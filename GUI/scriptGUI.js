@@ -1,9 +1,9 @@
 //---------------------------------------
 // SEQUENCER - secuenciador de 8 canales y 16 pasos
 
-/*
+
 var sequencer = new Nexus.Sequencer('#seq-animal',{
- 'size': [580,397],
+ 'size': [580,380],
  'mode': 'toggle',
  'rows': 8,
  'columns': 16
@@ -15,7 +15,7 @@ sequencer.on('change',function(v) {
 
 sequencer.on('step',function(v) {
   console.log(v);
-})*/
+})
 
 //---------------------------------------
 // DIALES - instrumentos

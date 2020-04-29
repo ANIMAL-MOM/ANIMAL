@@ -115,9 +115,12 @@ html {
   opacity:1!important;
 }
 
+body {
+  background-color: #BCF65D;
+}
+
 /* --------------------------------------------- */
 /* Extra NexusUI */
-
 
 .mom_dial{
   width:40px !important;
@@ -135,7 +138,10 @@ html {
    border-radius: 50%;
    background-color: var(--color-blanco-ui-animal);
 }
-
+.grid-size {
+  width:100%;
+  height:auto;
+}
 
 /* --------------------------------------------- */
 /* Instruments */
@@ -185,7 +191,7 @@ html {
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
 	margin-left: 15px;
-  margin-top: 50px;
+  margin-top: 30px;
 	background-color: var(--color-destaque-animal);
 }
 
@@ -233,5 +239,10 @@ html {
 
 
 .numero-animal{
-  font-size: 1.5em;
+  font-size: 1.5rem;
+  line-height: 1rem;
+}
+.texto-animal{
+  font-size: 1rem;
+  line-height: 0.5rem;
 }
