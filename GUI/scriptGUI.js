@@ -2,7 +2,7 @@
 // SEQUENCER - secuenciador de 8 canales y 16 pasos
 
 //NO PONER ESTO ACA 
--/*var sequencer = new Nexus.Sequencer('#seq-animal',{
+/*var sequencer = new Nexus.Sequencer('#seq-animal',{
   'size': [580,380],
   'mode': 'toggle',
   'rows': 8,
