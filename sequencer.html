@@ -471,16 +471,18 @@
 
   <script> //NET
     $(function () {
-      var socket = io();
+      var socket = io(window.location.href);
+    //  io.connect);
       sequencer.on('change', function (v) {
+        console.log("es un cambio");
         console.log(v);
         socket.emit('toggleStep', v);
       });
 
       socket.on('toggleStep', function (miStep) {
         console.log("llego " + miStep);
-        sequencer.matrix.set.cell( miStep.column, miStep.row, miStep.state )
-
+        sequencer.matrix.set.cell( miStep.column, miStep.row, miStep.state );
+       
       });
 
 
