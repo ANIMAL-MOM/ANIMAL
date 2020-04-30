@@ -25,10 +25,10 @@ app.use('/GUI',  express.static(__dirname + '/GUI/'));
 
 
 
-io.on('connection', (socket) => {
+io.of('/sequecer').on('connection', (socket) => {
 
   
-    console.log('a user connected to room:'+ socket.handshake.query.roomID);
+    console.log('a user connected to room:'+ socket.handshake.query);
     socket.on('disconnect', () => {
       console.log('user disconnected');
     });
