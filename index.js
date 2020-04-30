@@ -25,7 +25,7 @@ app.use('/GUI',  express.static(__dirname + '/GUI/'));
 
 
 
-io.of('/sequecer').on('connection', (socket) => {
+io.of('/sequencer').on('connection', (socket) => {
 
   
     console.log('a user connected to room:'+ socket.handshake.query);
