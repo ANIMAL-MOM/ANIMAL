@@ -26,8 +26,9 @@ app.use('/GUI',  express.static(__dirname + '/GUI/'));
 
 
 io.on('connection', (socket) => {
+
   
-    console.log('a user connected');
+    console.log('a user connected to room:'+ socket.handshake.query.roomID);
     socket.on('disconnect', () => {
       console.log('user disconnected');
     });
