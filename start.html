@@ -1,8 +1,68 @@
 <html>
+
 <head>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js'></script>
+    <script>
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const roomID = urlParams.get('roomID');
+        $(document).ready(function () {
+
+
+            $('#unirme').hide();
+
+
+
+            if (roomID) {
+                $('#unirme').show();
+            }
+
+            $("form").on('submit', function (e) {
+                e.preventDefault();  //prevent form from submitting
+                // store the value of the input with name='age' 
+                var canal = $("input[name='channel']:checked").val();
+                var name = $("#name").val();
+                if (roomID) {
+                    window.location.href = '/sequencer?roomID=' + roomID + '&channel=' + canal + "&name=" + name;
+                }
+            });
+        });
+
+
+
+
+    </script>
+
 </head>
+
 <body>
 
-<a href='/sequencer?roomID=1234'>ENTRAR!</a>
-<body>
+    <a href='/sequencer?roomID=new'>CREAR ROOM NUEVO!</a>
+    <br>
+    <br>
+
+
+    <div id="unirme">
+        <form action="">
+            <input type="text" val="nombre" id="name">
+            <br>
+
+            <input type="radio" id="gato" name="channel" value="8">GATO<br>
+            <input type="radio" id="mono" value="7" name="channel">mono<br>
+            <input type="radio" id="gallo" value="6" name="channel">gallo<br>
+            <input type="radio" id="oso" value="5" name="channel">oso<br>
+            <input type="radio" id="loro" value="4" name="channel">loro<br>
+            <input type="radio" id="topo" value="3" name="channel">topo<br>
+            <input type="radio" id="buho" value="2" name="channel">buho<br>
+            <input type="radio" value="1" id="coco" name="channel">coco<br>
+
+            <input type="submit" value="UNIRME AL ROOM!">
+        </form>
+
+
+    </div>
+
+    <body>
+
 </html>
