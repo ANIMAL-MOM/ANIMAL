@@ -290,7 +290,7 @@
 
               <!-- ÍCONOS y DIALES -->
 
-              <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around">
+              <div id="ch1" class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around">
                 <object id="icono-ch1" type="image/svg+xml" data="GUI/svg/iconos/buho.svg" class="animal-icon">
                   Buho
                 </object>
@@ -298,7 +298,7 @@
                   <div id="dial-ch1" class="mom_dial"></div>
                 </div>
               </div>
-              <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around">
+              <div id="ch2" class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around">
                 <object id="icono-ch2" type="image/svg+xml" data="GUI/svg/iconos/buho.svg" class="animal-icon">
                   Buho
                 </object>
@@ -306,7 +306,7 @@
                   <div id="dial-ch2" class="mom_dial"></div>
                 </div>
               </div>
-              <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around">
+              <div id="ch3" class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around">
                 <object id="icono-ch3" type="image/svg+xml" data="GUI/svg/iconos/buho.svg" class="animal-icon">
                   Buho
                 </object>
@@ -314,7 +314,7 @@
                   <div id="dial-ch3" class="mom_dial"></div>
                 </div>
               </div>
-              <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around">
+              <div id="ch4" class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around">
                 <object id="icono-ch4" type="image/svg+xml" data="GUI/svg/iconos/buho.svg" class="animal-icon">
                   Buho
                 </object>
@@ -322,7 +322,7 @@
                   <div id="dial-ch4" class="mom_dial"></div>
                 </div>
               </div>
-              <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around">
+              <div id="ch5" class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around">
                 <object id="icono-ch5" type="image/svg+xml" data="GUI/svg/iconos/buho.svg" class="animal-icon">
                   Buho
                 </object>
@@ -330,7 +330,7 @@
                   <div id="dial-ch5" class="mom_dial"></div>
                 </div>
               </div>
-              <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around">
+              <div id="ch6" class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around">
                 <object id="icono-ch6" type="image/svg+xml" data="GUI/svg/iconos/buho.svg" class="animal-icon">
                   Buho
                 </object>
@@ -338,7 +338,7 @@
                   <div id="dial-ch6" class="mom_dial"></div>
                 </div>
               </div>
-              <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around">
+              <div id="ch7" class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around">
                 <object id="icono-ch7" type="image/svg+xml" data="GUI/svg/iconos/buho.svg" class="animal-icon">
                   Buho
                 </object>
@@ -346,7 +346,7 @@
                   <div id="dial-ch7" class="mom_dial"></div>
                 </div>
               </div>
-              <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around">
+              <div id="ch8" class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around">
                 <object id="icono-ch8" type="image/svg+xml" data="GUI/svg/iconos/buho.svg" class="animal-icon">
                   Buho
                 </object>
@@ -451,8 +451,8 @@
         var url = new URL(currentUrl);
         url.searchParams.set("roomID",newroomID ); // setting your param
         var newUrl = url.href;
-        let stateObj = { id: "100" }; 
-       window.history.replaceState(stateObj, "roomID", newUrl); 
+        let stateObj = { id: "100" };
+       window.history.replaceState(stateObj, "roomID", newUrl);
 
 
         socket.emit('sequencer', sequencer.matrix.pattern);
