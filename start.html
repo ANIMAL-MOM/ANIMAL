@@ -1,6 +1,22 @@
 <html>
 
-<head>
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+    <title>Animalv0.1</title>
+
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;0,900;1,200;1,400;1,600;1,900&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="GUI/style.css">
+
+
+
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js'></script>
     <script>
@@ -20,7 +36,7 @@
 
             $("form").on('submit', function (e) {
                 e.preventDefault();  //prevent form from submitting
-                // store the value of the input with name='age' 
+                // store the value of the input with name='age'
                 var canal = $("input[name='channel']:checked").val();
                 var name = $("#name").val();
                 if (roomID) {
@@ -34,35 +50,368 @@
 
     </script>
 
-</head>
+  </head>
+  <body>
 
-<body>
+    <!-- HEADER (navbar) -->
 
-    <a href='/sequencer?roomID=new'>CREAR ROOM NUEVO!</a>
-    <br>
-    <br>
+    <div id="Header" class="row navbar">
+      <div class="col-12 text-right">
+        <div id="MoM_logo">[MoM]</div>
+      </div>
+    </div>
+
+    <!-- header end -->
+
+    <!-- HERO guest (animal-select) -->
+
+    <div id="unirme" class="jumbotron min-vh-100 text-center m-0 d-flex flex-column justify-content-center">
+      <div class="row">
+
+        <!-- WELCOME (left) -->
+
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-8 mx-auto text-left">
+              <p class="mb-0 pb-0">Hola...</p>
+              <img src="GUI/img/landing/Animal_logo_v0.png" class="img-fluid mb-5">
+              <p>Éste es un instrumento musical virtual colaborativo.
+              Escoje tus instrumentos y presional el botón INICIAR. </br>
+              <a href="#">[más info.]</a></p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- welcome end -->
+
+        <!-- ANIMAL-SELECT (right) -->
+
+        <div class="col-md-6">
+          <div class="row">
+
+            <div class="col-3">
+              <div class=" corners-2 fondo-1-animal p-2">
+                <div class="d-flex justify-content-around">
+                  <div class="">
+                    <object type="image/svg+xml" data="GUI/svg/botones/boton-audio-pre-1.svg" class="audio-preview-ch">
+                      Audio preview
+                    </object>
+                  </div>
+                  <div class="ml-1">
+                    <object type="image/svg+xml" data="GUI/svg/iconos/cerdo.svg" class="animal-icon-ch">
+                      Cerdo
+                    </object>
+                  </div>
+                </div>
+                <div class="titulo text-center pt-1">Cerdo</div>
+              </div>
+            </div>
+
+            <div class="col-3">
+              <div class=" corners-2 fondo-1-animal p-2">
+                <div class="d-flex justify-content-around">
+                  <div class="">
+                    <object type="image/svg+xml" data="GUI/svg/botones/boton-audio-pre-1.svg" class="audio-preview-ch">
+                      Audio preview
+                    </object>
+                  </div>
+                  <div class="ml-1">
+                    <object type="image/svg+xml" data="GUI/svg/iconos/loro.svg" class="animal-icon-ch">
+                      Loro
+                    </object>
+                  </div>
+                </div>
+                <div class="titulo text-center pt-1">Loro</div>
+              </div>
+            </div>
+
+            <div class="col-3">
+              <div class=" corners-2 fondo-1-animal p-2">
+                <div class="d-flex justify-content-around">
+                  <div class="">
+                    <object type="image/svg+xml" data="GUI/svg/botones/boton-audio-pre-1.svg" class="audio-preview-ch">
+                      Audio preview
+                    </object>
+                  </div>
+                  <div class="ml-1">
+                    <object type="image/svg+xml" data="GUI/svg/iconos/sapo.svg" class="animal-icon-ch">
+                      Sapo
+                    </object>
+                  </div>
+                </div>
+                <div class="titulo text-center pt-1">Sapo</div>
+              </div>
+            </div>
+
+            <div class="col-3">
+              <div class=" corners-2 fondo-1-animal p-2">
+                <div class="d-flex justify-content-around">
+                  <div class="">
+                    <object type="image/svg+xml" data="GUI/svg/botones/boton-audio-pre-1.svg" class="audio-preview-ch">
+                      Audio preview
+                    </object>
+                  </div>
+                  <div class="ml-1">
+                    <object type="image/svg+xml" data="GUI/svg/iconos/pato.svg" class="animal-icon-ch">
+                      Pato
+                    </object>
+                  </div>
+                </div>
+                <div class="titulo text-center pt-1">Pato</div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row mt-2">
+
+            <div class="col-3">
+              <div class=" corners-2 fondo-1-animal p-2">
+                <div class="d-flex justify-content-around">
+                  <div class="">
+                    <object type="image/svg+xml" data="GUI/svg/botones/boton-audio-pre-1.svg" class="audio-preview-ch">
+                      Audio preview
+                    </object>
+                  </div>
+                  <div class="ml-1">
+                    <object type="image/svg+xml" data="GUI/svg/iconos/mono.svg" class="animal-icon-ch">
+                      Mono
+                    </object>
+                  </div>
+                </div>
+                <div class="titulo text-center pt-1">Mono</div>
+              </div>
+            </div>
+
+            <div class="col-3">
+              <div class=" corners-2 fondo-1-animal p-2">
+                <div class="d-flex justify-content-around">
+                  <div class="">
+                    <object type="image/svg+xml" data="GUI/svg/botones/boton-audio-pre-1.svg" class="audio-preview-ch">
+                      Audio preview
+                    </object>
+                  </div>
+                  <div class="ml-1">
+                    <object type="image/svg+xml" data="GUI/svg/iconos/gato.svg" class="animal-icon-ch">
+                      Gato
+                    </object>
+                  </div>
+                </div>
+                <div class="titulo text-center pt-1">Gato</div>
+              </div>
+            </div>
+
+            <div class="col-3">
+              <div class=" corners-2 fondo-1-animal p-2">
+                <div class="d-flex justify-content-around">
+                  <div class="">
+                    <object type="image/svg+xml" data="GUI/svg/botones/boton-audio-pre-1.svg" class="audio-preview-ch">
+                      Audio preview
+                    </object>
+                  </div>
+                  <div class="ml-1">
+                    <object type="image/svg+xml" data="GUI/svg/iconos/oso.svg" class="animal-icon-ch">
+                      Oso
+                    </object>
+                  </div>
+                </div>
+                <div class="titulo text-center pt-1">Oso</div>
+              </div>
+            </div>
+
+            <div class="col-3">
+              <div class=" corners-2 fondo-1-animal p-2">
+                <div class="d-flex justify-content-around">
+                  <div class="">
+                    <object type="image/svg+xml" data="GUI/svg/botones/boton-audio-pre-1.svg" class="audio-preview-ch">
+                      Audio preview
+                    </object>
+                  </div>
+                  <div class="ml-1">
+                    <object type="image/svg+xml" data="GUI/svg/iconos/buho.svg" class="animal-icon-ch">
+                      Buho
+                    </object>
+                  </div>
+                </div>
+                <div class="titulo text-center pt-1">Buho</div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row mt-4">
+            <div class="col-12 d-flex justify-content-start">
+              <a class="btn btn-primary btn-lg" href='#' role="button">Entrar</a>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- animal-select end -->
+
+      </div>
 
 
-    <div id="unirme">
-        <form action="">
-            <input type="text" val="nombre" id="name">
-            <br>
+      <!-- CARO code
+      <form action="">
+          <input type="text" val="nombre" id="name">
+          <br>
 
-            <input type="radio" id="gato" name="channel" value="8">GATO<br>
-            <input type="radio" id="mono" value="7" name="channel">mono<br>
-            <input type="radio" id="gallo" value="6" name="channel">gallo<br>
-            <input type="radio" id="oso" value="5" name="channel">oso<br>
-            <input type="radio" id="loro" value="4" name="channel">loro<br>
-            <input type="radio" id="topo" value="3" name="channel">topo<br>
-            <input type="radio" id="buho" value="2" name="channel">buho<br>
-            <input type="radio" value="1" id="coco" name="channel">coco<br>
+          <input type="radio" id="gato" name="channel" value="8">GATO<br>
+          <input type="radio" id="mono" value="7" name="channel">mono<br>
+          <input type="radio" id="gallo" value="6" name="channel">gallo<br>
+          <input type="radio" id="oso" value="5" name="channel">oso<br>
+          <input type="radio" id="loro" value="4" name="channel">loro<br>
+          <input type="radio" id="topo" value="3" name="channel">topo<br>
+          <input type="radio" id="buho" value="2" name="channel">buho<br>
+          <input type="radio" id="coco" value="1" name="channel">coco<br>
 
-            <input type="submit" value="UNIRME AL ROOM!">
-        </form>
-
+          <input type="submit" value="UNIRME AL ROOM!">
+      </form>
+      -->
 
     </div>
 
-    <body>
+    <!-- hero guest end -->
 
+
+    <!-- HERO host -->
+
+    <div id="Hero" class="jumbotron min-vh-100 text-center m-0 d-flex flex-column justify-content-center">
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+          <div class="col-12 mx-auto">
+            <img src="GUI/img/landing/Animal_logo_v0.png" class="image-fluid">
+          </div>
+          <div class="col-md-5 border-right">
+            <p class="lead text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam ornare neque, sagittis, vel et commodo volutpat. Ipsum ipsum nisl blandit pharetra. Dictumst neque.</p>
+            <p class="lead text-left"><a href="#">[+ información]</a></p>
+          </div>
+          <div class="col-md-2 ml-3 my-auto">
+            <a class="btn btn-primary btn-lg" href='/sequencer?roomID=new' role="button">Iniciar sesión</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- hero host end -->
+
+    <!-- CONTENTS -->
+
+    <div class="container">
+      <div class="row m-5 d-flex justify-content-center">
+        <div id="phrase" class="col-7 p-5 text-center">
+          <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Malesuada leo dictum sit sapien, maecenas vitae at donec. Non.</h3>
+        </div>
+
+        <div class="col-auto my-5 pr-5 d-flex">
+          <div class="mx-2">
+            <img src="GUI/img/landing/cerdo.png" class="img-fluid"></br>
+            <div id="out1"></div>
+          </div>
+          <div class="mx-2">
+            <img src="GUI/img/landing/sapo.png" class="img-fluid"></br>
+            <div id="out3"></div>
+          </div>
+          <div class="mx-2">
+            <img src="GUI/img/landing/mono.png" class="img-fluid"></br>
+            <div id="out5"></div>
+          </div>
+          <div class="mx-2">
+            <img src="GUI/img/landing/oso.png" class="img-fluid"></br>
+            <div id="out7"></div>
+          </div>
+        </div>
+
+        <div class="col-auto my-5 ml-5 pl-5 d-flex">
+          <div class="mx-2">
+            <img src="GUI/img/landing/loro.png" class="img-fluid"></br>
+            <div id="out2"></div>
+          </div>
+          <div class="mx-2">
+            <img src="GUI/img/landing/pato.png" class="img-fluid"></br>
+            <div id="out4"></div>
+          </div>
+          <div class="mx-2">
+            <img src="GUI/img/landing/gato.png" class="img-fluid"></br>
+            <div id="out6"></div>
+          </div>
+          <div class="mx-2">
+            <img src="GUI/img/landing/buho.png" class="img-fluid"></br>
+            <div id="out8"></div>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="row">
+        <div class="col-8 my-5 d-flex flex-column">
+          <div id="outer2" class="w-100 pl-5 d-flex">
+            <div id="in1"></div>
+            <div id="in2"></div>
+            <div id="in3"></div>
+            <div id="in4"></div>
+            <div id="in5"></div>
+            <div id="in6"></div>
+            <div id="in7"></div>
+            <div id="in8"></div>
+          </div>
+          <img src="GUI/img/landing/sequencer.png" class="img-fluid">
+        </div>
+        <div class="col-4">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam ornare neque, sagittis, vel et commodo volutpat. Ipsum ipsum nisl blandit pharetra. Dictumst neque.</p>
+          <div>audio peview 1</div>
+          <div>audio peview 2</div>
+        </div>
+      </div>
+
+      <div class="row my-5">
+        <div class="col-4">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam ornare neque, sagittis, vel et commodo volutpat. Ipsum ipsum nisl blandit pharetra. Dictumst neque.</p>
+        </div>
+        <div class="col-8">
+          <div class="d-flex justify-content-around">
+            <div class=""><img src="GUI/img/landing/chat.png"></div>
+            <div class=""><img src="GUI/img/landing/controles.png" class=""></div>
+            <div class=""><img src="GUI/img/landing/rec-download-share.png" class=""></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- contents end -->
+
+    <!-- CTA 2 -->
+
+    <div id="call-to-action" class="container-fluid p-5 fondo-1 destaque-animal">
+      <div class="row my-5">
+        <div class="col-md-2 m-auto">
+          <a class="btn btn-primary btn-lg" href='/sequencer?roomID=new' role="button">Iniciar sesión</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- cta 2 end -->
+
+    <!-- FOOTER -->
+
+    <div id="footer" class="container-fluid py-5 bg-white">
+      <div class="row py-5 d-flex flex-md-row flex-column justify-content-center">
+        <div class="col-md-4 my-md-5">
+          <img src="GUI/img/landing/Animal-MoM-logo.png"class="img-fluid">
+        </div>
+        <div class="col-md-4 my-md-5">
+          <img src="GUI/img/landing/ANII-logo.png" class="img-fluid">
+        </div>
+      </div>
+    </div>
+
+    <!-- footer end -->
+
+  </body>
 </html>
