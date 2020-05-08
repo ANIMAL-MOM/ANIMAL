@@ -10,8 +10,8 @@ class Room {
       matrix[i] = new Array(17);
     }
     this.sequencer = matrix;
+    this.players = [8];
   }
-
   set bpm(bpm) {
     this._bpm = bpm;
   }
@@ -33,18 +33,18 @@ class Room {
   get soundKit() {
     return this._kitID;
   }
-  join(player) {
-    this.players.push(socket);
+  addPlayer(player) {
+    this.players.push(player);
   }
   leave(player) {
-    this.players.remove(socket);
+    this.players.remove(player);
   }
   sayHello() {
     console.log('Hello, my name is ' + this.name + ', I have ID: ' + this.id);
   }
 
   clickStep(msg) {
-    this.sequencer.matrix.set.cell(miStep.row, miStep.column,  miStep.state);
+    this.sequencer.matrix.set.cell(miStep.row, miStep.column, miStep.state);
   }
 }
 
@@ -72,6 +72,30 @@ app.use('/GUI', express.static(__dirname + '/GUI/'));
 
 var rooms = [];
 
+var visitor = io.of('/');
+
+visitor.on('connection', (socket) => {
+
+  var roomID = socket.handshake.query.roomID;
+  var theRoom = "";
+  if (roomID != "") {
+    //console.log('a user connected');
+
+    rooms.forEach(room => {
+      if (roomID == room.id) {
+        console.log(room.id + " " + room.ID);
+        theRoom = room;
+      }
+    });
+    if (theRoom != "" && roomID != "new") {
+      theRoom.players.forEach(player => {
+        //if Controlar si no hay canales libres
+      });
+    }
+  }
+});
+
+
 var player = io.of('/sequencer');
 
 player.on('connection', (socket) => {
@@ -93,6 +117,7 @@ player.on('connection', (socket) => {
       console.log(socket.room.id);
       rooms.push(socket.room);
       socket.join(socket.room.id);
+      socket.room.addPlayer(socket);
       //socket.roomID = socket.handshake.query.roomID;
       console.log('new user connected to room:' + socket.room.id);
       socket.type = "host";
@@ -106,7 +131,7 @@ player.on('connection', (socket) => {
       console.log('socket.room.seq ' + socket.room.sequencer);
       socket.type = "guest";
       socket.channel = socket.handshake.query.channel;
-
+      socket.room.addPlayer(socket);
       socket.emit('guest', socket.room.sequencer, socket.channel);
 
     }
