@@ -87,6 +87,9 @@ body {
   background-color: #BCF65D;
 }
 
+#Hero {
+  background-color: var(--color-rojo-ui-animal);
+}
 /* ---------------------------------------------- */
 /* Type */
 
@@ -255,13 +258,24 @@ html {
 /* --------------------------------------------- */
 /* Buttons & icons */
 
+.btn-group-lg>.btn, .btn-lg {
+  border-radius: 15px;
+}
+.btn-primary {
+  color: var(--color-chocolate-animal);
+  background-color: var(--color-blanco-ui-animal);
+  border-color: var(--color-blanco-ui-animal);
+}
+#cerdoicon circle:hover {
+  fill: red;
+}
 .animal-btn{
   width:44px;
   height:44px;
   border-radius: 50px;
   background-color: var(--color-figura-1-animal)
 }
-.animal-icon {
+.animal-icon, .audio-preview {
   width: 44px;
   height: 44px;
 }
