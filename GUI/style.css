@@ -17,38 +17,6 @@
 }
 
 /* ---------------------------------------------- */
-/* Type */
-
-
-body {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 200;
-  color: var(--color-chocolate-animal);
-}
-html {
-  font-size: 14px;
-
-  @media screen and (min-width: 900px) {
-    font-size: 15px;
-  }
-  @media screen and (min-width: 1200px) {
-    font-size: 16px;
-  }
-}
-.title{
-  font-size: 2.2rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  line-height: 1.5rem;
-}
-
-.sub_title{
-  font-size: 0.85rem;
-  font-weight: 200;
-  line-height: 1rem;
-}
-
-/* ---------------------------------------------- */
 /* Color & opacity */
 
 
@@ -119,6 +87,80 @@ body {
   background-color: #BCF65D;
 }
 
+#Hero {
+  background-color: #B7E2D0;
+}
+/* ---------------------------------------------- */
+/* Type */
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  color: var(--color-chocolate-animal);
+}
+html {
+  font-size: 14px;
+
+  @media screen and (min-width: 900px) {
+    font-size: 15px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+  }
+}
+.title{
+  font-size: 2.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.5rem;
+}
+
+.sub_title{
+  font-size: 0.85rem;
+  font-weight: 200;
+  line-height: 1rem;
+}
+
+.lead {
+  font-size: 1.125rem;
+}
+#phrase h3{
+  font-size: 2.25rem;
+  font-weight: 200;
+  line-height: 2.75rem;
+}
+
+
+/* --------------------------------------------- */
+/* Corners & special margins */
+
+.corners1{
+  border-radius: 15px;
+}
+.corners-2{
+  border-radius: 10px;
+}
+.corners-l{
+    border-radius: 15px 0 0 15px;
+}
+.corners-r{
+    border-radius: 0 15px 15px 0;
+}
+#ch1, #ch2, #ch3, #ch4, #ch5, #ch6, #ch7, #ch8{
+  margin:3px;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.jumbotron {
+  padding-top:64px;
+}
+
 /* --------------------------------------------- */
 /* Extra NexusUI */
 
@@ -142,6 +184,7 @@ body {
   width:100%;
   height:auto;
 }
+
 
 /* --------------------------------------------- */
 /* Instruments */
@@ -195,43 +238,61 @@ body {
 	background-color: var(--color-destaque-animal);
 }
 
+#in1, #in2, #in3, #in4, #in5, #in6, #in7, #in8 {
+	width:20px;
+	height: 7px;
+  border-top-left-radius: 40%;
+  border-top-right-radius: 40%;
+	margin-left: 10px;
+	background-color: var(--color-destaque-animal);
+}
+#out1, #out2, #out3, #out4, #out5, #out6, #out7, #out8 {
+	width:20px;
+	height: 7px;
+  border-bottom-left-radius: 40%;
+  border-bottom-right-radius: 40%;
+	margin-left: 20px;
+	background-color: var(--color-destaque-animal);
+}
 
 /* --------------------------------------------- */
 /* Buttons & icons */
 
+.btn-group-lg>.btn, .btn-lg {
+  border-radius: 15px;
+}
+.btn-primary {
+  color: var(--color-chocolate-animal);
+  background-color: var(--color-blanco-ui-animal);
+  border-color: var(--color-blanco-ui-animal);
+}
+#cerdoicon circle:hover {
+  fill: red;
+}
 .animal-btn{
   width:44px;
   height:44px;
   border-radius: 50px;
   background-color: var(--color-figura-1-animal)
 }
-.animal-icon {
+.animal-icon, .audio-preview {
   width: 44px;
   height: 44px;
+}
+
+.animal-icon-ch, .audio-preview-ch {
+  width: 28px;
+  height: 28px;
+}
+.animal-border{
+  border-style: solid;
+  border-width: 5px;
 }
 .rec-icon{}
 .download-btn{}
 .share-btn{}
 .email-btn{}
 .help-btn{}
-
-
-
-/* --------------------------------------------- */
-/* Corners & special margins */
-
-.corners1{
-  border-radius: 15px;
-}
-.corners-l{
-    border-radius: 15px 0 0 15px;
-}
-.corners-r{
-    border-radius: 0 15px 15px 0;
-}
-#ch1, #ch2, #ch3, #ch4, #ch5, #ch6, #ch7, #ch8{
-  margin:3px;
-}
 
 
 /* --------------------------------------------- */
@@ -245,4 +306,9 @@ body {
 .texto-animal{
   font-size: 1rem;
   line-height: 0.5rem;
+}
+
+.fondo-1 {
+  background: url('img/landing/fondo-outlines.png') no-repeat center center fixed;
+  background-color: var(--color-destaque-animal);
 }
