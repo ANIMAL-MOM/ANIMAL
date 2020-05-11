@@ -285,6 +285,37 @@ html {
   background-color: var(--color-blanco-ui-animal);
   border-color: var(--color-blanco-ui-animal);
 }
+.color-chip-1{
+  width:44px;
+  height:44px;
+  border-radius:50px;
+  background-color: var(--color-figura-1-animal)
+}
+.color-chip-2{
+  width:44px;
+  height:44px;
+  border-radius:50px;
+  background-color: var(--color-fondo-1-animal)
+}
+.color-chip-3{
+  width:44px;
+  height:44px;
+  border-radius:50px;
+  background-color: var(--color-figura-1-animal)
+}
+.color-chip-4{
+  width:44px;
+  height:44px;
+  border-radius:50px;
+  background-color: var(--color-fondo-1-animal)
+}
+.color-chip-5{
+  width:44px;
+  height:44px;
+  border-radius:50px;
+  background-color: var(--color-figura-1-animal)
+}
+
 .animal-btn{
   width:44px;
   height:44px;
