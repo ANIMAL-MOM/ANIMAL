@@ -1,1 +1,1 @@
-svg,svg *{pointer-events:all}#animal-svg:hover #animal-svg-bkg{transform:scale(.965, .965) translate(1px, 1px);stroke:#6D777E;stroke-width:3px}
+#ch_control .animal-icon:hover{border-width:3px;border-style:solid;border-color:var(--color-destaque-animal);background-color:var(--color-naranja-ui-animal)}.icono-ch1:hover{filter:contrast(200%)}
