@@ -457,7 +457,7 @@ html {
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   body {
-    background-color: var(--color-fondo-verde-animal);
+    background-color: var(--color-fondo-negro-animal);
   }
 }
 
