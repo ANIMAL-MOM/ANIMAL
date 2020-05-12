@@ -436,3 +436,34 @@ html {
   background: url('img/landing/fondo-outlines.png') no-repeat center center fixed;
   background-color: var(--color-destaque-animal);
 }
+
+
+
+/* Small devices (landscape phones, 576px and up) */
+
+@media (min-width: 576px) {
+  body {
+    background-color: var(--color-fondo-mostaza-animal);
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  body {
+    background-color: var(--color-fondo-aqua-animal);
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  body {
+    background-color: var(--color-fondo-verde-animal);
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  body {
+    background-color: var(--color-fondo-rosa-animal);
+  }
+}
