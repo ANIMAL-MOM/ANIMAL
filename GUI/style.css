@@ -200,45 +200,45 @@ html {
   width:auto;
   height:100px;
 }
-#buhoInst.instrumento-animal{
+#buhoInst .instrumento-animal{
   background-image: url("img/animal-sm_buho-tx.jpg");
   background-size: cover;
   background-position: center;
 }
-#osoInst.instrumento-animal{
+#osoInst .instrumento-animal{
   background-image: url("img/animal-sm_oso-tx.jpg");
   background-size: cover;
   background-position: center;
 }
-#gatoInst.instrumento-animal{
+#gatoInst .instrumento-animal{
   background-image: url("img/animal-sm_gato-tx.jpg");
   background-size: cover;
   background-position: center;
 }
-#sapoInst.instrumento-animal{
+#sapoInst .instrumento-animal{
   background-image: url("img/animal-sm_sapo-tx.jpg");
   background-size: cover;
   background-position: center;
 }
-#patoInst.instrumento-animal{
+#patoInst .instrumento-animal{
   background-image: url("img/animal-sm_pato-tx.jpg");
   background-size: cover;
   background-position: center;
 }
-#monoInst.instrumento-animal{
+#monoInst .instrumento-animal{
   background-image: url("img/animal-sm_mono-tx.jpg");
   background-size: cover;
   background-position: center;
 }
-#cerdoInst.instrumento-animal{
-  background-image: url("img/animal-sm_cerdo-tx.jpg");
-  background-size: cover;
-  background-position: center;
-}
-#loroInst.instrumento-animal{
+#loroInst .instrumento-animal{
   background-image: url("img/animal-sm_loro-tx.jpg");
   background-size: cover;
   background-position: left,top;
+}
+#cerdoInst .instrumento-animal{
+  background-image: url("img/animal-sm_cerdo-tx.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 
