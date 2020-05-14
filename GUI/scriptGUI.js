@@ -138,7 +138,9 @@
  })
 
  dialch1.on('change',function(v) {
+  
    console.log(v);
+   //sendChange
  })
 
  var dialch2 = new Nexus.Dial('#dial-ch2',{
