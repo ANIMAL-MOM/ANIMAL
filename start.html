@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="GUI/style.css">
     <link rel="stylesheet" href="GUI/animal.css">
  <style>
-   .channel-selected{
+   .channel-selected {
      border-style: solid;
    }
  </style>
@@ -48,7 +48,7 @@
                 var mianimal =$(".channel-selected")[0];
                 var canal = $(mianimal).attr("chNumber");
                 var name = $("#name").val();
-              
+
                 if (roomID && canal) {
                     window.location.href = '/sequencer?roomID=' + roomID + '&channel=' + canal + "&name=" + name;
                 }
@@ -98,21 +98,21 @@
 
         <!-- ANIMAL-SELECT (right) -->
 
-        <div id="animal-select" class="col-md-6">
-          <div class="row">
+        <div class="col-md-6">
+          <div id="sel-inst" class="row mb-1">
 
-            <div id="ch1" class="col-3 channels" chNumber="1">
-              <div class=" corners-2 fondo-1-animal p-2">
+            <div class="col-3 channels my-1" chnumber="8">
+              <div class="corners-2 fondo-1-animal p-2">
                 <div class="d-flex justify-content-around">
 
-                  <div class="">
-                    <object type="image/svg+xml" data="GUI/svg/botones/boton-audio-pre-1.svg" class="audio-preview-ch">
+                  <div class="audio-preview-s">
+                    <object id="audio-preview" type="image/svg+xml" data="GUI/svg/botones/boton_audio_w.svg" class="audio-preview-s">
                       Audio preview
                     </object>
                   </div>
 
-                  <div class="ml-1">
-                    <object type="image/svg+xml" data="GUI/svg/iconos/cerdo.svg" class="animal-icon-ch">
+                  <div id="sel-ch8" class="icon-container-s ml-1">
+                    <object type="image/svg+xml" data="GUI/svg/iconos/cerdo-w.svg" class="animal-icon-s">
                       Cerdo
                     </object>
                   </div>
@@ -122,152 +122,164 @@
               </div>
             </div>
 
-
-            <div id="ch2" class="col-3 channels" chNumber="2">
-              <div class=" corners-2 fondo-1-animal p-2">
+            <div class="col-3 channels my-1" chnumber="7">
+              <div class="corners-2 fondo-1-animal p-2">
                 <div class="d-flex justify-content-around">
-                  <div class="">
-                    <object type="image/svg+xml" data="GUI/svg/botones/boton-audio-pre-1.svg" class="audio-preview-ch">
+
+                  <div class="audio-preview-s">
+                    <object id="audio-preview" type="image/svg+xml" data="GUI/svg/botones/boton_audio_w.svg" class="audio-preview-s">
                       Audio preview
                     </object>
                   </div>
-                  <div class="ml-1">
-                    <object type="image/svg+xml" data="GUI/svg/iconos/loro.svg" class="animal-icon-ch">
+
+                  <div id="sel-ch7" class="icon-container-s ml-1">
+                    <object type="image/svg+xml" data="GUI/svg/iconos/loro-w.svg" class="animal-icon-s">
                       Loro
                     </object>
                   </div>
+
                 </div>
                 <div class="titulo text-center pt-1">Loro</div>
               </div>
             </div>
 
-
-            <div id="ch3" class="col-3 channels"  chNumber="3">
-              <div class=" corners-2 fondo-1-animal p-2">
+            <div class="col-3 channels my-1" chnumber="6">
+              <div class="corners-2 fondo-1-animal p-2">
                 <div class="d-flex justify-content-around">
-                  <div class="">
-                    <object type="image/svg+xml" data="GUI/svg/botones/boton-audio-pre-1.svg" class="audio-preview-ch">
+
+                  <div class="audio-preview-s">
+                    <object id="audio-preview" type="image/svg+xml" data="GUI/svg/botones/boton_audio_w.svg" class="audio-preview-s">
                       Audio preview
                     </object>
                   </div>
-                  <div class="ml-1">
-                    <object type="image/svg+xml" data="GUI/svg/iconos/sapo.svg" class="animal-icon-ch">
+
+                  <div id="sel-ch6" class="icon-container-s ml-1">
+                    <object type="image/svg+xml" data="GUI/svg/iconos/sapo-w.svg" class="animal-icon-s">
                       Sapo
                     </object>
                   </div>
+
                 </div>
                 <div class="titulo text-center pt-1">Sapo</div>
               </div>
             </div>
 
-
-            <div id="ch4" class="col-3 channels"  chNumber="4">
-              <div class=" corners-2 fondo-1-animal p-2">
+            <div class="col-3 channels my-1" chnumber="5">
+              <div class="corners-2 fondo-1-animal p-2">
                 <div class="d-flex justify-content-around">
-                  <div class="">
-                    <object type="image/svg+xml" data="GUI/svg/botones/boton-audio-pre-1.svg" class="audio-preview-ch">
+
+                  <div class="audio-preview-s">
+                    <object id="audio-preview" type="image/svg+xml" data="GUI/svg/botones/boton_audio_w.svg" class="audio-preview-s">
                       Audio preview
                     </object>
                   </div>
-                  <div class="ml-1">
-                    <object type="image/svg+xml" data="GUI/svg/iconos/pato.svg" class="animal-icon-ch">
+
+                  <div id="sel-ch5" class="icon-container-s ml-1">
+                    <object type="image/svg+xml" data="GUI/svg/iconos/pato-w.svg" class="animal-icon-s">
                       Pato
                     </object>
                   </div>
+
                 </div>
                 <div class="titulo text-center pt-1">Pato</div>
               </div>
             </div>
 
-          </div>
-
-
-          <div class="row mt-2">
-
-            <div id="ch5" class="col-3 channels" chNumber="5">
-              <div class=" corners-2 fondo-1-animal p-2">
+            <div class="col-3 channels my-1" chnumber="4">
+              <div class="corners-2 fondo-1-animal p-2">
                 <div class="d-flex justify-content-around">
-                  <div class="">
-                    <object type="image/svg+xml" data="GUI/svg/botones/boton-audio-pre-1.svg" class="audio-preview-ch">
+
+                  <div class="audio-preview-s">
+                    <object id="audio-preview" type="image/svg+xml" data="GUI/svg/botones/boton_audio_w.svg" class="audio-preview-s">
                       Audio preview
                     </object>
                   </div>
-                  <div class="ml-1">
-                    <object type="image/svg+xml" data="GUI/svg/iconos/mono.svg" class="animal-icon-ch">
+
+                  <div id="sel-ch4" class="icon-container-s ml-1">
+                    <object type="image/svg+xml" data="GUI/svg/iconos/mono-w.svg" class="animal-icon-s">
                       Mono
                     </object>
                   </div>
+
                 </div>
                 <div class="titulo text-center pt-1">Mono</div>
               </div>
             </div>
 
-            <div id="ch6" class="col-3 channels" chNumber="6">
-              <div class=" corners-2 fondo-1-animal p-2">
+            <div class="col-3 channels my-1" chnumber="3">
+              <div class="corners-2 fondo-1-animal p-2">
                 <div class="d-flex justify-content-around">
-                  <div class="">
-                    <object type="image/svg+xml" data="GUI/svg/botones/boton-audio-pre-1.svg" class="audio-preview-ch">
+
+                  <div class="audio-preview-s">
+                    <object id="audio-preview" type="image/svg+xml" data="GUI/svg/botones/boton_audio_w.svg" class="audio-preview-s">
                       Audio preview
                     </object>
                   </div>
-                  <div class="ml-1">
-                    <object type="image/svg+xml" data="GUI/svg/iconos/gato.svg" class="animal-icon-ch">
+
+                  <div id="sel-ch3" class="icon-container-s ml-1">
+                    <object type="image/svg+xml" data="GUI/svg/iconos/gato-w.svg" class="animal-icon-s">
                       Gato
                     </object>
                   </div>
+
                 </div>
                 <div class="titulo text-center pt-1">Gato</div>
               </div>
             </div>
 
-            <div id="ch7" class="col-3 channels" chNumber="7">
-              <div class=" corners-2 fondo-1-animal p-2">
+            <div class="col-3 channels my-1" chnumber="2">
+              <div class="corners-2 fondo-1-animal p-2">
                 <div class="d-flex justify-content-around">
-                  <div class="">
-                    <object type="image/svg+xml" data="GUI/svg/botones/boton-audio-pre-1.svg" class="audio-preview-ch">
+
+                  <div class="audio-preview-s">
+                    <object id="audio-preview" type="image/svg+xml" data="GUI/svg/botones/boton_audio_w.svg" class="audio-preview-s">
                       Audio preview
                     </object>
                   </div>
-                  <div class="ml-1">
-                    <object type="image/svg+xml" data="GUI/svg/iconos/oso.svg" class="animal-icon-ch">
+
+                  <div id="sel-ch2" class="icon-container-s ml-1">
+                    <object type="image/svg+xml" data="GUI/svg/iconos/oso-w.svg" class="animal-icon-s">
                       Oso
                     </object>
                   </div>
+
                 </div>
                 <div class="titulo text-center pt-1">Oso</div>
               </div>
             </div>
 
-            <div id="ch8" class="col-3 channels" chNumber="8">
-              <div class=" corners-2 fondo-1-animal p-2">
+            <div class="col-3 channels my-1" chnumber="1">
+              <div class="corners-2 fondo-1-animal p-2">
                 <div class="d-flex justify-content-around">
-                  <div class="">
-                    <object type="image/svg+xml" data="GUI/svg/botones/boton-audio-pre-1.svg" class="audio-preview-ch">
+
+                  <div class="audio-preview-s">
+                    <object id="audio-preview" type="image/svg+xml" data="GUI/svg/botones/boton_audio_w.svg" class="audio-preview-s">
                       Audio preview
                     </object>
                   </div>
-                  <div class="ml-1">
-                    <object type="image/svg+xml" data="GUI/svg/iconos/buho.svg" class="animal-icon-ch">
+
+                  <div id="sel-ch1" class="icon-container-s ml-1">
+                    <object type="image/svg+xml" data="GUI/svg/iconos/buho-w.svg" class="animal-icon-s">
                       Buho
                     </object>
                   </div>
+
                 </div>
                 <div class="titulo text-center pt-1">Buho</div>
               </div>
             </div>
 
           </div>
-
-          <div class="row mt-4">
-            <div class="col-12 d-flex justify-content-start">
-              <a class="btn btn-primary btn-lg" href="#" role="button" id="unirmeARoom">Entrar</a> 
-            </div>
-
-          </div>
-
         </div>
 
         <!-- animal-select end -->
+
+        <div class="row mt-4">
+            <div class="col-12 d-flex justify-content-start">
+              <a class="btn btn-primary btn-lg" href="#" role="button" id="unirmeARoom">Entrar</a>
+            </div>
+
+          </div>
 
       </div>
 
