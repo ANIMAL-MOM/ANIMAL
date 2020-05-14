@@ -419,6 +419,60 @@ html {
 }
 
 
+
+
+
+/* --------------------------------------------- */
+/* Animation & transitions */
+
+
+.animate-up-down-in-1{
+  -webkit-animation: up-down-in 1s; /* Chrome, Safari, Opera */
+  animation: up-down-in 1s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+}
+.animate-up-down-in-2{
+  -webkit-animation: up-down-in 1s; /* Chrome, Safari, Opera */
+  animation: up-down-in 1s;
+  animation-delay: 1.5s;
+  animation-fill-mode: both;
+}
+
+.animate-up-down-in-3{
+  -webkit-animation: up-down-in 1s; /* Chrome, Safari, Opera */
+  animation: up-down-in 1s;
+  animation-delay: 2s;
+  animation-fill-mode: both;
+}
+
+/* For modern browsers */
+@-webkit-keyframes up-down-in {
+  from {
+    opacity: 0;
+    transform: translate(0px,-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px,0px);
+  }
+}
+/* The standard way */
+@keyframes up-down-in {
+  from {
+    opacity: 0;
+    transform: translate(0px,-25px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px,0px);
+  }
+}
+
+
+
+
+
 /* --------------------------------------------- */
 /* Display */
 
@@ -437,6 +491,9 @@ html {
   background-color: var(--color-destaque-animal);
 }
 
+
+/* --------------------------------------------- */
+/* Breakpoints */
 
 
 /* Small devices (landscape phones, 576px and up) */
