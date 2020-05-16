@@ -1,18 +1,16 @@
 <html>
 
-  <head>
+<head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
-    <title>Animalv0.1</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+  <title>Animalv0.1</title>
 
 
-    <link
+  <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;0,900;1,200;1,400;1,600;1,900&display=swap"
       rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="GUI/style.css">
     <link rel="stylesheet" href="GUI/animal.css">
  <style>
@@ -23,425 +21,393 @@
 
 
 
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js'></script>
-    <script>
-        const queryString = window.location.search;
-        const urlParams = new URLSearchParams(queryString);
-        const roomID = urlParams.get('roomID');
-        $(document).ready(function () {
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js'></script>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const roomID = urlParams.get('roomID');
+    $(document).ready(function () {
 
 
-            $('#unirme').attr("style", "display: none !important");
+      $('#unirme').attr("style", "display: none !important");
 
-            if (roomID) {
-                $('#unirme').attr("style", "display: ");
-            }
-            $(".channels").click(function(){
-              $(".channels").removeClass("channel-selected");
-              $(this).addClass("channel-selected");
-            })
+      if (roomID) {
+        $('#unirme').attr("style", "display: ");
+      }
+      $(".channels").click(function () {
+        $(".channels").removeClass("channel-selected");
+        $(this).addClass("channel-selected");
+      })
 
-            $("#unirmeARoom").on('click', function (e) {
-                e.preventDefault();  //prevent form from submitting
-                // store the chNumber of the input with name='age'
-                //var canal = $("input[name='channel']:checked").val();
-                var mianimal =$(".channel-selected")[0];
-                var canal = $(mianimal).attr("chNumber");
-                var name = $("#name").val();
+      $("#unirmeARoom").on('click', function (e) {
+        e.preventDefault();  //prevent form from submitting
+        // store the chNumber of the input with name='age'
+        //var canal = $("input[name='channel']:checked").val();
+        var mianimal = $(".channel-selected")[0];
+        var canal = $(mianimal).attr("chNumber");
+        var name = $("#name").val();
 
-                if (roomID && canal) {
-                    window.location.href = '/sequencer?roomID=' + roomID + '&channel=' + canal + "&name=" + name;
-                }
-            });
+        if (roomID && canal) {
+          window.location.href = '/sequencer?roomID=' + roomID + '&channel=' + canal + "&name=" + name;
+        }
+      });
+
+
+      var socket = io('/start?roomID=' + roomID);
+      //  io.connect);
+      socket.on('usedChannels', function (usedChannels) {
+        console.log(usedChannels);
+        usedChannels.forEach(channel => {
+          var myChannelUsado = $(".channels")[channel-1];
+          $(myChannelUsado).css("opacity", "0.5");
+          $(myChannelUsado).css("pointer-events", "none");
         });
+      });
+    });
 
 
 
 
-    </script>
+  </script>
 
-  </head>
-  <body>
-
-    <!-- HEADER (navbar) -->
-
-    <div id="Header" class="row navbar">
-      <div class="col-12 text-right">
-        <div id="MoM_logo">[MoM]</div>
-      </div>
+</head>
+<body>
+  <!-- HEADER (navbar) -->
+  <div id="Header" class="row navbar">
+    <div class="col-12 text-right">
+      <div id="MoM_logo">[MoM]</div>
     </div>
-
-    <!-- header end -->
-
-    <!-- HERO guest (animal-select) -->
-
-    <div id="unirme" class="jumbotron min-vh-100 text-center m-0 d-flex flex-column justify-content-center">
-      <div class="row">
-
-        <!-- WELCOME (left) -->
-
-        <div class="col-md-6">
-          <div class="row">
-            <div class="col-8 mx-auto text-left">
-              <p class="mb-0 pb-0">Hola...</p>
-              <img id="animal-logo" src="GUI/img/landing/Animal_logo_v0.png" class="img-fluid mb-5">
-              <p>Éste es un instrumento musical virtual colaborativo.
-              Escoje tus instrumentos y presional el botón INICIAR. </br>
-              <a href="#">[más info.]</a></p>
-
-            </div>
-
+  </div>
+  <!-- header end -->
+  <!-- HERO guest (animal-select) -->
+  <div id="unirme-edit" class="jumbotron min-vh-100 text-center m-0 d-flex flex-column justify-content-center fondo-rosa-animal">
+    <div class="row">
+      <!-- WELCOME (left) -->
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-9 mx-auto text-center text-md-left">
+            <img id="animal-logo" src="GUI/img/landing/Animal_logo_v0.png" class="img-fluid mb-4">
+            <p>Recibiste una invitación a crear música con otros animales en una <strong><em>jam session</em></strong>. Escoge uno o varios de los disponibles y presiona el botón <em>Empezar</em>. <a href="#">[+ info.]</a></p>
           </div>
         </div>
-
-        <!-- welcome end -->
-
-        <!-- ANIMAL-SELECT (right) -->
-
-        <div class="col-md-6">
-          <div id="sel-inst" class="row mb-1">
-
-            <div class="col-3 channels my-1" chnumber="8">
-              <div class="corners-2 fondo-1-animal p-2">
-                <div class="d-flex justify-content-around">
-
-                  <div class="audio-preview-s">
-                    <object id="audio-preview" type="image/svg+xml" data="GUI/svg/botones/boton_audio_w.svg" class="audio-preview-s">
-                      Audio preview
-                    </object>
-                  </div>
-
-                  <div id="sel-ch8" class="icon-container-s ml-1">
-                    <object type="image/svg+xml" data="GUI/svg/iconos/cerdo-w.svg" class="animal-icon-s">
-                      Cerdo
-                    </object>
-                  </div>
-
+      </div>
+      <!-- welcome end -->
+      <!-- ANIMAL-SELECT (right) -->
+      <div class="col-md-6">
+        <div id="sel-inst" class="row mt-3">
+          <div class="col-4 col-md-3 channels my-1" chnumber="8">
+            <div class="corners-2 fondo-1-animal p-2">
+              <div class="d-flex justify-content-around">
+                <div class="audio-preview-s">
+                  <object id="audio-preview" type="image/svg+xml" data="GUI/svg/botones/boton_audio_w.svg" class="audio-preview-s">
+                    Audio preview
+                  </object>
                 </div>
-                <div class="titulo text-center pt-1">Cerdo</div>
-              </div>
-            </div>
-
-            <div class="col-3 channels my-1" chnumber="7">
-              <div class="corners-2 fondo-1-animal p-2">
-                <div class="d-flex justify-content-around">
-
-                  <div class="audio-preview-s">
-                    <object id="audio-preview" type="image/svg+xml" data="GUI/svg/botones/boton_audio_w.svg" class="audio-preview-s">
-                      Audio preview
-                    </object>
-                  </div>
-
-                  <div id="sel-ch7" class="icon-container-s ml-1">
-                    <object type="image/svg+xml" data="GUI/svg/iconos/loro-w.svg" class="animal-icon-s">
-                      Loro
-                    </object>
-                  </div>
-
+                <div id="sel-ch8" class="icon-container-s ml-1">
+                  <object type="image/svg+xml" data="GUI/svg/iconos/cerdo-w.svg" class="animal-icon-s">
+                    Cerdo
+                  </object>
                 </div>
-                <div class="titulo text-center pt-1">Loro</div>
               </div>
+              <div class="titulo text-center pt-1">Cerdo</div>
             </div>
-
-            <div class="col-3 channels my-1" chnumber="6">
-              <div class="corners-2 fondo-1-animal p-2">
-                <div class="d-flex justify-content-around">
-
-                  <div class="audio-preview-s">
-                    <object id="audio-preview" type="image/svg+xml" data="GUI/svg/botones/boton_audio_w.svg" class="audio-preview-s">
-                      Audio preview
-                    </object>
-                  </div>
-
-                  <div id="sel-ch6" class="icon-container-s ml-1">
-                    <object type="image/svg+xml" data="GUI/svg/iconos/sapo-w.svg" class="animal-icon-s">
-                      Sapo
-                    </object>
-                  </div>
-
+          </div>
+          <div class="col-4 col-md-3 channels my-1" chnumber="7">
+            <div class="corners-2 fondo-1-animal p-2">
+              <div class="d-flex justify-content-around">
+                <div class="audio-preview-s">
+                  <object id="audio-preview" type="image/svg+xml" data="GUI/svg/botones/boton_audio_w.svg" class="audio-preview-s">
+                    Audio preview
+                  </object>
                 </div>
-                <div class="titulo text-center pt-1">Sapo</div>
-              </div>
-            </div>
-
-            <div class="col-3 channels my-1" chnumber="5">
-              <div class="corners-2 fondo-1-animal p-2">
-                <div class="d-flex justify-content-around">
-
-                  <div class="audio-preview-s">
-                    <object id="audio-preview" type="image/svg+xml" data="GUI/svg/botones/boton_audio_w.svg" class="audio-preview-s">
-                      Audio preview
-                    </object>
-                  </div>
-
-                  <div id="sel-ch5" class="icon-container-s ml-1">
-                    <object type="image/svg+xml" data="GUI/svg/iconos/pato-w.svg" class="animal-icon-s">
-                      Pato
-                    </object>
-                  </div>
-
+                <div id="sel-ch7" class="icon-container-s ml-1">
+                  <object type="image/svg+xml" data="GUI/svg/iconos/loro-w.svg" class="animal-icon-s">
+                    Loro
+                  </object>
                 </div>
-                <div class="titulo text-center pt-1">Pato</div>
               </div>
+              <div class="titulo text-center pt-1">Loro</div>
             </div>
-
-            <div class="col-3 channels my-1" chnumber="4">
-              <div class="corners-2 fondo-1-animal p-2">
-                <div class="d-flex justify-content-around">
-
-                  <div class="audio-preview-s">
-                    <object id="audio-preview" type="image/svg+xml" data="GUI/svg/botones/boton_audio_w.svg" class="audio-preview-s">
-                      Audio preview
-                    </object>
-                  </div>
-
-                  <div id="sel-ch4" class="icon-container-s ml-1">
-                    <object type="image/svg+xml" data="GUI/svg/iconos/mono-w.svg" class="animal-icon-s">
-                      Mono
-                    </object>
-                  </div>
-
+          </div>
+          <div class="col-4 col-md-3 channels my-1" chnumber="6">
+            <div class="corners-2 fondo-1-animal p-2">
+              <div class="d-flex justify-content-around">
+                <div class="audio-preview-s">
+                  <object id="audio-preview" type="image/svg+xml" data="GUI/svg/botones/boton_audio_w.svg" class="audio-preview-s">
+                    Audio preview
+                  </object>
                 </div>
-                <div class="titulo text-center pt-1">Mono</div>
-              </div>
-            </div>
-
-            <div class="col-3 channels my-1" chnumber="3">
-              <div class="corners-2 fondo-1-animal p-2">
-                <div class="d-flex justify-content-around">
-
-                  <div class="audio-preview-s">
-                    <object id="audio-preview" type="image/svg+xml" data="GUI/svg/botones/boton_audio_w.svg" class="audio-preview-s">
-                      Audio preview
-                    </object>
-                  </div>
-
-                  <div id="sel-ch3" class="icon-container-s ml-1">
-                    <object type="image/svg+xml" data="GUI/svg/iconos/gato-w.svg" class="animal-icon-s">
-                      Gato
-                    </object>
-                  </div>
-
+                <div id="sel-ch6" class="icon-container-s ml-1">
+                  <object type="image/svg+xml" data="GUI/svg/iconos/sapo-w.svg" class="animal-icon-s">
+                    Sapo
+                  </object>
                 </div>
-                <div class="titulo text-center pt-1">Gato</div>
               </div>
+              <div class="titulo text-center pt-1">Sapo</div>
             </div>
-
-            <div class="col-3 channels my-1" chnumber="2">
-              <div class="corners-2 fondo-1-animal p-2">
-                <div class="d-flex justify-content-around">
-
-                  <div class="audio-preview-s">
-                    <object id="audio-preview" type="image/svg+xml" data="GUI/svg/botones/boton_audio_w.svg" class="audio-preview-s">
-                      Audio preview
-                    </object>
-                  </div>
-
-                  <div id="sel-ch2" class="icon-container-s ml-1">
-                    <object type="image/svg+xml" data="GUI/svg/iconos/oso-w.svg" class="animal-icon-s">
-                      Oso
-                    </object>
-                  </div>
-
+          </div>
+          <div class="col-4 col-md-3 channels my-1" chnumber="5">
+            <div class="corners-2 fondo-1-animal p-2">
+              <div class="d-flex justify-content-around">
+                <div class="audio-preview-s">
+                  <object id="audio-preview" type="image/svg+xml" data="GUI/svg/botones/boton_audio_w.svg" class="audio-preview-s">
+                    Audio preview
+                  </object>
                 </div>
-                <div class="titulo text-center pt-1">Oso</div>
-              </div>
-            </div>
-
-            <div class="col-3 channels my-1" chnumber="1">
-              <div class="corners-2 fondo-1-animal p-2">
-                <div class="d-flex justify-content-around">
-
-                  <div class="audio-preview-s">
-                    <object id="audio-preview" type="image/svg+xml" data="GUI/svg/botones/boton_audio_w.svg" class="audio-preview-s">
-                      Audio preview
-                    </object>
-                  </div>
-
-                  <div id="sel-ch1" class="icon-container-s ml-1">
-                    <object type="image/svg+xml" data="GUI/svg/iconos/buho-w.svg" class="animal-icon-s">
-                      Buho
-                    </object>
-                  </div>
-
+                <div id="sel-ch5" class="icon-container-s ml-1">
+                  <object type="image/svg+xml" data="GUI/svg/iconos/pato-w.svg" class="animal-icon-s">
+                    Pato
+                  </object>
                 </div>
-                <div class="titulo text-center pt-1">Buho</div>
               </div>
+              <div class="titulo text-center pt-1">Pato</div>
             </div>
-
+          </div>
+          <div class="col-4 col-md-3 channels my-1" chnumber="4">
+            <div class="corners-2 fondo-1-animal p-2">
+              <div class="d-flex justify-content-around">
+                <div class="audio-preview-s">
+                  <object id="audio-preview" type="image/svg+xml" data="GUI/svg/botones/boton_audio_w.svg" class="audio-preview-s">
+                    Audio preview
+                  </object>
+                </div>
+                <div id="sel-ch4" class="icon-container-s ml-1">
+                  <object type="image/svg+xml" data="GUI/svg/iconos/mono-w.svg" class="animal-icon-s">
+                    Mono
+                  </object>
+                </div>
+              </div>
+              <div class="titulo text-center pt-1">Mono</div>
+            </div>
+          </div>
+          <div class="col-4 col-md-3 channels my-1" chnumber="3">
+            <div class="corners-2 fondo-1-animal p-2">
+              <div class="d-flex justify-content-around">
+                <div class="audio-preview-s">
+                  <object id="audio-preview" type="image/svg+xml" data="GUI/svg/botones/boton_audio_w.svg" class="audio-preview-s">
+                    Audio preview
+                  </object>
+                </div>
+                <div id="sel-ch3" class="icon-container-s ml-1">
+                  <object type="image/svg+xml" data="GUI/svg/iconos/gato-w.svg" class="animal-icon-s">
+                    Gato
+                  </object>
+                </div>
+              </div>
+              <div class="titulo text-center pt-1">Gato</div>
+            </div>
+          </div>
+          <div class="col-4 col-md-3 channels my-1" chnumber="2">
+            <div class="corners-2 fondo-1-animal p-2">
+              <div class="d-flex justify-content-around">
+                <div class="audio-preview-s">
+                  <object id="audio-preview" type="image/svg+xml" data="GUI/svg/botones/boton_audio_w.svg" class="audio-preview-s">
+                    Audio preview
+                  </object>
+                </div>
+                <div id="sel-ch2" class="icon-container-s ml-1">
+                  <object type="image/svg+xml" data="GUI/svg/iconos/oso-w.svg" class="animal-icon-s">
+                    Oso
+                  </object>
+                </div>
+              </div>
+              <div class="titulo text-center pt-1">Oso</div>
+            </div>
+          </div>
+          <div class="col-4 col-md-3 channels my-1" chnumber="1">
+            <div class="corners-2 fondo-1-animal p-2">
+              <div class="d-flex justify-content-around">
+                <div class="audio-preview-s">
+                  <object id="audio-preview" type="image/svg+xml" data="GUI/svg/botones/boton_audio_w.svg" class="audio-preview-s">
+                    Audio preview
+                  </object>
+                </div>
+                <div id="sel-ch1" class="icon-container-s ml-1">
+                  <object type="image/svg+xml" data="GUI/svg/iconos/buho-w.svg" class="animal-icon-s">
+                    Buho
+                  </object>
+                </div>
+              </div>
+              <div class="titulo text-center pt-1">Buho</div>
+            </div>
+          </div>
+          <div class="col-12 mx-auto mt-3">
+            <a class="btn btn-primary btn-lg px-4 py-3" href="#" role="button" id="unirmeARoom">Empezar</a>
           </div>
         </div>
-
-        <!-- animal-select end -->
-
-        <div class="row mt-4">
-            <div class="col-12 d-flex justify-content-start">
-              <a class="btn btn-primary btn-lg" href="#" role="button" id="unirmeARoom">Entrar</a>
-            </div>
-
-          </div>
-
       </div>
-
-
-      <!-- CARO code
-      <form action="">
-          <input type="text" val="nombre" id="name">
-          <br>
-
-          <input type="radio" id="gato" name="channel" chNumber="8">GATO<br>
-          <input type="radio" id="mono" chNumber="7" name="channel">mono<br>
-          <input type="radio" id="gallo" chNumber="6" name="channel">gallo<br>
-          <input type="radio" id="oso" chNumber="5" name="channel">oso<br>
-          <input type="radio" id="loro" chNumber="4" name="channel">loro<br>
-          <input type="radio" id="topo" chNumber="3" name="channel">topo<br>
-          <input type="radio" id="buho" chNumber="2" name="channel">buho<br>
-          <input type="radio" id="coco" chNumber="1" name="channel">coco<br>
-
-          <input type="submit" chNumber="UNIRME AL ROOM!">
-      </form>
-      -->
-
+      <!-- animal-select end -->
     </div>
-
-    <!-- hero guest end -->
-
-
-    <!-- HERO host -->
-
-    <div id="Hero" class="jumbotron min-vh-100 text-center m-0 d-flex flex-column justify-content-center">
-      <div class="container">
-        <div class="row d-flex justify-content-center">
-          <div class="col-12 mx-auto">
-            <img src="GUI/img/landing/Animal_logo_v0.png" class="image-fluid">
-          </div>
-          <div class="col-md-5 border-right">
-            <p class="lead text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam ornare neque, sagittis, vel et commodo volutpat. Ipsum ipsum nisl blandit pharetra. Dictumst neque.</p>
-            <p class="lead text-left"><a href="#">[+ información]</a></p>
-          </div>
-          <div class="col-md-2 ml-3 my-auto">
-            <a class="btn btn-primary btn-lg" href='/sequencer?roomID=new' role="button">Iniciar sesión</a>
-          </div>
-        </div>
-
+    <!-- CARO code
+    <form action="">
+        <input type="text" val="nombre" id="name">
+        <br>
+        <input type="radio" id="gato" name="channel" chNumber="8">GATO<br>
+        <input type="radio" id="mono" chNumber="7" name="channel">mono<br>
+        <input type="radio" id="gallo" chNumber="6" name="channel">gallo<br>
+        <input type="radio" id="oso" chNumber="5" name="channel">oso<br>
+        <input type="radio" id="loro" chNumber="4" name="channel">loro<br>
+        <input type="radio" id="topo" chNumber="3" name="channel">topo<br>
+        <input type="radio" id="buho" chNumber="2" name="channel">buho<br>
+        <input type="radio" id="coco" chNumber="1" name="channel">coco<br>
+        <input type="submit" chNumber="UNIRME AL ROOM!">
+    </form>
+    -->
+  </div>
+  <!-- hero guest end -->
+  <!-- HERO host -->
+  <div id="Hero" class="jumbotron min-vh-100 position-relative m-0 p-0 d-flex flex-column justify-content-center text-center overflow-hidden fondo-aqua-animal">
+    <!-- Fondo -->
+    <div class="w-75 pr-5 position-lt opacity-1">
+      <object type="image/svg+xml" data="GUI/svg/iconos/mono-w.svg" class="w-75">
+        Mono
+      </object>
+    </div>
+    <div class="w-50 mt-5 position-lm opacity-1">
+      <object type="image/svg+xml" data="GUI/svg/iconos/pato-w.svg" class="w-50 mt-5">
+        Mono
+      </object>
+    </div>
+    <div class="w-75 position-lt animate-down-up-in-1">
+      <div class="w-50 pr-md-5">
+        <img src="GUI/img/landing/imagen_pato-tx.jpg" class="img-fluid">
       </div>
     </div>
-
-    <!-- hero host end -->
-
-    <!-- CONTENTS -->
-
+    <div class="w-50 pl-5 pt-md-5 position-rt animate-up-down-in-1">
+      <div class="w-75 ml-auto mt-5 pt-5">
+        <img src="GUI/img/landing/imagen_loro-tx.jpg" class="img-fluid">
+      </div>
+    </div>
+    <div class="w-75 mx-auto position-b animate-down-up-in-1">
+      <div class="w-75 ml-auto">
+        <img src="GUI/img/landing/imagen_oso-tx.jpg" class="img-fluid">
+      </div>
+    </div>
+    <!-- fondo end -->
     <div class="container">
-      <div class="row m-5 d-flex justify-content-center">
-        <div id="phrase" class="col-7 p-5 text-center">
-          <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Malesuada leo dictum sit sapien, maecenas vitae at donec. Non.</h3>
+      <div class="row d-flex justify-content-center">
+        <div class="col-10 col-md-9 col-lg-8 mx-auto">
+          <img src="GUI/img/landing/Animal_logo_v0.png" class="img-fluid">
         </div>
-
-        <div class="col-auto my-5 pr-5 d-flex">
-          <div class="mx-2">
+        <div class="col-10 col-lg-7 mx-auto mt-5">
+          <div class="row">
+            <div id="bajada" class="order-1 order-sm-0 col-sm-8">
+              <p class="lead text-center text-sm-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam ornare neque, sagittis, vel et commodo volutpat. Ipsum ipsum nisl blandit pharetra. Dictumst neque.</p>
+              <p class="lead text-center text-sm-left">
+                <a href="#">[+ información]</a>
+              </p>
+            </div>
+            <div class="order-0 order-sm-1 col-sm-4 mb-4 my-md-auto">
+              <a class="btn btn-primary btn-lg px-4 py-3" href='/sequencer?roomID=new' role="button">Empezar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- hero host end -->
+  <!-- CONTENTS -->
+  <div class="container-fluid py-5 fondo-verde-animal">
+    <!-- Frase e Instrumentos (img) -->
+    <div class="row">
+      <div id="phrase" class="col-9 col-md-7 mx-auto mt-5 text-center">
+        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Malesuada leo dictum sit sapien, maecenas vitae at donec. Non.</h3>
+      </div>
+      <div class="col-auto my-5">
+        <div class="row d-flex justify-content-around">
+          <div class="col-6 col-md-3 mb-2">
             <img src="GUI/img/landing/cerdo.png" class="img-fluid"></br>
-            <div id="out1"></div>
-          </div>
-          <div class="mx-2">
-            <img src="GUI/img/landing/sapo.png" class="img-fluid"></br>
-            <div id="out3"></div>
-          </div>
-          <div class="mx-2">
-            <img src="GUI/img/landing/mono.png" class="img-fluid"></br>
-            <div id="out5"></div>
-          </div>
-          <div class="mx-2">
-            <img src="GUI/img/landing/oso.png" class="img-fluid"></br>
-            <div id="out7"></div>
-          </div>
-        </div>
-
-        <div class="col-auto my-5 ml-5 pl-5 d-flex">
-          <div class="mx-2">
-            <img src="GUI/img/landing/loro.png" class="img-fluid"></br>
-            <div id="out2"></div>
-          </div>
-          <div class="mx-2">
-            <img src="GUI/img/landing/pato.png" class="img-fluid"></br>
-            <div id="out4"></div>
-          </div>
-          <div class="mx-2">
-            <img src="GUI/img/landing/gato.png" class="img-fluid"></br>
-            <div id="out6"></div>
-          </div>
-          <div class="mx-2">
-            <img src="GUI/img/landing/buho.png" class="img-fluid"></br>
             <div id="out8"></div>
           </div>
-        </div>
-
-      </div>
-
-
-      <div class="row">
-        <div class="col-8 my-5 d-flex flex-column">
-          <div id="outer2" class="w-100 pl-5 d-flex">
-            <div id="in1"></div>
-            <div id="in2"></div>
-            <div id="in3"></div>
-            <div id="in4"></div>
-            <div id="in5"></div>
-            <div id="in6"></div>
-            <div id="in7"></div>
-            <div id="in8"></div>
+          <div class="col-4 col-md-3 mb-2">
+            <img src="GUI/img/landing/sapo.png" class="img-fluid"></br>
+            <div id="out5"></div>
           </div>
-          <img src="GUI/img/landing/sequencer.png" class="img-fluid">
-        </div>
-        <div class="col-4">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam ornare neque, sagittis, vel et commodo volutpat. Ipsum ipsum nisl blandit pharetra. Dictumst neque.</p>
-          <div>audio peview 1</div>
-          <div>audio peview 2</div>
-        </div>
-      </div>
-
-      <div class="row my-5">
-        <div class="col-4">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam ornare neque, sagittis, vel et commodo volutpat. Ipsum ipsum nisl blandit pharetra. Dictumst neque.</p>
-        </div>
-        <div class="col-8">
-          <div class="d-flex justify-content-around">
-            <div class=""><img src="GUI/img/landing/chat.png"></div>
-            <div class=""><img src="GUI/img/landing/controles.png" class=""></div>
-            <div class=""><img src="GUI/img/landing/rec-download-share.png" class=""></div>
+          <div class="col-4 col-md-3 ml-5 mb-2">
+            <img src="GUI/img/landing/mono.png" class="img-fluid"></br>
+            <div id="out4"></div>
+          </div>
+          <div class="col-4 col-md-3 mt-5 mb-2">
+            <img src="GUI/img/landing/oso.png" class="img-fluid"></br>
+            <div id="out2"></div>
+          </div>
+          <div class="col-4 col-md-3 mt-3 mb-2">
+            <img src="GUI/img/landing/loro.png" class="img-fluid"></br>
+            <div id="out7"></div>
+          </div>
+          <div class="col-6 col-md-3 mb-2">
+            <img src="GUI/img/landing/pato.png" class="img-fluid"></br>
+            <div id="out5"></div>
+          </div>
+          <div class="col-4 col-md-3 mb-2">
+            <img src="GUI/img/landing/gato.png" class="img-fluid"></br>
+            <div id="out3"></div>
+          </div>
+          <div class="col-4 col-md-3 mt-3 mb-2">
+            <img src="GUI/img/landing/buho.png" class="img-fluid"></br>
+            <div id="out1"></div>
           </div>
         </div>
       </div>
-
     </div>
-
-    <!-- contents end -->
-
-    <!-- CTA 2 -->
-
-    <div id="call-to-action" class="container-fluid p-5 fondo-1 destaque-animal">
-      <div class="row my-5">
-        <div class="col-md-2 m-auto">
-          <a class="btn btn-primary btn-lg" href='/sequencer?roomID=new' role="button">Iniciar sesión</a>
+    <!-- Sequencer (img) -->
+    <div class="row">
+      <div class="col-md-8 my-5 d-flex flex-column">
+        <div id="outer2" class="w-100 pl-5 d-flex">
+          <div id="in1"></div>
+          <div id="in2"></div>
+          <div id="in3"></div>
+          <div id="in4"></div>
+          <div id="in5"></div>
+          <div id="in6"></div>
+          <div id="in7"></div>
+          <div id="in8"></div>
+        </div>
+        <img src="GUI/img/landing/sequencer.png" class="img-fluid">
+      </div>
+      <div class="col-9 col-sm-7 col-md-4 ml-auto mb-5 mt-md-5 pr-sm-5 pt-md-5">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam ornare neque, sagittis, vel et commodo volutpat. Ipsum ipsum nisl blandit pharetra. Dictumst neque.</p>
+        <div>audio peview 1</div>
+        <div>audio peview 2</div>
+      </div>
+    </div>
+    <!-- Chat y controles (img) -->
+    <div class="row">
+      <div class=" col-9 col-sm-8 col-md-4 order-1 order-md-0 ml-5 mt-md-5 pt-md-5">
+        <p>Invita más animales a una <strong><em>jam session</em></strong> en línea. Te podrás comunicar con el chat para coordinar acciones. Tambén puedes registrar la sesión y descargarla como audio.</p>
+      </div>
+      <div class="col-md-7 order-0 order-md-1 my-5">
+        <div class="d-flex justify-content-around">
+          <div class=""><img src="GUI/img/landing/chat.png" class="img-fluid"></div>
+          <div class=""><img src="GUI/img/landing/controles.png" class="img-fluid"></div>
+          <div class=""><img src="GUI/img/landing/rec-download-share.png" class="img-fluid"></div>
         </div>
       </div>
     </div>
-
-    <!-- cta 2 end -->
-
-    <!-- FOOTER -->
-
-    <div id="footer" class="container-fluid py-5 bg-white">
-      <div class="row py-5 d-flex flex-md-row flex-column justify-content-center">
-        <div class="col-md-4 my-md-5">
-          <img src="GUI/img/landing/Animal-MoM-logo.png"class="img-fluid">
-        </div>
-        <div class="col-md-4 my-md-5">
-          <img src="GUI/img/landing/ANII-logo.png" class="img-fluid">
-        </div>
+  </div>
+  <!-- contents end -->
+  <!-- CTA 2 -->
+  <div id="call-to-action" class="container-fluid p-5 fondo-1 destaque-animal">
+    <div class="row my-5">
+      <div class="col-md-2 m-auto text-center">
+        <a class="btn btn-primary btn-lg px-4 py-3" href='/sequencer?roomID=new' role="button">Empezar</a>
       </div>
     </div>
-
-    <!-- footer end -->
-
-  </body>
+  </div>
+  <!-- cta 2 end -->
+  <!-- FOOTER -->
+  <div id="footer" class="container-fluid py-5 bg-white">
+    <div class="row py-md-5">
+      <div class="col-7 col-sm-4 col-lg-3 mx-auto mr-sm-0 my-0 px-5 pb-3">
+        <img src="GUI/img/landing/Animal-MoM-logo.png"class="img-fluid">
+      </div>
+      <div class="col-7 col-sm-4 col-lg-3 mx-auto ml-sm-0 mb-5 px-5 pb-3">
+        <img src="GUI/img/landing/ANII-logo.png" class="img-fluid">
+      </div>
+    </div>
+  </div>
+  <!-- footer end -->
+</body>
 </html>

@@ -68,6 +68,21 @@
 .negro-ui-animal{
   background-color: var(--color-negro-ui-animal);
 }
+.fondo-mostaza-animal {
+  background-color: var(--color-fondo-mostaza-animal);
+}
+.fondo-aqua-animal {
+  background-color: var(--color-fondo-aqua-animal);
+}
+.fondo-rosa-animal {
+  background-color: var(--color-fondo-rosa-animal);
+}
+.fondo-verde-animal {
+  background-color: var(--color-fondo-verde-animal);
+}
+.fondo-negro-animal {
+  background-color: var(--color-fondo-negro-animal);
+}
 
 
 .opacity-0 {
@@ -132,14 +147,35 @@ html {
   font-size: 1.125rem;
 }
 #phrase h3{
-  font-size: 2.25rem;
+  font-size: 2rem;
   font-weight: 200;
-  line-height: 2.75rem;
+  line-height: 2.5rem;
 }
 
 
 /* --------------------------------------------- */
 /* Corners & special margins */
+
+.position-lt {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.position-rt {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.position-lm {
+  -webkit-transform: translate(0,-50%);
+  transform: translate(0,-50%);
+  position: absolute;
+  left: 0;
+}
+.position-b {
+  position: absolute;
+  bottom: 0;
+}
 
 .corners1{
   border-radius: 15px;
@@ -342,20 +378,20 @@ html {
   background-color: var(--color-blanco-ui-animal);
 }
 .animal-icon-s{
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   border-radius: 50px;
   background-color: var(--color-blanco-ui-animal);
 }
 .audio-preview-s {
-  width: 31px;
-  height: 31px;
+  width: 36px;
+  height: 36px;
   border-radius: 50px;
   background-color: var(--color-blanco-ui-animal);
 }
 .icon-container-s, .audio-preview-container-s {
-  width: 31px;
-  height: 31px;
+  width: 36px;
+  height: 36px;
   border-radius: 50px;
   background-color: var(--color-blanco-ui-animal);
   border: 3px solid;
@@ -419,6 +455,86 @@ html {
 }
 
 
+
+
+
+/* --------------------------------------------- */
+/* Animation & transitions */
+
+
+.animate-down-up-in-1{
+  -webkit-animation: down-up-in 1s; /* Chrome, Safari, Opera */
+  animation: down-up-in 1s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+}
+.animate-up-down-in-1{
+  -webkit-animation: up-down-in 1s; /* Chrome, Safari, Opera */
+  animation: up-down-in 1s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+}
+.animate-up-down-in-2{
+  -webkit-animation: up-down-in 1s; /* Chrome, Safari, Opera */
+  animation: up-down-in 1s;
+  animation-delay: 1.5s;
+  animation-fill-mode: both;
+}
+
+.animate-up-down-in-3{
+  -webkit-animation: up-down-in 1s; /* Chrome, Safari, Opera */
+  animation: up-down-in 1s;
+  animation-delay: 2s;
+  animation-fill-mode: both;
+}
+
+/* For modern browsers */
+@-webkit-keyframes up-down-in {
+  from {
+    opacity: 0;
+    transform: translate(0px,-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px,0px);
+  }
+}
+@-webkit-keyframes down-up-in {
+  from {
+    opacity: 0;
+    transform: translate(0px,15px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px,0px);
+  }
+}
+/* The standard way */
+@keyframes up-down-in {
+  from {
+    opacity: 0;
+    transform: translate(0px,-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px,0px);
+  }
+}
+@keyframes down-up-in {
+  from {
+    opacity: 0;
+    transform: translate(0px,15px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px,0px);
+  }
+}
+
+
+
+
+
 /* --------------------------------------------- */
 /* Display */
 
@@ -438,12 +554,18 @@ html {
 }
 
 
+/* --------------------------------------------- */
+/* Breakpoints */
+
 
 /* Small devices (landscape phones, 576px and up) */
 
 @media (min-width: 576px) {
   body {
     background-color: var(--color-fondo-mostaza-animal);
+  }
+  #bajada {
+    border-right: 1px solid white;
   }
 }
 

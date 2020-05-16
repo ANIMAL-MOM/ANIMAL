@@ -12,8 +12,9 @@
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;0,900;1,200;1,400;1,600;1,900&display=swap"
     rel="stylesheet">
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
 
   <link rel="stylesheet" href="GUI/style.css">
   <script src="/tone/Tone.js"></script>
@@ -53,7 +54,8 @@
           <div id="sel-inst" class="row mb-1">
 
             <div class="col-3 my-1">
-              <div class="corners-2 fondo-1-animal p-2">
+              <div class="corners-2 fondo-1-animal p-2 channelsInvite" sel="false" channelNumber="1"
+                id="channelsInvite1">
                 <div class="d-flex justify-content-around">
 
                   <div class="audio-preview-s">
@@ -75,7 +77,8 @@
             </div>
 
             <div class="col-3 my-1">
-              <div class="corners-2 fondo-1-animal p-2">
+              <div class="corners-2 fondo-1-animal p-2 channelsInvite" sel="false" channelNumber="2"
+                id="channelsInvite2">
                 <div class="d-flex justify-content-around">
 
                   <div class="audio-preview-s">
@@ -97,7 +100,8 @@
             </div>
 
             <div class="col-3 my-1">
-              <div class="corners-2 fondo-1-animal p-2">
+              <div class="corners-2 fondo-1-animal p-2 channelsInvite" sel="false" channelNumber="3"
+                id="channelsInvite3">
                 <div class="d-flex justify-content-around">
 
                   <div class="audio-preview-s">
@@ -119,7 +123,8 @@
             </div>
 
             <div class="col-3 my-1">
-              <div class="corners-2 fondo-1-animal p-2">
+              <div class="corners-2 fondo-1-animal p-2 channelsInvite" sel="false" channelNumber="4"
+                id="channelsInvite4">
                 <div class="d-flex justify-content-around">
 
                   <div class="audio-preview-s">
@@ -141,7 +146,8 @@
             </div>
 
             <div class="col-3 my-1">
-              <div class="corners-2 fondo-1-animal p-2">
+              <div class="corners-2 fondo-1-animal p-2 channelsInvite" sel="false" channelNumber="5"
+                id="channelsInvite5">
                 <div class="d-flex justify-content-around">
 
                   <div class="audio-preview-s">
@@ -163,7 +169,8 @@
             </div>
 
             <div class="col-3 my-1">
-              <div class="corners-2 fondo-1-animal p-2">
+              <div class="corners-2 fondo-1-animal p-2 channelsInvite" sel="false" channelNumber="6"
+                id="channelsInvite6">
                 <div class="d-flex justify-content-around">
 
                   <div class="audio-preview-s">
@@ -185,7 +192,8 @@
             </div>
 
             <div class="col-3 my-1">
-              <div class="corners-2 fondo-1-animal p-2">
+              <div class="corners-2 fondo-1-animal p-2 channelsInvite" sel="false" channelNumber="7"
+                id="channelsInvite7">
                 <div class="d-flex justify-content-around">
 
                   <div class="audio-preview-s">
@@ -207,7 +215,8 @@
             </div>
 
             <div class="col-3 my-1">
-              <div class="corners-2 fondo-1-animal p-2">
+              <div class="corners-2 fondo-1-animal p-2 channelsInvite" sel="false" channelNumber="8"
+                id="channelsInvite8">
                 <div class="d-flex justify-content-around">
 
                   <div class="audio-preview-s">
@@ -229,28 +238,27 @@
             </div>
 
           </div>
+          <input type="button" value="ok" id="okCanales">
+          Invitá animales
+        </div>
 
-          <div class="">
-            Invitá animales
-          </div>
-
-          <div id="enlace">
-            <div class="input-group mb-3">
-              <input type="text" class="form-control" placeholder="enlace sesión" aria-label="sesion"
-                aria-describedby="basic-addon2">
-              <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button">Copiar</button>
-              </div>
+        <div id="enlace">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="enlace sesión" id="linkText" aria-label="sesion"
+              aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button">Copiar</button>
             </div>
           </div>
-
-          <!-- modal body end -->
-
         </div>
-        <div class="modal-footer">
-        </div>
+
+        <!-- modal body end -->
+
+      </div>
+      <div class="modal-footer">
       </div>
     </div>
+  </div>
   </div>
 
   <!-- jam modal end -->
@@ -381,8 +389,8 @@
 
     <!-- MAIN-UP -->
 
-    <div id="Main-up" class="row">
 
+    <div id="Main-up" class="row animate-up-down-in-1">
       <!-- PATHS SVG (#svgContainer) -->
 
       <div id="svgContainer" style="margin: 50px 50px;">
@@ -816,7 +824,7 @@
         </div>
 
       </div>
-      <div id="der" class="col-lg-10">
+      <div id="der" class="col-lg-10 animate-up-down-in-3">
 
         <!-- AUDIO CABLES (#cables) -->
 
@@ -921,7 +929,7 @@
                 </div>
               </div>
 
-              <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup">
+              <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup8">
                 <div class="animal-icon">
                   <object id="icono-ch1" type="image/svg+xml" data="GUI/svg/iconos/buho-w.svg" class="animal-icon">
                     Buho
@@ -1013,60 +1021,134 @@
 
   <script> //NET
     $(function () {
-      var myChannel = -1;//todos
+      var myChannel = [];//todos
       var socket = io(window.location.href);
+      var newUrl;
+      var roomID;
+      var selectedChannels =[];
       //  io.connect);
-
+      //esconde enlace
+      $("#enlace").addClass("opacity-3");
+      $("#enlace").css("pointer-events", "none");
+      $("#okCanales").attr("disabled", true);
       socket.on('host', function (newroomID) {
-
-
-
-        /* var params = parsedUrl.param();
-         params["roomID"] = roomID;
-         var newUrl = "?" + $.param(params);
-         window.location.search = jQuery.query.set("roomID", roomID);*/
 
         var currentUrl = window.location.href;
         var url = new URL(currentUrl);
+        roomID = newroomID;
         url.searchParams.set("roomID", newroomID); // setting your param
-        var newUrl = url.href;
+        newUrl = url.href;
         let stateObj = { id: "100" };
         window.history.replaceState(stateObj, "roomID", newUrl);
 
-
         socket.emit('sequencer', sequencer.matrix.pattern);
+        $(".disabled-overlay").addClass("d-none");
+        myChannel= [1,2,3,4,5,6,7,8];
 
       });
 
-      socket.on('guest', function (pattern, channel) {
+      $(".channelsInvite").click(function () {
+        var selectedCH = $(this)[0];
+        if ($(selectedCH).attr("sel") == "false") {
+          $(selectedCH).css("border-style", "solid");
+          selectedChannels.push($(selectedCH).attr("channelNumber"));
+          $(selectedCH).attr("sel", "true");
+        } else {
+          $(selectedCH).attr("sel", "false");
+          var index = selectedChannels.indexOf($(selectedCH).attr("channelNumber"));
+          if (index > -1) {
+            selectedChannels.splice(index, 1);
+          }
+
+          $(selectedCH).css("border-style", "none");
+        }
+        if (selectedChannels.length > 0) {
+          $("#okCanales").attr("disabled", false);
+        } else {
+          $("#okCanales").attr("disabled", true);
+        }
+      });
+      $("#okCanales").click(function () {
+        if (selectedChannels.length > 0) {
+          myChannel=selectedChannels;
+          setMyChannel();
+          $("#sel-inst").addClass("opacity-3");
+          $("#sel-inst").css("pointer-events", "none");
+          $("#enlace").removeClass("opacity-3");
+          $("#enlace").css("pointer-events", "");
+          $("#linkText").val(window.location.origin + "?roomID=" + roomID);
+
+
+          socket.emit('roomOpened', myChannel);
+        }
+      });
+
+      socket.on('guest', function (pattern, michannel, usados) {
+        $("#jam-sesion").hide();
         sequencer.matrix.set.all(pattern);
-        myChannel = channel;
+        myChannel = michannel;
         setMyChannel();
+        usedChannels(usados);
       });
 
       sequencer.on('change', function (v) {
+        var itsMyChannel=false;
+        myChannel.forEach(channel =>{
+          if (v.row == channel) {
+            itsMyChannel=true;
+            ///TENGO QUE PONERLRE     pointer-events: none; a todas las otras rows            
+            
+          }
+        });
+
+        if(!itsMyChannel){
+
+        }
+      
+
+
         console.log("es un cambio");
         console.log(v);
         socket.emit('toggleStep', v);
-        var myCell = sequencer.cells[v.row*v.column];
-     //   $(myCell).css('fill', 'blue');
-      });
+        var myCell = sequencer.cells[v.row * v.column];
+        var miRect = $("rect")[((v.row * 16)) + (v.column)];
 
+        if (v.state == true) {
+
+          if (v.row == 0) {
+            $(miRect).css("fill", "red");
+          }
+
+        }
+      });
+      function usedChannels(usados){
+
+      }
       function setMyChannel() {
         $(".channelGroup").addClass("opacity-3");
         $(".channelGroup").addClass("ajeno");
-        $("#channelGroup" + myChannel).removeClass("opacity-3");
-        $("#channelGroup" + myChannel).removeClass("ajeno");
+        $(".ajeno").css("pointer-events", "none");
+        $(".disabled-overlay").addClass("d-block");
+
+        if (myChannel.length > 0) {
+          myChannel.forEach(channel => {
+            $("#channelGroup" + channel).removeClass("opacity-3");
+            $("#channelGroup" + channel).removeClass("ajeno");
+            var myInst = $(".instrumento" + channel)[0];
+
+            $(myInst).find(".disabled-overlay").removeClass("d-block");
+            $(myInst).find(".disabled-overlay").addClass("d-none");
+
+
+          });
+        }
+
+
         $(".ajeno").click(function (e) {
           e.preventDefault();
           console.log("entró a prevent");
         });
 
-        $(".ajeno").css("pointer-events", "none");
-        $(".disabled-overlay").addClass("d-block");
-        var myInst = $(".instrumento" + myChannel)[0];
-        $(myInst).find(".disabled-overlay").removeClass("d-block");
-        $(myInst).find(".disabled-overlay").removeClass("d-none");
 
       }
 
@@ -1078,13 +1160,13 @@
       });
 
 
-    /*  const seqBlocks = $(sequencer).find('rect');
-      // loop all blocks and intercept mousedown (should probably also account for touchdown)
-      [].forEach.call(seqBlocks, function (item) {
-        item.addEventListener('mousedown', function (e) {
-          
-        });
-      });*/
+      /*  const seqBlocks = $(sequencer).find('rect');
+        // loop all blocks and intercept mousedown (should probably also account for touchdown)
+        [].forEach.call(seqBlocks, function (item) {
+          item.addEventListener('mousedown', function (e) {
+            
+          });
+        });*/
 
 
 
