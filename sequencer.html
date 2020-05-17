@@ -12,8 +12,9 @@
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;0,900;1,200;1,400;1,600;1,900&display=swap"
     rel="stylesheet">
 
-    
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
 
   <link rel="stylesheet" href="GUI/style.css">
@@ -608,7 +609,7 @@
 
                     <div class="col-6 mx-0 my-auto p-2 text-center">
                       <span class="numero-animal">
-                        <strong>120</strong>
+                        <strong>90</strong>
                       </span>
                       <span class="texto-animal">bpm</span>
                     </div>
@@ -1025,7 +1026,7 @@
       var socket = io(window.location.href);
       var newUrl;
       var roomID;
-      var selectedChannels =[];
+      var selectedChannels = [];
       //  io.connect);
       //esconde enlace
       $("#enlace").addClass("opacity-3");
@@ -1043,7 +1044,7 @@
 
         socket.emit('sequencer', sequencer.matrix.pattern);
         $(".disabled-overlay").addClass("d-none");
-        myChannel= [1,2,3,4,5,6,7,8];
+        myChannel = [1, 2, 3, 4, 5, 6, 7, 8];
 
       });
 
@@ -1070,7 +1071,7 @@
       });
       $("#okCanales").click(function () {
         if (selectedChannels.length > 0) {
-          myChannel=selectedChannels;
+          myChannel = selectedChannels;
           setMyChannel();
           $("#sel-inst").addClass("opacity-3");
           $("#sel-inst").css("pointer-events", "none");
@@ -1091,20 +1092,21 @@
         usedChannels(usados);
       });
 
+
       sequencer.on('change', function (v) {
-        var itsMyChannel=false;
-        myChannel.forEach(channel =>{
+        var itsMyChannel = false;
+        myChannel.forEach(channel => {
           if (v.row == channel) {
-            itsMyChannel=true;
+            itsMyChannel = true;
             ///TENGO QUE PONERLRE     pointer-events: none; a todas las otras rows            
-            
+
           }
         });
 
-        if(!itsMyChannel){
+        if (!itsMyChannel) {
 
         }
-      
+
 
 
         console.log("es un cambio");
@@ -1116,12 +1118,12 @@
         if (v.state == true) {
 
           if (v.row == 0) {
-            $(miRect).css("fill", "red");
+       //     $(miRect).css("fill", "red");
           }
 
         }
       });
-      function usedChannels(usados){
+      function usedChannels(usados) {
 
       }
       function setMyChannel() {
@@ -1138,9 +1140,27 @@
 
             $(myInst).find(".disabled-overlay").removeClass("d-block");
             $(myInst).find(".disabled-overlay").addClass("d-none");
-
-
           });
+
+          var cuadrados = $("rect");     //((v.row * 16)) + (v.column)];
+
+          for (i = 0; i < cuadrados.length; i++) {
+            var mio = false;
+            myChannel.forEach(function (channel) {
+              if (Math.floor(i / 16) == channel-1) {
+                mio = true;
+              }
+            });
+            if (!mio) {
+              var miRect = $("rect")[i];
+              $(miRect).css("pointer-events", "none");
+            }
+          }
+          /*
+          sequencer.matrix.ui.cells.forEach(function (cell) {
+            $(cell).css("pointer-events", "none");
+          });*/
+
         }
 
 
@@ -1279,6 +1299,8 @@
 
 
     $("#Animal_logo").click(function () { //inicia el sequencer
+    
+      Tone.Transport.bpm.value = 90; //SACAR DE ACA
       if (loop === 0) {
         var matrix = sequencer.matrix.pattern;
         loop = new Tone.Sequence(function (time) {
@@ -1287,18 +1309,23 @@
 
             if (matrix[i][stepNumber]) {
               sonidos.get(scaleNotes[i]).start(time, 0, "16n", 0, 1);
+              
             }
           }
           stepNumber++;
           stepNumber = stepNumber % 16;
         }, scaleNotes, "16n");
         loop.start();
+        
         loop.loop = true;
       }
       if (Tone.Transport.state == "started") {
         Tone.Transport.stop();
+        sequencer.stop();
       } else {
-
+        
+        sequencer.start()
+        sequencer.interval.ms(166);
         Tone.Transport.start();
       }
     });
