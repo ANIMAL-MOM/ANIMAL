@@ -172,11 +172,27 @@ html {
   position: absolute;
   left: 0;
 }
+.position-lb {
+  position: absolute;
+  bottom:0;
+  left: 0;
+}
 .position-b {
   position: absolute;
   bottom: 0;
 }
-
+.shift-l-200 {
+  left:-200px;
+}
+.shift-l-100 {
+  left:-100px;
+}
+.shift-l-50 {
+  left:-50px;
+}
+.shift-r-200 {
+  left:-200px;
+}
 .corners1{
   border-radius: 15px;
 }
