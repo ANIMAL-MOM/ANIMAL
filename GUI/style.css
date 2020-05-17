@@ -111,6 +111,8 @@ body {
 #Hero {
   background-color: #B7E2D0;
 }
+
+
 /* ---------------------------------------------- */
 /* Type */
 
@@ -333,7 +335,7 @@ html {
 /* --------------------------------------------- */
 /* Buttons & icons */
 
-.btn-group-lg>.btn, .btn-lg {
+.btn-group-lg>.btn, .btn-lg, .btn {
   border-radius: 15px;
 }
 .btn-primary {
@@ -341,13 +343,32 @@ html {
   background-color: var(--color-blanco-ui-animal);
   border-color: var(--color-blanco-ui-animal);
 }
+.btn-secondary{
+  background-color: var(--color-figura-1-animal);
+  border:none;
+}
+.audiopre {
+  cursor: pointer;
+}
 .animal-btn{
   width:44px;
   height:44px;
   border-radius:50px;
   background-color: var(--color-figura-1-animal)
 }
-
+#controles {
+  height: 100px;
+}
+#rec-btn {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-color: var(--color-blanco-ui-animal)
+}
+#mute-btn{
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: var(--color-blanco-ui-animal)
+}
 #ch_control object, #instrumentos object, #sel-inst object{
   background-color: #000;
   filter:invert(1) opacity(.25);
@@ -385,9 +406,17 @@ html {
   filter:invert(0)!important;
   background-color: var(--color-gris-animal);
 }
+#audiopre-kit1:hover {
+  filter:invert(0)!important;
+  background-color: var(--color-verde-ui-animal);
+}
+.audio-preview {
+  width: 44px;
+  height: 44px;
+  background-color: var(--color-figura-1-animal);
 
-
-.animal-icon, .audio-preview {
+}
+.animal-icon {
   width: 44px;
   height: 44px;
   border-radius: 50px;
@@ -425,31 +454,31 @@ html {
   width:44px;
   height:44px;
   border-radius:50px;
-  background-color: var(--color-figura-1-animal)
+  background-color: var(--color-fondo-mostaza-animal)
 }
 .color-chip-2{
   width:44px;
   height:44px;
   border-radius:50px;
-  background-color: var(--color-fondo-1-animal)
+  background-color: var(--color-fondo-aqua-animal)
 }
 .color-chip-3{
   width:44px;
   height:44px;
   border-radius:50px;
-  background-color: var(--color-figura-1-animal)
+  background-color: var(--color-fondo-rosa-animal)
 }
 .color-chip-4{
   width:44px;
   height:44px;
   border-radius:50px;
-  background-color: var(--color-fondo-1-animal)
+  background-color: var(--color-fondo-verde-animal)
 }
 .color-chip-5{
   width:44px;
   height:44px;
   border-radius:50px;
-  background-color: var(--color-figura-1-animal)
+  background-color: var(--color-fondo-negro-animal)
 }
 
 
@@ -471,7 +500,33 @@ html {
 }
 
 
+/* --------------------------------------------- */
+/* Windows */
 
+
+#settingsModal .modal-content, #helpModal .modal-content, #jamModal .modal-content {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.modal-header, .modal-footer {
+  border: none;
+  display:block;
+}
+.modal-header .close{
+  float: none;
+  margin-left:0;
+  margin-top:5px;
+  padding:0;
+  font-size: 2rem;
+  font-weight: 100;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: var(--color-fondo-1-animal);
+}
 
 
 /* --------------------------------------------- */
@@ -583,6 +638,9 @@ html {
   #bajada {
     border-right: 1px solid white;
   }
+  #rec-btn {
+    border-bottom: 2px solid var(--color-fondo-1-animal);
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -596,6 +654,22 @@ html {
 @media (min-width: 992px) {
   body {
     background-color: var(--color-fondo-negro-animal);
+  }
+  #rec-btn {
+    border-top-right-radius: 0;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom: none;
+    border-right: 2px solid var(--color-fondo-1-animal);
+  }
+
+  #mute-btn {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 0;
+  }
+  #controles {
+    height: 200px;
   }
 }
 
