@@ -10,7 +10,7 @@ class Room {
       matrix[i] = new Array(17);
     }
     this.sequencer = matrix;
-    this.players = [8];    
+    this.players = [8];
   }
   set bpm(bpm) {
     this._bpm = bpm;
@@ -80,13 +80,13 @@ visitor.on('connection', (socket) => {
   console.log(socket.handshake.url);
   //if () //controlar que no sea sequencer
   var theRoom = '';
-  console.log('entro visitor con roomid ' +roomID);
-  
+  console.log('entro visitor con roomid ' + roomID);
+
   if (roomID != '') {
 
     rooms.forEach(room => {
       if (roomID == room.id) {
-          console.log('encontro room' +room.id + ' ' + roomID);
+        console.log('encontro room' + room.id + ' ' + roomID);
         theRoom = room;
       }
     });
@@ -94,17 +94,17 @@ visitor.on('connection', (socket) => {
       console.log("entro busco usados");
       var usados = [];
       theRoom.players.forEach(player => {
-        if (player.channels){
-        player.channels.forEach(channel =>{
-          if(channel>0){
-          usados.push(channel);
-          }
-        });
-      }
+        if (player.channels) {
+          player.channels.forEach(channel => {
+            if (channel > 0) {
+              usados.push(channel);
+            }
+          });
+        }
       });
       socket.emit('usedChannels', usados);
       console.log('emito usados' + usados);
-    }else{
+    } else {
       console.log("no emito usados");
     }
   }
@@ -138,11 +138,11 @@ player.on('connection', (socket) => {
       console.log('new user connected to room:' + socket.room.id);
       socket.type = 'host';
       socket.emit('host', socket.room.id);
-      var channels =[];
-      for (i=1; i<9 ; i++){
+      var channels = [];
+      for (i = 1; i < 9; i++) {
         channels.push(i);
       }
-      socket.channels = channels ;
+      socket.channels = channels;
 
     } else { //es invitado u observador
       socket.room = theRoom;
@@ -151,22 +151,22 @@ player.on('connection', (socket) => {
       console.log('a user connected to room:' + socket.room.id);
       console.log('socket.room.seq ' + socket.room.sequencer);
       socket.type = 'guest';
-      var channels =[];
+      var channels = [];
       channels.push(socket.handshake.query.channel);
       socket.channels = channels;
       socket.room.addPlayer(socket);
-      console.log("eligio este canal" + socket.channels );
-      var usados =[];
-      theRoom.players.forEach(player => {
-        if (player.channels){
-        player.channels.forEach(channel =>{
-          if(channel>0){
-          usados.push(channel);
-          }
-        });
-      }
-      });
-      socket.emit('guest', socket.room.sequencer, socket.channels, usados);
+      console.log("eligio este canal" + socket.channels);
+      var usados = [];
+  /*    theRoom.players.forEach(player => {
+        if (player.channels) {
+          player.channels.forEach(channel => {
+            if (channel > 0) {
+              usados.push(channel);
+            }
+          });
+        }
+      });*/
+      socket.emit('guest', socket.room.sequencer, socket.channels, socket.room.bpm);
 
     }
 
@@ -189,6 +189,10 @@ player.on('connection', (socket) => {
 
     });
 
+    socket.on('chat message', (msg) => {
+      console.log('message: ' + msg);
+      socket.to(socket.room.id).emit('chat message', msg);
+    });
 
     socket.on('toggleStep', (miStep) => {
       console.log('emit changes to room: ' + socket.room.id);
@@ -197,11 +201,17 @@ player.on('connection', (socket) => {
       socket.room.sequencer[miStep.row][miStep.column] = miStep.state;
     });
 
-    socket.on('roomOpened', (channels)=>{
-      socket.channels=channels;
-      console.log("abrio cuarto canales usados "+channels )
+    socket.on("bpm", function (bpm) {
+      socket.to(socket.room.id).emit('bpm', bpm);
+      socket.room.bpm=bpm;
+    });
+
+    socket.on('roomOpened', (channels) => {
+      socket.channels = channels;
+      console.log("abrio cuarto canales usados " + channels)
 
     });
+
   }
 });
 
