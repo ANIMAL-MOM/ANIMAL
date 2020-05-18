@@ -38,34 +38,41 @@
         $('#unirme').attr("style", "display: ");
       }
       $(".channels").click(function () {
-        $(".channels").removeClass("channel-selected");
-        $(this).addClass("channel-selected");
+        $(this).toggleClass("channel-selected");
+
+        //  $(this).addClass("channel-selected");
       })
 
       $("#unirmeARoom").on('click', function (e) {
+        var canales = "";
         e.preventDefault();  //prevent form from submitting
         // store the chNumber of the input with name='age'
         //var canal = $("input[name='channel']:checked").val();
-        var mianimal = $(".channel-selected")[0];
-        var canal = $(mianimal).attr("chNumber");
-        var name = $("#name").val();
-
-        if (roomID && canal) {
-          window.location.href = '/sequencer?roomID=' + roomID + '&channel=' + canal + "&name=" + name;
+        var misCanales = $(".channel-selected");
+        for (i = 0; i < misCanales.length; i++) {
+          var miCanal = misCanales[i];
+          var miChnumber = $(miCanal).attr("chNumber");
+          canales=canales +'y'+miChnumber ;
         }
-      });
+            //canales  = $(mianimal);
+     // var name = $("#name").val();
+
+      if (roomID && (canales.length > 0)) {
+                window.location.href = '/sequencer?roomID=' + roomID + '&channel='+canales+'&name=' + name;
+      }
+    });
 
 
-      var socket = io('/start?roomID=' + roomID);
-      //  io.connect);
-      socket.on('usedChannels', function (usedChannels) {
-        console.log(usedChannels);
-        usedChannels.forEach(channel => {
-          var myChannelUsado = $(".channels")[channel - 1];
-          $(myChannelUsado).css("opacity", "0.5");
-          $(myChannelUsado).css("pointer-events", "none");
-        });
+    var socket = io('/start?roomID=' + roomID);
+    //  io.connect);
+    socket.on('usedChannels', function (usedChannels) {
+      console.log(usedChannels);
+      usedChannels.forEach(channel => {
+        var myChannelUsado = $(".channels")[channel - 1];
+        $(myChannelUsado).css("opacity", "0.5");
+        $(myChannelUsado).css("pointer-events", "none");
       });
+    });
     });
 
 
@@ -93,8 +100,10 @@
 
           <div class="col-10 col-sm-9 mx-auto text-center text-md-left">
             <img id="animal-logo" src="GUI/img/landing/Animal_logo_v0.png" class="img-fluid mb-4 px-sm-5 px-md-0">
-            <p>Recibiste una invitación a crear música junto a otros animales en una <strong><em>jam session</em></strong> en línea. Escoge uno o varios de los animales disponibles y presiona el botón <em>Empezar</em>.</br> <a href="#">[+ info.]</a></p>
-            </div>
+            <p>Recibiste una invitación a crear música junto a otros animales en una <strong><em>jam
+                  session</em></strong> en línea. Escoge uno o varios de los animales disponibles y presiona el botón
+              <em>Empezar</em>.</br> <a href="#">[+ info.]</a></p>
+          </div>
         </div>
       </div>
       <!-- welcome end -->
@@ -307,7 +316,8 @@
         <div class="col-10 col-lg-6 mx-auto mt-5">
           <div class="row">
             <div id="bajada" class="order-1 order-sm-0 col-sm-8">
-              <p class="lead text-center text-sm-left"> Ocho animales musicales. Una persona creando varios patrones rítmicos, o varias personas creando un patrón rítmico. </br>¡Invita amiges!</p>
+              <p class="lead text-center text-sm-left"> Ocho animales musicales. Una persona creando varios patrones
+                rítmicos, o varias personas creando un patrón rítmico. </br>¡Invita amiges!</p>
               <p class="lead text-center text-sm-left">
                 <a href="#">[+ info.]</a>
               </p>
@@ -382,8 +392,9 @@
         <img src="GUI/img/landing/sequencer.png" class="img-fluid">
       </div>
       <div class="col-9 col-sm-7 col-md-4 ml-auto mb-5 mt-md-5 pr-sm-5 pt-md-5">
-        <p>Animal tiene 8 cerebros. Animal es un BUHO, OSO, GATO, PATO, MONO, SAPO, LORO, y CERDO musical. Cada animal es un sonido y ocupa un rol específico en el conjunto: base drum, snare, hi hat, etc.</p>
-        
+        <p>Animal tiene 8 cerebros. Animal es un BUHO, OSO, GATO, PATO, MONO, SAPO, LORO, y CERDO musical. Cada animal
+          es un sonido y ocupa un rol específico en el conjunto: base drum, snare, hi hat, etc.</p>
+
         <div>audio peview 1</div>
         <div>audio peview 2</div>
       </div>
