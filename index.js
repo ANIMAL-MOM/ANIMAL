@@ -1,7 +1,7 @@
 class Room {
   constructor() { //(ID, sequencer) {
     this.id = Math.floor(Math.random() * 10000);
-    console.log
+   // console.log
     // this.sequencer = '';//sequencer;
     this.bpm = 120;
     this.soundkit = 1;
@@ -49,6 +49,16 @@ class Room {
 }
 
 
+var seqInicial = [[true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false],
+[false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true],
+[false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
+[false, true, false, false, false, true, false, false, false, true, false, true, false, true, false, true],
+[false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
+[false, true, false, false, false, true, false, false, false, false, false, true, false, true, false, true],
+[false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false],
+[false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true]];
+
+
 'use strict';
 var app = require('express')();
 var http = require('http').createServer(app);
@@ -91,7 +101,7 @@ visitor.on('connection', (socket) => {
       }
     });
     if (theRoom != '' && roomID != 'new') {
-      console.log("entro busco usados");
+      console.log(" busco canales usados");
       var usados = [];
       theRoom.players.forEach(player => {
         if (player.channels) {
@@ -116,9 +126,9 @@ var player = io.of('/sequencer');
 player.on('connection', (socket) => {
 
   var roomID = socket.handshake.query.roomID;
-  console.log(socket.handshake.url);
-  console.log('entro sequencer');
-  console.log(roomID);
+ // console.log(socket.handshake.url);
+  console.log('entro sequencer con roomid '+roomID);
+ // console.log(roomID);
   var theRoom = '';
   if (roomID != '') {
     rooms.forEach(room => {
@@ -130,14 +140,17 @@ player.on('connection', (socket) => {
     if (theRoom == '' || roomID == 'new') { //ES ANFITRION
       //  console.log('host');
       socket.room = new Room();
-      console.log('new roomid' + socket.room.id);
+      console.log('host, new roomid' + socket.room.id);
       rooms.push(socket.room);
       socket.join(socket.room.id);
       socket.room.addPlayer(socket);
       //socket.roomID = socket.handshake.query.roomID;
-      console.log('new user connected to room:' + socket.room.id);
+    //  console.log('new user connected to room:' + socket.room.id);
       socket.type = 'host';
-      socket.emit('host', socket.room.id);
+      socket.emit('host', socket.room.id, seqInicial);
+
+      socket.room.sequencer = seqInicial;
+      socket.room.bpm=90;
       var channels = [];
       for (i = 1; i < 9; i++) {
         channels.push(i);
@@ -146,10 +159,10 @@ player.on('connection', (socket) => {
 
     } else { //es invitado u observador
       socket.room = theRoom;
-      console.log('theRoom.sequencer ' + theRoom.sequencer);
+    //  console.log('theRoom.sequencer ' + theRoom.sequencer);
       socket.join(socket.room.id);
-      console.log('a user connected to room:' + socket.room.id);
-      console.log('socket.room.seq ' + socket.room.sequencer);
+      console.log('a guest user connected to room:' + socket.room.id);
+    //  console.log('socket.room.seq ' + socket.room.sequencer);
       socket.type = 'guest';
       var channels = [];
       channels.push(socket.handshake.query.channel);
@@ -157,27 +170,26 @@ player.on('connection', (socket) => {
       socket.room.addPlayer(socket);
       console.log("eligio este canal" + socket.channels);
       var usados = [];
-  /*    theRoom.players.forEach(player => {
-        if (player.channels) {
-          player.channels.forEach(channel => {
-            if (channel > 0) {
-              usados.push(channel);
+      /*    theRoom.players.forEach(player => {
+            if (player.channels) {
+              player.channels.forEach(channel => {
+                if (channel > 0) {
+                  usados.push(channel);
+                }
+              });
             }
-          });
-        }
-      });*/
+          });*/
+          
+      console.log('emito bpm de ' + socket.room.bpm);
       socket.emit('guest', socket.room.sequencer, socket.channels, socket.room.bpm);
-
     }
 
 
-    socket.on('sequencer', (hostsequencer) => {
+    //  socket.on('sequencer', (hostsequencer) => {
+    //  console.log('ok sequencer' + hostsequencer);
+    //console.log('guardé sequencer' + socket.room.sequencer);
 
-      socket.room.sequencer = hostsequencer;
-      console.log('ok sequencer' + hostsequencer);
-      console.log('guardé sequencer' + socket.room.sequencer);
-
-    });
+    //  });
     //rooms.push(socket.roomID);
     socket.on('disconnect', () => {
       console.log('user disconnected');
@@ -195,15 +207,15 @@ player.on('connection', (socket) => {
     });
 
     socket.on('toggleStep', (miStep) => {
-      console.log('emit changes to room: ' + socket.room.id);
+      //console.log('emit changes to room: ' + socket.room.id);
       socket.to(socket.room.id).emit('toggleStep', miStep);
-      console.log('add changes to server matrix' + miStep.row + ',' + miStep.column + ',' + miStep.state);
+     // console.log('add changes to server matrix' + miStep.row + ',' + miStep.column + ',' + miStep.state);
       socket.room.sequencer[miStep.row][miStep.column] = miStep.state;
     });
 
-    socket.on("bpm", function (bpm) {
-      socket.to(socket.room.id).emit('bpm', bpm);
-      socket.room.bpm=bpm;
+    socket.on("bpm", function (unbpm) {
+      socket.to(socket.room.id).emit('bpm', unbpm);
+      socket.room.bpm = unbpm;
     });
 
     socket.on('roomOpened', (channels) => {

@@ -1102,7 +1102,7 @@
       $("#enlace").css("pointer-events", "none");
       $("#okCanales").attr("disabled", true);
 
-      socket.on('host', function (newroomID) {
+      socket.on('host', function (newroomID, seqInicial) {
 
         var currentUrl = window.location.href;
         var url = new URL(currentUrl);
@@ -1112,9 +1112,10 @@
         let stateObj = { id: "100" };
         window.history.replaceState(stateObj, "roomID", newUrl);
 
-        socket.emit('sequencer', sequencer.matrix.pattern);
+        //socket.emit('sequencer', sequencer.matrix.pattern);
         $(".disabled-overlay").addClass("d-none");
         myChannel = [1, 2, 3, 4, 5, 6, 7, 8];
+        sequencer.matrix.set.all(seqInicial);
 
       });
 
@@ -1126,6 +1127,8 @@
         myChannel = michannel;
         setMyChannel();
         bpm = unbpm;
+        Tone.Transport.bpm.value=bpm;
+        console.log("me llegó bpm de "+unbpm);
       });
 
       socket.on('chat message', function (msg) {
@@ -1179,7 +1182,7 @@
       });
 
       function setMyChannel() {
-        $(".channelGroup").addClass("opacity-3");
+        $(".channelGroup").addClass("opacity-2");
         $(".channelGroup").addClass("ajeno");
         $(".disabled-overlay").addClass("d-block");
 
@@ -1224,19 +1227,22 @@
       }
 
       sequencer.on('change', function (v) {
-        var itsMyChannel = false;
+
+        socket.emit('toggleStep', v);
+
+       /* var itsMyChannel = false;
         myChannel.forEach(channel => {
           if (v.row == channel) {
             itsMyChannel = true;
             ///TENGO QUE PONERLRE     pointer-events: none; a todas las otras rows            
 
           }
-        });
+        });*/
 
 
         /* console.log("es un cambio");
          console.log(v);
-         socket.emit('toggleStep', v);*/
+         */
         var myCell = sequencer.cells[v.row * v.column];
         var miRect = $("rect")[((v.row * 16)) + (v.column)];
 
@@ -1258,7 +1264,8 @@
 
       socket.on("bpm", function (unbpm) {
         bpm = unbpm;
-        Transport.time.bpm.rampTo(bpm, 4);
+        Tone.Transport.bpm.value=bpm;
+        $("#bpmNumber").html(bpm);
       });
 
       function emitBpm(bpm) {
@@ -1378,11 +1385,11 @@
         }
         if (Tone.Transport.state == "started") {
           Tone.Transport.stop();
-          sequencer.stop();
+         // sequencer.stop();
         } else {
 
-          sequencer.start()
-          sequencer.interval.ms(166);
+       //   sequencer.start()
+        //  sequencer.interval.ms(166);
           Tone.Transport.start();
         }
       });
