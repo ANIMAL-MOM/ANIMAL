@@ -425,36 +425,28 @@ html {
 }
 
 #icono-ch8:hover {
-  filter:invert(0)!important;
-  background-color: var(--color-rosa-animal);
+  content: url(img/cerdo_activo.png);
 }
 #icono-ch7:hover {
-  filter:invert(0)!important;
-  background-color: var(--color-verde-animal);
+  content: url(img/loro_activo.png);
 }
 #icono-ch6:hover {
-  filter:invert(0)!important;
-  background-color: var(--color-verde-animal);
+  content: url(img/sapo_activo.png);
 }
 #icono-ch5:hover {
-  filter:invert(0)!important;
-  background-color: var(--color-mostaza-animal);
+  content: url(img/pato_activo.png);
 }
 #icono-ch4:hover {
-  filter:invert(0)!important;
-  background-color: var(--color-marron-animal);
+  content: url(img/mono_activo.png);
 }
 #icono-ch3:hover {
-  filter:invert(0)!important;
-  background-color: var(--color-gris-animal);
+  content: url(img/gato_activo.png);
 }
 #icono-ch2:hover {
-  filter:invert(0)!important;
-  background-color: var(--color-chocolate-animal);
+  content: url(img/oso_activo.png);
 }
 #icono-ch1:hover {
-  filter:invert(0)!important;
-  background-color: var(--color-gris-animal);
+  content: url(img/buho_activo.png);
 }
 #audiopre-kit1:hover {
   filter:invert(0)!important;
