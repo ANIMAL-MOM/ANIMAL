@@ -383,12 +383,12 @@ html {
   background-color:var(--color-blanco-ui-animal);
   animation-play-state: initial !important;
 }
-#rec-btn:hover, #mute-btn:hover, #increment-swing-btn:hover, #increment-bpm-btn:hover, #decrement-swing-btn:hover, #decrement-bpm-btn:hover{
-  background-color:var(--color-figura-1-animal);
-}
 .mute-btn-activo{
   -webkit-animation:blinkingPlay 1.2s infinite;
   animation:blinkingPlay 1.2s infinite;
+}
+#rec-btn:hover, #mute-btn:hover, #increment-swing-btn:hover, #increment-bpm-btn:hover, #decrement-swing-btn:hover, #decrement-bpm-btn:hover{
+  background-color:var(--color-figura-1-animal);
 }
 #decrement-bpm-btn {
   border-top-left-radius: 15px;
