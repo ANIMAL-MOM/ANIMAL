@@ -25,6 +25,15 @@
 /* ---------------------------------------------- */
 /* Color & opacity */
 
+.activado{
+content:url("img/loro_activo.png");
+/*setear las urls de las imgs activas para cada uno con su id*/
+}
+.mute-btn-activo{ color:var(--color-blanco-ui-animal)!important;background-color: var(--color-rojo-ui-animal) !important;}
+
+.rec-btn-activo{ color:var(--color-blanco-ui-animal);background-color: var(--color-verde-ui-animal);}
+
+.jam-btn-activo{ color:var(--color-blanco-ui-animal);background-color: var(--color-verde-ui-animal);}
 
 .verde-animal {
   background-color: var(--color-verde-animal);
