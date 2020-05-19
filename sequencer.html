@@ -652,34 +652,34 @@
           <div class="col-6 col-lg-12 m-0 p-lg-0">
             <div id="controles" class="row mb-1 mt-lg-1 ml-0 mx-lg-0 p-2 corners1 fondo-1-animal">
               <div class="col-8 col-lg-12">
-                <div class="row h-100 corners1 blanco-ui-animal">
+                <div class="row h-100">
                   <!-- BPM -->
                   <div id="bpm" class="col-12">
                     <div class="row d-flex h-100">
-                      <div id="decrement-bpm-btn" class="col-3 d-flex my-auto text-center">
-                        <strong>-</strong>
+                      <div id="decrement-bpm-btn" class="col-3 d-flex my-0 blanco-ui-animal">
+                        <strong class="m-auto text-center">-</strong>
                       </div>
-                      <div id="increment-bpm-btn" class="col-3 d-flex my-auto text-center">
-                        <strong>+</strong>
+                      <div id="increment-bpm-btn" class="col-3 d-flex my-0 blanco-ui-animal">
+                        <strong class="m-auto text-center">+</strong>
                       </div>
-                      <div class="col-4 numero-animal my-auto text-center">
-                        <strong id="bpmNumber">90</strong>
-                        <span class="texto-animal">bpm</span>
+                      <div id="bpm-display" class="col-6 numero-animal d-flex my-0 blanco-ui-animal">
+                        <strong id="bpmNumber" class="m-auto text-center">120</strong>
+                        <span class="texto-animal m-auto text-center">bpm</span>
                       </div>
                     </div>
                   </div>
                   <!-- SWING -->
                   <div id="swing" class="col-12">
                     <div class="row d-flex h-100">
-                      <div id="decrement-bpm-btn" class="col-3 d-flex my-auto text-center">
-                        <strong>-</strong>
+                      <div id="decrement-swing-btn" class="col-3 d-flex my-0 blanco-ui-animal">
+                        <strong class="m-auto text-center">-</strong>
                       </div>
-                      <div id="increment-bpm-btn" class="col-3 d-flex my-auto text-center">
-                        <strong>+</strong>
+                      <div id="increment-swing-btn" class="col-3 d-flex my-0 blanco-ui-animal">
+                        <strong class="m-auto text-center">+</strong>
                       </div>
-                      <div class="col-4 numero-animal my-auto text-center">
-                        <strong>96</strong>
-                        <span class="texto-animal">Swing</span>
+                      <div id="swing-display" class="col-6 numero-animal d-flex my-0 blanco-ui-animal">
+                        <strong id="swingNumber" class="m-auto text-center">96</strong>
+                        <span class="texto-animal m-auto text-center">swing</span>
                       </div>
                     </div>
                   </div>
@@ -687,8 +687,8 @@
               </div>
               <!-- REC + MUTE -->
               <div id="rec-mute" class="col-4 col-lg-12 mt-lg-1 ">
-                <div class="row d-flex flex-column flex-lg-row pl-1">
-                  <span id="rec-btn" class="col-lg-6 text-center">
+                <div class="row d-flex h-100 my-0 pl-1 flex-column flex-lg-row ">
+                  <span id="rec-btn" class="col-lg-6 d-flex h-100  my-0 text-center">
                     <strong>Rec</strong>
                   </span>
                   <span id="mute-btn" class="col-lg-6 text-center mute-btn-activo">
@@ -1221,7 +1221,7 @@
          myChannel.forEach(channel => {
            if (v.row == channel) {
              itsMyChannel = true;
-             ///TENGO QUE PONERLRE     pointer-events: none; a todas las otras rows           
+             ///TENGO QUE PONERLRE     pointer-events: none; a todas las otras rows
            }
          });*/
         /* console.log("es un cambio");

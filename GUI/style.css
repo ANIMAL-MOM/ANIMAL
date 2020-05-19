@@ -122,6 +122,7 @@ body {
 }
 
 
+
 /* ---------------------------------------------- */
 /* Type */
 
@@ -377,6 +378,18 @@ html {
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: var(--color-blanco-ui-animal)
+}
+#decrement-bpm-btn {
+  border-top-left-radius: 15px;
+}
+#bpm-display{
+  border-top-right-radius: 15px;
+}
+#decrement-swing-btn {
+  border-bottom-left-radius: 15px;
+}
+#swing-display{
+  border-bottom-right-radius: 15px;
 }
 #ch_control object, #instrumentos object, #sel-inst object{
   background-color: #000;
