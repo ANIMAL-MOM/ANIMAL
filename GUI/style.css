@@ -461,13 +461,12 @@ html {
 .animal-icon {
   width: 44px;
   height: 44px;
-  border-radius: 50px;
-  background-color: var(--color-blanco-ui-animal);
+  border-radius: 50%;
 }
 .animal-icon-s{
   width: 30px;
   height: 30px;
-  border-radius: 50px;
+  border-radius: 50%;
   background-color: var(--color-blanco-ui-animal);
 }
 .audio-preview-s {
