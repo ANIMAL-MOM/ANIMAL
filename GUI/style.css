@@ -372,12 +372,13 @@ html {
 #rec-btn {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  background-color: var(--color-blanco-ui-animal)
+  background-color: var(--color-blanco-ui-animal);
 }
 #mute-btn{
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: var(--color-blanco-ui-animal)
+  background-color: var(--color-blanco-ui-animal);
+  height:100%;
 }
 #decrement-bpm-btn {
   border-top-left-radius: 15px;
