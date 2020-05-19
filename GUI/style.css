@@ -29,11 +29,7 @@
 content:url("img/loro_activo.png");
 /*setear las urls de las imgs activas para cada uno con su id*/
 }
-.mute-btn-activo{ color:var(--color-blanco-ui-animal)!important;background-color: var(--color-rojo-ui-animal) !important;}
 
-.rec-btn-activo{ color:var(--color-blanco-ui-animal);background-color: var(--color-verde-ui-animal);}
-
-.jam-btn-activo{ color:var(--color-blanco-ui-animal);background-color: var(--color-verde-ui-animal);}
 
 .verde-animal {
   background-color: var(--color-verde-animal);
@@ -372,25 +368,46 @@ html {
 #rec-btn {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  background-color: var(--color-blanco-ui-animal);
+  height:50%;
+}
+.rec-btn-activo, .jam-btn-activo {
+  -webkit-animation:blinkingRecJam 1.2s infinite;
+  animation:blinkingRecJam 1.2s infinite;
 }
 #mute-btn{
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: var(--color-blanco-ui-animal);
-  height:100%;
+  background-color:var(--color-blanco-ui-animal);
+  height:50%;
+}
+#rec-btn:hover, #mute-btn:hover, #increment-swing-btn:hover, #increment-bpm-btn:hover, #decrement-swing-btn:hover, #decrement-bpm-btn:hover{
+  background-color:var(--color-figura-1-animal);
+}
+.mute-btn-activo{
+  -webkit-animation:blinkingPlay 1.2s infinite;
+  animation:blinkingPlay 1.2s infinite;
 }
 #decrement-bpm-btn {
   border-top-left-radius: 15px;
+  border-bottom: 1px solid var(--color-fondo-1-animal);
+}
+#increment-bpm-btn {
+  border-bottom: 1px solid var(--color-fondo-1-animal);
 }
 #bpm-display{
   border-top-right-radius: 15px;
+  border-bottom: 1px solid var(--color-fondo-1-animal);
 }
 #decrement-swing-btn {
   border-bottom-left-radius: 15px;
+  border-top: 1px solid var(--color-fondo-1-animal);
+}
+#increment-swing-btn {
+  border-top: 1px solid var(--color-fondo-1-animal);
 }
 #swing-display{
   border-bottom-right-radius: 15px;
+  border-top: 1px solid var(--color-fondo-1-animal);
 }
 #ch_control object, #instrumentos object, #sel-inst object{
   background-color: #000;
@@ -555,78 +572,26 @@ html {
 /* --------------------------------------------- */
 /* Animation & transitions */
 
-
-.animate-down-up-in-1{
-  -webkit-animation: down-up-in 1s; /* Chrome, Safari, Opera */
-  animation: down-up-in 1s;
-  animation-delay: 1s;
-  animation-fill-mode: both;
+@keyframes blinkingPlay{
+  0%{     background-color:var(--color-rojo-ui-animal);}
+  35%{    background-color:var(--color-rojo-ui-animal);}
+  85%{    color:var(--color-figura-1-animal);}
 }
-.animate-up-down-in-1{
-  -webkit-animation: up-down-in 1s; /* Chrome, Safari, Opera */
-  animation: up-down-in 1s;
-  animation-delay: 1s;
-  animation-fill-mode: both;
+@webkit-keyframes blinkingPlay{
+  0%{     background-color:var(--color-rojo-ui-animal);}
+  35%{    background-color:var(--color-rojo-ui-animal);}
+  85%{    color:var(--color-figura-1-animal);}
 }
-.animate-up-down-in-2{
-  -webkit-animation: up-down-in 1s; /* Chrome, Safari, Opera */
-  animation: up-down-in 1s;
-  animation-delay: 1.5s;
-  animation-fill-mode: both;
+@keyframes blinkingRecJam{
+  0%{     background-color:var(--color-verde-ui-animal);}
+  35%{    background-color:var(--color-verde-ui-animal);}
+  85%{    color:var(--color-figura-1-animal);}
 }
-
-.animate-up-down-in-3{
-  -webkit-animation: up-down-in 1s; /* Chrome, Safari, Opera */
-  animation: up-down-in 1s;
-  animation-delay: 2s;
-  animation-fill-mode: both;
+@webkit-keyframes blinkingRecJam{
+  0%{     background-color:var(--color-verde-ui-animal);}
+  35%{    background-color:var(--color-verde-ui-animal);}
+  85%{    color:var(--color-figura-1-animal);}
 }
-
-/* For modern browsers */
-@-webkit-keyframes up-down-in {
-  from {
-    opacity: 0;
-    transform: translate(0px,-15px);
-  }
-  to {
-    opacity: 1;
-    transform: translate(0px,0px);
-  }
-}
-@-webkit-keyframes down-up-in {
-  from {
-    opacity: 0;
-    transform: translate(0px,15px);
-  }
-  to {
-    opacity: 1;
-    transform: translate(0px,0px);
-  }
-}
-/* The standard way */
-@keyframes up-down-in {
-  from {
-    opacity: 0;
-    transform: translate(0px,-15px);
-  }
-  to {
-    opacity: 1;
-    transform: translate(0px,0px);
-  }
-}
-@keyframes down-up-in {
-  from {
-    opacity: 0;
-    transform: translate(0px,15px);
-  }
-  to {
-    opacity: 1;
-    transform: translate(0px,0px);
-  }
-}
-
-
-
 
 
 /* --------------------------------------------- */
@@ -662,7 +627,10 @@ html {
     border-right: 1px solid white;
   }
   #rec-btn {
-    border-bottom: 2px solid var(--color-fondo-1-animal);
+    border-bottom: 1px solid var(--color-fondo-1-animal);
+  }
+  #mute-btn {
+    border-top: 1px solid var(--color-fondo-1-animal);
   }
 }
 
@@ -683,13 +651,19 @@ html {
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     border-bottom: none;
-    border-right: 2px solid var(--color-fondo-1-animal);
+    border-right: 1px solid var(--color-fondo-1-animal);
+    height: 100%;
+  }
+  #mute-btn{
+    border-top: none;
   }
 
   #mute-btn {
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 0;
+    border-left: 1px solid var(--color-fondo-1-animal);
+    height: 100%;
   }
   #controles {
     height: 200px;
