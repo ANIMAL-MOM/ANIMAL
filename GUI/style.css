@@ -380,15 +380,15 @@ html {
   height:50%;
 }
 .mute-btn{
-  -webkit-animation:blinkingPlay 1.2s infinite;
-  animation:blinkingPlay 1.2s infinite;
+  background-color:var(--color-blanco-ui-animal);
+  animation-play-state: initial !important;
 }
 #rec-btn:hover, #mute-btn:hover, #increment-swing-btn:hover, #increment-bpm-btn:hover, #decrement-swing-btn:hover, #decrement-bpm-btn:hover{
   background-color:var(--color-figura-1-animal);
 }
 .mute-btn-activo{
-  background-color:var(--color-blanco-ui-animal);
-  animation-play-state: initial !important;
+  -webkit-animation:blinkingPlay 1.2s infinite;
+  animation:blinkingPlay 1.2s infinite;
 }
 #decrement-bpm-btn {
   border-top-left-radius: 15px;
