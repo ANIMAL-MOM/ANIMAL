@@ -661,10 +661,10 @@ html {
     height:auto;
   }
   #chat-animal{
-    height:50%;
+    height:65%;
   }
   #controles {
-    height:50%;
+    height:35%;
   }
 
   .custom-height {
@@ -696,5 +696,11 @@ html {
 @media (min-width: 1200px) {
   body {
     background-color: var(--color-fondo-rosa-animal);
+  }
+  #chat-animal{
+    height:60%;
+  }
+  #controles {
+    height:40%;
   }
 }
