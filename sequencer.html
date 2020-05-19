@@ -18,7 +18,7 @@
 
 
   <link rel="stylesheet" href="GUI/style.css">
-  <script src="/tone/Tone.js"></script>
+ <!--<script src="/tone/Tone.js"></script>-->
   <script type="module">
     import * as Tone from "/tone/Tone.js";
   </script>
@@ -660,7 +660,7 @@
                         <strong class="m-auto text-center">+</strong>
                       </div>
                       <div id="bpm-display" class="col-6 numero-animal d-flex my-0 blanco-ui-animal">
-                        <strong id="bpmNumber" class="m-auto text-center">120</strong>
+                        <strong id="bpmNumber" class="m-auto text-center">90</strong>
                         <span class="texto-animal m-auto text-center">bpm</span>
                       </div>
                     </div>
@@ -1286,18 +1286,22 @@
           $(this).addClass("activado");
           for (i = 0; i < 8; i++) {
             sonidos.get(scaleNotes[i]).mute = true;
+            console.log("es el animal numero"+ i)
             console.log(scaleNotes[i]);
-            //console.log(sonidos.get(scaleNotes[i]));
+            console.log("quedó muteado " +sonidos.get(scaleNotes[i]).mute);
           }
           sonidos.get(scaleNotes[(7 - myAnimalNumber)]).mute = false;
           console.log(scaleNotes[(7 - myAnimalNumber)]);
+
         } else {
           muteado = false;
           $(this).removeClass("activado");
           for (i = 0; i < 8; i++) {
             console.log(scaleNotes[i]);
             sonidos.get(scaleNotes[i]).mute = false;
-
+            console.log("es el animal numero"+ i)
+            console.log(scaleNotes[i]);
+            console.log("quedó muteado " +sonidos.get(scaleNotes[i]).mute);
           }
         }
 
