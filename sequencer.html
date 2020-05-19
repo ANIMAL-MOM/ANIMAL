@@ -629,14 +629,11 @@
         </div>
       </div>
       <!-- audio cables end -->
-      <div id="izq" class="col-12 col-lg-2 d-flex flex-column flex-lg-row">
-        <div class="row pr-lg-1">
+      <div id="izq" class="col-12 col-lg-3 col-xl-2 d-flex flex-column flex-lg-row">
+        <div class="row pr-lg-1 d-flex h-100">
           <!-- CHAT -->
-          <div id="chat-animal" class="col-6 col-lg-12 p-0">
-            <div class="h-100 corners1 figura-1-animal">
-
-
-
+          <div id="chat-animal" class="col-6 col-lg-12 p-0 d-flex">
+            <div class="corners1 figura-1-animal">
 
               <ul id="messages"></ul>
               <form action="">
@@ -649,37 +646,37 @@
           </div>
           <!-- chat end -->
           <!-- CONTROLES -->
-          <div class="col-6 col-lg-12 m-0 p-lg-0">
-            <div id="controles" class="row mb-1 mt-lg-1 ml-0 mx-lg-0 p-2 corners1 fondo-1-animal">
+          <div id="controles" class="col-6 col-lg-12 p-0 pt-lg-1 d-flex flex-column flex-lg-row">
+            <div class="row m-0 p-2 d-flex custom-height corners1 fondo-1-animal">
               <div class="col-8 col-lg-12">
-                <div class="row h-100 corners1 blanco-ui-animal">
+                <div class="row h-100">
                   <!-- BPM -->
                   <div id="bpm" class="col-12">
                     <div class="row d-flex h-100">
-                      <div id="decrement-bpm-btn" class="col-3 d-flex my-auto text-center">
-                        <strong>-</strong>
+                      <div id="decrement-bpm-btn" class="col-3 d-flex my-0 blanco-ui-animal">
+                        <strong class="m-auto text-center">-</strong>
                       </div>
-                      <div id="increment-bpm-btn" class="col-3 d-flex my-auto text-center">
-                        <strong>+</strong>
+                      <div id="increment-bpm-btn" class="col-3 d-flex my-0 blanco-ui-animal">
+                        <strong class="m-auto text-center">+</strong>
                       </div>
-                      <div class="col-4 numero-animal my-auto text-center">
-                        <strong id="bpmNumber">90</strong>
-                        <span class="texto-animal">bpm</span>
+                      <div id="bpm-display" class="col-6 numero-animal d-flex my-0 blanco-ui-animal">
+                        <strong id="bpmNumber" class="m-auto text-center">120</strong>
+                        <span class="texto-animal m-auto text-center">bpm</span>
                       </div>
                     </div>
                   </div>
                   <!-- SWING -->
                   <div id="swing" class="col-12">
                     <div class="row d-flex h-100">
-                      <div id="decrement-bpm-btn" class="col-3 d-flex my-auto text-center">
-                        <strong>-</strong>
+                      <div id="decrement-swing-btn" class="col-3 d-flex my-0 blanco-ui-animal">
+                        <strong class="m-auto text-center">-</strong>
                       </div>
-                      <div id="increment-bpm-btn" class="col-3 d-flex my-auto text-center">
-                        <strong>+</strong>
+                      <div id="increment-swing-btn" class="col-3 d-flex my-0 blanco-ui-animal">
+                        <strong class="m-auto text-center">+</strong>
                       </div>
-                      <div class="col-4 numero-animal my-auto text-center">
-                        <strong>96</strong>
-                        <span class="texto-animal">Swing</span>
+                      <div id="swing-display" class="col-6 numero-animal d-flex my-0 blanco-ui-animal">
+                        <strong id="swingNumber" class="m-auto text-center">96</strong>
+                        <span class="texto-animal m-auto text-center">swing</span>
                       </div>
                     </div>
                   </div>
@@ -687,22 +684,22 @@
               </div>
               <!-- REC + MUTE -->
               <div id="rec-mute" class="col-4 col-lg-12 mt-lg-1 ">
-                <div class="row d-flex flex-column flex-lg-row pl-1">
-                  <span id="rec-btn" class="col-lg-6 text-center">
-                    <strong>Rec</strong>
-                  </span>
-                  <span id="mute-btn" class="col-lg-6 text-center mute-btn-activo">
-                    <strong>Mute</strong>
-                  </span>
+                <div class="row h-100 my-0 pl-1 pl-lg-0 d-flex flex-column flex-lg-row">
+                  <div id="rec-btn" class="col-lg-6 d-flex my-0 blanco-ui-animal">
+                    <span class="m-auto text-center">Rec</span>
+                  </div>
+                  <div id="mute-btn" class="col-lg-6 d-flex my-0 figura-1-animal mute-btn">
+                    <span class="m-auto text-center">Play</span>
+                  </div>
                 </div>
               </div>
-
             </div>
+
+
 
             <!-- INSTRUMENTO SELECCIONADO (#sel-inst) -->
 
-
-            <div id="sel-inst" class="m-0 p-0 d-block d-lg-none d-flex align-items-end text-white overflow-hidden">
+            <div id="sel-inst" class="m-0 p-0 pt-1 d-block d-lg-none d-flex align-items-end text-white overflow-hidden">
 
               <span id="buhoInst" class="d-none">
                 <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal gris-animal">
@@ -873,7 +870,7 @@
         </div>
 
       </div>
-      <div id="der" class="col-12 col-lg-10 animate-up-down-in-3">
+      <div id="der" class="col-12 col-lg-9 col-xl-10">
 
         <div class="row">
 
@@ -886,7 +883,7 @@
 
               <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup1">
                 <div class="animal-icon">
-                  <img id="icono-ch8" src="GUI/img/cerdo.png" width="44" height="44" class="soloButton">
+                  <img id="icono-ch8" src="GUI/img/cerdo.png" class="soloButton img-fluid">
                 </div>
                 <div class="dial_container d-none d-lg-block">
                   <div id="dial-ch8" class="mom_dial"></div>
@@ -895,7 +892,7 @@
 
               <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup2">
                 <div class="animal-icon">
-                  <img id="icono-ch7" src="GUI/img/loro.png" width="44" height="44" class="soloButton">
+                  <img id="icono-ch7" src="GUI/img/loro.png" class="soloButton img-fluid">
                 </div>
                 <div class="dial_container d-none d-lg-block">
                   <div id="dial-ch7" class="mom_dial"></div>
@@ -904,7 +901,7 @@
 
               <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup3">
                 <div class="animal-icon">
-                  <img id="icono-ch6" src="GUI/img/sapo.png" width="44" height="44" class="soloButton">
+                  <img id="icono-ch6" src="GUI/img/sapo.png" class="soloButton img-fluid">
                 </div>
                 <div class="dial_container d-none d-lg-block">
                   <div id="dial-ch6" class="mom_dial"></div>
@@ -913,7 +910,7 @@
 
               <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup4">
                 <div class="animal-icon">
-                  <img id="icono-ch5" src="GUI/img/pato.png" width="44" height="44" class="soloButton">
+                  <img id="icono-ch5" src="GUI/img/pato.png" class="soloButton img-fluid">
                 </div>
                 <div class="dial_container d-none d-lg-block">
                   <div id="dial-ch5" class="mom_dial"></div>
@@ -922,7 +919,7 @@
 
               <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup5">
                 <div class="animal-icon">
-                  <img id="icono-ch4" src="GUI/img/mono.png" width="44" height="44" class="soloButton">
+                  <img id="icono-ch4" src="GUI/img/mono.png" class="soloButton img-fluid">
                 </div>
                 <div class="dial_container d-none d-lg-block">
                   <div id="dial-ch4" class="mom_dial"></div>
@@ -931,7 +928,7 @@
 
               <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup6">
                 <div class="animal-icon">
-                  <img id="icono-ch3" src="GUI/img/gato.png" width="44" height="44" class="soloButton">
+                  <img id="icono-ch3" src="GUI/img/gato.png" class="soloButton img-fluid">
                 </div>
                 <div class="dial_container d-none d-lg-block">
                   <div id="dial-ch3" class="mom_dial"></div>
@@ -940,7 +937,7 @@
 
               <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup7">
                 <div class="animal-icon">
-                  <img id="icono-ch2" src="GUI/img/oso.png" width="44" height="44" class="soloButton">
+                  <img id="icono-ch2" src="GUI/img/oso.png" class="soloButton img-fluid">
                 </div>
                 <div class="dial_container d-none d-lg-block">
                   <div id="dial-ch2" class="mom_dial"></div>
@@ -949,7 +946,7 @@
 
               <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup8">
                 <div class="animal-icon" id="animalChannel1">
-                  <img id="icono-ch1" src="GUI/img/buho.png" width="44" height="44" class="soloButton">
+                  <img id="icono-ch1" src="GUI/img/buho.png" class="soloButton img-fluid">
                 </div>
                 <div class="dial_container d-none d-lg-block">
                   <div id="dial-ch1" class="mom_dial"></div>
@@ -965,7 +962,9 @@
 
           <!-- SECUENCIADOR (#secuenciador) -->
 
-          <div id="secuenciador" class="col-10 col-lg-9 mx-0 my-1 my-lg-0 p-0 pr-lg-1">
+
+          <div id="secuenciador" class="col-10 col-xl-9 mx-0 my-1 my-lg-0 p-0 pr-lg-1">
+
             <div class="pl-0 py-4 pr-4 corners-r overflow-hidden fondo-1-animal">
               <div id="seq-animal" class="grid-size"></div>
             </div>
@@ -976,7 +975,7 @@
           <!-- REGISTRO COMPARTIR (#jam-ajustes) -->
 
           <div id="jam-ajustes"
-            class="col-lg-1 py-4 px-3 d-flex flex-lg-column justify-content-between fondo-1-animal corners1">
+            class="col-xl-1 py-4 px-3 d-flex flex-xl-column justify-content-between fondo-1-animal corners1">
             <div id="jam-sesion" class="mx-auto d-flex flex-lg-column">
               <a href="#" id="boton" data-toggle="modal" data-target="#jamModal" role="button">
                 <img src="GUI/svg/botones/boton_rec.svg" class="animal-icon">
@@ -985,7 +984,7 @@
                 <span class="align-middle">Jam</span>
               </div>
             </div>
-            <div id="combo-botones" class="mx-auto d-flex flex-row flex-lg-column">
+            <div id="combo-botones" class="mx-auto d-flex flex-row flex-xl-column">
               <div id="help" class="mx-auto align-self-baseline">
                 <a href="#" id="boton" data-toggle="modal" data-target="#helpModal" role="button">
                   <img src="GUI/svg/botones/boton_ayuda.svg" class="animal-icon">
@@ -1056,21 +1055,24 @@
 
       // TONEJS
       var sonidos = new Tone.Players({
-        "Buho": "/audios/SA-001.mp3",
-        "Oso": "/audios/SA-002.mp3",
-        "Gato": "/audios/SA-003.mp3",
-        "Sapo": "/audios/SA-004.mp3",
-        "Pato": "/audios/SA-005.mp3",
-        "Mono": "/audios/SA-006.mp3",
-        "Cerdo": "/audios/SA-007.mp3",
-        "Loro": "/audios/SA-008.mp3",
+        "Cerdo": "/audios/kit-002/inicial_008_open hihat_cerdo.wav",//"/audios/kit-001/hd_008_cerdo.wav",
+        "Loro": "/audios/kit-002/inicial_007_loro_triangulo.wav",//"/audios/kit-001/hd_007_loro.wav",
+        "Pato": "/audios/kit-002/inicial_006_ride_pato.wav",//"/audios/kit-001/hd_006_pato.wav",
+        "Sapo": "/audios/kit-002/inicial_005_clave_sapo.wav",//"/audios/kit-001/hd_005_sapo.wav",        
+        "Gato": "/audios/kit-002/inicial_004_hihat_gato.wav",// "/audios/kit-001/hd_004_gato.wav",             
+        "Mono": "/audios/kit-002/inicial_003_bass_mono.wav", /*"/audios/kit-001/hd_003_mono.wav", */
+        "Oso": "/audios/kit-002/inicial_002_sd_oso.wav", /* "/audios/kit-001/hd_002_oso.wav",*/
+        "Buho": "/audios/kit-002/inicial_001_bd_buho.wav" /* "/audios/kit-001/hd_001_buho.wav" */
+
+
+
       }, {
         "volume": -1,
         "fadeOut": "16n",
       }).toMaster();
 
       //the notes
-      var scaleNotes = ["Buho", "Oso", "Gato", "Sapo", "Pato", "Mono", "Cerdo", "Loro"];
+      var scaleNotes = ["Cerdo", "Loro", "Pato", "Sapo", "Gato", "Mono", "Oso", "Buho"];
       var stepNumber = 0;
       var loop = 0;
       Tone.Transport.bpm.value = bpm;
@@ -1278,22 +1280,24 @@
       $(".soloButton").click(function () {
         var myId = this.id;
         var myAnimalNumber = myId.split("icono-ch")[1];
+        myAnimalNumber--;
         if (!muteado) {
           muteado = true;
           $(this).addClass("activado");
           for (i = 0; i < 8; i++) {
-            if (i != (myAnimalNumber - 1)) {
-              sonidos.get(scaleNotes[i]).mute = true;
-            }
+            sonidos.get(scaleNotes[i]).mute = true;
+            console.log(scaleNotes[i]);
+            //console.log(sonidos.get(scaleNotes[i]));
           }
-          //  $("#myId").attr("src", "")
+          sonidos.get(scaleNotes[(7 - myAnimalNumber)]).mute = false;
+          console.log(scaleNotes[(7 - myAnimalNumber)]);
         } else {
           muteado = false;
           $(this).removeClass("activado");
           for (i = 0; i < 8; i++) {
-            if (i != myAnimalNumber - 1) {
-              sonidos.get(scaleNotes[i]).mute = false;
-            }
+            console.log(scaleNotes[i]);
+            sonidos.get(scaleNotes[i]).mute = false;
+
           }
         }
 
@@ -1377,7 +1381,7 @@
         } else {
           isRecording = true;
           chunks = [];
-
+          $(this).toggleClass('rec-btn-activo');
           recorder.start();
 
           // dest = actx.createMediaStreamDestination();
@@ -1387,16 +1391,13 @@
 
           recorder.onstop = evt => {
             let blob = new Blob(chunks, { type: 'audio/ogg; codecs=opus' });
-
-
             var url = URL.createObjectURL(blob);
-
             var a = document.createElement('a');
             a.href = url;
             a.download = 'ANIMAL Recording.ogg';
             a.target = "_blank"
             a.click();
-
+            $(this).toggleClass('rec-btn-activo');
           };
         }
 
@@ -1413,7 +1414,7 @@
           var matrix = sequencer.matrix.pattern;
           loop = new Tone.Sequence(function (time) {
 
-            for (var i = 0; i < 8; i++) {
+            for (var i = 7; i >= 0; i--) {
 
               if (matrix[i][stepNumber]) {
                 sonidos.get(scaleNotes[i]).start(time, 0, "16n", 0, 1);
@@ -1435,7 +1436,6 @@
           Tone.Transport.stop();
           // sequencer.stop();
         } else {
-
           //   sequencer.start()
           //  sequencer.interval.ms(166);
           Tone.Transport.start();
@@ -1444,7 +1444,7 @@
 
       $("#mute-btn").click(function () {
         playSequencer();
-        $(this).toggleClass("mute-btn-activo");
+        $(this).toggleClass("mute-btn");
       });
 
 

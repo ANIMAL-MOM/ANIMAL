@@ -1,690 +1,698 @@
 /* @import "animal.css"; */
 
 :root {
---color-verde-animal: rgba(59,140,39,1);
---color-marron-animal: rgba(97,50,8,1);
---color-chocolate-animal: rgba(55,41,41,1);
---color-mostaza-animal: rgba(177,149,2,1);
---color-rosa-animal: rgba(228,180,160,1);
---color-gris-animal: rgba(177,166,144,1);
---color-blanco-ui-animal: rgba(255,255,255,1);
---color-fondo-1-animal: rgba(222,231,238,1);
---color-figura-1-animal: rgba(184,197,208,1);
---color-destaque-animal: rgba(109,119,126,1);
---color-celeste-ui-animal: rgba(186,218,242,1);
---color-naranja-ui-animal: rgba(255,120,9,1);
---color-verde-ui-animal: rgba(94,194,10,1);
---color-rojo-ui-animal: rgba(229,76,76,1);
---color-fondo-mostaza-animal: rgba(199,179,79,1);
---color-fondo-aqua-animal: rgba(183,226,208,1);
---color-fondo-rosa-animal: rgba(255,221,207,1);
---color-fondo-verde-animal: rgba(188,246,93,1);
---color-fondo-negro-animal: rgba(62,2,2,1);
-}
-
-/* ---------------------------------------------- */
-/* Color & opacity */
-
-.activado{
-content:url("img/loro_activo.png");
-/*setear las urls de las imgs activas para cada uno con su id*/
-}
-.mute-btn-activo{ color:var(--color-blanco-ui-animal)!important;background-color: var(--color-rojo-ui-animal) !important;}
-
-.rec-btn-activo{ color:var(--color-blanco-ui-animal);background-color: var(--color-verde-ui-animal);}
-
-.jam-btn-activo{ color:var(--color-blanco-ui-animal);background-color: var(--color-verde-ui-animal);}
-
-.verde-animal {
-  background-color: var(--color-verde-animal);
-}
-.marron-animal {
-  background-color: var(--color-marron-animal);
-}
-.chocolate-animal {
-  background-color: var(--color-chocolate-animal);
-}
-.mostaza-animal {
-  background-color: var(--color-mostaza-animal);
-}
-.rosa-animal {
-  background-color: var(--color-rosa-animal);
-}
-.gris-animal {
-  background-color: var(--color-gris-animal);
-}
-.fondo-1-animal {
-  background-color: var(--color-fondo-1-animal);
-}
-.figura-1-animal {
-  background-color: var(--color-figura-1-animal);
-}
-.destaque-animal {
-  background-color: var(--color-destaque-animal);
-}
-.naranja-ui-animal {
-  background-color: var(--color-naranja-ui-animal);
-}
-.verde-ui-animal {
-  background-color: var(--color-verde-ui-animal);
-}
-.blanco-ui-animal {
-  background-color: var(--color-blanco-ui-animal);
-}
-.rojo-ui-animal {
-  background-color: var(--color-rojo-ui-animal);
-}
-.negro-ui-animal{
-  background-color: var(--color-negro-ui-animal);
-}
-.fondo-mostaza-animal {
-  background-color: var(--color-fondo-mostaza-animal);
-}
-.fondo-aqua-animal {
-  background-color: var(--color-fondo-aqua-animal);
-}
-.fondo-rosa-animal {
-  background-color: var(--color-fondo-rosa-animal);
-}
-.fondo-verde-animal {
-  background-color: var(--color-fondo-verde-animal);
-}
-.fondo-negro-animal {
-  background-color: var(--color-fondo-negro-animal);
-}
-
-
-.opacity-0 {
-  opacity:0!important;
-}
-.opacity-1 {
-  opacity:0.2!important;
-}
-.opacity-2 {
-  opacity:0.4!important;
-}
-.opacity-3 {
-  opacity:0.6!important;
-}
-.opacity-4 {
-  opacity:.8!important;
-}
-.opacity-5 {
-  opacity:1!important;
-}
-
-body {
-  background-color: #BCF65D;
-}
-
-#Hero {
-  background-color: #B7E2D0;
-}
-
-
-/* ---------------------------------------------- */
-/* Type */
-
-
-body {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 200;
-  color: var(--color-chocolate-animal);
-}
-html {
-  font-size: 14px;
-
-  @media screen and (min-width: 900px) {
-    font-size: 15px;
+  --color-verde-animal: rgba(59,140,39,1);
+  --color-marron-animal: rgba(97,50,8,1);
+  --color-chocolate-animal: rgba(55,41,41,1);
+  --color-mostaza-animal: rgba(177,149,2,1);
+  --color-rosa-animal: rgba(228,180,160,1);
+  --color-gris-animal: rgba(177,166,144,1);
+  --color-blanco-ui-animal: rgba(255,255,255,1);
+  --color-fondo-1-animal: rgba(222,231,238,1);
+  --color-figura-1-animal: rgba(184,197,208,1);
+  --color-destaque-animal: rgba(109,119,126,1);
+  --color-celeste-ui-animal: rgba(186,218,242,1);
+  --color-naranja-ui-animal: rgba(255,120,9,1);
+  --color-verde-ui-animal: rgba(94,194,10,1);
+  --color-rojo-ui-animal: rgba(229,76,76,1);
+  --color-fondo-mostaza-animal: rgba(199,179,79,1);
+  --color-fondo-aqua-animal: rgba(183,226,208,1);
+  --color-fondo-rosa-animal: rgba(255,221,207,1);
+  --color-fondo-verde-animal: rgba(188,246,93,1);
+  --color-fondo-negro-animal: rgba(62,2,2,1);
   }
-  @media screen and (min-width: 1200px) {
-    font-size: 16px;
+  
+  /* ---------------------------------------------- */
+  /* Color & opacity */
+  
+  .activado{
+  content:url("img/loro_activo.png");
+  /*setear las urls de las imgs activas para cada uno con su id*/
   }
-}
-.title{
-  font-size: 2.2rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  line-height: 1.5rem;
-}
-
-.sub_title{
-  font-size: 0.85rem;
-  font-weight: 200;
-  line-height: 1rem;
-}
-
-.lead {
-  font-size: 1.125rem;
-}
-#phrase h3{
-  font-size: 2rem;
-  font-weight: 200;
-  line-height: 2.5rem;
-}
-
-
-/* --------------------------------------------- */
-/* Corners & special margins */
-
-.position-lt {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.position-rt {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-.position-lm {
-  -webkit-transform: translate(0,-50%);
-  transform: translate(0,-50%);
-  position: absolute;
-  left: 0;
-}
-.position-lb {
-  position: absolute;
-  bottom:0;
-  left: 0;
-}
-.position-b {
-  position: absolute;
-  bottom: 0;
-}
-.shift-l-200 {
-  left:-200px;
-}
-.shift-l-100 {
-  left:-100px;
-}
-.shift-l-50 {
-  left:-50px;
-}
-.shift-r-200 {
-  left:-200px;
-}
-.corners1{
-  border-radius: 15px;
-}
-.corners-2{
-  border-radius: 10px;
-}
-.corners-l{
-    border-radius: 15px 0 0 15px;
-}
-.corners-r{
-    border-radius: 0 15px 15px 0;
-}
-#ch1, #ch2, #ch3, #ch4, #ch5, #ch6, #ch7, #ch8{
-  margin:3px;
-}
-
-.navbar {
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-.jumbotron {
-  padding-top:64px;
-}
-
-/* --------------------------------------------- */
-/* Extra NexusUI */
-
-.mom_dial{
-  width:40px !important;
-  height:40px !important;
-}
-
-.dial_container {
-   content: '';
-   display: inline-block;
-   width: 44px;
-   height: 44px;
-   padding: 2px;
-   -moz-border-radius: 50%;
-   -webkit-border-radius: 50%;
-   border-radius: 50%;
-   background-color: var(--color-blanco-ui-animal);
-}
-.grid-size {
-  width:100%;
-  height:auto;
-}
-
-
-/* --------------------------------------------- */
-/* Instruments */
-
-
-.instrumento-animal{
-  width:auto;
-  height:100px;
-}
-#buhoInst .instrumento-animal{
-  background-image: url("img/animal-sm_buho-tx.jpg");
-  background-size: cover;
-  background-position: center;
-}
-#osoInst .instrumento-animal{
-  background-image: url("img/animal-sm_oso-tx.jpg");
-  background-size: cover;
-  background-position: center;
-}
-#gatoInst .instrumento-animal{
-  background-image: url("img/animal-sm_gato-tx.jpg");
-  background-size: cover;
-  background-position: center;
-}
-#sapoInst .instrumento-animal{
-  background-image: url("img/animal-sm_sapo-tx.jpg");
-  background-size: cover;
-  background-position: center;
-}
-#patoInst .instrumento-animal{
-  background-image: url("img/animal-sm_pato-tx.jpg");
-  background-size: cover;
-  background-position: center;
-}
-#monoInst .instrumento-animal{
-  background-image: url("img/animal-sm_mono-tx.jpg");
-  background-size: cover;
-  background-position: center;
-}
-#loroInst .instrumento-animal{
-  background-image: url("img/animal-sm_loro-tx.jpg");
-  background-size: cover;
-  background-position: left,top;
-}
-#cerdoInst .instrumento-animal{
-  background-image: url("img/animal-sm_cerdo-tx.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-
-/* --------------------------------------------- */
-/* Audio cables */
-
-#svgContainer {
-	z-index: -10;
-	position:absolute;
-	opacity: 1;
-}
-
-#inlet1, #inlet2, #inlet3, #inlet4, #inlet5, #inlet6, #inlet7, #inlet8 {
-	width:30px;
-	height: 10px;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
-	margin-left: 15px;
-  margin-top: 30px;
-	background-color: var(--color-destaque-animal);
-}
-
-#in1, #in2, #in3, #in4, #in5, #in6, #in7, #in8 {
-	width:20px;
-	height: 7px;
-  border-top-left-radius: 40%;
-  border-top-right-radius: 40%;
-	margin-left: 10px;
-	background-color: var(--color-destaque-animal);
-}
-#out1, #out2, #out3, #out4, #out5, #out6, #out7, #out8 {
-	width:20px;
-	height: 7px;
-  border-bottom-left-radius: 40%;
-  border-bottom-right-radius: 40%;
-	margin-left: 20px;
-	background-color: var(--color-destaque-animal);
-}
-
-/* --------------------------------------------- */
-/* Buttons & icons */
-
-.btn-group-lg>.btn, .btn-lg, .btn {
-  border-radius: 15px;
-}
-.btn-primary {
-  color: var(--color-chocolate-animal);
-  background-color: var(--color-blanco-ui-animal);
-  border-color: var(--color-blanco-ui-animal);
-}
-.btn-secondary{
-  background-color: var(--color-figura-1-animal);
-  border:none;
-}
-.audiopre {
-  cursor: pointer;
-}
-.animal-btn{
-  width:44px;
-  height:44px;
-  border-radius:50px;
-  background-color: var(--color-figura-1-animal)
-}
-#controles {
-  height: 100px;
-}
-#rec-btn {
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  background-color: var(--color-blanco-ui-animal)
-}
-#mute-btn{
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background-color: var(--color-blanco-ui-animal)
-}
-#ch_control object, #instrumentos object, #sel-inst object{
-  background-color: #000;
-  filter:invert(1) opacity(.25);
-}
-
-#icono-ch8:hover {
-  filter:invert(0)!important;
-  background-color: var(--color-rosa-animal);
-}
-#icono-ch7:hover {
-  filter:invert(0)!important;
-  background-color: var(--color-verde-animal);
-}
-#icono-ch6:hover {
-  filter:invert(0)!important;
-  background-color: var(--color-verde-animal);
-}
-#icono-ch5:hover {
-  filter:invert(0)!important;
-  background-color: var(--color-mostaza-animal);
-}
-#icono-ch4:hover {
-  filter:invert(0)!important;
-  background-color: var(--color-marron-animal);
-}
-#icono-ch3:hover {
-  filter:invert(0)!important;
-  background-color: var(--color-gris-animal);
-}
-#icono-ch2:hover {
-  filter:invert(0)!important;
-  background-color: var(--color-chocolate-animal);
-}
-#icono-ch1:hover {
-  filter:invert(0)!important;
-  background-color: var(--color-gris-animal);
-}
-#audiopre-kit1:hover {
-  filter:invert(0)!important;
-  background-color: var(--color-verde-ui-animal);
-}
-.audio-preview {
-  width: 44px;
-  height: 44px;
-  background-color: var(--color-figura-1-animal);
-
-}
-.animal-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 50px;
-  background-color: var(--color-blanco-ui-animal);
-}
-.animal-icon-s{
-  width: 30px;
-  height: 30px;
-  border-radius: 50px;
-  background-color: var(--color-blanco-ui-animal);
-}
-.audio-preview-s {
-  width: 36px;
-  height: 36px;
-  border-radius: 50px;
-  background-color: var(--color-blanco-ui-animal);
-}
-.icon-container-s, .audio-preview-container-s {
-  width: 36px;
-  height: 36px;
-  border-radius: 50px;
-  background-color: var(--color-blanco-ui-animal);
-  border: 3px solid;
-  border-color: var(--color-blanco-ui-animal);
-}
-.icon-container-s:hover {
-  border-color: var(--color-naranja-ui-animal);
-}
-#audio-preview:hover {
-  filter:invert(0)!important;
-  background-color: var(--color-verde-ui-animal);
-}
-
-.color-chip-1{
-  width:44px;
-  height:44px;
-  border-radius:50px;
-  background-color: var(--color-fondo-mostaza-animal)
-}
-.color-chip-2{
-  width:44px;
-  height:44px;
-  border-radius:50px;
-  background-color: var(--color-fondo-aqua-animal)
-}
-.color-chip-3{
-  width:44px;
-  height:44px;
-  border-radius:50px;
-  background-color: var(--color-fondo-rosa-animal)
-}
-.color-chip-4{
-  width:44px;
-  height:44px;
-  border-radius:50px;
-  background-color: var(--color-fondo-verde-animal)
-}
-.color-chip-5{
-  width:44px;
-  height:44px;
-  border-radius:50px;
-  background-color: var(--color-fondo-negro-animal)
-}
-
-
-
-
-.solo-ch8 {
-  filter:invert(0)!important;
-  background-color: var(--color-gris-animal);
-}
-
-
-.animal-icon path{
-  background-color: var(--color-naranja-ui-animal);
-}
-
-.animal-border{
-  border-style: solid;
-  border-width: 5px;
-}
-
-
-/* --------------------------------------------- */
-/* Windows */
-
-
-#settingsModal .modal-content, #helpModal .modal-content, #jamModal .modal-content {
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.modal-header, .modal-footer {
-  border: none;
-  display:block;
-}
-.modal-header .close{
-  float: none;
-  margin-left:0;
-  margin-top:5px;
-  padding:0;
-  font-size: 2rem;
-  font-weight: 100;
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background-color: var(--color-fondo-1-animal);
-}
-
-
-/* --------------------------------------------- */
-/* Animation & transitions */
-
-
-.animate-down-up-in-1{
-  -webkit-animation: down-up-in 1s; /* Chrome, Safari, Opera */
-  animation: down-up-in 1s;
-  animation-delay: 1s;
-  animation-fill-mode: both;
-}
-.animate-up-down-in-1{
-  -webkit-animation: up-down-in 1s; /* Chrome, Safari, Opera */
-  animation: up-down-in 1s;
-  animation-delay: 1s;
-  animation-fill-mode: both;
-}
-.animate-up-down-in-2{
-  -webkit-animation: up-down-in 1s; /* Chrome, Safari, Opera */
-  animation: up-down-in 1s;
-  animation-delay: 1.5s;
-  animation-fill-mode: both;
-}
-
-.animate-up-down-in-3{
-  -webkit-animation: up-down-in 1s; /* Chrome, Safari, Opera */
-  animation: up-down-in 1s;
-  animation-delay: 2s;
-  animation-fill-mode: both;
-}
-
-/* For modern browsers */
-@-webkit-keyframes up-down-in {
-  from {
-    opacity: 0;
-    transform: translate(0px,-15px);
+  
+  
+  .verde-animal {
+    background-color: var(--color-verde-animal);
   }
-  to {
-    opacity: 1;
-    transform: translate(0px,0px);
+  .marron-animal {
+    background-color: var(--color-marron-animal);
   }
-}
-@-webkit-keyframes down-up-in {
-  from {
-    opacity: 0;
-    transform: translate(0px,15px);
+  .chocolate-animal {
+    background-color: var(--color-chocolate-animal);
   }
-  to {
-    opacity: 1;
-    transform: translate(0px,0px);
+  .mostaza-animal {
+    background-color: var(--color-mostaza-animal);
   }
-}
-/* The standard way */
-@keyframes up-down-in {
-  from {
-    opacity: 0;
-    transform: translate(0px,-15px);
+  .rosa-animal {
+    background-color: var(--color-rosa-animal);
   }
-  to {
-    opacity: 1;
-    transform: translate(0px,0px);
+  .gris-animal {
+    background-color: var(--color-gris-animal);
   }
-}
-@keyframes down-up-in {
-  from {
-    opacity: 0;
-    transform: translate(0px,15px);
+  .fondo-1-animal {
+    background-color: var(--color-fondo-1-animal);
   }
-  to {
-    opacity: 1;
-    transform: translate(0px,0px);
+  .figura-1-animal {
+    background-color: var(--color-figura-1-animal);
   }
-}
-
-
-
-
-
-/* --------------------------------------------- */
-/* Display */
-
-
-.numero-animal{
-  font-size: 1.5rem;
-  line-height: 1rem;
-}
-.texto-animal{
-  font-size: 1rem;
-  line-height: 0.5rem;
-}
-
-.fondo-1 {
-  background: url('img/landing/fondo-outlines.png') no-repeat center center fixed;
-  background-color: var(--color-destaque-animal);
-}
-
-
-/* --------------------------------------------- */
-/* Breakpoints */
-
-
-/* Small devices (landscape phones, 576px and up) */
-
-@media (min-width: 576px) {
-  body {
+  .destaque-animal {
+    background-color: var(--color-destaque-animal);
+  }
+  .naranja-ui-animal {
+    background-color: var(--color-naranja-ui-animal);
+  }
+  .verde-ui-animal {
+    background-color: var(--color-verde-ui-animal);
+  }
+  .blanco-ui-animal {
+    background-color: var(--color-blanco-ui-animal);
+  }
+  .rojo-ui-animal {
+    background-color: var(--color-rojo-ui-animal);
+  }
+  .negro-ui-animal{
+    background-color: var(--color-negro-ui-animal);
+  }
+  .fondo-mostaza-animal {
     background-color: var(--color-fondo-mostaza-animal);
   }
-  #bajada {
-    border-right: 1px solid white;
-  }
-  #rec-btn {
-    border-bottom: 2px solid var(--color-fondo-1-animal);
-  }
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-  body {
+  .fondo-aqua-animal {
     background-color: var(--color-fondo-aqua-animal);
   }
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-  body {
-    background-color: var(--color-fondo-negro-animal);
-  }
-  #rec-btn {
-    border-top-right-radius: 0;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-    border-bottom: none;
-    border-right: 2px solid var(--color-fondo-1-animal);
-  }
-
-  #mute-btn {
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    border-bottom-left-radius: 0;
-  }
-  #controles {
-    height: 200px;
-  }
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-  body {
+  .fondo-rosa-animal {
     background-color: var(--color-fondo-rosa-animal);
   }
-}
+  .fondo-verde-animal {
+    background-color: var(--color-fondo-verde-animal);
+  }
+  .fondo-negro-animal {
+    background-color: var(--color-fondo-negro-animal);
+  }
+  
+  
+  .opacity-0 {
+    opacity:0!important;
+  }
+  .opacity-1 {
+    opacity:0.2!important;
+  }
+  .opacity-2 {
+    opacity:0.4!important;
+  }
+  .opacity-3 {
+    opacity:0.6!important;
+  }
+  .opacity-4 {
+    opacity:.8!important;
+  }
+  .opacity-5 {
+    opacity:1!important;
+  }
+  
+  body {
+    background-color: #BCF65D;
+  }
+  
+  #Hero {
+    background-color: #B7E2D0;
+  }
+  
+  
+  
+  /* ---------------------------------------------- */
+  /* Type */
+  
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    color: var(--color-chocolate-animal);
+  }
+  html {
+    font-size: 14px;
+  
+    @media screen and (min-width: 900px) {
+      font-size: 15px;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 16px;
+    }
+  }
+  .title{
+    font-size: 2.2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1.5rem;
+  }
+  
+  .sub_title{
+    font-size: 0.85rem;
+    font-weight: 200;
+    line-height: 1rem;
+  }
+  
+  .lead {
+    font-size: 1.125rem;
+  }
+  #phrase h3{
+    font-size: 2rem;
+    font-weight: 200;
+    line-height: 2.5rem;
+  }
+  
+  
+  /* --------------------------------------------- */
+  /* Corners & special margins */
+  
+  .position-lt {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .position-rt {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .position-lm {
+    -webkit-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+    position: absolute;
+    left: 0;
+  }
+  .position-lb {
+    position: absolute;
+    bottom:0;
+    left: 0;
+  }
+  .position-b {
+    position: absolute;
+    bottom: 0;
+  }
+  .shift-l-200 {
+    left:-200px;
+  }
+  .shift-l-100 {
+    left:-100px;
+  }
+  .shift-l-50 {
+    left:-50px;
+  }
+  .shift-r-200 {
+    left:-200px;
+  }
+  .corners1{
+    border-radius: 15px;
+  }
+  .corners-2{
+    border-radius: 10px;
+  }
+  .corners-l{
+      border-radius: 15px 0 0 15px;
+  }
+  .corners-r{
+      border-radius: 0 15px 15px 0;
+  }
+  #ch1, #ch2, #ch3, #ch4, #ch5, #ch6, #ch7, #ch8{
+    margin:3px;
+  }
+  .navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  .jumbotron {
+    padding-top:64px;
+  }
+  
+  /* --------------------------------------------- */
+  /* Extra NexusUI */
+  
+  .mom_dial{
+    width:40px !important;
+    height:40px !important;
+  }
+  
+  .dial_container {
+     content: '';
+     display: inline-block;
+     width: 44px;
+     height: 44px;
+     padding: 2px;
+     -moz-border-radius: 50%;
+     -webkit-border-radius: 50%;
+     border-radius: 50%;
+     background-color: var(--color-blanco-ui-animal);
+  }
+  .grid-size {
+    width:100%;
+    height:auto;
+  }
+  
+  
+  /* --------------------------------------------- */
+  /* Instruments */
+  
+  
+  .instrumento-animal{
+    width:auto;
+    height:100px;
+  }
+  #buhoInst .instrumento-animal{
+    background-image: url("img/animal-sm_buho-tx.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  #osoInst .instrumento-animal{
+    background-image: url("img/animal-sm_oso-tx.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  #gatoInst .instrumento-animal{
+    background-image: url("img/animal-sm_gato-tx.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  #sapoInst .instrumento-animal{
+    background-image: url("img/animal-sm_sapo-tx.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  #patoInst .instrumento-animal{
+    background-image: url("img/animal-sm_pato-tx.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  #monoInst .instrumento-animal{
+    background-image: url("img/animal-sm_mono-tx.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  #loroInst .instrumento-animal{
+    background-image: url("img/animal-sm_loro-tx.jpg");
+    background-size: cover;
+    background-position: left,top;
+  }
+  #cerdoInst .instrumento-animal{
+    background-image: url("img/animal-sm_cerdo-tx.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  
+  
+  /* --------------------------------------------- */
+  /* Audio cables */
+  
+  #svgContainer {
+    z-index: -10;
+    position:absolute;
+    opacity: 1;
+  }
+  
+  #inlet1, #inlet2, #inlet3, #inlet4, #inlet5, #inlet6, #inlet7, #inlet8 {
+    width:30px;
+    height: 10px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    margin-left: 15px;
+    margin-top: 30px;
+    background-color: var(--color-destaque-animal);
+  }
+  
+  #in1, #in2, #in3, #in4, #in5, #in6, #in7, #in8 {
+    width:20px;
+    height: 7px;
+    border-top-left-radius: 40%;
+    border-top-right-radius: 40%;
+    margin-left: 10px;
+    background-color: var(--color-destaque-animal);
+  }
+  #out1, #out2, #out3, #out4, #out5, #out6, #out7, #out8 {
+    width:20px;
+    height: 7px;
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+    margin-left: 20px;
+    background-color: var(--color-destaque-animal);
+  }
+  
+  /* --------------------------------------------- */
+  /* Buttons & icons */
+  
+  .btn-group-lg>.btn, .btn-lg, .btn {
+    border-radius: 15px;
+  }
+  .btn-primary {
+    color: var(--color-chocolate-animal);
+    background-color: var(--color-blanco-ui-animal);
+    border-color: var(--color-blanco-ui-animal);
+  }
+  .btn-secondary{
+    background-color: var(--color-figura-1-animal);
+    border:none;
+  }
+  .audiopre {
+    cursor: pointer;
+  }
+  .animal-btn{
+    width:44px;
+    height:44px;
+    border-radius:50px;
+    background-color: var(--color-figura-1-animal)
+  }
+  #izq {
+    height:210px;
+  }
+  #chat-animal{
+    height:100%;
+  }
+  #controles {
+    height:100%;
+  }
+  .custom-height {
+    height: 50%;
+  }
+  #rec-btn {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height:50%;
+  }
+  .rec-btn-activo, .jam-btn-activo {
+    -webkit-animation:blinkingRecJam 1.2s infinite;
+    animation:blinkingRecJam 1.2s infinite;
+  }
+  #mute-btn{
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    height:50%;
+  }
+  .mute-btn-activo{
+    background-color:var(--color-blanco-ui-animal);
+    animation-play-state: initial !important;
+  }
+  .mute-btn{
+    -webkit-animation:blinkingPlay 1.2s infinite;
+    animation:blinkingPlay 1.2s infinite;
+  }
+  #rec-btn:hover, #mute-btn:hover, #increment-swing-btn:hover, #increment-bpm-btn:hover, #decrement-swing-btn:hover, #decrement-bpm-btn:hover{
+    background-color:var(--color-figura-1-animal);
+  }
+  #decrement-bpm-btn {
+    border-top-left-radius: 15px;
+    border-bottom: 1px solid var(--color-fondo-1-animal);
+  }
+  #increment-bpm-btn {
+    border-bottom: 1px solid var(--color-fondo-1-animal);
+  }
+  #bpm-display{
+    border-top-right-radius: 15px;
+    border-bottom: 1px solid var(--color-fondo-1-animal);
+  }
+  #decrement-swing-btn {
+    border-bottom-left-radius: 15px;
+    border-top: 1px solid var(--color-fondo-1-animal);
+  }
+  #increment-swing-btn {
+    border-top: 1px solid var(--color-fondo-1-animal);
+  }
+  #swing-display{
+    border-bottom-right-radius: 15px;
+    border-top: 1px solid var(--color-fondo-1-animal);
+  }
+  #ch_control object, #instrumentos object, #sel-inst object{
+    background-color: #000;
+    filter:invert(1) opacity(.25);
+  }
+  
+  #icono-ch8:hover {
+    content: url(img/cerdo_activo.png);
+  }
+  #icono-ch7:hover {
+    content: url(img/loro_activo.png);
+  }
+  #icono-ch6:hover {
+    content: url(img/sapo_activo.png);
+  }
+  #icono-ch5:hover {
+    content: url(img/pato_activo.png);
+  }
+  #icono-ch4:hover {
+    content: url(img/mono_activo.png);
+  }
+  #icono-ch3:hover {
+    content: url(img/gato_activo.png);
+  }
+  #icono-ch2:hover {
+    content: url(img/oso_activo.png);
+  }
+  #icono-ch1:hover {
+    content: url(img/buho_activo.png);
+  }
+  #audiopre-kit1:hover {
+    filter:invert(0)!important;
+    background-color: var(--color-verde-ui-animal);
+  }
+  .audio-preview {
+    width: 44px;
+    height: 44px;
+    background-color: var(--color-figura-1-animal);
+  
+  }
+  .animal-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--color-blanco-ui-animal);
+  }
+  .animal-icon-s{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--color-blanco-ui-animal);
+  }
+  .audio-preview-s {
+    width: 36px;
+    height: 36px;
+    border-radius: 50px;
+    background-color: var(--color-blanco-ui-animal);
+  }
+  .icon-container-s, .audio-preview-container-s {
+    width: 36px;
+    height: 36px;
+    border-radius: 50px;
+    background-color: var(--color-blanco-ui-animal);
+    border: 3px solid;
+    border-color: var(--color-blanco-ui-animal);
+  }
+  .icon-container-s:hover {
+    border-color: var(--color-naranja-ui-animal);
+  }
+  #audio-preview:hover {
+    filter:invert(0)!important;
+    background-color: var(--color-verde-ui-animal);
+  }
+  
+  .color-chip-1{
+    width:44px;
+    height:44px;
+    border-radius:50px;
+    background-color: var(--color-fondo-mostaza-animal)
+  }
+  .color-chip-2{
+    width:44px;
+    height:44px;
+    border-radius:50px;
+    background-color: var(--color-fondo-aqua-animal)
+  }
+  .color-chip-3{
+    width:44px;
+    height:44px;
+    border-radius:50px;
+    background-color: var(--color-fondo-rosa-animal)
+  }
+  .color-chip-4{
+    width:44px;
+    height:44px;
+    border-radius:50px;
+    background-color: var(--color-fondo-verde-animal)
+  }
+  .color-chip-5{
+    width:44px;
+    height:44px;
+    border-radius:50px;
+    background-color: var(--color-fondo-negro-animal)
+  }
+  
+  
+  
+  
+  .solo-ch8 {
+    filter:invert(0)!important;
+    background-color: var(--color-gris-animal);
+  }
+  
+  
+  .animal-icon path{
+    background-color: var(--color-naranja-ui-animal);
+  }
+  
+  .animal-border{
+    border-style: solid;
+    border-width: 5px;
+  }
+  
+  
+  /* --------------------------------------------- */
+  /* Windows */
+  
+  
+  #settingsModal .modal-content, #helpModal .modal-content, #jamModal .modal-content {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  
+  .modal-header, .modal-footer {
+    border: none;
+    display:block;
+  }
+  .modal-header .close{
+    float: none;
+    margin-left:0;
+    margin-top:5px;
+    padding:0;
+    font-size: 2rem;
+    font-weight: 100;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: var(--color-fondo-1-animal);
+  }
+  
+  
+  /* --------------------------------------------- */
+  /* Animation & transitions */
+  
+  @keyframes blinkingPlay{
+    0%{     background-color:var(--color-rojo-ui-animal);}
+    35%{    background-color:var(--color-rojo-ui-animal);}
+    85%{    color:var(--color-figura-1-animal);}
+  }
+  @webkit-keyframes blinkingPlay{
+    0%{     background-color:var(--color-rojo-ui-animal);}
+    35%{    background-color:var(--color-rojo-ui-animal);}
+    85%{    color:var(--color-figura-1-animal);}
+  }
+  @keyframes blinkingRecJam{
+    0%{     background-color:var(--color-verde-ui-animal);}
+    35%{    background-color:var(--color-verde-ui-animal);}
+    85%{    color:var(--color-figura-1-animal);}
+  }
+  @webkit-keyframes blinkingRecJam{
+    0%{     background-color:var(--color-verde-ui-animal);}
+    35%{    background-color:var(--color-verde-ui-animal);}
+    85%{    color:var(--color-figura-1-animal);}
+  }
+  
+  
+  /* --------------------------------------------- */
+  /* Display */
+  
+  
+  .numero-animal{
+    font-size: 1.5rem;
+    line-height: 1rem;
+  }
+  .texto-animal{
+    font-size: 1rem;
+    line-height: 0.5rem;
+  }
+  
+  .fondo-1 {
+    background: url('img/landing/fondo-outlines.png') no-repeat center center fixed;
+    background-color: var(--color-destaque-animal);
+  }
+  
+  
+  /* --------------------------------------------- */
+  /* Breakpoints */
+  
+  
+  /* Small devices (landscape phones, 576px and up) */
+  
+  @media (min-width: 576px) {
+    body {
+      background-color: var(--color-fondo-mostaza-animal);
+    }
+    #bajada {
+      border-right: 1px solid white;
+    }
+    #rec-btn {
+      border-bottom: 1px solid var(--color-fondo-1-animal);
+    }
+    #mute-btn {
+      border-top: 1px solid var(--color-fondo-1-animal);
+    }
+  }
+  
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) {
+    body {
+      background-color: var(--color-fondo-aqua-animal);
+    }
+  }
+  
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) {
+    body {
+      background-color: var(--color-fondo-negro-animal);
+    }
+  
+    #izq {
+      height:auto;
+    }
+    #chat-animal{
+      height:65%;
+    }
+    #controles {
+      height:35%;
+    }
+  
+    .custom-height {
+      height: 100%;
+    }
+  
+    #rec-btn {
+      border-top-right-radius: 0;
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+      border-bottom: none;
+      border-right: 1px solid var(--color-fondo-1-animal);
+      height: 100%;
+    }
+    #mute-btn{
+      border-top: none;
+    }
+  
+    #mute-btn {
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+      border-bottom-left-radius: 0;
+      border-left: 1px solid var(--color-fondo-1-animal);
+      height: 100%;
+    }
+  }
+  
+  /* Extra large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+    body {
+      background-color: var(--color-fondo-rosa-animal);
+    }
+    #chat-animal{
+      height:60%;
+    }
+    #controles {
+      height:40%;
+    }
+  }
