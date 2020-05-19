@@ -388,7 +388,7 @@ html {
 }
 .mute-btn-activo{
   background-color:var(--color-blanco-ui-animal);
-  animation-play-state: paused !important;
+  animation-play-state: initial !important;
 }
 #decrement-bpm-btn {
   border-top-left-radius: 15px;
