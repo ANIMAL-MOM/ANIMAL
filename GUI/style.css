@@ -369,6 +369,9 @@ html {
 #controles {
   height:100%;
 }
+.custom-height {
+  height: 50%;
+}
 #rec-btn {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
@@ -662,6 +665,10 @@ html {
   }
   #controles {
     height:50%;
+  }
+
+  .custom-height {
+    height: 100%;
   }
 
   #rec-btn {
