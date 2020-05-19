@@ -377,15 +377,15 @@ html {
 #mute-btn{
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color:var(--color-blanco-ui-animal);
   height:50%;
+  -webkit-animation:blinkingPlay 1.2s infinite;
+  animation:blinkingPlay 1.2s infinite;
 }
 #rec-btn:hover, #mute-btn:hover, #increment-swing-btn:hover, #increment-bpm-btn:hover, #decrement-swing-btn:hover, #decrement-bpm-btn:hover{
   background-color:var(--color-figura-1-animal);
 }
 .mute-btn-activo{
-  -webkit-animation:blinkingPlay 1.2s infinite;
-  animation:blinkingPlay 1.2s infinite;
+  background-color:var(--color-blanco-ui-animal);
 }
 #decrement-bpm-btn {
   border-top-left-radius: 15px;
