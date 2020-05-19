@@ -387,12 +387,20 @@
     height:50%;
   }
   .mute-btn-activo{
-    background-color:var(--color-blanco-ui-animal);
+    background-color:var(--color-blanco-ui-animal) !important;
     animation-play-state: initial !important;
+    
+  }
+  .mute-btn-activo span:after{
+    content: 'Stop' !important;
+  }
+  .mute-btn span:after{
+    content: 'Play';
   }
   .mute-btn{
     -webkit-animation:blinkingPlay 1.2s infinite;
     animation:blinkingPlay 1.2s infinite;
+   
   }
   #rec-btn:hover, #mute-btn:hover, #increment-swing-btn:hover, #increment-bpm-btn:hover, #decrement-swing-btn:hover, #decrement-bpm-btn:hover{
     background-color:var(--color-figura-1-animal);

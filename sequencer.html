@@ -689,7 +689,7 @@
                     <span class="m-auto text-center">Rec</span>
                   </div>
                   <div id="mute-btn" class="col-lg-6 d-flex my-0 figura-1-animal mute-btn">
-                    <span class="m-auto text-center">Play</span>
+                    <span class="m-auto text-center"></span>
                   </div>
                 </div>
               </div>
@@ -1275,15 +1275,14 @@
       //chicons
 
       var myChannelAnimalIcon = $("#animalChannel1")[0];
-      var muteado = false;
+  //    var muteado = false;
 
       $(".soloButton").click(function () {
         var myId = this.id;
         var myAnimalNumber = myId.split("icono-ch")[1];
         myAnimalNumber--;
-        if (!muteado) {
-          muteado = true;
-          $(this).addClass("activado");
+        if (!(sonidos.get(scaleNotes[(7 - myAnimalNumber)]).mute)) {
+           $(this).addClass("activado");
           for (i = 0; i < 8; i++) {
             sonidos.get(scaleNotes[i]).mute = true;
             console.log("es el animal numero"+ i)
@@ -1294,7 +1293,6 @@
           console.log(scaleNotes[(7 - myAnimalNumber)]);
 
         } else {
-          muteado = false;
           $(this).removeClass("activado");
           for (i = 0; i < 8; i++) {
             console.log(scaleNotes[i]);

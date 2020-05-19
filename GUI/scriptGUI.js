@@ -135,6 +135,19 @@ dialins.push(dialins6);
 dialins.push(dialins7);
 dialins.push(dialins8);
  //---------------------------------------
+
+//Mobile
+/*var mobdialins8 = new Nexus.Dial('#mob-dial-ins8',{
+  'interaction': 'vertical', // "radial", "vertical", or "horizontal"
+  'mode': 'relative', // "relative" or "relative"
+  'min': 0,
+  'max': 10,
+  'step':1,
+  'value': 5
+})
+
+dialins.push(mobdialins1);*/
+
  // DIALES - volumen
 
  var dialch1 = new Nexus.Dial('#dial-ch1',{
@@ -239,6 +252,7 @@ dialins.push(dialins8);
    'value': 5
  })
 
+
  dialch8.on('change',function(v) {
    console.log(v);
  })
@@ -252,3 +266,19 @@ dialins.push(dialins8);
  dialchs.push(dialch3);
  dialchs.push(dialch2);
  dialchs.push(dialch1);
+
+
+ ///MOBILE
+
+
+  /*var mobdialch8 = new Nexus.Dial('#mob-dial-ch8',{
+  'interaction': 'vertical', // "radial", "vertical", or "horizontal"
+  'mode': 'relative', // "relative" or "relative"
+  'min': 0,
+  'max': 10,
+  'step':1,
+  'value': 5
+})
+
+
+dialchs.push(mobdialch8);*/
