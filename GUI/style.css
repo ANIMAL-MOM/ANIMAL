@@ -379,11 +379,11 @@ html {
   border-bottom-right-radius: 15px;
   height:50%;
 }
-.mute-btn{
+.mute-btn-activo{
   background-color:var(--color-blanco-ui-animal);
   animation-play-state: initial !important;
 }
-.mute-btn-activo{
+.mute-btn{
   -webkit-animation:blinkingPlay 1.2s infinite;
   animation:blinkingPlay 1.2s infinite;
 }
