@@ -363,7 +363,7 @@ html {
   background-color: var(--color-figura-1-animal)
 }
 #controles {
-  height: 100px;
+  height: 50%;
 }
 #rec-btn {
   border-top-left-radius: 15px;
@@ -649,6 +649,10 @@ html {
   body {
     background-color: var(--color-fondo-negro-animal);
   }
+
+  #controles {
+    height: 100%;
+  }
   #rec-btn {
     border-top-right-radius: 0;
     border-top-left-radius: 15px;
@@ -667,9 +671,6 @@ html {
     border-bottom-left-radius: 0;
     border-left: 1px solid var(--color-fondo-1-animal);
     height: 100%;
-  }
-  #controles {
-    height: 200px;
   }
 }
 
