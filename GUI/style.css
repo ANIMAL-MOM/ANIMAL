@@ -181,7 +181,9 @@ html {
   /* --------------------------------------------- */
   /* Corners & special margins */
 
-
+#Header{
+  height: 35px;
+}
 
   .navbar {
     position: absolute;
@@ -370,6 +372,10 @@ html {
   /* --------------------------------------------- */
   /* Buttons & icons */
 
+
+#Animal_logo{
+  height:65px;
+}
   .btn-group-lg>.btn, .btn-lg, .btn {
     border-radius: 15px;
   }
