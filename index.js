@@ -206,9 +206,10 @@ player.on('connection', (socket) => {
 
     socket.on('toggleStep', (miStep) => {
       //console.log('emit changes to room: ' + socket.room.id);
-      socket.to(socket.room.id).emit('toggleStep', miStep);
+      socket.broadcast.to(socket.room.id).emit('toggleStep', miStep);      
       // console.log('add changes to server matrix' + miStep.row + ',' + miStep.column + ',' + miStep.state);
       socket.room.sequencer[miStep.row][miStep.column] = miStep.state;
+     // console.log("emito cambio desde el server", console.log(socket));
     });
 
     socket.on('volumeChanged', (myAnimal, value) => {

@@ -18,7 +18,7 @@
 
 
   <link rel="stylesheet" href="GUI/style.css">
- <!--<script src="/tone/Tone.js"></script>-->
+  <!--<script src="/tone/Tone.js"></script>-->
   <script type="module">
     import * as Tone from "/tone/Tone.js";
   </script>
@@ -1216,8 +1216,14 @@
       }
 
       sequencer.on('change', function (v) {
-        console.log("emito change");
-        socket.emit('toggleStep', v);
+        myChannel.forEach(function (micha) {
+          if (v.row == micha - 1) {
+            socket.emit('toggleStep', v);
+            console.log("emito change");
+          }
+        });
+        //   if (v.row
+
 
         /* var itsMyChannel = false;
          myChannel.forEach(channel => {
@@ -1275,36 +1281,48 @@
       //chicons
 
       var myChannelAnimalIcon = $("#animalChannel1")[0];
-  //    var muteado = false;
+      //    var muteado = false;
+      var miSolo = -1;
 
       $(".soloButton").click(function () {
         var myId = this.id;
         var myAnimalNumber = myId.split("icono-ch")[1];
         myAnimalNumber--;
-        if (!(sonidos.get(scaleNotes[(7 - myAnimalNumber)]).mute)) {
-           $(this).addClass("activado");
-          for (i = 0; i < 8; i++) {
-            sonidos.get(scaleNotes[i]).mute = true;
-            console.log("es el animal numero"+ i)
-            console.log(scaleNotes[i]);
-            console.log("quedó muteado " +sonidos.get(scaleNotes[i]).mute);
-          }
-          sonidos.get(scaleNotes[(7 - myAnimalNumber)]).mute = false;
-          console.log(scaleNotes[(7 - myAnimalNumber)]);
-
-        } else {
+        if (miSolo == (7 - myAnimalNumber)) {
           $(this).removeClass("activado");
-          for (i = 0; i < 8; i++) {
-            console.log(scaleNotes[i]);
-            sonidos.get(scaleNotes[i]).mute = false;
-            console.log("es el animal numero"+ i)
-            console.log(scaleNotes[i]);
-            console.log("quedó muteado " +sonidos.get(scaleNotes[i]).mute);
-          }
+          miSolo = -1;
+        } else {
+          $(this).addClass("activado");
+          miSolo = (7 - myAnimalNumber);
         }
-
-
       });
+      /*
+      myAnimalNumber--;
+      if (!(sonidos.get(scaleNotes[(7 - myAnimalNumber)]).mute)) {
+         $(this).addClass("activado");
+        for (i = 0; i < 8; i++) {
+          sonidos.get(scaleNotes[i]).mute = true;
+          console.log("es el animal numero"+ i)
+          console.log(scaleNotes[i]);
+          console.log("quedó muteado " +sonidos.get(scaleNotes[i]).mute);
+        }
+        sonidos.get(scaleNotes[(7 - myAnimalNumber)]).mute = false;
+        console.log(scaleNotes[(7 - myAnimalNumber)]);
+
+      } else {
+        $(this).removeClass("activado");
+        for (i = 0; i < 8; i++) {
+          console.log(scaleNotes[i]);
+          sonidos.get(scaleNotes[i]).mute = false;
+          console.log("es el animal numero"+ i)
+          console.log(scaleNotes[i]);
+          console.log("quedó muteado " +sonidos.get(scaleNotes[i]).mute);
+        }
+        
+    }
+
+
+    });*/
 
       //copy link
       $(".input-group-append").click(function () {
@@ -1418,7 +1436,7 @@
 
             for (var i = 7; i >= 0; i--) {
 
-              if (matrix[i][stepNumber]) {
+              if (matrix[i][stepNumber] && (miSolo == -1 || miSolo == i)) {
                 sonidos.get(scaleNotes[i]).start(time, 0, "16n", 0, 1);
 
               }
