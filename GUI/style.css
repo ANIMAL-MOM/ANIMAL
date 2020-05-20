@@ -665,7 +665,7 @@ html {
   /* Display */
 
 
-    
+
 
   #bpm-display{
     border-top-right-radius: 15px;
@@ -734,6 +734,20 @@ html {
   /* Breakpoints */
 
 
+
+
+
+  @media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 480px)
+    and (orientation: portrait) {
+      #alerta{
+        display:block;
+      }
+  }
+
+
+
   /* Small devices (landscape phones, 576px and up) */
 
   @media (min-width: 576px) {
@@ -757,6 +771,7 @@ html {
       background-color: var(--color-fondo-aqua-animal);
     }
   }
+
 
   /* Large devices (desktops, 992px and up) */
   @media (min-width: 992px) {
