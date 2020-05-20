@@ -633,13 +633,14 @@
         <div class="row pr-lg-1 d-flex h-100">
           <!-- CHAT -->
           <div id="chat-animal" class="col-6 col-lg-12 p-0 d-flex">
-            <div class="corners1 figura-1-animal">
+            <div class="p-2 corners1 figura-1-animal">
 
-              <ul id="messages"></ul>
+              <ul id="messages" class="my-2 mx-0 h-75 fondo-1-animal">pp</ul>
+
               <form action="">
-                <input id="m" autocomplete="off" /><button>Send</button>
+                <input id="m" autocomplete="off" class="corners2"/>
+                <button class="animal-icon-s"><img src="GUI/img/ok-btn.png" class="img-fluid"></button>
               </form>
-
 
             </div>
 
@@ -1058,8 +1059,8 @@
         "Cerdo": "/audios/kit-002/inicial_008_open hihat_cerdo.wav",//"/audios/kit-001/hd_008_cerdo.wav",
         "Loro": "/audios/kit-002/inicial_007_loro_triangulo.wav",//"/audios/kit-001/hd_007_loro.wav",
         "Pato": "/audios/kit-002/inicial_006_ride_pato.wav",//"/audios/kit-001/hd_006_pato.wav",
-        "Sapo": "/audios/kit-002/inicial_005_clave_sapo.wav",//"/audios/kit-001/hd_005_sapo.wav",        
-        "Gato": "/audios/kit-002/inicial_004_hihat_gato.wav",// "/audios/kit-001/hd_004_gato.wav",             
+        "Sapo": "/audios/kit-002/inicial_005_clave_sapo.wav",//"/audios/kit-001/hd_005_sapo.wav",
+        "Gato": "/audios/kit-002/inicial_004_hihat_gato.wav",// "/audios/kit-001/hd_004_gato.wav",
         "Mono": "/audios/kit-002/inicial_003_bass_mono.wav", /*"/audios/kit-001/hd_003_mono.wav", */
         "Oso": "/audios/kit-002/inicial_002_sd_oso.wav", /* "/audios/kit-001/hd_002_oso.wav",*/
         "Buho": "/audios/kit-002/inicial_001_bd_buho.wav" /* "/audios/kit-001/hd_001_buho.wav" */
@@ -1223,7 +1224,7 @@
          myChannel.forEach(channel => {
            if (v.row == channel) {
              itsMyChannel = true;
-             ///TENGO QUE PONERLRE     pointer-events: none; a todas las otras rows           
+             ///TENGO QUE PONERLRE     pointer-events: none; a todas las otras rows
            }
          });*/
         /* console.log("es un cambio");
