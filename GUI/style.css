@@ -730,24 +730,25 @@ html {
     color: var(--color-blanco-ui-animal);
     background-color: var(--color-gris-animal);
 }
+
+
+
   /* --------------------------------------------- */
   /* Breakpoints */
 
 
 
+  #alerta{
+    height:100vh;
+  }
 
-
-  @media only screen
-    and (min-device-width: 320px)
-    and (max-device-width: 480px)
+  @media (max-device-width: 480px)
     and (orientation: portrait) {
       #alerta{
         display:block;
       }
   }
-  @media only screen
-    and (min-device-width: 320px)
-    and (max-device-width: 480px)
+  @media (max-device-width: 480px)
     and (orientation: landscape) {
       #alerta{
         display:none;
