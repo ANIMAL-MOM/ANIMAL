@@ -414,19 +414,22 @@
     <!-- HEADER -->
 
     <div id="Header" class="row">
-      <div class="col-md-12 d-flex flex-row justify-content-between">
-        <div id="Animal_logo">Animal</div>
-        <div id="MoM_logo">[MoM]</div>
+      <div class="col-md-12 d-flex p-2 flex-row justify-content-between">
+        <div id="Animal_logo" class="my-auto">
+          <img src="GUI/img/Animal_logo_v0.png" height="30">
+        </div>
+        <div id="MoM_logo" class="my-auto">
+          <img src="GUI/img/MoM_logo_v0.png" height="20">
+        </div>
       </div>
     </div>
-
     <!-- header end -->
 
 
     <!-- MAIN-UP -->
 
 
-    <div id="Main-up" class="row animate-up-down-in-1">
+    <div id="Main-up" class="row ">
       <!-- PATHS SVG (#svgContainer) -->
 
       <div id="svgContainer" style="margin: 50px 50px;">
@@ -632,12 +635,12 @@
       <div id="izq" class="col-12 col-lg-3 col-xl-2 d-flex flex-column flex-lg-row">
         <div class="row pr-lg-1 d-flex h-100">
           <!-- CHAT -->
-          <div id="chat-animal" class="col-6 col-lg-12 p-0 d-flex">
-            <div class="corners1 figura-1-animal">
-
-              <ul id="messages"></ul>
-              <form action="">
-                <input id="m" autocomplete="off" /><button>Send</button>
+          <div id="chat-animal" class="col-5 col-lg-12 p-0 d-flex">
+            <div class="pt-4 pb-2 px-2 corners1 figura-1-animal">
+              <ul id="messages" class="m-0 p-0 h-75 texto-chico"></ul>
+              <form action="" class="pt-2 d-flex h-25">
+                <input id="m" autocomplete="off" class="w-75 border-0 corners1" />
+                <button class="ml-1 p-1 animal-icon-s"><img src="GUI/img/ok-btn.png" class="img-fluid"></button>
               </form>
 
 
@@ -661,7 +664,7 @@
                       </div>
                       <div id="bpm-display" class="col-6 numero-animal d-flex my-0 blanco-ui-animal">
                         <strong id="bpmNumber" class="m-auto text-center">90</strong>
-                        <span class="texto-animal m-auto text-center">bpm</span>
+                        <span class="m-auto pl-1 texto-chico text-center">bpm</span>
                       </div>
                     </div>
                   </div>
@@ -676,7 +679,7 @@
                       </div>
                       <div id="swing-display" class="col-6 numero-animal d-flex my-0 blanco-ui-animal">
                         <strong id="swingNumber" class="m-auto text-center">96</strong>
-                        <span class="texto-animal m-auto text-center">swing</span>
+                        <span class="m-auto pl-1 texto-chico text-center">swing</span>
                       </div>
                     </div>
                   </div>
@@ -974,31 +977,29 @@
 
           <!-- REGISTRO COMPARTIR (#jam-ajustes) -->
 
+
           <div id="jam-ajustes"
             class="col-xl-1 py-4 px-3 d-flex flex-xl-column justify-content-between fondo-1-animal corners1">
-            <div id="jam-sesion" class="mx-auto d-flex flex-lg-column">
-              <a href="#" id="boton" data-toggle="modal" data-target="#jamModal" role="button">
-                <img src="GUI/svg/botones/boton_rec.svg" class="animal-icon">
+            <div id="jam-sesion" class="mx-auto d-flex my-auto flex-lg-column">
+              <a href="#" id="boton" data-toggle="modal" data-target="#jamModal" role="button"
+                class="animal-icon text-center">
+                Jam
               </a>
               <div class="m-auto text-center">
-                <span class="align-middle">Jam</span>
               </div>
             </div>
             <div id="combo-botones" class="mx-auto d-flex flex-row flex-xl-column">
-              <div id="help" class="mx-auto align-self-baseline">
+              <div id="help" class="d-none mx-auto align-self-baseline">
                 <a href="#" id="boton" data-toggle="modal" data-target="#helpModal" role="button">
                   <img src="GUI/svg/botones/boton_ayuda.svg" class="animal-icon">
                 </a>
               </div>
-
-              <div id="settings" class="mx-auto align-self-baseline">
+              <div id="settings" class="d-none mx-auto align-self-baseline">
                 <a href="#" id="boton" data-toggle="modal" data-target="#settingsModal" role="button">
                   <img src="GUI/svg/botones/boton_ajustes_w.svg" class="btn-icon">
                 </a>
               </div>
-
             </div>
-
           </div>
 
           <!-- registro compartir end -->
@@ -1043,13 +1044,58 @@
       var selectedChannels = [];
       var soloOn;
       var bpm = 90;
+
+      //Query screen size to create grid  
+      //smallest devices bootstrap default  GRILLA w:330 h:380
+      // Small devices (landscape phones, 576px and up) @media (min-width: 576px) { ... } GRILLA w:430 h:380
+      // Medium devices (tablets, 768px and up)  @media (min-width: 768px) { ... }  GRILLA w:580 h:380
+      // Large devices (desktops, 992px and up) @media (min-width: 992px) { ... }  GRILLA w:580 h:380 
+      // Extra large devices (large desktops, 1200px and up)  @media (min-width: 1200px) { ... } GRILLA w:690 h:380
+      var sequencer;
+
+      if ($(window).width() > 1200) {
+        console.log('creo seq Extra large devices (large desktops, 1200px and up)  @media (min-width: 1200px) { ... } GRILLA w:690 h:380 ');
+        sequencer = new Nexus.Sequencer('#seq-animal', {
+          'size': [690, 380],
+          'mode': 'toggle',
+          'rows': 8,
+          'columns': 16
+        });
+      } else if (($(window).width() > 768)) {
+        console.log('creo seq Large devices (desktops, 768 y992px and up) @media (min-width: 992px y 768) { ... }  GRILLA w:580 h:380 ');
+        sequencer = new Nexus.Sequencer('#seq-animal', {
+          'size': [580, 380],
+          'mode': 'toggle',
+          'rows': 8,
+          'columns': 16
+        });
+
+      } else if (($(window).width() > 576)) {
+        console.log('creo seq Small devices (landscape phones, 576px and up) @media (min-width: 576px) { ... } GRILLA w:430 h:380');
+        sequencer = new Nexus.Sequencer('#seq-animal', {
+          'size': [430, 380],
+          'mode': 'toggle',
+          'rows': 8,
+          'columns': 16
+        });
+
+      } else {
+        console.log('creo seq S//smallest devices bootstrap default  GRILLA w:330 h:380');
+        sequencer = new Nexus.Sequencer('#seq-animal', {
+          'size': [330, 380],
+          'mode': 'toggle',
+          'rows': 8,
+          'columns': 16
+        });
+      }
+
       //NEXUs
-      var sequencer = new Nexus.Sequencer('#seq-animal', {
-        'size': [580, 380],
-        'mode': 'toggle',
-        'rows': 8,
-        'columns': 16
-      });
+      /*  var sequencer = new Nexus.Sequencer('#seq-animal', {
+          'size': [580, 380],
+          'mode': 'toggle',
+          'rows': 8,
+          'columns': 16
+        });*/
 
       ///
 
@@ -1057,10 +1103,11 @@
       var sonidos = new Tone.Players({
         "Cerdo": "/audios/kit-002/inicial_008_open hihat_cerdo.wav",//"/audios/kit-001/hd_008_cerdo.wav",
         "Loro": "/audios/kit-002/inicial_007_loro_triangulo.wav",//"/audios/kit-001/hd_007_loro.wav",
+        "Sapo": "/audios/kit-002/inicial_005_clave_sapo.wav",
         "Pato": "/audios/kit-002/inicial_006_ride_pato.wav",//"/audios/kit-001/hd_006_pato.wav",
-        "Sapo": "/audios/kit-002/inicial_005_clave_sapo.wav",//"/audios/kit-001/hd_005_sapo.wav",        
+        "Mono": "/audios/kit-002/inicial_003_bass_mono.wav",//"/audios/kit-001/hd_005_sapo.wav",        
         "Gato": "/audios/kit-002/inicial_004_hihat_gato.wav",// "/audios/kit-001/hd_004_gato.wav",             
-        "Mono": "/audios/kit-002/inicial_003_bass_mono.wav", /*"/audios/kit-001/hd_003_mono.wav", */
+        /*"/audios/kit-001/hd_003_mono.wav", */
         "Oso": "/audios/kit-002/inicial_002_sd_oso.wav", /* "/audios/kit-001/hd_002_oso.wav",*/
         "Buho": "/audios/kit-002/inicial_001_bd_buho.wav" /* "/audios/kit-001/hd_001_buho.wav" */
 
@@ -1348,14 +1395,19 @@
       });
 
       function changePitch(myAnimal, value) {
-
+        console.log("entro a change pitch");
+        console.log(myAnimal);
+        var myAnimalNumber = myAnimal.split("dial-inst")[1];
+        sonidos.get(scaleNotes[8 - myAnimalNumber]).volume.value = value;
       }
+
       function changeVolume(myAnimal, value) {
         console.log("entro a change volume");
         console.log(myAnimal);
         var myAnimalNumber = myAnimal.split("dial-ch")[1];
-        sonidos.get(scaleNotes[myAnimalNumber - 1]).volume.value = value;
+        sonidos.get(scaleNotes[8 - myAnimalNumber]).volume.value = value;
       }
+
       dialins.forEach((dialin) => {
         dialin.on('change', function (v) {
           console.log("encontró el dial");
