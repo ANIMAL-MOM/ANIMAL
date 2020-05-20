@@ -18,7 +18,7 @@
 
 
   <link rel="stylesheet" href="GUI/style.css">
-  <!--<script src="/tone/Tone.js"></script>-->
+ <!--<script src="/tone/Tone.js"></script>-->
   <script type="module">
     import * as Tone from "/tone/Tone.js";
   </script>
@@ -33,9 +33,54 @@
 
 <body>
 
+<div id="alerta" class="fondo-verde-animal">
+  <div class="container">
+    <div class="col-12 text-center">
+      <h1>Opa!</h1>
+      <h3>Animal funciona mejor en modo horizontal. </h3>
+      <h4>¡Porfavor rota tu dispositivo!</h4>
+    </div>
+  </div>
+</div>
+
 
   <!-- MODALS -->
 
+
+  <!-- PLAY Modal -->
+
+  <div class="modal fade" id="playModal" tabindex="-1" role="dialog" aria-labelledby="settingsModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h5 class="modal-title" id="playModalLabel">Play</h5>
+
+        </div>
+
+        <!-- MODAL BODY -->
+
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-12 text-center">
+              <h1>Bienvenido Animal!</h1>
+            <h3>Presiona el botón de PLAY para comenzar :)</h3>
+          </div>
+          </div>
+        </div>
+
+        <!-- modal body end -->
+
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- setings modal end -->
 
   <!-- JAM Modal -->
 
@@ -411,22 +456,26 @@
 
   <div class="container">
 
+
     <!-- HEADER -->
 
     <div id="Header" class="row">
-      <div class="col-md-12 d-flex flex-row justify-content-between">
-        <div id="Animal_logo">Animal</div>
-        <div id="MoM_logo">[MoM]</div>
+      <div class="col-md-12 d-flex p-2 flex-row justify-content-between">
+        <div id="Animal_logo" class="my-auto">
+            <img src="GUI/img/Animal_logo_v0.png" height="30" >
+        </div>
+        <div id="MoM_logo" class="my-auto">
+            <img src="GUI/img/MoM_logo_v0.png" height="20" >
+        </div>
       </div>
     </div>
 
     <!-- header end -->
 
-
     <!-- MAIN-UP -->
 
 
-    <div id="Main-up" class="row animate-up-down-in-1">
+    <div id="Main-up" class="row ">
       <!-- PATHS SVG (#svgContainer) -->
 
       <div id="svgContainer" style="margin: 50px 50px;">
@@ -454,9 +503,10 @@
             </div>
             <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal gris-animal">
               <div class="d-flex flex-column">
-                
                 <div class="animal-icon">
-                  <img src="GUI/img/buho.png" class="buhoActivo img-fluid">
+                  <object type="image/svg+xml" data="GUI/svg/iconos/buho-w.svg" class="animal-icon">
+                    Buho
+                  </object>
                 </div>
                 <div class="title mt-1">Buh</div>
                 <div class="sub_title">Base drum</div>
@@ -473,7 +523,9 @@
             <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal chocolate-animal">
               <div class="d-flex flex-column">
                 <div class="animal-icon">
-                  <img src="GUI/img/oso.png" class="osoActivo img-fluid">
+                  <object type="image/svg+xml" data="GUI/svg/iconos/oso-w.svg" class="animal-icon">
+                    Oso
+                  </object>
                 </div>
                 <div class="title mt-1">Os</div>
                 <div class="sub_title">Snare</div>
@@ -490,7 +542,9 @@
             <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal gris-animal">
               <div class="d-flex flex-column">
                 <div class="animal-icon">
-                  <img src="GUI/img/gato.png" class="gatoActivo img-fluid">
+                  <object type="image/svg+xml" data="GUI/svg/iconos/gato-w.svg" class="animal-icon">
+                    Gato
+                  </object>
                 </div>
                 <div class="title mt-1">Gat</div>
                 <div class="sub_title">Hi hat</div>
@@ -507,7 +561,9 @@
             <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal marron-animal">
               <div class="d-flex flex-column">
                 <div class="animal-icon">
-                  <img src="GUI/img/mono.png" class="monoActivo img-fluid">
+                  <object type="image/svg+xml" data="GUI/svg/iconos/mono-w.svg" class="animal-icon">
+                    Mono
+                  </object>
                 </div>
                 <div class="title mt-1">Mon</div>
                 <div class="sub_title">Bass</div>
@@ -524,7 +580,9 @@
             <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal mostaza-animal">
               <div class="d-flex flex-column">
                 <div class="animal-icon">
-                  <img src="GUI/img/pato.png" class="patoActivo img-fluid">
+                  <object type="image/svg+xml" data="GUI/svg/iconos/pato-w.svg" class="animal-icon">
+                    Pato
+                  </object>
                 </div>
                 <div class="title mt-1">Pat</div>
                 <div class="sub_title">Clave</div>
@@ -541,7 +599,9 @@
             <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal verde-animal">
               <div class="d-flex flex-column">
                 <div class="animal-icon">
-                  <img src="GUI/img/sapo.png" class="sapoActivo img-fluid">
+                  <object type="image/svg+xml" data="GUI/svg/iconos/sapo-w.svg" class="animal-icon">
+                    Sapo
+                  </object>
                 </div>
                 <div class="title mt-1">Sap</div>
                 <div class="sub_title">Ride</div>
@@ -558,7 +618,9 @@
             <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal verde-animal">
               <div class="d-flex flex-column">
                 <div class="animal-icon">
-                  <img src="GUI/img/loro.png" class="loroActivo img-fluid">
+                  <object type="image/svg+xml" data="GUI/svg/iconos/loro-w.svg" class="animal-icon">
+                    Loro
+                  </object>
                 </div>
                 <div class="title mt-1">Lor</div>
                 <div class="sub_title">Sampler</div>
@@ -575,7 +637,9 @@
             <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal rosa-animal">
               <div class="d-flex flex-column">
                 <div class="animal-icon">
-                  <img src="GUI/img/cerdo.png" class="cerdoActivo img-fluid">
+                  <object type="image/svg+xml" data="GUI/svg/iconos/cerdo-w.svg" class="animal-icon">
+                    Cerdo
+                  </object>
                 </div>
                 <div class="title mt-1">Cerd</div>
                 <div class="sub_title">Scratch</div>
@@ -617,14 +681,15 @@
       <div id="izq" class="col-12 col-lg-3 col-xl-2 d-flex flex-column flex-lg-row">
         <div class="row pr-lg-1 d-flex h-100">
           <!-- CHAT -->
-          <div id="chat-animal" class="col-6 col-lg-12 p-0 d-flex">
-            <div class="corners1 figura-1-animal">
+          <div id="chat-animal" class="col-5 col-lg-12 p-0 d-flex">
+            <div class="pt-4 pb-2 px-2 corners1 figura-1-animal">
 
-              <ul id="messages"></ul>
-              <form action="">
-                <input id="m" autocomplete="off" /><button>Send</button>
+              <ul id="messages" class="m-0 p-0 h-75 texto-chico"></ul>
+
+              <form action="" class="pt-2 d-flex h-25">
+                <input id="m" autocomplete="off" class="w-75 border-0 corners1"/>
+                <button class="ml-1 p-1 animal-icon-s"><img src="GUI/img/ok-btn.png" class="img-fluid"></button>
               </form>
-
 
             </div>
 
@@ -646,7 +711,7 @@
                       </div>
                       <div id="bpm-display" class="col-6 numero-animal d-flex my-0 blanco-ui-animal">
                         <strong id="bpmNumber" class="m-auto text-center">90</strong>
-                        <span class="texto-animal m-auto text-center">bpm</span>
+                        <span class="m-auto pl-1 texto-chico text-center">bpm</span>
                       </div>
                     </div>
                   </div>
@@ -661,13 +726,13 @@
                       </div>
                       <div id="swing-display" class="col-6 numero-animal d-flex my-0 blanco-ui-animal">
                         <strong id="swingNumber" class="m-auto text-center">96</strong>
-                        <span class="texto-animal m-auto text-center">swing</span>
+                        <span class="m-auto pl-1 texto-chico text-center">swing</span>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- REC + MUTE -->
+              <!-- REC + MUTE  -->
               <div id="rec-mute" class="col-4 col-lg-12 mt-lg-1 ">
                 <div class="row h-100 my-0 pl-1 pl-lg-0 d-flex flex-column flex-lg-row">
                   <div id="rec-btn" class="col-lg-6 d-flex my-0 blanco-ui-animal">
@@ -690,16 +755,18 @@
                 <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal gris-animal">
                   <div class="d-flex flex-column">
                     <div class="animal-icon">
-                      <img src="GUI/img/buho.png" class="buhoSel img-fluid">
+                      <object type="image/svg+xml" data="GUI/svg/iconos/buho-w.svg" class="animal-icon">
+                        Buho
+                      </object>
                     </div>
                     <div class="title mt-1">Buh</div>
                     <div class="sub_title">Base drum</div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ins1" class="mom_dial"></div>
+                    <div id="dial-ins1-sel" class="mom_dial"></div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ch1" class="mom_dial"></div>
+                    <div id="dial-ch1-sel" class="mom_dial"></div>
                   </div>
                 </div>
               </span>
@@ -708,16 +775,18 @@
                 <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal chocolate-animal">
                   <div class="d-flex flex-column">
                     <div class="animal-icon">
-                      <img src="GUI/img/oso.png" class="osoSel img-fluid">
+                      <object type="image/svg+xml" data="GUI/svg/iconos/oso-w.svg" class="animal-icon">
+                        Loro
+                      </object>
                     </div>
                     <div class="title mt-1">Os</div>
                     <div class="sub_title">Snare</div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ins2" class="mom_dial"></div>
+                    <div id="dial-ins2-sel" class="mom_dial"></div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ch2" class="mom_dial"></div>
+                    <div id="dial-ch2-sel" class="mom_dial"></div>
                   </div>
                 </div>
               </span>
@@ -726,16 +795,18 @@
                 <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal gris-animal">
                   <div class="d-flex flex-column">
                     <div class="animal-icon">
-                      <img src="GUI/img/gato.png" class="gatoSel img-fluid">
+                      <object type="image/svg+xml" data="GUI/svg/iconos/gato-w.svg" class="animal-icon">
+                        Gato
+                      </object>
                     </div>
                     <div class="title mt-1">Gat</div>
                     <div class="sub_title">Hi hat</div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ins3" class="mom_dial"></div>
+                    <div id="dial-ins3-sel" class="mom_dial"></div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ch3" class="mom_dial"></div>
+                    <div id="dial-ch3-sel" class="mom_dial"></div>
                   </div>
                 </div>
               </span>
@@ -744,16 +815,18 @@
                 <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal marron-animal">
                   <div class="d-flex flex-column">
                     <div class="animal-icon">
-                      <img src="GUI/img/mono.png" class="monoSel img-fluid">
+                      <object type="image/svg+xml" data="GUI/svg/iconos/mono-w.svg" class="animal-icon">
+                        Mono
+                      </object>
                     </div>
                     <div class="title mt-1">Mon</div>
                     <div class="sub_title">Bass</div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ins4" class="mom_dial"></div>
+                    <div id="dial-ins4-sel" class="mom_dial"></div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ch4" class="mom_dial"></div>
+                    <div id="dial-ch4-sel" class="mom_dial"></div>
                   </div>
                 </div>
               </span>
@@ -762,16 +835,18 @@
                 <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal mostaza-animal">
                   <div class="d-flex flex-column">
                     <div class="animal-icon">
-                      <img src="GUI/img/pato.png" class="patoSel img-fluid">
+                      <object type="image/svg+xml" data="GUI/svg/iconos/pato-w.svg" class="animal-icon">
+                        Pato
+                      </object>
                     </div>
                     <div class="title mt-1">Pat</div>
                     <div class="sub_title">Clave</div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ins5" class="mom_dial"></div>
+                    <div id="dial-ins5-sel" class="mom_dial"></div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ch5" class="mom_dial"></div>
+                    <div id="dial-ch5-sel" class="mom_dial"></div>
                   </div>
                 </div>
               </span>
@@ -780,16 +855,18 @@
                 <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal verde-animal">
                   <div class="d-flex flex-column">
                     <div class="animal-icon">
-                      <img src="GUI/img/sapo.png" class="sapoSel img-fluid">
+                      <object type="image/svg+xml" data="GUI/svg/iconos/sapo-w.svg" class="animal-icon">
+                        Sapo
+                      </object>
                     </div>
                     <div class="title mt-1">Sap</div>
                     <div class="sub_title">Ride</div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ins6" class="mom_dial"></div>
+                    <div id="dial-ins6-sel" class="mom_dial"></div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ch6" class="mom_dial"></div>
+                    <div id="dial-ch6-sel" class="mom_dial"></div>
                   </div>
                 </div>
               </span>
@@ -798,16 +875,18 @@
                 <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal verde-animal">
                   <div class="d-flex flex-column">
                     <div class="animal-icon">
-                      <img src="GUI/img/loro.png" class="loroSel img-fluid">
+                      <object type="image/svg+xml" data="GUI/svg/iconos/loro-w.svg" class="animal-icon">
+                        Loro
+                      </object>
                     </div>
                     <div class="title mt-1">Lor</div>
                     <div class="sub_title">Sampler</div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ins7" class="mom_dial"></div>
+                    <div id="dial-ins7-sel" class="mom_dial"></div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ch7" class="mom_dial"></div>
+                    <div id="dial-ch7-sel" class="mom_dial"></div>
                   </div>
                 </div>
               </span>
@@ -816,16 +895,18 @@
                 <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal rosa-animal">
                   <div class="d-flex flex-column">
                     <div class="animal-icon">
-                      <img src="GUI/img/cerdo.png" class="cerdoSel img-fluid">
+                      <object type="image/svg+xml" data="GUI/svg/iconos/cerdo-w.svg" class="animal-icon">
+                        Cerdo
+                      </object>
                     </div>
                     <div class="title mt-1">Cerd</div>
                     <div class="sub_title">Scratch</div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ins1" class="mom_dial"></div>
+                    <div id="dial-ins8-sel" class="mom_dial"></div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ch8" class="mom_dial"></div>
+                    <div id="dial-ch8-sel" class="mom_dial"></div>
                   </div>
                 </div>
               </span>
@@ -945,22 +1026,22 @@
 
           <div id="jam-ajustes"
             class="col-xl-1 py-4 px-3 d-flex flex-xl-column justify-content-between fondo-1-animal corners1">
-            <div id="jam-sesion" class="mx-auto d-flex flex-lg-column">
-              <a href="#" id="boton" data-toggle="modal" data-target="#jamModal" role="button">
-                <img src="GUI/svg/botones/boton_rec.svg" class="animal-icon">
+            <div id="jam-sesion" class="mx-auto d-flex my-auto flex-lg-column">
+              <a href="#" id="boton" data-toggle="modal" data-target="#jamModal" role="button" class="animal-icon text-center">
+                Jam
               </a>
               <div class="m-auto text-center">
-                <span class="align-middle">Jam</span>
+
               </div>
             </div>
             <div id="combo-botones" class="mx-auto d-flex flex-row flex-xl-column">
-              <div id="help" class="mx-auto align-self-baseline">
+              <div id="help" class="d-none mx-auto align-self-baseline">
                 <a href="#" id="boton" data-toggle="modal" data-target="#helpModal" role="button">
                   <img src="GUI/svg/botones/boton_ayuda.svg" class="animal-icon">
                 </a>
               </div>
 
-              <div id="settings" class="mx-auto align-self-baseline">
+              <div id="settings" class="d-none mx-auto align-self-baseline">
                 <a href="#" id="boton" data-toggle="modal" data-target="#settingsModal" role="button">
                   <img src="GUI/svg/botones/boton_ajustes_w.svg" class="btn-icon">
                 </a>
@@ -1027,8 +1108,8 @@
         "Cerdo": "/audios/kit-002/inicial_008_open hihat_cerdo.wav",//"/audios/kit-001/hd_008_cerdo.wav",
         "Loro": "/audios/kit-002/inicial_007_loro_triangulo.wav",//"/audios/kit-001/hd_007_loro.wav",
         "Pato": "/audios/kit-002/inicial_006_ride_pato.wav",//"/audios/kit-001/hd_006_pato.wav",
-        "Sapo": "/audios/kit-002/inicial_005_clave_sapo.wav",//"/audios/kit-001/hd_005_sapo.wav",        
-        "Gato": "/audios/kit-002/inicial_004_hihat_gato.wav",// "/audios/kit-001/hd_004_gato.wav",             
+        "Sapo": "/audios/kit-002/inicial_005_clave_sapo.wav",//"/audios/kit-001/hd_005_sapo.wav",
+        "Gato": "/audios/kit-002/inicial_004_hihat_gato.wav",// "/audios/kit-001/hd_004_gato.wav",
         "Mono": "/audios/kit-002/inicial_003_bass_mono.wav", /*"/audios/kit-001/hd_003_mono.wav", */
         "Oso": "/audios/kit-002/inicial_002_sd_oso.wav", /* "/audios/kit-001/hd_002_oso.wav",*/
         "Buho": "/audios/kit-002/inicial_001_bd_buho.wav" /* "/audios/kit-001/hd_001_buho.wav" */
@@ -1185,20 +1266,14 @@
       }
 
       sequencer.on('change', function (v) {
-        myChannel.forEach(function (micha) {
-          if (v.row == micha - 1) {
-            socket.emit('toggleStep', v);
-            console.log("emito change");
-          }
-        });
-        //   if (v.row
-
+        console.log("emito change");
+        socket.emit('toggleStep', v);
 
         /* var itsMyChannel = false;
          myChannel.forEach(channel => {
            if (v.row == channel) {
              itsMyChannel = true;
-             ///TENGO QUE PONERLRE     pointer-events: none; a todas las otras rows           
+             ///TENGO QUE PONERLRE     pointer-events: none; a todas las otras rows
            }
          });*/
         /* console.log("es un cambio");
@@ -1250,48 +1325,36 @@
       //chicons
 
       var myChannelAnimalIcon = $("#animalChannel1")[0];
-      //    var muteado = false;
-      var miSolo = -1;
+  //    var muteado = false;
 
       $(".soloButton").click(function () {
         var myId = this.id;
         var myAnimalNumber = myId.split("icono-ch")[1];
         myAnimalNumber--;
-        if (miSolo == (7 - myAnimalNumber)) {
-          $(this).removeClass("activado");
-          miSolo = -1;
+        if (!(sonidos.get(scaleNotes[(7 - myAnimalNumber)]).mute)) {
+           $(this).addClass("activado");
+          for (i = 0; i < 8; i++) {
+            sonidos.get(scaleNotes[i]).mute = true;
+            console.log("es el animal numero"+ i)
+            console.log(scaleNotes[i]);
+            console.log("quedó muteado " +sonidos.get(scaleNotes[i]).mute);
+          }
+          sonidos.get(scaleNotes[(7 - myAnimalNumber)]).mute = false;
+          console.log(scaleNotes[(7 - myAnimalNumber)]);
+
         } else {
-          $(this).addClass("activado");
-          miSolo = (7 - myAnimalNumber);
+          $(this).removeClass("activado");
+          for (i = 0; i < 8; i++) {
+            console.log(scaleNotes[i]);
+            sonidos.get(scaleNotes[i]).mute = false;
+            console.log("es el animal numero"+ i)
+            console.log(scaleNotes[i]);
+            console.log("quedó muteado " +sonidos.get(scaleNotes[i]).mute);
+          }
         }
+
+
       });
-      /*
-      myAnimalNumber--;
-      if (!(sonidos.get(scaleNotes[(7 - myAnimalNumber)]).mute)) {
-         $(this).addClass("activado");
-        for (i = 0; i < 8; i++) {
-          sonidos.get(scaleNotes[i]).mute = true;
-          console.log("es el animal numero"+ i)
-          console.log(scaleNotes[i]);
-          console.log("quedó muteado " +sonidos.get(scaleNotes[i]).mute);
-        }
-        sonidos.get(scaleNotes[(7 - myAnimalNumber)]).mute = false;
-        console.log(scaleNotes[(7 - myAnimalNumber)]);
-
-      } else {
-        $(this).removeClass("activado");
-        for (i = 0; i < 8; i++) {
-          console.log(scaleNotes[i]);
-          sonidos.get(scaleNotes[i]).mute = false;
-          console.log("es el animal numero"+ i)
-          console.log(scaleNotes[i]);
-          console.log("quedó muteado " +sonidos.get(scaleNotes[i]).mute);
-        }
-        
-    }
-
-
-    });*/
 
       //copy link
       $(".input-group-append").click(function () {
@@ -1405,7 +1468,7 @@
 
             for (var i = 7; i >= 0; i--) {
 
-              if (matrix[i][stepNumber] && (miSolo == -1 || miSolo == i)) {
+              if (matrix[i][stepNumber]) {
                 sonidos.get(scaleNotes[i]).start(time, 0, "16n", 0, 1);
 
               }
@@ -1461,11 +1524,11 @@
   </script>
 
   <script type="text/javascript">
-    /*
+
     $(document).ready(function () {
-      $('#jamModal').modal('show');
+      $('#playModal').modal('show');
     });
-    */
+
   </script>
 
 
