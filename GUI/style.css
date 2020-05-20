@@ -259,7 +259,9 @@ html {
   }
 
   #jam-sesion a{
-    padding-top:5px;
+    padding-top:12px;
+    color: var(--color-chocolate-animal);
+    text-decoration: none !important;
   }
 
   /* --------------------------------------------- */
