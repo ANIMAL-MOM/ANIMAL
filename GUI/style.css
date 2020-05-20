@@ -181,7 +181,9 @@ html {
   /* --------------------------------------------- */
   /* Corners & special margins */
 
-
+#Header{
+    height:65px;
+}
 
   .navbar {
     position: absolute;
@@ -484,6 +486,33 @@ html {
   #icono-ch1:hover {
     content: url(img/buho_activo.png);
   }
+
+  .icono-ch8 {
+    content: url(img/cerdo_activo.png);
+  }
+  .icono-ch7 {
+    content: url(img/loro_activo.png);
+  }
+  .icono-ch6 {
+    content: url(img/sapo_activo.png);
+  }
+  .icono-ch5 {
+    content: url(img/pato_activo.png);
+  }
+  .icono-ch4 {
+    content: url(img/mono_activo.png);
+  }
+  .icono-ch3 {
+    content: url(img/gato_activo.png);
+  }
+  .icono-ch2 {
+    content: url(img/oso_activo.png);
+  }
+  .icono-ch1 {
+    content: url(img/buho_activo.png);
+  }
+
+
   #audiopre-kit1:hover {
     filter:invert(0)!important;
     background-color: var(--color-verde-ui-animal);
@@ -636,6 +665,7 @@ html {
   /* Display */
 
 
+    
 
   #bpm-display{
     border-top-right-radius: 15px;
@@ -651,7 +681,55 @@ html {
     background-color: var(--color-destaque-animal);
   }
 
-
+.interloc-b {
+    border-radius: 50%;
+    padding:2px;
+    text-align: center;
+    color: var(--color-blanco-ui-animal);
+    background-color: var(--color-gris-animal);
+}
+.interloc-o {
+    border-radius: 50%;
+    padding:2px;
+    text-align: center;
+    color: var(--color-blanco-ui-animal);
+    background-color: var(--color-gris-animal);
+}
+.interloc-g {
+    border-radius: 50%;
+    padding:2px;
+    text-align: center;
+    color: var(--color-blanco-ui-animal);
+    background-color: var(--color-gris-animal);
+}
+.interloc-m {
+    border-radius: 50%;
+    padding:2px;
+    text-align: center;
+    color: var(--color-blanco-ui-animal);
+    background-color: var(--color-gris-animal);
+}
+.interloc-s {
+    border-radius: 50%;
+    padding:2px;
+    text-align: center;
+    color: var(--color-blanco-ui-animal);
+    background-color: var(--color-gris-animal);
+}
+.interloc-l {
+    border-radius: 50%;
+    padding:2px;
+    text-align: center;
+    color: var(--color-blanco-ui-animal);
+    background-color: var(--color-gris-animal);
+}
+.interloc-c {
+    border-radius: 50%;
+    padding:2px;
+    text-align: center;
+    color: var(--color-blanco-ui-animal);
+    background-color: var(--color-gris-animal);
+}
   /* --------------------------------------------- */
   /* Breakpoints */
 
