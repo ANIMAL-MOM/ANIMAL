@@ -21,16 +21,16 @@
   --color-fondo-verde-animal: rgba(188,246,93,1);
   --color-fondo-negro-animal: rgba(62,2,2,1);
   }
-  
+
   /* ---------------------------------------------- */
   /* Color & opacity */
-  
+
   .activado{
   content:url("img/loro_activo.png");
   /*setear las urls de las imgs activas para cada uno con su id*/
   }
-  
-  
+
+
   .verde-animal {
     background-color: var(--color-verde-animal);
   }
@@ -88,8 +88,8 @@
   .fondo-negro-animal {
     background-color: var(--color-fondo-negro-animal);
   }
-  
-  
+
+
   .opacity-0 {
     opacity:0!important;
   }
@@ -108,62 +108,90 @@
   .opacity-5 {
     opacity:1!important;
   }
-  
+
   body {
     background-color: #BCF65D;
   }
-  
+
   #Hero {
     background-color: #B7E2D0;
   }
-  
-  
-  
+
+
+
   /* ---------------------------------------------- */
   /* Type */
-  
-  
-  body {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 200;
-    color: var(--color-chocolate-animal);
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  color: var(--color-chocolate-animal);
+}
+html {
+  font-size: 14px;
+
+  @media screen and (min-width: 900px) {
+    font-size: 15px;
   }
-  html {
-    font-size: 14px;
-  
-    @media screen and (min-width: 900px) {
-      font-size: 15px;
-    }
-    @media screen and (min-width: 1200px) {
-      font-size: 16px;
-    }
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
   }
-  .title{
-    font-size: 2.2rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    line-height: 1.5rem;
-  }
-  
-  .sub_title{
-    font-size: 0.85rem;
-    font-weight: 200;
-    line-height: 1rem;
-  }
-  
-  .lead {
-    font-size: 1.125rem;
-  }
-  #phrase h3{
-    font-size: 2rem;
-    font-weight: 200;
-    line-height: 2.5rem;
-  }
-  
-  
+}
+
+.title{
+  font-size: 2.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.5rem;
+}
+
+.sub_title{
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1rem;
+}
+
+.lead {
+  font-size: 1.125rem;
+}
+
+#phrase h3{
+  font-size: 2rem;
+  font-weight: 200;
+  line-height: 2.5rem;
+}
+
+.texto-chico{
+  font-size: 0.85rem;
+  font-weight: 200;
+  line-height: 1rem;
+}
+
+.texto-normal{
+  font-size: 1rem;
+  line-height: 0.5rem;
+}
+
+.numero-animal{
+  font-size: 1.5rem;
+  line-height: 1rem;
+}
+
   /* --------------------------------------------- */
   /* Corners & special margins */
-  
+
+
+
+  .navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  .jumbotron {
+    padding-top:64px;
+  }
+
   .position-lt {
     position: absolute;
     top: 0;
@@ -213,26 +241,29 @@
   .corners-r{
       border-radius: 0 15px 15px 0;
   }
+
   #ch1, #ch2, #ch3, #ch4, #ch5, #ch6, #ch7, #ch8{
     margin:3px;
   }
-  .navbar {
-    position: absolute;
-    top: 0;
-    width: 100%;
+
+  #messages {
+    height: 30px;
+    list-style-type: none;
+    overflow:scroll;
   }
-  .jumbotron {
-    padding-top:64px;
+  #bpm-display, #swing-display {
+    border-left:2px solid;
+    border-color: var(--color-fondo-1-animal);
   }
-  
+
   /* --------------------------------------------- */
   /* Extra NexusUI */
-  
+
   .mom_dial{
     width:40px !important;
     height:40px !important;
   }
-  
+
   .dial_container {
      content: '';
      display: inline-block;
@@ -248,12 +279,12 @@
     width:100%;
     height:auto;
   }
-  
-  
+
+
   /* --------------------------------------------- */
   /* Instruments */
-  
-  
+
+
   .instrumento-animal{
     width:auto;
     height:100px;
@@ -298,17 +329,17 @@
     background-size: cover;
     background-position: center;
   }
-  
-  
+
+
   /* --------------------------------------------- */
   /* Audio cables */
-  
+
   #svgContainer {
     z-index: -10;
     position:absolute;
     opacity: 1;
   }
-  
+
   #inlet1, #inlet2, #inlet3, #inlet4, #inlet5, #inlet6, #inlet7, #inlet8 {
     width:30px;
     height: 10px;
@@ -318,7 +349,7 @@
     margin-top: 30px;
     background-color: var(--color-destaque-animal);
   }
-  
+
   #in1, #in2, #in3, #in4, #in5, #in6, #in7, #in8 {
     width:20px;
     height: 7px;
@@ -335,10 +366,10 @@
     margin-left: 20px;
     background-color: var(--color-destaque-animal);
   }
-  
+
   /* --------------------------------------------- */
   /* Buttons & icons */
-  
+
   .btn-group-lg>.btn, .btn-lg, .btn {
     border-radius: 15px;
   }
@@ -389,7 +420,7 @@
   .mute-btn-activo{
     background-color:var(--color-blanco-ui-animal) !important;
     animation-play-state: initial !important;
-    
+
   }
   .mute-btn-activo span:after{
     content: 'Stop' !important;
@@ -400,7 +431,7 @@
   .mute-btn{
     -webkit-animation:blinkingPlay 1.2s infinite;
     animation:blinkingPlay 1.2s infinite;
-   
+
   }
   #rec-btn:hover, #mute-btn:hover, #increment-swing-btn:hover, #increment-bpm-btn:hover, #decrement-swing-btn:hover, #decrement-bpm-btn:hover{
     background-color:var(--color-figura-1-animal);
@@ -412,10 +443,6 @@
   #increment-bpm-btn {
     border-bottom: 1px solid var(--color-fondo-1-animal);
   }
-  #bpm-display{
-    border-top-right-radius: 15px;
-    border-bottom: 1px solid var(--color-fondo-1-animal);
-  }
   #decrement-swing-btn {
     border-bottom-left-radius: 15px;
     border-top: 1px solid var(--color-fondo-1-animal);
@@ -423,15 +450,12 @@
   #increment-swing-btn {
     border-top: 1px solid var(--color-fondo-1-animal);
   }
-  #swing-display{
-    border-bottom-right-radius: 15px;
-    border-top: 1px solid var(--color-fondo-1-animal);
-  }
+
   #ch_control object, #instrumentos object, #sel-inst object{
     background-color: #000;
     filter:invert(1) opacity(.25);
   }
-  
+
   #icono-ch8:hover {
     content: url(img/cerdo_activo.png);
   }
@@ -464,7 +488,7 @@
     width: 44px;
     height: 44px;
     background-color: var(--color-figura-1-animal);
-  
+
   }
   .animal-icon {
     width: 44px;
@@ -499,7 +523,7 @@
     filter:invert(0)!important;
     background-color: var(--color-verde-ui-animal);
   }
-  
+
   .color-chip-1{
     width:44px;
     height:44px;
@@ -530,37 +554,37 @@
     border-radius:50px;
     background-color: var(--color-fondo-negro-animal)
   }
-  
-  
-  
-  
+
+
+
+
   .solo-ch8 {
     filter:invert(0)!important;
     background-color: var(--color-gris-animal);
   }
-  
-  
+
+
   .animal-icon path{
     background-color: var(--color-naranja-ui-animal);
   }
-  
+
   .animal-border{
     border-style: solid;
     border-width: 5px;
   }
-  
-  
+
+
   /* --------------------------------------------- */
   /* Windows */
-  
-  
+
+
   #settingsModal .modal-content, #helpModal .modal-content, #jamModal .modal-content {
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
-  
+
   .modal-header, .modal-footer {
     border: none;
     display:block;
@@ -577,11 +601,11 @@
     border-radius: 50%;
     background-color: var(--color-fondo-1-animal);
   }
-  
-  
+
+
   /* --------------------------------------------- */
   /* Animation & transitions */
-  
+
   @keyframes blinkingPlay{
     0%{     background-color:var(--color-rojo-ui-animal);}
     35%{    background-color:var(--color-rojo-ui-animal);}
@@ -602,33 +626,34 @@
     35%{    background-color:var(--color-verde-ui-animal);}
     85%{    color:var(--color-figura-1-animal);}
   }
-  
-  
+
+
   /* --------------------------------------------- */
   /* Display */
-  
-  
-  .numero-animal{
-    font-size: 1.5rem;
-    line-height: 1rem;
+
+
+
+  #bpm-display{
+    border-top-right-radius: 15px;
+    border-bottom: 1px solid var(--color-fondo-1-animal);
   }
-  .texto-animal{
-    font-size: 1rem;
-    line-height: 0.5rem;
+  #swing-display{
+    border-bottom-right-radius: 15px;
+    border-top: 1px solid var(--color-fondo-1-animal);
   }
-  
+
   .fondo-1 {
     background: url('img/landing/fondo-outlines.png') no-repeat center center fixed;
     background-color: var(--color-destaque-animal);
   }
-  
-  
+
+
   /* --------------------------------------------- */
   /* Breakpoints */
-  
-  
+
+
   /* Small devices (landscape phones, 576px and up) */
-  
+
   @media (min-width: 576px) {
     body {
       background-color: var(--color-fondo-mostaza-animal);
@@ -643,20 +668,20 @@
       border-top: 1px solid var(--color-fondo-1-animal);
     }
   }
-  
+
   /* Medium devices (tablets, 768px and up) */
   @media (min-width: 768px) {
     body {
       background-color: var(--color-fondo-aqua-animal);
     }
   }
-  
+
   /* Large devices (desktops, 992px and up) */
   @media (min-width: 992px) {
     body {
       background-color: var(--color-fondo-negro-animal);
     }
-  
+
     #izq {
       height:auto;
     }
@@ -666,11 +691,11 @@
     #controles {
       height:35%;
     }
-  
+
     .custom-height {
       height: 100%;
     }
-  
+
     #rec-btn {
       border-top-right-radius: 0;
       border-top-left-radius: 15px;
@@ -682,7 +707,7 @@
     #mute-btn{
       border-top: none;
     }
-  
+
     #mute-btn {
       border-top-right-radius: 15px;
       border-bottom-right-radius: 15px;
@@ -691,7 +716,7 @@
       height: 100%;
     }
   }
-  
+
   /* Extra large devices (large desktops, 1200px and up) */
   @media (min-width: 1200px) {
     body {
