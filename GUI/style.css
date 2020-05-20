@@ -745,6 +745,14 @@ html {
         display:block;
       }
   }
+  @media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 480px)
+    and (orientation: landscape) {
+      #alerta{
+        display:none;
+      }
+  }
 
 
 
@@ -769,6 +777,9 @@ html {
   @media (min-width: 768px) {
     body {
       background-color: var(--color-fondo-aqua-animal);
+    }
+    #alerta{
+      display:none;
     }
   }
 
