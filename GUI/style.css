@@ -179,7 +179,7 @@ html {
 }
 
   /* --------------------------------------------- */
-  /* Corners & special margins */
+  /* Corners & special `margins` */
 
 #Header{
     height:65px;
@@ -256,6 +256,10 @@ html {
   #bpm-display, #swing-display {
     border-left:2px solid;
     border-color: var(--color-fondo-1-animal);
+  }
+
+  #jam-sesion a{
+    padding-top:5px;
   }
 
   /* --------------------------------------------- */
