@@ -261,7 +261,8 @@ h3 {
   #messages {
     height: 30px;
     list-style-type: none;
-    overflow:scroll;
+    overflow-y:scroll;
+    overflow-x:hidden;
   }
   #bpm-display, #swing-display {
     border-left:2px solid;
