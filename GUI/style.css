@@ -156,6 +156,19 @@ html {
   font-size: 1.125rem;
 }
 
+h1 {
+  font-size: 1.5rem;
+  font-weight: 200;
+  line-height: 1.5rem;
+    
+}
+
+h3 {
+  font-size: 1.125rem;
+  font-weight: 200;
+  line-height: 1.5rem;
+}
+
 #phrase h3{
   font-size: 2rem;
   font-weight: 200;
@@ -382,6 +395,11 @@ html {
 #Animal_logo{
   height:65px;
 }
+#playModal .close{
+    background-color: var(--color-blanco-ui-animal);
+    opacity: 1;
+    color: var(--color-figura-1-animal);
+}
   .btn-group-lg>.btn, .btn-lg, .btn {
     border-radius: 15px;
   }
@@ -390,6 +408,11 @@ html {
     background-color: var(--color-blanco-ui-animal);
     border-color: var(--color-blanco-ui-animal);
   }
+.btn-primary:hover {
+    color: var(--color-blanco-ui-animal);
+    background-color: var(--color-naranja-ui-animal);
+    border-color: var(--color-naranja-ui-animal);
+}
   .btn-secondary{
     background-color: var(--color-figura-1-animal);
     border:none;
@@ -788,6 +811,9 @@ html {
     #alerta{
       display:none;
     }
+    #bienvenida {
+      border-right: 1px solid white;
+    }
   }
 
 
@@ -830,6 +856,8 @@ html {
       border-left: 1px solid var(--color-fondo-1-animal);
       height: 100%;
     }
+      
+    
   }
 
   /* Extra large devices (large desktops, 1200px and up) */

@@ -33,12 +33,15 @@
 
 <body>
 
-<div id="alerta" class="fondo-verde-animal">
+<div id="alerta" class="fondo-aqua-animal">
   <div class="container">
-    <div class="col-12 text-center">
-      <h1>Opa!</h1>
-      <h3>Animal funciona mejor en modo horizontal. </h3>
-      <h4>¡Porfavor rota tu dispositivo!</h4>
+    <div class="col-12 text-center">  
+      <h1 class="mt-5">¡Opa!</h1>
+      <h3 class="mt-1">Animal funciona en modo horizontal.</br>
+        ¡Porfavor rota tu dispositivo!</h3>
+      <div class="w-25 mx-auto mt-3">
+        <img src="/GUI/img/rotate-devise.png" class="img-fluid">
+      </div>
     </div>
   </div>
 </div>
@@ -53,29 +56,31 @@
     aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
-        <div class="modal-header">
+        <div class="modal-header fondo-aqua-animal">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
-          <h5 class="modal-title" id="playModalLabel">Play</h5>
-
         </div>
 
         <!-- MODAL BODY -->
 
-        <div class="modal-body">
-          <div class="row">
+        <div class="modal-body fondo-aqua-animal">
+          <div class="row mb-5">
             <div class="col-12 text-center">
-              <h1>Bienvenido Animal!</h1>
-            <h3>Presiona el botón de PLAY para comenzar :)</h3>
-          </div>
+                <div id="Animal_logo" class="mx-auto">
+                    <img src="GUI/img/Animal_logo_v0.png" width="300px">
+                </div>
+              <h1 class="mt-5">¡Bienvenido!</h1>
+              <h3 class="mt-1">Presiona el botón de PLAY para comenzar</h3>
+              <div class="w-25 mx-auto mt-3">
+                <img src="/GUI/img/landing/push-play.png" class="img-fluid">
+              </div>
+            </div>
           </div>
         </div>
 
         <!-- modal body end -->
 
-        <div class="modal-footer">
-        </div>
       </div>
     </div>
   </div>
