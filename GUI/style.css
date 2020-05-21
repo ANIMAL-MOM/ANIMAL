@@ -513,28 +513,28 @@ h3 {
     content: url(img/buho_activo.png);
   }
 
-  .icono-ch8 activado{
+  #icono-ch8 activado{
     content: url(img/cerdo_activo.png);
   }
-  .icono-ch7 activado{
+  #icono-ch7 activado{
     content: url(img/loro_activo.png);
   }
-  .icono-ch6 activado{
+  #icono-ch6 activado{
     content: url(img/sapo_activo.png);
   }
-  .icono-ch5 activado{
+  .#icono-ch5 activado{
     content: url(img/pato_activo.png);
   }
-  .icono-ch4 activado{
+  #icono-ch4 activado{
     content: url(img/mono_activo.png);
   }
-  .icono-ch3 activado{
+  #icono-ch3 activado{
     content: url(img/gato_activo.png);
   }
-  .icono-ch2 activado{
+  #icono-ch2 activado{
     content: url(img/oso_activo.png);
   }
-  .icono-ch1 activado{
+  #icono-ch1 activado{
     content: url(img/buho_activo.png);
   }
 
