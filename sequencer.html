@@ -32,10 +32,51 @@
 </head>
 
 <body>
+  <div id="alerta" class="fondo-aqua-animal">
+    <div class="container">
+      <div class="col-12 text-center">
+        <h1 class="mt-5">¡Opa!</h1>
+        <h3 class="mt-1">Animal funciona en modo horizontal.</br>
+          ¡Porfavor rota tu dispositivo!</h3>
+        <div class="w-25 mx-auto mt-3">
+          <img src="/GUI/img/rotate-devise.png" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
 
 
   <!-- MODALS -->
-
+  <!-- PLAY Modal -->
+  <div class="modal fade" id="playModal" tabindex="-1" role="dialog" aria-labelledby="settingsModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header fondo-aqua-animal">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <!-- MODAL BODY -->
+        <div class="modal-body fondo-aqua-animal">
+          <div class="row mb-5">
+            <div class="col-12 text-center">
+              <div id="Animal_logo" class="mx-auto">
+                <img src="GUI/img/Animal_logo_v0.png" width="300px">
+              </div>
+              <h1 class="mt-5">¡Bienvenido!</h1>
+              <h3 class="mt-1">Presiona el botón de PLAY para comenzar</h3>
+              <div class="w-25 mx-auto mt-3">
+                <img src="/GUI/img/landing/push-play.png" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- modal body end -->
+      </div>
+    </div>
+  </div>
+  <!-- setings modal end -->
 
   <!-- JAM Modal -->
 
@@ -716,10 +757,10 @@
                     <div class="sub_title">Base drum</div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="dial-ins1-sel" class="mom_dial"></div>
+                    <div id="mob-dial-ins1" class="mom_dial"></div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="dial-ch1-sel" class="mom_dial"></div>
+                    <div id="mob-dial-ch1" class="mom_dial"></div>
                   </div>
                 </div>
               </span>
@@ -736,10 +777,10 @@
                     <div class="sub_title">Snare</div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="dial-ins2-sel" class="mom_dial"></div>
+                    <div id="mob-dial-ins2" class="mom_dial"></div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="dial-ch2-sel" class="mom_dial"></div>
+                    <div id="mob-dial-ch2" class="mom_dial"></div>
                   </div>
                 </div>
               </span>
@@ -756,10 +797,10 @@
                     <div class="sub_title">Hi hat</div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="dial-ins3-sel" class="mom_dial"></div>
+                    <div id="mob-dial-ins3" class="mom_dial"></div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="dial-ch3-sel" class="mom_dial"></div>
+                    <div id="mob-dial-ch3" class="mom_dial"></div>
                   </div>
                 </div>
               </span>
@@ -776,10 +817,10 @@
                     <div class="sub_title">Bass</div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="dial-ins4-sel" class="mom_dial"></div>
+                    <div id="mob-dial-ins4" class="mom_dial"></div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="dial-ch4-sel" class="mom_dial"></div>
+                    <div id="mob-dial-ch4" class="mom_dial"></div>
                   </div>
                 </div>
               </span>
@@ -796,10 +837,10 @@
                     <div class="sub_title">Clave</div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="dial-ins5-sel" class="mom_dial"></div>
+                    <div id="mob-dial-ins5" class="mom_dial"></div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="dial-ch5-sel" class="mom_dial"></div>
+                    <div id="mob-dial-ch5" class="mom_dial"></div>
                   </div>
                 </div>
               </span>
@@ -816,10 +857,10 @@
                     <div class="sub_title">Ride</div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="dial-ins6-sel" class="mom_dial"></div>
+                    <div id="mob-dial-ins6" class="mom_dial"></div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="dial-ch6-sel" class="mom_dial"></div>
+                    <div id="mob-dial-ch6" class="mom_dial"></div>
                   </div>
                 </div>
               </span>
@@ -836,10 +877,10 @@
                     <div class="sub_title">Sampler</div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="dial-ins7-sel" class="mom_dial"></div>
+                    <div id="mob-dial-ins7" class="mom_dial"></div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="dial-ch7-sel" class="mom_dial"></div>
+                    <div id="mob-dial-ch7" class="mom_dial"></div>
                   </div>
                 </div>
               </span>
@@ -856,10 +897,10 @@
                     <div class="sub_title">Scratch</div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="dial-ins8-sel" class="mom_dial"></div>
+                    <div id="mob-dial-ins8" class="mom_dial"></div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="dial-ch8-sel" class="mom_dial"></div>
+                    <div id="mob-dial-ch8" class="mom_dial"></div>
                   </div>
                 </div>
               </span>
@@ -1118,6 +1159,8 @@
         "fadeOut": "16n",
       }).toMaster();
 
+
+
       //the notes
       var scaleNotes = ["Cerdo", "Loro", "Pato", "Sapo", "Gato", "Mono", "Oso", "Buho"];
       var stepNumber = 0;
@@ -1165,6 +1208,11 @@
         bpm = unbpm;
         Tone.Transport.bpm.value = bpm;
         console.log("me llegó bpm de " + unbpm);
+        //sacarbpm 
+        $("#decrement-bpm-btn").addClass("opacity-3");
+        $("#decrement-bpm-btn").addClass("ajeno");
+        $("#increment-bpm-btn").addClass("opacity-3");
+        $("#increment-bpm-btn").addClass("ajeno");
       });
 
       socket.on('chat message', function (msg) {
@@ -1394,48 +1442,6 @@
         //console.log(v);
       });
 
-      function changePitch(myAnimal, value) {
-        console.log("entro a change pitch");
-        console.log(myAnimal);
-        var myAnimalNumber = myAnimal.split("dial-inst")[1];
-        sonidos.get(scaleNotes[8 - myAnimalNumber]).volume.value = value;
-      }
-
-      function changeVolume(myAnimal, value) {
-        console.log("entro a change volume");
-        console.log(myAnimal);
-        var myAnimalNumber = myAnimal.split("dial-ch")[1];
-        sonidos.get(scaleNotes[8 - myAnimalNumber]).volume.value = value;
-      }
-
-      dialins.forEach((dialin) => {
-        dialin.on('change', function (v) {
-          console.log("encontró el dial");
-          console.log(this);
-          console.log(v);
-          var id = this.parent.id
-          socket.emit('pitchChange', id, v);
-          changePitch(this, v);
-        })
-      })
-
-      dialchs.forEach((dialch) => {
-        dialch.on('change', function (v) {
-          console.log("encontró el dial");
-          console.log(this);
-          console.log(v);
-          var id = this.parent.id
-          socket.emit('volumeChanged', id, v);
-          changeVolume(id, v);
-        })
-      })
-      socket.on('volumeChanged', function (myAnimal, value) {
-        changeVolume(myAnimal, value);
-      });
-
-      socket.on('pitchChange', function (myAnimal, value) {
-        changePitch(myAnimal, value)
-      });
 
       ////GRABAR
       var isRecording;
@@ -1520,6 +1526,52 @@
         $(this).toggleClass("mute-btn-activo");
       });
 
+      function changePitch(myAnimal, value) {
+        console.log("entro a change pitch");
+        console.log(myAnimal);
+        var myAnimalNumber = myAnimal.split("dial-ins")[1];
+        sonidos.get(scaleNotes[8 - myAnimalNumber]).volume.value = value;
+      }
+
+      function changeVolume(myAnimal, value) {
+        console.log("entro a change volume");
+        console.log(myAnimal);
+        var myAnimalNumber = myAnimal.split("dial-ch")[1];
+        sonidos.get(scaleNotes[8 - myAnimalNumber]).volume.value = value;
+      }
+
+
+      socket.on('pitchChange', function (myAnimal, value) {
+        changePitch(myAnimal, value)
+      });
+
+
+      socket.on('volumeChanged', function (myAnimal, value) {
+        changeVolume(myAnimal, value);
+      });
+
+      dialins.forEach((dialin) => {
+        dialin.on('change', function (v) {
+          console.log("encontró el dial");
+          console.log(this);
+          console.log(v);
+          var id = this.parent.id
+          socket.emit('pitchChange', id, v);
+          changePitch(id, v);
+        })
+      })
+
+      dialchs.forEach((dialch) => {
+        dialch.on('change', function (v) {
+          console.log("encontró el dial");
+          console.log(this);
+          console.log(v);
+          var id = this.parent.id
+          socket.emit('volumeChanged', id, v);
+          changeVolume(id, v);
+        })
+      })
+
 
     });
 
@@ -1544,11 +1596,9 @@
   </script>
 
   <script type="text/javascript">
-    /*
     $(document).ready(function () {
-      $('#jamModal').modal('show');
+      $('#playModal').modal('show');
     });
-    */
   </script>
 
 

@@ -156,6 +156,19 @@ html {
   font-size: 1.125rem;
 }
 
+h1 {
+  font-size: 1.5rem;
+  font-weight: 200;
+  line-height: 1.5rem;
+    
+}
+
+h3 {
+  font-size: 1.125rem;
+  font-weight: 200;
+  line-height: 1.5rem;
+}
+
 #phrase h3{
   font-size: 2rem;
   font-weight: 200;
@@ -179,7 +192,7 @@ html {
 }
 
   /* --------------------------------------------- */
-  /* Corners & special margins */
+  /* Corners & special `margins` */
 
 #Header{
     height:65px;
@@ -256,6 +269,12 @@ html {
   #bpm-display, #swing-display {
     border-left:2px solid;
     border-color: var(--color-fondo-1-animal);
+  }
+
+  #jam-sesion a{
+    padding-top:12px;
+    color: var(--color-chocolate-animal);
+    text-decoration: none !important;
   }
 
   /* --------------------------------------------- */
@@ -376,6 +395,11 @@ html {
 #Animal_logo{
   height:65px;
 }
+#playModal .close{
+    background-color: var(--color-blanco-ui-animal);
+    opacity: 1;
+    color: var(--color-figura-1-animal);
+}
   .btn-group-lg>.btn, .btn-lg, .btn {
     border-radius: 15px;
   }
@@ -384,6 +408,11 @@ html {
     background-color: var(--color-blanco-ui-animal);
     border-color: var(--color-blanco-ui-animal);
   }
+.btn-primary:hover {
+    color: var(--color-blanco-ui-animal);
+    background-color: var(--color-naranja-ui-animal);
+    border-color: var(--color-naranja-ui-animal);
+}
   .btn-secondary{
     background-color: var(--color-figura-1-animal);
     border:none;
@@ -665,7 +694,7 @@ html {
   /* Display */
 
 
-    
+
 
   #bpm-display{
     border-top-right-radius: 15px;
@@ -730,8 +759,31 @@ html {
     color: var(--color-blanco-ui-animal);
     background-color: var(--color-gris-animal);
 }
+
+
+
   /* --------------------------------------------- */
   /* Breakpoints */
+
+
+
+  #alerta{
+    height:100vh;
+  }
+
+  @media (max-device-width: 480px)
+    and (orientation: portrait) {
+      #alerta{
+        display:block;
+      }
+  }
+  @media (max-device-width: 480px)
+    and (orientation: landscape) {
+      #alerta{
+        display:none;
+      }
+  }
+
 
 
   /* Small devices (landscape phones, 576px and up) */
@@ -756,7 +808,14 @@ html {
     body {
       background-color: var(--color-fondo-aqua-animal);
     }
+    #alerta{
+      display:none;
+    }
+    #bienvenida {
+      border-right: 1px solid white;
+    }
   }
+
 
   /* Large devices (desktops, 992px and up) */
   @media (min-width: 992px) {
@@ -797,6 +856,8 @@ html {
       border-left: 1px solid var(--color-fondo-1-animal);
       height: 100%;
     }
+      
+    
   }
 
   /* Extra large devices (large desktops, 1200px and up) */
