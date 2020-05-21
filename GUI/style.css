@@ -25,10 +25,7 @@
   /* ---------------------------------------------- */
   /* Color & opacity */
 
-  .activado{
-  content:url("img/loro_activo.png");
-  /*setear las urls de las imgs activas para cada uno con su id*/
-  }
+  
 
 
   .verde-animal {
@@ -516,28 +513,28 @@ h3 {
     content: url(img/buho_activo.png);
   }
 
-  .icono-ch8 {
+  .icono-ch8 activado{
     content: url(img/cerdo_activo.png);
   }
-  .icono-ch7 {
+  .icono-ch7 activado{
     content: url(img/loro_activo.png);
   }
-  .icono-ch6 {
+  .icono-ch6 activado{
     content: url(img/sapo_activo.png);
   }
-  .icono-ch5 {
+  .icono-ch5 activado{
     content: url(img/pato_activo.png);
   }
-  .icono-ch4 {
+  .icono-ch4 activado{
     content: url(img/mono_activo.png);
   }
-  .icono-ch3 {
+  .icono-ch3 activado{
     content: url(img/gato_activo.png);
   }
-  .icono-ch2 {
+  .icono-ch2 activado{
     content: url(img/oso_activo.png);
   }
-  .icono-ch1 {
+  .icono-ch1 activado{
     content: url(img/buho_activo.png);
   }
 
