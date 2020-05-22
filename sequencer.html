@@ -32,7 +32,7 @@
 </head>
 
 <body>
-  <div id="alerta" class="fondo-aqua-animal">
+  <div id="alerta" class="fondo-aqua-animal" style="display:none">
     <div class="container">
       <div class="col-12 text-center">
         <h1 class="mt-5">¡Opa!</h1>
@@ -745,7 +745,7 @@
 
             <div id="sel-inst" class="m-0 p-0 pt-1 d-block d-lg-none d-flex align-items-end text-white overflow-hidden">
 
-              <span id="buhoInst" class="d-none">
+              <span id="buhoInst" class="d-none instMobile">
                 <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal gris-animal">
                   <div class="d-flex flex-column">
                     <div class="animal-icon">
@@ -765,7 +765,7 @@
                 </div>
               </span>
 
-              <span id="osoInst" class="d-none">
+              <span id="osoInst" class="d-none instMobile">
                 <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal chocolate-animal">
                   <div class="d-flex flex-column">
                     <div class="animal-icon">
@@ -785,7 +785,7 @@
                 </div>
               </span>
 
-              <span id="gatoInst" class="d-none">
+              <span id="gatoInst" class="d-none instMobile">
                 <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal gris-animal">
                   <div class="d-flex flex-column">
                     <div class="animal-icon">
@@ -805,7 +805,7 @@
                 </div>
               </span>
 
-              <span id="monoInst" class="d-none">
+              <span id="monoInst" class="d-none instMobile">
                 <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal marron-animal">
                   <div class="d-flex flex-column">
                     <div class="animal-icon">
@@ -825,7 +825,7 @@
                 </div>
               </span>
 
-              <span id="patoInst" class="d-none">
+              <span id="patoInst" class="d-none instMobile">
                 <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal mostaza-animal">
                   <div class="d-flex flex-column">
                     <div class="animal-icon">
@@ -845,7 +845,7 @@
                 </div>
               </span>
 
-              <span id="sapoInst" class="d-none">
+              <span id="sapoInst" class="d-none instMobile">
                 <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal verde-animal">
                   <div class="d-flex flex-column">
                     <div class="animal-icon">
@@ -865,7 +865,7 @@
                 </div>
               </span>
 
-              <span id="loroInst" class="d-none">
+              <span id="loroInst" class="d-none instMobile">
                 <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal verde-animal">
                   <div class="d-flex flex-column">
                     <div class="animal-icon">
@@ -885,7 +885,7 @@
                 </div>
               </span>
 
-              <span id="cerdoInst" class="d-block">
+              <span id="cerdoInst" class="d-block instMobile">
                 <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal rosa-animal">
                   <div class="d-flex flex-column">
                     <div class="animal-icon">
@@ -1078,6 +1078,9 @@
 
   <script> //NET
     $(function () {
+
+
+
       var myChannel = [];//todos
       var socket = io(window.location.href);
       var newUrl;
@@ -1085,6 +1088,13 @@
       var selectedChannels = [];
       var soloOn;
       var bpm = 90;
+
+
+      if (window.innerHeight > window.innerWidth) {
+        $("#alerta").css("display", "block");
+      } else {
+        $("#alerta").css("display", "none");
+      }
 
       //Query screen size to create grid  
       //smallest devices bootstrap default  GRILLA w:330 h:380
@@ -1216,14 +1226,21 @@
       });
 
       socket.on('chat message', function (msg) {
-        $('#messages').append($('<li>').text(msg));
+
+        $('#messages').prepend($('<li>').text(msg));
       });
 
 
       $('form').submit(function (e) {
         e.preventDefault(); // prevents page reloading
-        socket.emit('chat message', $('#m').val());
-        $('#messages').append($('<li>').text($('#m').val()));
+        var myAnimalsLetter = ["C", "L", "S", "P", "M", "G", "O", "B"];
+        var myLetters = "";
+        myChannel.forEach(function (channel) {
+          myLetters = myLetters + '<span class="interloc-' + myAnimalsLetter[channel-1] + '">' + myAnimalsLetter[channel-1] + '</span>';
+        });
+        var emitMe = myLetters +": " +$('#m').val()
+        socket.emit('chat message',emitMe );
+        $('#messages').append('<li> '+ emitMe +' </li>');
         $('#m').val('');
         return false;
       });
@@ -1380,9 +1397,13 @@
       var miSolo = -1;
 
       $(".soloButton").click(function () {
+        $(".instMobile").addClass("d-none");
+        $(".instMobile").removeClass("d-block");
+
         var myId = this.id;
         var myAnimalNumber = myId.split("icono-ch")[1];
         myAnimalNumber--;
+        $($(".instMobile")[myAnimalNumber]).addClass("d-block");
         if (miSolo == (7 - myAnimalNumber)) {
           $(this).removeClass("activado");
           miSolo = -1;
@@ -1447,12 +1468,22 @@
       var isRecording;
       const actx = Tone.context;
       const dest = actx.createMediaStreamDestination();
-      const recorder = new MediaRecorder(dest.stream);
-      sonidos.connect(dest);
+      let recorder = null;
       var chunks = [];
+
+
+
+
 
       $("#rec-btn").click(function () {
 
+
+        try {
+          recorder = new MediaRecorder(stream);
+        } catch (err) {
+          return err.name;     /* return the error name */
+        }
+        sonidos.connect(dest);
         if (isRecording) {
           recorder.stop();
           return;
@@ -1573,9 +1604,48 @@
       })
 
 
+
+      //VISIBILITY PAUSE
+      // Set the name of the hidden property and the change event for visibility
+      var hidden, visibilityChange;
+      if (typeof document.hidden !== "undefined") { // Opera 12.10 and Firefox 18 and later support 
+        hidden = "hidden";
+        visibilityChange = "visibilitychange";
+      } else if (typeof document.msHidden !== "undefined") {
+        hidden = "msHidden";
+        visibilityChange = "msvisibilitychange";
+      } else if (typeof document.webkitHidden !== "undefined") {
+        hidden = "webkitHidden";
+        visibilityChange = "webkitvisibilitychange";
+      }
+
+      function handleVisibilityChange() {
+        if (document[hidden]) {
+          Tone.Transport.stop();
+        }
+      }
+
+
+      // Warn if the browser doesn't support addEventListener or the Page Visibility API
+      if (typeof document.addEventListener === "undefined" || hidden === undefined) {
+        console.log("This demo requires a browser, such as Google Chrome or Firefox, that supports the Page Visibility API.");
+      } else {
+        // Handle page visibility change   
+        document.addEventListener(visibilityChange, handleVisibilityChange, false);
+      }
+      // END  VISIBILITY PAUSE
+
+      window.addEventListener("orientationchange", function () {
+        console.log("the orientation of the device is now " + screen.orientation.angle);
+        if (window.innerHeight > window.innerWidth) {
+          $("#alerta").css("display", "block");
+        } else {
+          $("#alerta").css("display", "none");
+        }
+      });
+
+
     });
-
-
 
   </script>
 
@@ -1593,6 +1663,10 @@
       $("#svg1").attr("width", "0");
       connectAll();
     });
+
+
+
+
   </script>
 
   <script type="text/javascript">

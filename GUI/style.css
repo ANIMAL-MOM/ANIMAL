@@ -25,10 +25,7 @@
   /* ---------------------------------------------- */
   /* Color & opacity */
 
-  .activado{
-  content:url("img/loro_activo.png");
-  /*setear las urls de las imgs activas para cada uno con su id*/
-  }
+  
 
 
   .verde-animal {
@@ -264,7 +261,8 @@ h3 {
   #messages {
     height: 30px;
     list-style-type: none;
-    overflow:scroll;
+    overflow-y:scroll;
+    overflow-x:hidden;
   }
   #bpm-display, #swing-display {
     border-left:2px solid;
@@ -516,28 +514,28 @@ h3 {
     content: url(img/buho_activo.png);
   }
 
-  .icono-ch8 {
+  #icono-ch8.activado{
     content: url(img/cerdo_activo.png);
   }
-  .icono-ch7 {
+  #icono-ch7.activado{
     content: url(img/loro_activo.png);
   }
-  .icono-ch6 {
+  #icono-ch6.activado{
     content: url(img/sapo_activo.png);
   }
-  .icono-ch5 {
+  #icono-ch5.activado{
     content: url(img/pato_activo.png);
   }
-  .icono-ch4 {
+  #icono-ch4.activado{
     content: url(img/mono_activo.png);
   }
-  .icono-ch3 {
+  #icono-ch3.activado{
     content: url(img/gato_activo.png);
   }
-  .icono-ch2 {
+  #icono-ch2.activado{
     content: url(img/oso_activo.png);
   }
-  .icono-ch1 {
+  #icono-ch1.activado{
     content: url(img/buho_activo.png);
   }
 
@@ -710,49 +708,49 @@ h3 {
     background-color: var(--color-destaque-animal);
   }
 
-.interloc-b {
+.interloc-B {
     border-radius: 50%;
     padding:2px;
     text-align: center;
     color: var(--color-blanco-ui-animal);
     background-color: var(--color-gris-animal);
 }
-.interloc-o {
+.interloc-O {
     border-radius: 50%;
     padding:2px;
     text-align: center;
     color: var(--color-blanco-ui-animal);
     background-color: var(--color-gris-animal);
 }
-.interloc-g {
+.interloc-G {
     border-radius: 50%;
     padding:2px;
     text-align: center;
     color: var(--color-blanco-ui-animal);
     background-color: var(--color-gris-animal);
 }
-.interloc-m {
+.interloc-M {
     border-radius: 50%;
     padding:2px;
     text-align: center;
     color: var(--color-blanco-ui-animal);
     background-color: var(--color-gris-animal);
 }
-.interloc-s {
+.interloc-S {
     border-radius: 50%;
     padding:2px;
     text-align: center;
     color: var(--color-blanco-ui-animal);
     background-color: var(--color-gris-animal);
 }
-.interloc-l {
+.interloc-L {
     border-radius: 50%;
     padding:2px;
     text-align: center;
     color: var(--color-blanco-ui-animal);
     background-color: var(--color-gris-animal);
 }
-.interloc-c {
+.interloc-C {
     border-radius: 50%;
     padding:2px;
     text-align: center;
@@ -770,7 +768,7 @@ h3 {
   #alerta{
     height:100vh;
   }
-
+/*
   @media (max-device-width: 480px)
     and (orientation: portrait) {
       #alerta{
@@ -784,7 +782,7 @@ h3 {
       }
   }
 
-
+*/
 
   /* Small devices (landscape phones, 576px and up) */
 
