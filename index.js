@@ -1,7 +1,7 @@
 class Room {
   constructor() { //(ID, sequencer) {
     this.id = Math.floor(Math.random() * 10000);
-    // console.log
+    // //console.log
     // this.sequencer = '';//sequencer;
     this.bpm = 120;
     this.soundkit = 1;
@@ -40,7 +40,7 @@ class Room {
     this.players.remove(player);
   }
   sayHello() {
-    console.log('Hello, my name is ' + this.name + ', I have ID: ' + this.id);
+    //console.log('Hello, my name is ' + this.name + ', I have ID: ' + this.id);
   }
 
   clickStep(msg) {
@@ -79,21 +79,21 @@ var visitor = io.of('/start');
 visitor.on('connection', (socket) => {
 
   var roomID = socket.handshake.query.roomID;
-  console.log(socket.handshake.url);
+  //console.log(socket.handshake.url);
   //if () //controlar que no sea sequencer
   var theRoom = '';
-  console.log('entro visitor con roomid ' + roomID);
+  //console.log('entro visitor con roomid ' + roomID);
 
   if (roomID != '') {
 
     rooms.forEach(room => {
       if (roomID == room.id) {
-        console.log('encontro room' + room.id + ' ' + roomID);
+        //console.log('encontro room' + room.id + ' ' + roomID);
         theRoom = room;
       }
     });
     if (theRoom != '' && roomID != 'new') {
-      console.log(" busco canales usados");
+      //console.log(" busco canales usados");
       var usados = [];
       theRoom.players.forEach(player => {
         if (player.channels) {
@@ -105,9 +105,9 @@ visitor.on('connection', (socket) => {
         }
       });
       socket.emit('usedChannels', usados);
-      console.log('emito usados' + usados);
+      //console.log('emito usados' + usados);
     } else {
-      console.log("no emito usados");
+      //console.log("no emito usados");
     }
   }
 });
@@ -118,26 +118,26 @@ var player = io.of('/sequencer');
 player.on('connection', (socket) => {
 
   var roomID = socket.handshake.query.roomID;
-  // console.log(socket.handshake.url);
-  console.log('entro sequencer con roomid ' + roomID);
-  // console.log(roomID);
+  // //console.log(socket.handshake.url);
+  //console.log('entro sequencer con roomid ' + roomID);
+  // //console.log(roomID);
   var theRoom = '';
   if (roomID != '') {
     rooms.forEach(room => {
       if (roomID == room.id) {
-        //   console.log('room.id' + room.id + '  roomID' + roomID);
+        //   //console.log('room.id' + room.id + '  roomID' + roomID);
         theRoom = room;
       }
     });
     if (theRoom == '' || roomID == 'new') { //ES ANFITRION
-      //  console.log('host');
+      //  //console.log('host');
       socket.room = new Room();
-      console.log('host, new roomid' + socket.room.id);
+      //console.log('host, new roomid' + socket.room.id);
       rooms.push(socket.room);
       socket.join(socket.room.id);
       socket.room.addPlayer(socket);
       //socket.roomID = socket.handshake.query.roomID;
-      //  console.log('new user connected to room:' + socket.room.id);
+      //  //console.log('new user connected to room:' + socket.room.id);
       socket.type = 'host';
       socket.emit('host', socket.room.id);
 
@@ -151,20 +151,20 @@ player.on('connection', (socket) => {
 
     } else { //es invitado u observador
       socket.room = theRoom;
-      //  console.log('theRoom.sequencer ' + theRoom.sequencer);
+      //  //console.log('theRoom.sequencer ' + theRoom.sequencer);
       socket.join(socket.room.id);
-      console.log('a guest user connected to room:' + socket.room.id);
-      //  console.log('socket.room.seq ' + socket.room.sequencer);
+      //console.log('a guest user connected to room:' + socket.room.id);
+      //  //console.log('socket.room.seq ' + socket.room.sequencer);
       socket.type = 'guest';
       var channels = [];
-      console.log(socket.handshake.query.channel);
+      //console.log(socket.handshake.query.channel);
       if (socket.handshake.query.channel) {
         var loschannels = socket.handshake.query.channel.split("y");
-        console.log("loschannels" + loschannels)
+        //console.log("loschannels" + loschannels)
         channels = loschannels;
         socket.channels = channels;
         socket.room.addPlayer(socket);
-        console.log("eligio estosh canalesh" + socket.channels);
+        //console.log("eligio estosh canalesh" + socket.channels);
         var usados = [];
         /*    theRoom.players.forEach(player => {
               if (player.channels) {
@@ -176,7 +176,7 @@ player.on('connection', (socket) => {
               }
             });*/
 
-        console.log('emito bpm de ' + socket.room.bpm);
+        //console.log('emito bpm de ' + socket.room.bpm);
         socket.emit('guest', socket.room.sequencer, socket.channels, socket.room.bpm);
       }//
       //Que vaya al inicio
@@ -184,32 +184,32 @@ player.on('connection', (socket) => {
 
 
     socket.on('sequencer', (hostsequencer) => {
-      //  console.log('ok sequencer' + hostsequencer);
+      //  //console.log('ok sequencer' + hostsequencer);
       socket.room.sequencer = hostsequencer;
 
     });
     //rooms.push(socket.roomID);
     socket.on('disconnect', () => {
-      console.log('user disconnected');
+      //console.log('user disconnected');
       //BORRAR CUARTo si es host
       // socket.room.removePlayer(socket);
       if (socket.room.players.length == 0) {
-        console.log('rooms' + rooms);
+        //console.log('rooms' + rooms);
       }
 
     });
 
     socket.on('chat message', (msg) => {
-      console.log('message: ' + msg);
+      //console.log('message: ' + msg);
       socket.to(socket.room.id).emit('chat message', msg);
     });
 
     socket.on('toggleStep', (miStep) => {
-      //console.log('emit changes to room: ' + socket.room.id);
+      ////console.log('emit changes to room: ' + socket.room.id);
       socket.broadcast.to(socket.room.id).emit('toggleStep', miStep);      
-      // console.log('add changes to server matrix' + miStep.row + ',' + miStep.column + ',' + miStep.state);
+      // //console.log('add changes to server matrix' + miStep.row + ',' + miStep.column + ',' + miStep.state);
       socket.room.sequencer[miStep.row][miStep.column] = miStep.state;
-     // console.log("emito cambio desde el server", console.log(socket));
+     // //console.log("emito cambio desde el server", //console.log(socket));
     });
 
     socket.on('volumeChanged', (myAnimal, value) => {
@@ -226,7 +226,7 @@ player.on('connection', (socket) => {
 
     socket.on('roomOpened', (channels) => {
       socket.channels = channels;
-      console.log("abrio cuarto canales usados " + channels)
+      //console.log("abrio cuarto canales usados " + channels)
 
     });
 
@@ -237,5 +237,5 @@ player.on('connection', (socket) => {
 
 
 http.listen(PORT, () => {
-  console.log('listening on *:3000');
+  //console.log('listening on *:3000');
 });

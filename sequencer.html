@@ -455,17 +455,14 @@
     <!-- HEADER -->
 
     <div id="Header" class="row">
-      <div class="col-md-12 d-flex p-2 flex-row justify-content-between">
-        <div id="Animal_logo" class="my-auto">
-          <img src="GUI/img/Animal_logo_v0.png" height="30">
+      <div class="col-md-12 d-flex p-3 flex-row justify-content-between">
+        <div id="Animal_logo" class="d-flex flex-column justify-content-arround">
+          <img src="GUI/img/Animal_logo_v0.png" height="40px">
         </div>
-        <div id="MoM_logo" class="my-auto">
-          <img src="GUI/img/MoM_logo_v0.png" height="20">
-        </div>
+        <div id="MoM_logo" class="d-flex mr-2 my-auto">[MoM]</div>
       </div>
     </div>
     <!-- header end -->
-
 
     <!-- MAIN-UP -->
 
@@ -507,10 +504,11 @@
                 <div class="sub_title">Base drum</div>
               </div>
               <div class="dial_container mb-1 ml-1">
-                <div id="dial-ins1" class="mom_dial"></div>
+                <div id="dial-ins1" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch"></div>
               </div>
             </div>
           </div>
+
 
           <div id="osoInst" class="col-auto m-0 ml-1 mt-2 p-0 instrumento7">
             <div id="" class="position-absolute opacity-4 corners1 destaque-animal w-100 h-100 disabled-overlay">
@@ -526,10 +524,11 @@
                 <div class="sub_title">Snare</div>
               </div>
               <div class="dial_container mb-1 ml-1">
-                <div id="dial-ins2" class="mom_dial"></div>
+                <div id="dial-ins2" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch"></div>
               </div>
             </div>
           </div>
+
 
           <div id="gatoInst" class="col-auto m-0 ml-1 mr-5 mr-xl-0 mt-2 p-0 instrumento6">
             <div id="" class="position-absolute opacity-4 corners1 destaque-animal w-100 h-100 disabled-overlay">
@@ -545,7 +544,7 @@
                 <div class="sub_title">Hi hat</div>
               </div>
               <div class="dial_container mb-1 ml-1">
-                <div id="dial-ins3" class="mom_dial"></div>
+                <div id="dial-ins3" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch"></div>
               </div>
             </div>
           </div>
@@ -564,10 +563,11 @@
                 <div class="sub_title">Bass</div>
               </div>
               <div class="dial_container mb-1 ml-1">
-                <div id="dial-ins4" class="mom_dial"></div>
+                <div id="dial-ins4" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch"></div>
               </div>
             </div>
           </div>
+
 
           <div id="patoInst" class="col-auto m-0 ml-1 mr-5 mr-xl-0 mt-2 p-0 instrumento4">
             <div id="" class="position-absolute opacity-4 corners1 destaque-animal w-100 h-100 disabled-overlay">
@@ -583,7 +583,7 @@
                 <div class="sub_title">Clave</div>
               </div>
               <div class="dial_container mb-1 ml-1">
-                <div id="dial-ins5" class="mom_dial"></div>
+                <div id="dial-ins5" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch"></div>
               </div>
             </div>
           </div>
@@ -602,7 +602,7 @@
                 <div class="sub_title">Ride</div>
               </div>
               <div class="dial_container mb-1 ml-1">
-                <div id="dial-ins6" class="mom_dial"></div>
+                <div id="dial-ins6" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch"></div>
               </div>
             </div>
           </div>
@@ -621,7 +621,7 @@
                 <div class="sub_title">Sampler</div>
               </div>
               <div class="dial_container mb-1 ml-1">
-                <div id="dial-ins7" class="mom_dial"></div>
+                <div id="dial-ins7" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch"></div>
               </div>
             </div>
           </div>
@@ -640,7 +640,7 @@
                 <div class="sub_title">Scratch</div>
               </div>
               <div class="dial_container mb-1 ml-1">
-                <div id="dial-ins8" class="mom_dial"></div>
+                <div id="dial-ins8" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch"></div>
               </div>
             </div>
           </div>
@@ -697,10 +697,10 @@
                   <!-- BPM -->
                   <div id="bpm" class="col-12">
                     <div class="row d-flex h-100">
-                      <div id="decrement-bpm-btn" class="col-3 d-flex my-0 blanco-ui-animal">
+                      <div id="decrement-bpm-btn" class="col-3 d-flex my-0 blanco-ui-animal animal-pointer">
                         <strong class="m-auto text-center">-</strong>
                       </div>
-                      <div id="increment-bpm-btn" class="col-3 d-flex my-0 blanco-ui-animal">
+                      <div id="increment-bpm-btn" class="col-3 d-flex my-0 blanco-ui-animal animal-pointer">
                         <strong class="m-auto text-center">+</strong>
                       </div>
                       <div id="bpm-display" class="col-6 numero-animal d-flex my-0 blanco-ui-animal">
@@ -712,10 +712,10 @@
                   <!-- SWING -->
                   <div id="swing" class="col-12">
                     <div class="row d-flex h-100">
-                      <div id="decrement-swing-btn" class="col-3 d-flex my-0 blanco-ui-animal">
+                      <div id="decrement-swing-btn" class="col-3 d-flex my-0 blanco-ui-animal animal-pointer">
                         <strong class="m-auto text-center">-</strong>
                       </div>
-                      <div id="increment-swing-btn" class="col-3 d-flex my-0 blanco-ui-animal">
+                      <div id="increment-swing-btn" class="col-3 d-flex my-0 blanco-ui-animal animal-pointer">
                         <strong class="m-auto text-center">+</strong>
                       </div>
                       <div id="swing-display" class="col-6 numero-animal d-flex my-0 blanco-ui-animal">
@@ -728,11 +728,11 @@
               </div>
               <!-- REC + MUTE -->
               <div id="rec-mute" class="col-4 col-lg-12 mt-lg-1 ">
-                <div class="row h-100 my-0 pl-1 pl-lg-0 d-flex flex-column flex-lg-row">
-                  <div id="rec-btn" class="col-lg-6 d-flex my-0 blanco-ui-animal">
+                <div class="row h-100 my-0 pl-1 pl-lg-0 d-flex flex-column flex-lg-row ">
+                  <div id="rec-btn" class="col-lg-6 d-flex my-0 blanco-ui-animal animal-pointer">
                     <span class="m-auto text-center">Rec</span>
                   </div>
-                  <div id="mute-btn" class="col-lg-6 d-flex my-0 figura-1-animal mute-btn">
+                  <div id="mute-btn" class="col-lg-6 d-flex my-0 figura-1-animal mute-btn animal-pointer">
                     <span class="m-auto text-center"></span>
                   </div>
                 </div>
@@ -757,10 +757,12 @@
                     <div class="sub_title">Base drum</div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ins1" class="mom_dial"></div>
+                    <div id="mob-dial-ins1" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch">
+                    </div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ch1" class="mom_dial"></div>
+                    <div id="mob-dial-ch1" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
+                    </div>
                   </div>
                 </div>
               </span>
@@ -777,10 +779,12 @@
                     <div class="sub_title">Snare</div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ins2" class="mom_dial"></div>
+                    <div id="mob-dial-ins2" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch">
+                    </div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ch2" class="mom_dial"></div>
+                    <div id="mob-dial-ch2" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
+                    </div>
                   </div>
                 </div>
               </span>
@@ -797,10 +801,12 @@
                     <div class="sub_title">Hi hat</div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ins3" class="mom_dial"></div>
+                    <div id="mob-dial-ins3" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch">
+                    </div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ch3" class="mom_dial"></div>
+                    <div id="mob-dial-ch3" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
+                    </div>
                   </div>
                 </div>
               </span>
@@ -817,10 +823,12 @@
                     <div class="sub_title">Bass</div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ins4" class="mom_dial"></div>
+                    <div id="mob-dial-ins4" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch">
+                    </div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ch4" class="mom_dial"></div>
+                    <div id="mob-dial-ch4" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
+                    </div>
                   </div>
                 </div>
               </span>
@@ -837,10 +845,12 @@
                     <div class="sub_title">Clave</div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ins5" class="mom_dial"></div>
+                    <div id="mob-dial-ins5" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch">
+                    </div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ch5" class="mom_dial"></div>
+                    <div id="mob-dial-ch5" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
+                    </div>
                   </div>
                 </div>
               </span>
@@ -857,10 +867,12 @@
                     <div class="sub_title">Ride</div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ins6" class="mom_dial"></div>
+                    <div id="mob-dial-ins6" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch">
+                    </div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ch6" class="mom_dial"></div>
+                    <div id="mob-dial-ch6" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
+                    </div>
                   </div>
                 </div>
               </span>
@@ -877,10 +889,12 @@
                     <div class="sub_title">Sampler</div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ins7" class="mom_dial"></div>
+                    <div id="mob-dial-ins7" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch">
+                    </div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ch7" class="mom_dial"></div>
+                    <div id="mob-dial-ch7" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
+                    </div>
                   </div>
                 </div>
               </span>
@@ -897,10 +911,12 @@
                     <div class="sub_title">Scratch</div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ins8" class="mom_dial"></div>
+                    <div id="mob-dial-ins8" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch">
+                    </div>
                   </div>
                   <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ch8" class="mom_dial"></div>
+                    <div id="mob-dial-ch8" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
+                    </div>
                   </div>
                 </div>
               </span>
@@ -925,77 +941,73 @@
 
               <!-- ÍCONOS y DIALES -->
 
+              <!-- ÍCONOS y DIALES -->
               <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup1">
                 <div class="animal-icon">
-                  <img id="icono-ch8" src="GUI/img/cerdo.png" class="soloButton img-fluid">
+                  <img id="icono-ch8" src="GUI/img/cerdo.png" class="soloButton img-fluid animal-pointer">
                 </div>
                 <div class="dial_container d-none d-lg-block">
-                  <div id="dial-ch8" class="mom_dial"></div>
+                  <div id="dial-ch8" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
                 </div>
               </div>
-
               <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup2">
                 <div class="animal-icon">
-                  <img id="icono-ch7" src="GUI/img/loro.png" class="soloButton img-fluid">
+                  <img id="icono-ch7" src="GUI/img/loro.png" class="soloButton img-fluid animal-pointer">
                 </div>
                 <div class="dial_container d-none d-lg-block">
-                  <div id="dial-ch7" class="mom_dial"></div>
+                  <div id="dial-ch7" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
                 </div>
               </div>
-
               <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup3">
                 <div class="animal-icon">
-                  <img id="icono-ch6" src="GUI/img/sapo.png" class="soloButton img-fluid">
+                  <img id="icono-ch6" src="GUI/img/sapo.png" class="soloButton img-fluid animal-pointer">
                 </div>
                 <div class="dial_container d-none d-lg-block">
-                  <div id="dial-ch6" class="mom_dial"></div>
+                  <div id="dial-ch6" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
                 </div>
               </div>
-
               <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup4">
                 <div class="animal-icon">
-                  <img id="icono-ch5" src="GUI/img/pato.png" class="soloButton img-fluid">
+                  <img id="icono-ch5" src="GUI/img/pato.png" class="soloButton img-fluid animal-pointer">
                 </div>
                 <div class="dial_container d-none d-lg-block">
-                  <div id="dial-ch5" class="mom_dial"></div>
+                  <div id="dial-ch5" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
                 </div>
               </div>
-
               <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup5">
                 <div class="animal-icon">
-                  <img id="icono-ch4" src="GUI/img/mono.png" class="soloButton img-fluid">
+                  <img id="icono-ch4" src="GUI/img/mono.png" class="soloButton img-fluid animal-pointer">
                 </div>
                 <div class="dial_container d-none d-lg-block">
-                  <div id="dial-ch4" class="mom_dial"></div>
+                  <div id="dial-ch4" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
                 </div>
               </div>
-
               <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup6">
                 <div class="animal-icon">
-                  <img id="icono-ch3" src="GUI/img/gato.png" class="soloButton img-fluid">
+                  <img id="icono-ch3" src="GUI/img/gato.png" class="soloButton img-fluid animal-pointer">
                 </div>
                 <div class="dial_container d-none d-lg-block">
-                  <div id="dial-ch3" class="mom_dial"></div>
+                  <div id="dial-ch3" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
                 </div>
               </div>
-
               <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup7">
                 <div class="animal-icon">
-                  <img id="icono-ch2" src="GUI/img/oso.png" class="soloButton img-fluid">
+                  <img id="icono-ch2" src="GUI/img/oso.png" class="soloButton img-fluid animal-pointer">
                 </div>
                 <div class="dial_container d-none d-lg-block">
-                  <div id="dial-ch2" class="mom_dial"></div>
+                  <div id="dial-ch2" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
                 </div>
               </div>
-
               <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup8">
                 <div class="animal-icon" id="animalChannel1">
-                  <img id="icono-ch1" src="GUI/img/buho.png" class="soloButton img-fluid">
+                  <img id="icono-ch1" src="GUI/img/buho.png" class="soloButton img-fluid animal-pointer">
                 </div>
                 <div class="dial_container d-none d-lg-block">
-                  <div id="dial-ch1" class="mom_dial"></div>
+                  <div id="dial-ch1" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
                 </div>
               </div>
+              <!-- íconos y diales end -->
+
 
               <!-- íconos y diales end -->
 
@@ -1105,7 +1117,7 @@
       var sequencer;
 
       if ($(window).width() > 1200) {
-        console.log('creo seq Extra large devices (large desktops, 1200px and up)  @media (min-width: 1200px) { ... } GRILLA w:690 h:380 ');
+        //console.log('creo seq Extra large devices (large desktops, 1200px and up)  @media (min-width: 1200px) { ... } GRILLA w:690 h:380 ');
         sequencer = new Nexus.Sequencer('#seq-animal', {
           'size': [690, 380],
           'mode': 'toggle',
@@ -1113,7 +1125,7 @@
           'columns': 16
         });
       } else if (($(window).width() > 768)) {
-        console.log('creo seq Large devices (desktops, 768 y992px and up) @media (min-width: 992px y 768) { ... }  GRILLA w:580 h:380 ');
+        //console.log('creo seq Large devices (desktops, 768 y992px and up) @media (min-width: 992px y 768) { ... }  GRILLA w:580 h:380 ');
         sequencer = new Nexus.Sequencer('#seq-animal', {
           'size': [580, 380],
           'mode': 'toggle',
@@ -1122,7 +1134,7 @@
         });
 
       } else if (($(window).width() > 576)) {
-        console.log('creo seq Small devices (landscape phones, 576px and up) @media (min-width: 576px) { ... } GRILLA w:430 h:380');
+        //console.log('creo seq Small devices (landscape phones, 576px and up) @media (min-width: 576px) { ... } GRILLA w:430 h:380');
         sequencer = new Nexus.Sequencer('#seq-animal', {
           'size': [430, 380],
           'mode': 'toggle',
@@ -1131,7 +1143,7 @@
         });
 
       } else {
-        console.log('creo seq S//smallest devices bootstrap default  GRILLA w:330 h:380');
+        //console.log('creo seq S//smallest devices bootstrap default  GRILLA w:330 h:380');
         sequencer = new Nexus.Sequencer('#seq-animal', {
           'size': [330, 380],
           'mode': 'toggle',
@@ -1217,7 +1229,7 @@
         setMyChannel();
         bpm = unbpm;
         Tone.Transport.bpm.value = bpm;
-        console.log("me llegó bpm de " + unbpm);
+        //console.log("me llegó bpm de " + unbpm);
         //sacarbpm 
         $("#decrement-bpm-btn").addClass("opacity-3");
         $("#decrement-bpm-btn").addClass("ajeno");
@@ -1227,7 +1239,7 @@
 
       socket.on('chat message', function (msg) {
 
-        $('#messages').prepend($('<li>').text(msg));
+        $('#messages').append('<li> ' + msg + ' </li>');
       });
 
 
@@ -1236,11 +1248,13 @@
         var myAnimalsLetter = ["C", "L", "S", "P", "M", "G", "O", "B"];
         var myLetters = "";
         myChannel.forEach(function (channel) {
-          myLetters = myLetters + '<span class="interloc-' + myAnimalsLetter[channel-1] + '">' + myAnimalsLetter[channel-1] + '</span>';
+          if (channel != "") {
+            myLetters = myLetters + '<span class="interloc-' + myAnimalsLetter[channel - 1] + '">' + myAnimalsLetter[channel - 1] + '</span>';
+          }
         });
-        var emitMe = myLetters +": " +$('#m').val()
-        socket.emit('chat message',emitMe );
-        $('#messages').append('<li> '+ emitMe +' </li>');
+        var emitMe = myLetters + ":<br> " + $('#m').val()
+        socket.emit('chat message', emitMe);
+        $('#messages').append('<li> ' + emitMe + ' </li>');
         $('#m').val('');
         return false;
       });
@@ -1321,7 +1335,7 @@
 
         $(".ajeno").click(function (e) {
           e.preventDefault();
-          console.log("entró a prevent");
+          //console.log("entró a prevent");
         });
 
 
@@ -1331,7 +1345,7 @@
         myChannel.forEach(function (micha) {
           if (v.row == micha - 1) {
             socket.emit('toggleStep', v);
-            console.log("emito change");
+            //console.log("emito change");
           }
         });
         //   if (v.row
@@ -1344,8 +1358,8 @@
              ///TENGO QUE PONERLRE     pointer-events: none; a todas las otras rows           
            }
          });*/
-        /* console.log("es un cambio");
-         console.log(v);
+        /* //console.log("es un cambio");
+         //console.log(v);
          */
         //  var myCell = sequencer.cells[v.row * v.column];
         //var miRect = $("rect")[((v.row * 16)) + (v.column)];
@@ -1360,7 +1374,7 @@
       });
 
       socket.on('toggleStep', function (miStep) {
-        console.log("llego " + miStep);
+        //console.log("llego " + miStep);
         sequencer.matrix.set.cell(miStep.column, miStep.row, miStep.state);
         // sequencer.colorize("accent","#ff0000");
 
@@ -1404,6 +1418,7 @@
         var myAnimalNumber = myId.split("icono-ch")[1];
         myAnimalNumber--;
         $($(".instMobile")[myAnimalNumber]).addClass("d-block");
+        $(".soloButton").removeClass("activado");
         if (miSolo == (7 - myAnimalNumber)) {
           $(this).removeClass("activado");
           miSolo = -1;
@@ -1418,21 +1433,21 @@
          $(this).addClass("activado");
         for (i = 0; i < 8; i++) {
           sonidos.get(scaleNotes[i]).mute = true;
-          console.log("es el animal numero"+ i)
-          console.log(scaleNotes[i]);
-          console.log("quedó muteado " +sonidos.get(scaleNotes[i]).mute);
+          //console.log("es el animal numero"+ i)
+          //console.log(scaleNotes[i]);
+          //console.log("quedó muteado " +sonidos.get(scaleNotes[i]).mute);
         }
         sonidos.get(scaleNotes[(7 - myAnimalNumber)]).mute = false;
-        console.log(scaleNotes[(7 - myAnimalNumber)]);
+        //console.log(scaleNotes[(7 - myAnimalNumber)]);
 
       } else {
         $(this).removeClass("activado");
         for (i = 0; i < 8; i++) {
-          console.log(scaleNotes[i]);
+          //console.log(scaleNotes[i]);
           sonidos.get(scaleNotes[i]).mute = false;
-          console.log("es el animal numero"+ i)
-          console.log(scaleNotes[i]);
-          console.log("quedó muteado " +sonidos.get(scaleNotes[i]).mute);
+          //console.log("es el animal numero"+ i)
+          //console.log(scaleNotes[i]);
+          //console.log("quedó muteado " +sonidos.get(scaleNotes[i]).mute);
         }
         
     }
@@ -1456,11 +1471,11 @@
 
 
       sequencer.on('change', function (v) {
-        // console.log(v);
+        // //console.log(v);
       });
 
       sequencer.on('step', function (v) {
-        //console.log(v);
+        ////console.log(v);
       });
 
 
@@ -1477,17 +1492,17 @@
 
       $("#rec-btn").click(function () {
 
-
-        try {
-          recorder = new MediaRecorder(stream);
-        } catch (err) {
-          return err.name;     /* return the error name */
-        }
-        sonidos.connect(dest);
         if (isRecording) {
           recorder.stop();
           return;
-        } else {
+        }
+        else {
+          try {
+            recorder = new MediaRecorder(dest.stream);
+          } catch (err) {
+            return err.name;     /* return the error name */
+          }
+          sonidos.connect(dest);
           isRecording = true;
           chunks = [];
           $(this).toggleClass('rec-btn-activo');
@@ -1558,15 +1573,15 @@
       });
 
       function changePitch(myAnimal, value) {
-        console.log("entro a change pitch");
-        console.log(myAnimal);
+        //console.log("entro a change pitch");
+        //console.log(myAnimal);
         var myAnimalNumber = myAnimal.split("dial-ins")[1];
         sonidos.get(scaleNotes[8 - myAnimalNumber]).volume.value = value;
       }
 
       function changeVolume(myAnimal, value) {
-        console.log("entro a change volume");
-        console.log(myAnimal);
+        //console.log("entro a change volume");
+        //console.log(myAnimal);
         var myAnimalNumber = myAnimal.split("dial-ch")[1];
         sonidos.get(scaleNotes[8 - myAnimalNumber]).volume.value = value;
       }
@@ -1583,9 +1598,9 @@
 
       dialins.forEach((dialin) => {
         dialin.on('change', function (v) {
-          console.log("encontró el dial");
-          console.log(this);
-          console.log(v);
+          //console.log("encontró el dial");
+          //console.log(this);
+          //console.log(v);
           var id = this.parent.id
           socket.emit('pitchChange', id, v);
           changePitch(id, v);
@@ -1594,9 +1609,9 @@
 
       dialchs.forEach((dialch) => {
         dialch.on('change', function (v) {
-          console.log("encontró el dial");
-          console.log(this);
-          console.log(v);
+          //console.log("encontró el dial");
+          //console.log(this);
+          //console.log(v);
           var id = this.parent.id
           socket.emit('volumeChanged', id, v);
           changeVolume(id, v);
@@ -1628,7 +1643,7 @@
 
       // Warn if the browser doesn't support addEventListener or the Page Visibility API
       if (typeof document.addEventListener === "undefined" || hidden === undefined) {
-        console.log("This demo requires a browser, such as Google Chrome or Firefox, that supports the Page Visibility API.");
+        //console.log("This demo requires a browser, such as Google Chrome or Firefox, that supports the Page Visibility API.");
       } else {
         // Handle page visibility change   
         document.addEventListener(visibilityChange, handleVisibilityChange, false);
@@ -1636,7 +1651,7 @@
       // END  VISIBILITY PAUSE
 
       window.addEventListener("orientationchange", function () {
-        console.log("the orientation of the device is now " + screen.orientation.angle);
+        //console.log("the orientation of the device is now " + screen.orientation.angle);
         if (window.innerHeight > window.innerWidth) {
           $("#alerta").css("display", "block");
         } else {
@@ -1672,6 +1687,7 @@
   <script type="text/javascript">
     $(document).ready(function () {
       $('#playModal').modal('show');
+      $('[data-toggle="tooltip"]').tooltip()
     });
   </script>
 

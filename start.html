@@ -66,7 +66,7 @@
       var socket = io('/start?roomID=' + roomID);
       //  io.connect);
       socket.on('usedChannels', function (usedChannels) {
-        console.log(usedChannels);
+        //console.log(usedChannels);
         usedChannels.forEach(channel => {
           var myChannelUsado = $(".channels")[channel - 1];
           $(myChannelUsado).css("opacity", "0.5");
@@ -83,12 +83,7 @@
 </head>
 
 <body>
-  <!-- HEADER (navbar) -->
-  <div id="Header" class="row navbar">
-    <div class="col-12 text-right">
-      <div id="MoM_logo">[MoM]</div>
-    </div>
-  </div>
+
   <!-- header end -->
   <!-- HERO guest (animal-select) -->
   <div id="unirme"
@@ -318,7 +313,7 @@
           <div class="row">
             <div id="bajada" class="order-1 order-sm-0 col-sm-8">
               <p class="lead text-center text-sm-left">Ocho animales musicales. Una persona creando varios patrones
-                rítmicos, o varias personas creando un patrón rítmico. </br>¡Invita amiges!</p>
+                rítmicos, o varias personas creando un patrón rítmico.  </br>¡Invita amigos!</p>>
               <p class="lead text-center text-sm-left">
                 <a href="#frase">[+ info.]</a>
               </p>
@@ -332,6 +327,13 @@
     </div>
   </div>
   <!-- hero host end -->
+   <!-- HEADER (navbar) -->
+   <div id="Header" class="row navbar">
+    <div class="col-12 text-right">
+      <div id="MoM_logo">[MoM]</div>
+    </div>
+  </div>
+  <!-- header end -->
   <!-- CONTENTS -->
   <div class="container-fluid py-5 fondo-verde-animal">
     <!-- Frase e Instrumentos (img) -->

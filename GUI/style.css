@@ -489,30 +489,9 @@ h3 {
     filter:invert(1) opacity(.25);
   }
 
-  #icono-ch8:hover {
-    content: url(img/cerdo_activo.png);
-  }
-  #icono-ch7:hover {
-    content: url(img/loro_activo.png);
-  }
-  #icono-ch6:hover {
-    content: url(img/sapo_activo.png);
-  }
-  #icono-ch5:hover {
-    content: url(img/pato_activo.png);
-  }
-  #icono-ch4:hover {
-    content: url(img/mono_activo.png);
-  }
-  #icono-ch3:hover {
-    content: url(img/gato_activo.png);
-  }
-  #icono-ch2:hover {
-    content: url(img/oso_activo.png);
-  }
-  #icono-ch1:hover {
-    content: url(img/buho_activo.png);
-  }
+.animal-pointer{
+    cursor: pointer;
+}
 
   #icono-ch8.activado{
     content: url(img/cerdo_activo.png);
@@ -638,11 +617,11 @@ h3 {
   /* Windows */
 
 
-  #settingsModal .modal-content, #helpModal .modal-content, #jamModal .modal-content {
+.modal-content {
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
   }
 
   .modal-header, .modal-footer {
@@ -709,53 +688,111 @@ h3 {
   }
 
 .interloc-B {
+    margin-right: 2px;
+    font-weight: 600;
+    float: left;
     border-radius: 50%;
-    padding:2px;
+    padding: 3px;
+    width: 20px;
+    height: 20px;
+    display: block;
     text-align: center;
     color: var(--color-blanco-ui-animal);
     background-color: var(--color-gris-animal);
 }
 .interloc-O {
+    margin-right: 2px;
+    font-weight: 600;
+    float: left;
     border-radius: 50%;
-    padding:2px;
+    float:left;
+    padding: 3px;
+    width: 20px;
+    height: 20px;
+    display: block;
     text-align: center;
     color: var(--color-blanco-ui-animal);
-    background-color: var(--color-gris-animal);
+    background-color: var(--color-chocolate-animal);
 }
+
+.interloc-P {
+  margin-right: 2px;
+  font-weight: 600;
+  float: left;
+  border-radius: 50%;
+  padding: 3px;
+  width: 20px;
+  height: 20px;
+  display: block;
+  text-align: center;
+  color: var(--color-blanco-ui-animal);
+  background-color: var(--color-mostaza-animal);
+}
+
 .interloc-G {
+    margin-right: 2px;
+    font-weight: 600;
+    float: left;
     border-radius: 50%;
-    padding:2px;
+    padding: 3px;
+    width: 20px;
+    height: 20px;
+    display: block;
     text-align: center;
     color: var(--color-blanco-ui-animal);
     background-color: var(--color-gris-animal);
 }
 .interloc-M {
+    margin-right: 2px;
+    font-weight: 600;
+    float: left;
     border-radius: 50%;
-    padding:2px;
+    padding: 3px;
+    width: 20px;
+    height: 20px;
+    display: block;
     text-align: center;
     color: var(--color-blanco-ui-animal);
-    background-color: var(--color-gris-animal);
+    background-color: var(--color-marron-animal);
 }
 .interloc-S {
+    margin-right: 2px;
+    font-weight: 600;
+    float: left;
     border-radius: 50%;
-    padding:2px;
+    padding: 3px;
+    width: 20px;
+    height: 20px;
+    display: block;
     text-align: center;
     color: var(--color-blanco-ui-animal);
-    background-color: var(--color-gris-animal);
+    background-color: var(--color-verde-animal);
 }
 .interloc-L {
+    margin-right: 2px;
+    font-weight: 600;
+    float: left;
     border-radius: 50%;
-    padding:2px;
+    padding: 3px;
+    width: 20px;
+    height: 20px;
+    display: block;
     text-align: center;
     color: var(--color-blanco-ui-animal);
-    background-color: var(--color-gris-animal);
+    background-color: var(--color-verde-animal);
 }
 .interloc-C {
+    margin-right: 2px;
+    font-weight: 600;
+    float: left;
     border-radius: 50%;
-    padding:2px;
+    padding: 3px;
+    width: 20px;
+    height: 20px;
+    display: block;
     text-align: center;
     color: var(--color-blanco-ui-animal);
-    background-color: var(--color-gris-animal);
+    background-color: var(--color-rosa-animal);
 }
 
 
@@ -790,6 +827,9 @@ h3 {
     body {
       background-color: var(--color-fondo-mostaza-animal);
     }
+      #MoM_logo{
+          color: var(--color-chocolate-animal);
+      }
     #bajada {
       border-right: 1px solid white;
     }
@@ -820,7 +860,9 @@ h3 {
     body {
       background-color: var(--color-fondo-negro-animal);
     }
-
+      #MoM_logo{
+          color: var(--color-blanco-ui-animal);
+      }
     #izq {
       height:auto;
     }
@@ -863,6 +905,9 @@ h3 {
     body {
       background-color: var(--color-fondo-rosa-animal);
     }
+      #MoM_logo{
+          color: var(--color-chocolate-animal);
+      }
     #chat-animal{
       height:60%;
     }
