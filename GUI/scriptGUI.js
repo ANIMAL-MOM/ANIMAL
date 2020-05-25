@@ -29,6 +29,7 @@
    'value': 5
  })
 
+
  dialins1.on('change',function(v) {
    console.log(v);
  })
@@ -373,6 +374,41 @@ var mobdialch8 = new Nexus.Dial('#mob-dial-ch8',{
   'step':1,
   'value': 5
 })
+
+
+mobdialch8.colorize("accent","#FF7809");
+mobdialch7.colorize("accent","#FF7809");
+mobdialch6.colorize("accent","#FF7809");
+mobdialch5.colorize("accent","#FF7809");
+mobdialch4.colorize("accent","#FF7809");
+mobdialch3.colorize("accent","#FF7809");
+mobdialch2.colorize("accent","#FF7809");
+mobdialch1.colorize("accent","#FF7809");
+dialch8.colorize("accent","#FF7809");
+dialch7.colorize("accent","#FF7809");
+dialch6.colorize("accent","#FF7809");
+dialch5.colorize("accent","#FF7809");
+dialch4.colorize("accent","#FF7809");
+dialch3.colorize("accent","#FF7809");
+dialch2.colorize("accent","#FF7809");
+dialch1.colorize("accent","#FF7809");
+
+mobdialins8.colorize("accent","#5EC20A");
+mobdialins7.colorize("accent","#5EC20A");
+mobdialins6.colorize("accent","#5EC20A");
+mobdialins5.colorize("accent","#5EC20A");
+mobdialins4.colorize("accent","#5EC20A");
+mobdialins3.colorize("accent","#5EC20A");
+mobdialins2.colorize("accent","#5EC20A");
+mobdialins1.colorize("accent","#5EC20A");
+dialins8.colorize("accent","#5EC20A");
+dialins7.colorize("accent","#5EC20A");
+dialins6.colorize("accent","#5EC20A");
+dialins5.colorize("accent","#5EC20A");
+dialins4.colorize("accent","#5EC20A");
+dialins3.colorize("accent","#5EC20A");
+dialins2.colorize("accent","#5EC20A");
+dialins1.colorize("accent","#5EC20A");
 
 var dialchs=[];
 dialchs.push(mobdialch1);
