@@ -436,6 +436,10 @@ h3 {
   .custom-height {
     height: 50%;
   }
+#chat-animal div{
+    height: 254px;
+}
+
   #rec-btn {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
