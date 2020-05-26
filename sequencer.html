@@ -1262,7 +1262,7 @@ sequencer.colorize("accent","#5EC20A");
             myLetters = myLetters + '<span class="interloc-' + myAnimalsLetter[channel - 1] + '">' + myAnimalsLetter[channel - 1] + '</span>';
           }
         });
-        var emitMe = myLetters + "</br> " + $('#m').val()
+        var emitMe = myLetters + "<p>" + $('#m').val() + "</p>" 
         socket.emit('chat message', emitMe);
         $('#messages').append('<li> ' + emitMe + ' </li>');
         $('#m').val('');
