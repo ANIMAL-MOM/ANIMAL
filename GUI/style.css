@@ -567,6 +567,13 @@ h3 {
     background-color: var(--color-verde-ui-animal);
   }
 
+  .rec-icon-s{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--color-rojo-ui-animal);
+  }
+
   .color-chip-1{
     width:44px;
     height:44px;

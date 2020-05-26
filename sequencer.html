@@ -46,7 +46,7 @@
     <div class="container">
       <div class="col-12 text-center">
         <h1 class="mt-5">¡Opa!</h1>
-        <h3 class="mt-1">Animal funciona en modo horizontal.</br>
+        <h3 class="mt-1">Animal funciona en modo horizontal.<br/>
           ¡Porfavor rota tu dispositivo!</h3>
         <div class="w-25 mx-auto mt-3">
           <img src="/GUI/img/rotate-devise.png" class="img-fluid">
@@ -350,6 +350,35 @@
   </div>
 
   <!-- help modal end -->
+    
+    <!-- LORO REC Modal -->
+
+  <div class="modal fade" id="lororecModal" tabindex="-1" role="dialog" aria-labelledby="helpModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="helpModalLabel">Loro rec</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <!-- MODAL BODY -->
+
+        <div class="modal-body">
+          ...
+        </div>
+
+        <!-- modal body end -->
+
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- loro rec end -->
 
   <!-- SETTINGS Modal -->
 
@@ -501,7 +530,7 @@
         <div id="instrumentos" class="row mx-5 mx-lg-0 px-5 px-lg-0 d-flex flex-row justify-content-around text-white">
 
           <div id="buhoInst" class="col-auto m-0 mr-5 mr-xl-0 mt-2 p-0 instrumento8">
-            <div id="" class="position-absolute opacity-4 corners1 destaque-animal w-100 h-100 disabled-overlay">
+            <div id="" class="d-none position-absolute opacity-4 corners1 destaque-animal w-100 h-100 disabled-overlay">
             </div>
             <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal gris-animal">
               <div class="d-flex flex-column">
@@ -510,6 +539,9 @@
                     Buho
                   </object>
                 </div>
+                  
+                
+                  
                 <div class="title mt-1">Buh</div>
                 <div class="sub_title">Base drum</div>
               </div>
@@ -521,7 +553,7 @@
 
 
           <div id="osoInst" class="col-auto m-0 ml-1 mt-2 p-0 instrumento7">
-            <div id="" class="position-absolute opacity-4 corners1 destaque-animal w-100 h-100 disabled-overlay">
+            <div id="" class="d-none position-absolute opacity-4 corners1 destaque-animal w-100 h-100 disabled-overlay">
             </div>
             <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal chocolate-animal">
               <div class="d-flex flex-column">
@@ -541,7 +573,7 @@
 
 
           <div id="gatoInst" class="col-auto m-0 ml-1 mr-5 mr-xl-0 mt-2 p-0 instrumento6">
-            <div id="" class="position-absolute opacity-4 corners1 destaque-animal w-100 h-100 disabled-overlay">
+            <div id="" class="d-none position-absolute opacity-4 corners1 destaque-animal w-100 h-100 disabled-overlay">
             </div>
             <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal gris-animal">
               <div class="d-flex flex-column">
@@ -560,7 +592,7 @@
           </div>
 
           <div id="monoInst" class="col-auto m-0 ml-1 mr-5 mr-xl-0 mt-2 p-0 instrumento5">
-            <div id="" class="position-absolute opacity-4 corners1 destaque-animal w-100 h-100 disabled-overlay">
+            <div id="" class="d-none position-absolute opacity-4 corners1 destaque-animal w-100 h-100 disabled-overlay">
             </div>
             <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal marron-animal">
               <div class="d-flex flex-column">
@@ -580,7 +612,7 @@
 
 
           <div id="patoInst" class="col-auto m-0 ml-1 mr-5 mr-xl-0 mt-2 p-0 instrumento4">
-            <div id="" class="position-absolute opacity-4 corners1 destaque-animal w-100 h-100 disabled-overlay">
+            <div id="" class="d-none position-absolute opacity-4 corners1 destaque-animal w-100 h-100 disabled-overlay">
             </div>
             <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal mostaza-animal">
               <div class="d-flex flex-column">
@@ -599,7 +631,7 @@
           </div>
 
           <div id="sapoInst" class="col-auto m-0 ml-5 ml-xl-1 mt-2 p-0 instrumento3">
-            <div id="" class="position-absolute opacity-4 corners1 destaque-animal w-100 h-100 disabled-overlay">
+            <div id="" class="d-none position-absolute opacity-4 corners1 destaque-animal w-100 h-100 disabled-overlay">
             </div>
             <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal verde-animal">
               <div class="d-flex flex-column">
@@ -618,7 +650,7 @@
           </div>
 
           <div id="loroInst" class="col-auto m-0 ml-1 mt-2 p-0 instrumento2">
-            <div id="" class="position-absolute opacity-4 corners1 destaque-animal w-100 h-100 disabled-overlay">
+            <div id="" class="d-none position-absolute opacity-4 corners1 destaque-animal w-100 h-100 disabled-overlay">
             </div>
             <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal verde-animal">
               <div class="d-flex flex-column">
@@ -630,8 +662,16 @@
                 <div class="title mt-1">Lor</div>
                 <div class="sub_title">Sampler</div>
               </div>
-              <div class="dial_container mb-1 ml-1">
-                <div id="dial-ins7" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch"></div>
+              <div class="d-flex flex-column">
+                  
+                  
+                  <div id="loro-rec" class="mb-1 ml-1" data-toggle="tooltip" data-placement="top" title="rec" >
+                      <a href="#" data-toggle="modal" data-target="#lororecModal" role="button" class="d-flex m-auto p-1 rec-icon-s white-text">&nbsp;</a>
+                  </div>
+                  
+                <div class="dial_container mb-1 ml-1">
+                    <div id="dial-ins7" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -782,7 +822,7 @@
                   <div class="d-flex flex-column">
                     <div class="animal-icon">
                       <object type="image/svg+xml" data="GUI/svg/iconos/oso-w.svg" class="animal-icon">
-                        Loro
+                        Oso
                       </object>
                     </div>
                     <div class="title mt-1">Os</div>
