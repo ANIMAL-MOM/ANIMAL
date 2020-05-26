@@ -259,11 +259,11 @@ h3 {
   }
 
   #messages {
-    height: 30px;
     list-style-type: none;
     overflow-y:scroll;
     overflow-x:hidden;
   }
+
   #bpm-display, #swing-display {
     border-left:2px solid;
     border-color: var(--color-fondo-1-animal);
@@ -690,6 +690,10 @@ h3 {
     background: url('img/landing/fondo-outlines.png') no-repeat center center fixed;
     background-color: var(--color-destaque-animal);
   }
+
+#messages li p{
+    background-color: white;
+}
 
 .interloc-B {
     margin-right: 2px;
