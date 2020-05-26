@@ -847,6 +847,9 @@ h3 {
     #mute-btn {
       border-top: 1px solid var(--color-fondo-1-animal);
     }
+    #chat-animal div {
+        height: 209px;
+    }
   }
 
   /* Medium devices (tablets, 768px and up) */
@@ -880,7 +883,10 @@ h3 {
     #controles {
       height:35%;
     }
-
+      
+#chat-animal div {
+    height: 254px;
+}
     .custom-height {
       height: 100%;
     }
