@@ -860,9 +860,6 @@ h3 {
     #bienvenida {
       border-right: 1px solid white;
     }
-    #chat-animal div {
-        height: 330px;
-    }
   }
 
 
@@ -882,10 +879,9 @@ h3 {
     }
     #controles {
       height:35%;
-    }
-      
+    } 
     #chat-animal div {
-        height: 254px;
+        height: 330px;
     }
     .custom-height {
       height: 100%;
@@ -927,5 +923,8 @@ h3 {
     }
     #controles {
       height:40%;
+    }
+    #chat-animal div {
+        height: 254px;
     }
   }
