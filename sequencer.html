@@ -688,7 +688,7 @@
           <!-- CHAT -->
           <div id="chat-animal" class="col-5 col-lg-12 p-0 d-flex">
             <div class="pt-4 pb-2 px-2 corners1 figura-1-animal">
-              <ul id="messages" class="d-flex h-75 flex-column m-0 p-0 texto-chico"></ul>
+              <ul id="messages" class="d-flex h-75 flex-column-reverse m-0 p-0 texto-chico"></ul>
               <form action="" class="pt-2 d-flex h-25">
                 <input id="m" autocomplete="off" class="w-75 border-0 corners1" />
                 <button class="ml-1 p-1 animal-icon-s"><img src="GUI/img/ok-btn.png" class="img-fluid"></button>
@@ -1249,7 +1249,7 @@ sequencer.colorize("accent","#5EC20A");
 
       socket.on('chat message', function (msg) {
 
-        $('#messages').append('<li> ' + msg + ' </li>');
+        $('#messages').prepend('<li> ' + msg + ' </li>');
       });
 
 
@@ -1264,7 +1264,7 @@ sequencer.colorize("accent","#5EC20A");
         });
         var emitMe = myLetters + "<p class='mt-1 mb-0 pb-2'>" + $('#m').val() + "</p>" 
         socket.emit('chat message', emitMe);
-        $('#messages').append('<li> ' + emitMe + ' </li>');
+        $('#messages').prepend('<li> ' + emitMe + ' </li>');
         $('#m').val('');
         return false;
       });
