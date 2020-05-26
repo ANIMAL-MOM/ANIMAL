@@ -692,7 +692,7 @@ h3 {
   }
 
 #messages li p{
-    background-color: white;
+    clear: left;
 }
 
 .interloc-B {
