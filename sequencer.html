@@ -74,11 +74,26 @@
               <div id="Animal_logo" class="mx-auto">
                 <img src="GUI/img/Animal_logo_v0.png" width="300px">
               </div>
-              <h1 class="mt-5">¡Bienvenido!</h1>
-              <h3 class="mt-1">Presiona el botón de PLAY para comenzar</h3>
-              <div class="w-25 mx-auto mt-3">
-                <img src="/GUI/img/landing/push-play.png" class="img-fluid">
+              <h1 class="my-5">¡Bienvenido!</h1>
+              <div class="row">
+                  <div class="col-6">
+                      <h3 class="mt-1">
+                          Presiona el botón de PLAY para comenzar.
+                      </h3>
+                      <div class="w-50 mx-auto mt-3">
+                        <img src="/GUI/img/landing/push-play.png" class="img-fluid">
+                      </div>
+                  </div>
+                  <div class="col-6">
+                      <h3 class="mt-1">
+                          Activa la <em>Jam session</em> para invitar más animales.
+                      </h3>
+                      <div class="w-50 mx-auto mt-3">
+                        <img src="/GUI/img/landing/push-jam.png" class="img-fluid">
+                      </div>
+                  </div>
               </div>
+              
             </div>
           </div>
         </div>
@@ -294,7 +309,12 @@
             </div>
 
           </div>
-          <input type="button" value="ok" id="okCanales">
+          <!-- <input type="button" value="ok" id="okCanales"> -->
+          <div class="mb-1">
+            <button type="button" value="ok" id="okCanales" class="btn btn-secondary px-4">
+                        Ok
+            </button>
+          </div>
 
 
           <div class="mt-3">
@@ -353,21 +373,46 @@
     
     <!-- LORO REC Modal -->
 
-  <div class="modal fade" id="lororecModal" tabindex="-1" role="dialog" aria-labelledby="helpModalLabel"
+  <div class="modal fade" id="lororecModal" tabindex="-1" role="dialog" aria-labelledby="settingsModalLabel"
     aria-hidden="true">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-sm" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="helpModalLabel">Loro rec</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
+          <h5 class="modal-title" id="settingsModalLabel">Rec sample</h5>
+
         </div>
 
         <!-- MODAL BODY -->
 
         <div class="modal-body">
-          ...
+          
+          <div class="row">
+            <div id="rec-play" class="col">
+                <div class="mb-1">
+                    Puedes grabar un sonido de hasta 3 segundos.
+                </div>
+                <div class="btn-group my-2" role="group" aria-label="Basic example">
+                  <div id="loro-rec-preview" class="audio-preview corners-l">
+                    <img src="GUI/img/audio-trans.png" class="animal-pointer corners-l h-100 w-auto" data-toggle="tooltip" data-placement="top" title="Escuchar">
+                  </div>
+                  <div class="d-flex align-items-center loro-rec corners-r">
+                      <a href="#" class="d-flex m-auto texto-chico rec-icon-s">Rec</a>
+                  </div>
+                </div>
+                <div class="mb-1">
+                    Haz click en el parlante para escuchar, click en OK para usar el sonido.
+                </div>
+                <div class="mb-1">
+                    <button type="button" class="btn btn-secondary px-4">
+                        Ok
+                    </button>
+                </div>
+            </div>
+          </div>
+          
         </div>
 
         <!-- modal body end -->
@@ -665,8 +710,8 @@
               <div class="d-flex flex-column">
                   
                   
-                  <div id="loro-rec" class="mb-1 ml-1" data-toggle="tooltip" data-placement="top" title="rec" >
-                      <a href="#" data-toggle="modal" data-target="#lororecModal" role="button" class="d-flex m-auto p-1 rec-icon-s white-text">&nbsp;</a>
+                  <div id="loro-rec" class="mb-1 ml-1" data-toggle="tooltip" data-placement="top" title="Rec" >
+                      <a href="#" data-toggle="modal" data-target="#lororecModal" role="button" class="d-flex m-auto p-1 rec-icon-s-b">&nbsp;</a>
                   </div>
                   
                 <div class="dial_container mb-1 ml-1">
@@ -938,10 +983,17 @@
                     <div class="title mt-1">Lor</div>
                     <div class="sub_title">Sampler</div>
                   </div>
-                  <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ins7" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch">
+                    <div class="d-flex flex-column">
+                        <div id="loro-rec" class="mb-1 ml-1" data-toggle="tooltip" data-placement="top" title="Rec" >
+                          <a href="#" data-toggle="modal" data-target="#lororecModal" role="button" class="d-flex m-auto p-1 rec-icon-s-b">&nbsp;</a>
+                        </div>
+                    
+                        <div class="dial_container mb-1 ml-1">
+                             <div id="mob-dial-ins7" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch">
+                            </div>
+                        </div>
                     </div>
-                  </div>
+                    
                   <div class="dial_container mb-1 ml-1">
                     <div id="mob-dial-ch7" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
                     </div>
@@ -1084,14 +1136,13 @@
           <div id="jam-ajustes"
             class="col-xl-1 py-4 px-3 d-flex flex-xl-column justify-content-between fondo-1-animal corners1">
             <div id="jam-sesion" class="mx-auto d-flex my-auto flex-lg-column">
-              <a href="#" id="boton" data-toggle="modal" data-target="#jamModal" role="button"
-                class="animal-icon text-center">
+              <a href="#" id="boton" data-toggle="modal" data-target="#jamModal" role="button" class="animal-icon jam-btn text-center">
                 Jam
               </a>
               <div class="m-auto text-center">
               </div>
             </div>
-            <div id="combo-botones" class="mx-auto d-flex flex-row flex-xl-column">
+            <div id="combo-botones" class="mx-0 mx-xl-auto d-flex flex-row flex-xl-column">
               <div id="help" class="d-none mx-auto align-self-baseline">
                 <a href="#" id="boton" data-toggle="modal" data-target="#helpModal" role="button">
                   <img src="GUI/svg/botones/boton_ayuda.svg" class="animal-icon">
