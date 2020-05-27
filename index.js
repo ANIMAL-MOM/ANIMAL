@@ -224,6 +224,11 @@ player.on('connection', (socket) => {
       socket.room.bpm = unbpm;
     });
 
+    socket.on("swing", function (unswing) {
+      socket.to(socket.room.id).emit('swing', unswing);
+      socket.room.swing = unswing;
+    });
+
     socket.on('roomOpened', (channels) => {
       socket.channels = channels;
       //console.log("abrio cuarto canales usados " + channels)

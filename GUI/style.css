@@ -259,11 +259,11 @@ h3 {
   }
 
   #messages {
-    height: 30px;
     list-style-type: none;
     overflow-y:scroll;
     overflow-x:hidden;
   }
+
   #bpm-display, #swing-display {
     border-left:2px solid;
     border-color: var(--color-fondo-1-animal);
@@ -389,7 +389,9 @@ h3 {
   /* --------------------------------------------- */
   /* Buttons & icons */
 
-
+.modal-header .close {
+    font-size: 1.85rem;
+}
 #Animal_logo{
   height:65px;
 }
@@ -436,6 +438,10 @@ h3 {
   .custom-height {
     height: 50%;
   }
+#chat-animal div{
+    height: 209px;
+}
+
   #rec-btn {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
@@ -445,6 +451,11 @@ h3 {
     -webkit-animation:blinkingRecJam 1.2s infinite;
     animation:blinkingRecJam 1.2s infinite;
   }
+
+.jam-btn:hover{
+    color: var(--color-blanco-ui-animal);
+    background-color: var(--color-verde-ui-animal);
+}
   #mute-btn{
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -523,13 +534,16 @@ h3 {
     filter:invert(0)!important;
     background-color: var(--color-verde-ui-animal);
   }
-  .audio-preview {
+  .audio-preview, .loro-rec {
     width: 44px;
     height: 44px;
     background-color: var(--color-figura-1-animal);
 
   }
-  .animal-icon {
+.audio-preview-active, .audio-preview:hover{
+    background-color: var(--color-verde-ui-animal);
+}
+  .animal-icon, .jam-btn {
     width: 44px;
     height: 44px;
     border-radius: 50%;
@@ -562,6 +576,45 @@ h3 {
     filter:invert(0)!important;
     background-color: var(--color-verde-ui-animal);
   }
+.rec-icon-s-b{
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
+    padding-top: 5px;
+    padding-left: 2px;
+    border-radius: 50%;
+    border: 3px solid;
+    border-color: var(--color-blanco-ui-animal);
+    background-color: var(--color-rojo-ui-animal);
+}
+.rec-icon-s-b:hover{
+    text-decoration: none;
+    border-color: var(--color-rojo-ui-animal);
+}
+  .rec-icon-s{
+    color: var(--color-chocolate-animal)
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
+    padding-top: 5px;
+    padding-left: 2px;
+    border-radius: 50%;
+    border: 3px solid;
+    border-color: var(--color-blanco-ui-animal);
+    background-color: var(--color-blanco-ui-animal);
+  }
+.rec-icon-s-activo{
+    text-decoration:none;
+    -webkit-animation:blinkingloroRec 1.2s infinite;
+    animation:blinkingloroRec 1.2s infinite;   
+}
+.rec-icon-s:hover {
+    color: var(--color-blanco-ui-animal);
+    text-decoration: none;
+    border: 3px solid;
+    border-color: var(--color-rojo-ui-animal);
+    background-color: var(--color-rojo-ui-animal);
+}
 
   .color-chip-1{
     width:44px;
@@ -648,24 +701,34 @@ h3 {
   @keyframes blinkingPlay{
     0%{     background-color:var(--color-rojo-ui-animal);}
     35%{    background-color:var(--color-rojo-ui-animal);}
-    85%{    color:var(--color-figura-1-animal);}
+    85%{    color:var(--color-blanco-ui-animal);}
   }
   @webkit-keyframes blinkingPlay{
     0%{     background-color:var(--color-rojo-ui-animal);}
     35%{    background-color:var(--color-rojo-ui-animal);}
-    85%{    color:var(--color-figura-1-animal);}
+    85%{    color:var(--color-blanco-ui-animal);}
   }
   @keyframes blinkingRecJam{
     0%{     background-color:var(--color-verde-ui-animal);}
     35%{    background-color:var(--color-verde-ui-animal);}
-    85%{    color:var(--color-figura-1-animal);}
+    85%{    color:var(--color-blanco-ui-animal);}
   }
   @webkit-keyframes blinkingRecJam{
     0%{     background-color:var(--color-verde-ui-animal);}
     35%{    background-color:var(--color-verde-ui-animal);}
-    85%{    color:var(--color-figura-1-animal);}
+    85%{    color:var(--color-blanco-ui-animal);}
   }
 
+  @keyframes blinkingloroRec{
+    0%{     background-color:var(--color-blanco-ui-animal);}
+    35%{    background-color:var(--color-blanco-ui-animal);}
+    85%{    color:var(--color-blanco-ui-animal);}
+  }
+  @webkit-keyframes blinkingloroRec{
+    0%{     background-color:var(--color-blanco-ui-animal);}
+    35%{    background-color:var(--color-blanco-ui-animal);}
+    85%{    color:var(--color-blanco-ui-animal);}
+  }
 
   /* --------------------------------------------- */
   /* Display */
@@ -686,6 +749,10 @@ h3 {
     background: url('img/landing/fondo-outlines.png') no-repeat center center fixed;
     background-color: var(--color-destaque-animal);
   }
+
+#messages li p{
+    clear: left;
+}
 
 .interloc-B {
     margin-right: 2px;
@@ -871,8 +938,10 @@ h3 {
     }
     #controles {
       height:35%;
+    } 
+    #chat-animal div {
+        height: 330px;
     }
-
     .custom-height {
       height: 100%;
     }
@@ -913,5 +982,8 @@ h3 {
     }
     #controles {
       height:40%;
+    }
+    #chat-animal div {
+        height: 254px;
     }
   }
