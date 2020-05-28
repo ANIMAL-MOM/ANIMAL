@@ -1274,7 +1274,7 @@
 
       for (i = 0; i < 8; i++) {
         //(sonidos.get(scaleNotes[(7 - myAnimalNumber)]).
-        myShifter[i] = new Tone.PitchShift(0); //.toMaster();
+        myShifter[i] = new Tone.Volume(10);//Tone.PitchShift(0); //.toMaster();
         sonidos.get(scaleNotes[i]).chain(myShifter[i], Tone.Master);
       }
       var stepNumber = 0;
