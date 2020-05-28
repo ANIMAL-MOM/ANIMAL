@@ -1274,12 +1274,9 @@
 
       for (i = 0; i < 8; i++) {
         //(sonidos.get(scaleNotes[(7 - myAnimalNumber)]).
-        myShifter[i] = new Tone.PitchShift(2).toMaster();
-        sonidos.get(scaleNotes[i]).connect(myShifter[i]);
-      };
-
-
-
+        myShifter[i] = new Tone.PitchShift(2); //.toMaster();
+        sonidos.get(scaleNotes[i]).chain(myShifter[i], Tone.Master);
+      }
       var stepNumber = 0;
       var loop = 0;
 
@@ -1509,8 +1506,8 @@
 
       socket.on("swing", function (unswing) {
         swing = unswing;
-        
-      //  Tone.Transport.swing = swing / 100;
+
+        //  Tone.Transport.swing = swing / 100;
         $("#swingNumber").html(swing);
       });
 
@@ -1520,7 +1517,7 @@
       }
 
       $("#decrement-swing-btn").click(function () {
-        if (swing >0) {
+        if (swing > 0) {
           swing--;
           $("#swingNumber").html(swing);
           emitSwing(swing);
