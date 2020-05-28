@@ -1520,15 +1520,15 @@
 
       $("#decrement-swing-btn").click(function () {
         if (swing > 0) {
-          swing--;
+          swing=swing-5;
           $("#swingNumber").html(swing);
           emitSwing(swing);
         }
       });
 
       $("#increment-swing-btn").click(function () {
-        if (swing < 75) {
-          swing++;
+        if (swing < 55) {
+          swing=swing+5;
           $("#swingNumber").html(swing);
           emitSwing(swing);
         }
