@@ -1284,7 +1284,7 @@
 
       Tone.Transport.bpm.value = bpm;
       Tone.Transport.swing = swing;
-      Tone.Transport.swingSubdivision ="32n";
+      Tone.Transport.swingSubdivision ="16n";
 
 
 
@@ -1527,7 +1527,7 @@
       });
 
       $("#increment-swing-btn").click(function () {
-        if (swing < 31) {
+        if (swing < 75) {
           swing++;
           $("#swingNumber").html(swing);
           emitSwing(swing);
