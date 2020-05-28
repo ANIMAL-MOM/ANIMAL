@@ -1283,7 +1283,7 @@
 
 
       Tone.Transport.bpm.value = bpm;
-      //Tone.Transport.swing = swing;
+      Tone.Transport.swing = swing;
 
 
 
@@ -1508,12 +1508,12 @@
       socket.on("swing", function (unswing) {
         swing = unswing;
 
-        //  Tone.Transport.swing = swing / 100;
+          Tone.Transport.swing = swing / 100;
         $("#swingNumber").html(swing);
       });
 
       function emitSwing(swing) {
-        //Tone.Transport.swing = swing / 100;
+        Tone.Transport.swing = swing / 100;
         socket.emit('swing', swing);
       }
 
