@@ -564,7 +564,7 @@
       <!-- INSTRUMENTOS -->
 
       <span class="d-none d-lg-block">
-        <div id="instrumentos" class="row mx-5 mx-lg-0 px-5 px-lg-0 d-flex flex-row justify-content-around text-white">
+        <div id="instrumentos" class="row mx-5 mx-lg-0 px-5 px-lg-0 d-flex flex-row justify-content-around text-white help-item" data-toggle="popover" title="Popover title" data-placement="bottom" data-content="And here's some amazing content. It's very engaging. Right?">
 
           <div id="buhoInst" class="col-auto m-0 mr-5 mr-xl-0 mt-2 p-0 instrumento8">
             <div id="" class="position-absolute opacity-4 corners1 destaque-animal w-100 h-100 disabled-overlay">
@@ -753,7 +753,7 @@
         <div class="row pr-lg-1 d-flex h-100">
           <!-- CHAT -->
           <div id="chat-animal" class="col-5 col-lg-12 p-0 d-flex">
-            <div class="pt-4 pb-2 px-2 corners1 figura-1-animal">
+            <div id="chat-help" class="pt-4 pb-2 px-2 corners1 figura-1-animal help-item" data-toggle="popover" title="Popover title" data-placement="bottom" data-content="And here's some amazing content. It's very engaging. Right?">
               <ul id="messages" class="d-flex h-75 flex-column-reverse m-0 p-0 texto-chico"></ul>
 
               <form action="" class="pt-2 d-flex h-25">
@@ -809,7 +809,7 @@
                   <div id="rec-btn" class="col-lg-6 d-flex my-0 blanco-ui-animal animal-pointer">
                     <span class="m-auto text-center">Rec</span>
                   </div>
-                  <div id="mute-btn" class="col-lg-6 d-flex my-0 figura-1-animal mute-btn animal-pointer">
+                  <div id="mute-btn" class="col-lg-6 d-flex my-0 figura-1-animal mute-btn animal-pointer" data-toggle="popover" title="Popover title" data-placement="bottom" data-content="And here's some amazing content. It's very engaging. Right?">
                     <span class="m-auto text-center"></span>
                   </div>
                 </div>
@@ -820,7 +820,7 @@
 
             <!-- INSTRUMENTO SELECCIONADO (#sel-inst) -->
 
-            <div id="sel-inst" class="m-0 p-0 pt-1 d-block d-lg-none d-flex align-items-end text-white overflow-hidden">
+            <div id="sel-inst" class="m-0 p-0 pt-1 d-block d-lg-none d-flex align-items-end text-white overflow-hidden" data-toggle="popover" title="Popover title" data-placement="bottom" data-content="And here's some amazing content. It's very engaging. Right?">
 
               <span id="buhoInst" class="d-none instMobile">
                 <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal gris-animal">
@@ -982,8 +982,8 @@
                       </div>
                     </div>
                   </div>
-              </span>
-            </div>
+                </div>
+            </span>
             <span id="cerdoInst" class="d-block instMobile">
               <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal rosa-animal">
                 <div class="d-flex flex-column">
@@ -1118,7 +1118,7 @@
 
         <div id="jam-ajustes"
           class="col-xl-1 py-4 px-3 d-flex flex-xl-column justify-content-between fondo-1-animal corners1">
-          <div id="jam-sesion" class="mx-auto d-flex my-auto flex-lg-column">
+          <div id="jam-sesion" class="mx-auto d-flex my-auto flex-lg-column help-item" data-toggle="popover" title="Popover title" data-placement="bottom" data-content="And here's some amazing content. It's very engaging. Right?">
             <a href="#" id="boton" data-toggle="modal" data-target="#jamModal" role="button"
               class="animal-icon jam-btn text-center">
               Jam
@@ -1127,8 +1127,8 @@
             </div>
           </div>
           <div id="combo-botones" class="mx-0 mx-xl-auto d-flex flex-row flex-xl-column">
-            <div id="help" class="d-none mx-auto align-self-baseline">
-              <a href="#" id="boton" data-toggle="modal" data-target="#helpModal" role="button">
+            <div id="help" class="mx-auto align-self-baseline">
+              <a id="help-btn" role="button">
                 <img src="GUI/svg/botones/boton_ayuda.svg" class="animal-icon">
               </a>
             </div>
@@ -1819,8 +1819,24 @@
   <script type="text/javascript">
     $(document).ready(function () {
       $('#playModal').modal('show');
-      $('[data-toggle="tooltip"]').tooltip()
+      $('[data-toggle="tooltip"]').tooltip();
+      $('[data-toggle="popover"]').popover()
     });
+      
+    $('#help-btn').on('click', function()
+    {    
+        $('.help-item').popover('toggle');
+
+    });
+      
+    $('#jam-sesion').on('click', function() {    
+        $(this).popover('dispose');
+        $('#instrumentos').popover('dispose');
+        $('#chat-help').popover('dispose');
+        $('#sel-inst').popover('dispose')
+        
+    }); 
+      
   </script>
 
 
