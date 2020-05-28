@@ -23,10 +23,10 @@
  var dialins1 = new Nexus.Dial('#dial-ins1',{
    'interaction': 'vertical', // "radial", "vertical", or "horizontal"
    'mode': 'relative', // "relative" or "relative"
-   'min': -5,
-   'max': 5,
-   'step':1,
-   'value': 0
+   'min': 0.5,
+   'max': 1.5,
+   'step':0.1,
+   'value': 1
  })
 
 
@@ -37,10 +37,10 @@
  var dialins2 = new Nexus.Dial('#dial-ins2',{
    'interaction': 'vertical', // "radial", "vertical", or "horizontal"
    'mode': 'relative', // "relative" or "relative"
-   'min': -5,
-   'max': 5,
-   'step':1,
-   'value': 0
+   'min': 0.5,
+   'max': 1.5,
+   'step':0.1,
+   'value': 1
  })
 
  dialins2.on('change',function(v) {
@@ -50,10 +50,10 @@
  var dialins3 = new Nexus.Dial('#dial-ins3',{
    'interaction': 'vertical', // "radial", "vertical", or "horizontal"
    'mode': 'relative', // "relative" or "relative"
-   'min': -5,
-   'max': 5,
-   'step':1,
-   'value': 0
+   'min': 0.5,
+   'max': 1.5,
+   'step':0.1,
+   'value': 1
  })
 
  dialins3.on('change',function(v) {
@@ -63,10 +63,10 @@
  var dialins4 = new Nexus.Dial('#dial-ins4',{
    'interaction': 'vertical', // "radial", "vertical", or "horizontal"
    'mode': 'relative', // "relative" or "relative"
-   'min': -5,
-   'max': 5,
-   'step':1,
-   'value': 0
+   'min': 0.5,
+   'max': 1.5,
+   'step':0.1,
+   'value': 1
  })
 
  dialins4.on('change',function(v) {
@@ -76,10 +76,10 @@
  var dialins5 = new Nexus.Dial('#dial-ins5',{
    'interaction': 'vertical', // "radial", "vertical", or "horizontal"
    'mode': 'relative', // "relative" or "relative"
-   'min': -5,
-   'max': 5,
-   'step':1,
-   'value': 0
+   'min': 0.5,
+   'max': 1.5,
+   'step':0.1,
+   'value': 1
  })
 
  dialins5.on('change',function(v) {
@@ -89,10 +89,10 @@
  var dialins6 = new Nexus.Dial('#dial-ins6',{
    'interaction': 'vertical', // "radial", "vertical", or "horizontal"
    'mode': 'relative', // "relative" or "relative"
-   'min': -5,
-   'max': 5,
-   'step':1,
-   'value': 0
+   'min': 0.5,
+   'max': 1.5,
+   'step':0.1,
+   'value': 1
  })
 
  dialins6.on('change',function(v) {
@@ -104,10 +104,10 @@
  var dialins7 = new Nexus.Dial('#dial-ins7',{
    'interaction': 'vertical', // "radial", "vertical", or "horizontal"
    'mode': 'relative', // "relative" or "relative"
-   'min': -5,
-   'max': 5,
-   'step':1,
-   'value': 0
+   'min': 0.5,
+   'max': 1.5,
+   'step':0.1,
+   'value': 1
  })
 
  dialins7.on('change',function(v) {
@@ -117,10 +117,10 @@
  var dialins8 = new Nexus.Dial('#dial-ins8',{
    'interaction': 'vertical', // "radial", "vertical", or "horizontal"
    'mode': 'relative', // "relative" or "relative"
-   'min': -5,
-   'max': 5,
-   'step':1,
-   'value': 0
+   'min': 0.5,
+   'max': 1.5,
+   'step':0.1,
+   'value': 1
  })
 
  dialins8.on('change',function(v) {
@@ -134,66 +134,66 @@
 var mobdialins1 = new Nexus.Dial('#mob-dial-ins1',{
   'interaction': 'vertical', // "radial", "vertical", or "horizontal"
   'mode': 'relative', // "relative" or "relative"
-  'min': -5,
-  'max': 5,
-  'step':1,
-  'value': 0
+  'min': 0.5,
+  'max': 1.5,
+  'step':0.1,
+  'value': 1
 })
 var mobdialins2 = new Nexus.Dial('#mob-dial-ins2',{
   'interaction': 'vertical', // "radial", "vertical", or "horizontal"
   'mode': 'relative', // "relative" or "relative"
-  'min': -5,
-  'max': 5,
-  'step':1,
-  'value': 0
+  'min': 0.5,
+  'max': 1.5,
+  'step':0.1,
+  'value': 1
 })
 var mobdialins3 = new Nexus.Dial('#mob-dial-ins3',{
   'interaction': 'vertical', // "radial", "vertical", or "horizontal"
   'mode': 'relative', // "relative" or "relative"
-  'min': -5,
-  'max': 5,
-  'step':1,
-  'value': 0
+  'min': 0.5,
+  'max': 1.5,
+  'step':0.1,
+  'value': 1
 })
 var mobdialins4 = new Nexus.Dial('#mob-dial-ins4',{
   'interaction': 'vertical', // "radial", "vertical", or "horizontal"
   'mode': 'relative', // "relative" or "relative"
-  'min': -5,
-  'max': 5,
-  'step':1,
-  'value': 0
+  'min': 0.5,
+  'max': 1.5,
+  'step':0.1,
+  'value': 1
 })
 var mobdialins5 = new Nexus.Dial('#mob-dial-ins5',{
   'interaction': 'vertical', // "radial", "vertical", or "horizontal"
   'mode': 'relative', // "relative" or "relative"
-  'min': -5,
-  'max': 5,
-  'step':1,
-  'value': 0
+  'min': 0.5,
+  'max': 1.5,
+  'step':0.1,
+  'value': 1
 })
 var mobdialins6 = new Nexus.Dial('#mob-dial-ins6',{
   'interaction': 'vertical', // "radial", "vertical", or "horizontal"
   'mode': 'relative', // "relative" or "relative"
-  'min': -5,
-  'max': 5,
-  'step':1,
-  'value': 0
+  'min': 0.5,
+  'max': 1.5,
+  'step':0.1,
+  'value': 1
 })
 var mobdialins7 = new Nexus.Dial('#mob-dial-ins7',{
   'interaction': 'vertical', // "radial", "vertical", or "horizontal"
   'mode': 'relative', // "relative" or "relative"
-  'min': -5,
-  'max': 5,
-  'step':1,
-  'value': 0
+  'min': 0.5,
+  'max': 1.5,
+  'step':0.1,
+  'value': 1
 })
 var mobdialins8 = new Nexus.Dial('#mob-dial-ins8',{
   'interaction': 'vertical', // "radial", "vertical", or "horizontal"
   'mode': 'relative', // "relative" or "relative"
-  'min': -5,
-  'max': 5,
-  'step':1,
-  'value': 0
+  'min': 0.5,
+  'max': 1.5,
+  'step':0.1,
+  'value': 1
 })
 
 
@@ -369,10 +369,10 @@ var mobdialch7 = new Nexus.Dial('#mob-dial-ch7',{
 var mobdialch8 = new Nexus.Dial('#mob-dial-ch8',{
   'interaction': 'vertical', // "radial", "vertical", or "horizontal"
   'mode': 'relative', // "relative" or "relative"
-  'min': -5,
+  'min': 0,
   'max': 10,
   'step':1,
-  'value': 0
+  'value': 5
 })
 
 

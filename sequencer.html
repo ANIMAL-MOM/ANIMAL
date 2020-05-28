@@ -1266,18 +1266,18 @@
       }, {
         "volume": -1,
         "fadeOut": "16n",
-      });
+      }).toMaster();
 
-      var myShifter = [myShifter1, myShifter2, myShifter3, myShifter4, myShifter5, myShifter6, myShifter7, myShifter8];
+    var myShifter = [myShifter1, myShifter2, myShifter3, myShifter4, myShifter5, myShifter6, myShifter7, myShifter8];
       //the notes
       var scaleNotes = ["Cerdo", "Loro", "Pato", "Sapo", "Gato", "Mono", "Oso", "Buho"];
 
-      for (i = 0; i < 8; i++) {
+  //    for (i = 0; i < 8; i++) {
         //(sonidos.get(scaleNotes[(7 - myAnimalNumber)]).
-        myShifter[i] = new Tone.PitchShift(0); //.toMaster();
-        myShifter[i].windowSize = 0.03;
-        sonidos.get(scaleNotes[i]).chain(myShifter[i], Tone.Master);
-      }
+  //      myShifter[i] = new Tone.PitchShift(0); //.toMaster();
+  //      myShifter[i].windowSize = 0.03;
+  //      sonidos.get(scaleNotes[i]).chain(myShifter[i], Tone.Master);
+   //   }
       var stepNumber = 0;
       var loop = 0;
 
@@ -1705,10 +1705,11 @@
         //console.log("entro a change pitch");
         //console.log(myAnimal);
         var myAnimalNumber = myAnimal.split("dial-ins")[1];
-        myShifter[8 - myAnimalNumber].pitch = value;
+      //  myShifter[8 - myAnimalNumber].pitch = value;
+        sonidos.get(scaleNotes[8 - myAnimalNumber]).playbackRate=value;
 
         
-        console.log("changed pitch animal " +( 8 - myAnimalNumber )+ "to value "+ value );
+        console.log("changed playback rate animal " +( 8 - myAnimalNumber )+ "to value "+ value );
         //sonidos.get(scaleNotes[8 - myAnimalNumber]).volume.value = value;
       }
 
