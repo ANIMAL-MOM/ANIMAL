@@ -667,7 +667,7 @@ h3 {
 
 
   /* --------------------------------------------- */
-  /* Windows */
+  /* Windows, popovers, modals */
 
 
 .modal-content {
@@ -694,7 +694,9 @@ h3 {
     background-color: var(--color-fondo-1-animal);
   }
 
-
+.instrumentos-help-item, .sel-ins-help-item, .chat-help-item, .jam-sesion-help-item, .canal-help-item, .solo-help-item {
+    background-color: red;
+}
   /* --------------------------------------------- */
   /* Animation & transitions */
 

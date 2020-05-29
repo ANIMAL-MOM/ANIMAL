@@ -564,7 +564,8 @@
       <!-- INSTRUMENTOS -->
 
       <span class="d-none d-lg-block">
-        <div id="instrumentos" class="row mx-5 mx-lg-0 px-5 px-lg-0 d-flex flex-row justify-content-around text-white help-item" data-toggle="popover" title="Popover title" data-placement="bottom" data-content="And here's some amazing content. It's very engaging. Right?">
+          
+        <div id="instrumentos" class="row mx-5 mx-lg-0 px-5 px-lg-0 d-flex flex-row justify-content-around text-white help-item" data-toggle="popover" title="INSTRUMENTOS" data-placement="bottom" data-content="Modifica el sonido girando la perilla de pitch">
 
           <div id="buhoInst" class="col-auto m-0 mr-5 mr-xl-0 mt-2 p-0 instrumento8">
             <div id="" class="position-absolute opacity-4 corners1 destaque-animal w-100 h-100 disabled-overlay">
@@ -722,6 +723,7 @@
           </div>
 
         </div>
+          
       </span>
 
       <!-- instrumentos end -->
@@ -753,17 +755,16 @@
         <div class="row pr-lg-1 d-flex h-100">
           <!-- CHAT -->
           <div id="chat-animal" class="col-5 col-lg-12 p-0 d-flex">
-            <div id="chat-help" class="pt-4 pb-2 px-2 corners1 figura-1-animal help-item" data-toggle="popover" title="Popover title" data-placement="bottom" data-content="And here's some amazing content. It's very engaging. Right?">
-              <ul id="messages" class="d-flex h-75 flex-column-reverse m-0 p-0 texto-chico"></ul>
+            
+                <div id="chat-help" class="pt-4 pb-2 px-2 corners1 figura-1-animal help-item" data-toggle="popover" title="CHAT" data-placement="bottom" data-content="Coordina tus accions con otros animales">
+                  <ul id="messages" class="d-flex h-75 flex-column-reverse m-0 p-0 texto-chico"></ul>
 
-              <form action="" class="pt-2 d-flex h-25">
-                <input id="m" autocomplete="off" class="w-75 border-0 corners1" />
-                <button class="ml-1 p-1 animal-icon-s"><img src="GUI/img/ok-btn.png" class="img-fluid"></button>
-              </form>
-
-
-            </div>
-
+                  <form action="" class="pt-2 d-flex h-25">
+                    <input id="m" autocomplete="off" class="w-75 border-0 corners1" />
+                    <button class="ml-1 p-1 animal-icon-s"><img src="GUI/img/ok-btn.png" class="img-fluid"></button>
+                  </form>
+                </div>
+              
           </div>
           <!-- chat end -->
           <!-- CONTROLES -->
@@ -820,7 +821,8 @@
 
             <!-- INSTRUMENTO SELECCIONADO (#sel-inst) -->
 
-            <div id="sel-inst" class="m-0 p-0 pt-1 d-block d-lg-none d-flex align-items-end text-white overflow-hidden" data-toggle="popover" title="Popover title" data-placement="bottom" data-content="And here's some amazing content. It's very engaging. Right?">
+            <span id="sel-ins-help" class="help-item" data-toggle="popover" title="INSTRUMENTOS" data-placement="bottom" data-content="Modifica el sonido y el volumen girando las perillas">
+              <div id="sel-inst" class="m-0 p-0 pt-1 d-block d-lg-none d-flex align-items-end text-white overflow-hidden">
 
               <span id="buhoInst" class="d-none instMobile">
                 <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal gris-animal">
@@ -1007,6 +1009,8 @@
             </span>
 
           </div>
+            </span>
+            
 
         </div>
 
@@ -1029,7 +1033,7 @@
             <!-- ÍCONOS y DIALES -->
             <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup1">
               <div class="animal-icon">
-                <img id="icono-ch8" src="GUI/img/cerdo.png" class="soloButton img-fluid animal-pointer">
+                <img id="icono-ch8" src="GUI/img/cerdo.png" class="soloButton img-fluid animal-pointer" data-toggle="tooltip" data-placement="top" title="SOLO">
               </div>
               <div class="dial_container d-none d-lg-block">
                 <div id="dial-ch8" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
@@ -1037,7 +1041,7 @@
             </div>
             <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup2">
               <div class="animal-icon">
-                <img id="icono-ch7" src="GUI/img/loro.png" class="soloButton img-fluid animal-pointer">
+                <img id="icono-ch7" src="GUI/img/loro.png" class="soloButton img-fluid animal-pointer" data-toggle="tooltip" data-placement="top" title="SOLO">
               </div>
               <div class="dial_container d-none d-lg-block">
                 <div id="dial-ch7" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
@@ -1045,7 +1049,7 @@
             </div>
             <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup3">
               <div class="animal-icon">
-                <img id="icono-ch6" src="GUI/img/sapo.png" class="soloButton img-fluid animal-pointer">
+                <img id="icono-ch6" src="GUI/img/sapo.png" class="soloButton img-fluid animal-pointer" data-toggle="tooltip" data-placement="top" title="SOLO">
               </div>
               <div class="dial_container d-none d-lg-block">
                 <div id="dial-ch6" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
@@ -1053,7 +1057,7 @@
             </div>
             <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup4">
               <div class="animal-icon">
-                <img id="icono-ch5" src="GUI/img/pato.png" class="soloButton img-fluid animal-pointer">
+                <img id="icono-ch5" src="GUI/img/pato.png" class="soloButton img-fluid animal-pointer" data-toggle="tooltip" data-placement="top" title="SOLO">
               </div>
               <div class="dial_container d-none d-lg-block">
                 <div id="dial-ch5" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
@@ -1061,7 +1065,7 @@
             </div>
             <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup5">
               <div class="animal-icon">
-                <img id="icono-ch4" src="GUI/img/mono.png" class="soloButton img-fluid animal-pointer">
+                <img id="icono-ch4" src="GUI/img/mono.png" class="soloButton img-fluid animal-pointer" data-toggle="tooltip" data-placement="top" title="SOLO">
               </div>
               <div class="dial_container d-none d-lg-block">
                 <div id="dial-ch4" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
@@ -1069,7 +1073,7 @@
             </div>
             <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup6">
               <div class="animal-icon">
-                <img id="icono-ch3" src="GUI/img/gato.png" class="soloButton img-fluid animal-pointer">
+                <img id="icono-ch3" src="GUI/img/gato.png" class="soloButton img-fluid animal-pointer" data-toggle="tooltip" data-placement="top" title="SOLO">
               </div>
               <div class="dial_container d-none d-lg-block">
                 <div id="dial-ch3" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
@@ -1077,15 +1081,15 @@
             </div>
             <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup7">
               <div class="animal-icon">
-                <img id="icono-ch2" src="GUI/img/oso.png" class="soloButton img-fluid animal-pointer">
+                <img id="icono-ch2" src="GUI/img/oso.png" class="soloButton img-fluid animal-pointer" data-toggle="tooltip" data-placement="top" title="SOLO">
               </div>
               <div class="dial_container d-none d-lg-block">
                 <div id="dial-ch2" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
               </div>
             </div>
-            <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup8">
-              <div class="animal-icon" id="animalChannel1">
-                <img id="icono-ch1" src="GUI/img/buho.png" class="soloButton img-fluid animal-pointer">
+            <div id="channelGroup8" class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup help-item" data-toggle="popover" title="CANALES" data-placement="right" data-content="Activa modo SOLO presionando el ícono de animal y ajusta el volumen con la perilla" >
+              <div id="animalChannel1" class="animal-icon help-item" data-toggle="popover" title="CANALES" data-placement="right" data-content="Activa modo SOLO presionando el ícono de animal">
+                <img id="icono-ch1" src="GUI/img/buho.png" class="soloButton img-fluid animal-pointer" data-toggle="tooltip" data-placement="top" title="SOLO">
               </div>
               <div class="dial_container d-none d-lg-block">
                 <div id="dial-ch1" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
@@ -1118,7 +1122,8 @@
 
         <div id="jam-ajustes"
           class="col-xl-1 py-4 px-3 d-flex flex-xl-column justify-content-between fondo-1-animal corners1">
-          <div id="jam-sesion" class="mx-auto d-flex my-auto flex-lg-column help-item" data-toggle="popover" title="Popover title" data-placement="bottom" data-content="And here's some amazing content. It's very engaging. Right?">
+            
+          <div id="jam-sesion" class="mx-auto d-flex my-auto flex-lg-column help-item" data-toggle="popover" title="JAM SESSION" data-placement="bottom" data-content="Invita más animales a tu sesión">
             <a href="#" id="boton" data-toggle="modal" data-target="#jamModal" role="button"
               class="animal-icon jam-btn text-center">
               Jam
@@ -1126,6 +1131,7 @@
             <div class="m-auto text-center">
             </div>
           </div>
+            
           <div id="combo-botones" class="mx-0 mx-xl-auto d-flex flex-row flex-xl-column">
             <div id="help" class="mx-auto align-self-baseline">
               <a id="help-btn" role="button">
@@ -1823,19 +1829,29 @@
       $('[data-toggle="popover"]').popover()
     });
       
-    $('#help-btn').on('click', function()
-    {    
-        $('.help-item').popover('toggle');
-
+    $('#help-btn').on('click', function() {    
+        $('#instrumentos').popover('toggle');   
+        $('#sel-ins-help').popover('toggle');   
+        $('#chat-help').popover('toggle');   
+        $('#jam-sesion').popover('toggle');  
+        $('#channelGroup8').popover('toggle');   
+        $('#animalChannel1').popover('toggle');
+        
+      $('.popover:eq(0)').addClass('instrumentos-help-item');
+      $('.popover:eq(1)').addClass('sel-ins-help-item');
+      $('.popover:eq(2)').addClass('chat-help-item');
+      $('.popover:eq(3)').addClass('jam-sesion-help-item');
+      $('.popover:eq(4)').addClass('canal-help-item');
+      $('.popover:eq(5)').addClass('solo-help-item');
+        
     });
       
-    $('#jam-sesion').on('click', function() {    
-        $(this).popover('dispose');
-        $('#instrumentos').popover('dispose');
-        $('#chat-help').popover('dispose');
-        $('#sel-inst').popover('dispose')
-        
-    }); 
+    $(document).on('click', function(e) {
+      var container = $("#help-btn");
+      if (!$(e.target).closest(container).length) {    
+            $('.help-item').popover('dispose'); 
+      }
+    });
       
   </script>
 
