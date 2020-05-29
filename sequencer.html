@@ -564,8 +564,7 @@
       <!-- INSTRUMENTOS -->
 
       <span class="d-none d-lg-block">
-        <div id="instrumentos" class="row mx-5 mx-lg-0 px-5 px-lg-0 d-flex flex-row justify-content-around text-white">
-
+        <div id="instrumentos" class="row mx-5 mx-lg-0 px-5 px-lg-0 d-flex flex-row justify-content-around text-white help-item" data-toggle="popover" title="INSTRUMENTOS" data-placement="bottom" data-content="Modifica el sonido girando la perilla de pitch">
           <div id="buhoInst" class="col-auto m-0 mr-5 mr-xl-0 mt-2 p-0 instrumento8">
             <div id="" class="position-absolute opacity-4 corners1 destaque-animal w-100 h-100 disabled-overlay">
             </div>
@@ -683,6 +682,7 @@
             </div>
           </div>
 
+        
           <div id="loroInst" class="col-auto m-0 ml-1 mt-2 p-0 instrumento2">
             <div id="" class="position-absolute opacity-4 corners1 destaque-animal w-100 h-100 disabled-overlay">
             </div>
@@ -696,12 +696,17 @@
                 <div class="title mt-1">Lor</div>
                 <div class="sub_title">Sampler</div>
               </div>
-              <div class="dial_container mb-1 ml-1">
-                <div id="dial-ins7" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch"></div>
+              <div class="d-flex flex-column">
+                <div id="loro-rec" class="mb-1 ml-1" data-toggle="tooltip" data-placement="top" title="Rec">
+                  <a href="#" data-toggle="modal" data-target="#lororecModal" role="button"
+                    class="d-flex m-auto p-1 rec-icon-s-b">&nbsp;</a>
+                </div>
+                <div class="dial_container mb-1 ml-1">
+                  <div id="dial-ins7" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch"></div>
+                </div>
               </div>
             </div>
           </div>
-
           <div id="cerdoInst" class="col-auto m-0 ml-1 mr-5 mr-xl-0 mt-2 p-0 instrumento1">
             <div id="" class="d-none position-absolute opacity-4 corners1 destaque-animal w-100 h-100 disabled-overlay">
             </div>
@@ -753,7 +758,9 @@
         <div class="row pr-lg-1 d-flex h-100">
           <!-- CHAT -->
           <div id="chat-animal" class="col-5 col-lg-12 p-0 d-flex">
-            <div class="pt-4 pb-2 px-2 corners1 figura-1-animal">
+         
+            <div id="chat-help" class="pt-4 pb-2 px-2 corners1 figura-1-animal help-item" data-toggle="popover" title="CHAT" data-placement="bottom" data-content="Coordina tus accions con otros animales">
+                
               <ul id="messages" class="d-flex h-75 flex-column-reverse m-0 p-0 texto-chico"></ul>
 
               <form action="" class="pt-2 d-flex h-25">
@@ -809,7 +816,8 @@
                   <div id="rec-btn" class="col-lg-6 d-flex my-0 blanco-ui-animal animal-pointer">
                     <span class="m-auto text-center">Rec</span>
                   </div>
-                  <div id="mute-btn" class="col-lg-6 d-flex my-0 figura-1-animal mute-btn animal-pointer">
+                  <div id="mute-btn" class="col-lg-6 d-flex my-0 figura-1-animal mute-btn animal-pointer" data-toggle="popover" title="Popover title" data-placement="bottom" data-content="And here's some amazing content. It's very engaging. Right?">
+                 
                     <span class="m-auto text-center"></span>
                   </div>
                 </div>
@@ -837,6 +845,7 @@
                     <div id="mob-dial-ins1" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch">
                     </div>
                   </div>
+                </div>
                   <div class="dial_container mb-1 ml-1">
                     <div id="mob-dial-ch1" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
                     </div>
@@ -983,7 +992,7 @@
                     </div>
                   </div>
               </span>
-            </div>
+          
             <span id="cerdoInst" class="d-block instMobile">
               <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal rosa-animal">
                 <div class="d-flex flex-column">
@@ -1029,7 +1038,7 @@
             <!-- ÍCONOS y DIALES -->
             <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup1">
               <div class="animal-icon">
-                <img id="icono-ch8" src="GUI/img/cerdo.png" class="soloButton img-fluid animal-pointer">
+                <img id="icono-ch8" src="GUI/img/cerdo.png" class="soloButton img-fluid animal-pointer" data-toggle="tooltip" data-placement="top" title="SOLO">
               </div>
               <div class="dial_container d-none d-lg-block">
                 <div id="dial-ch8" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
@@ -1037,7 +1046,7 @@
             </div>
             <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup2">
               <div class="animal-icon">
-                <img id="icono-ch7" src="GUI/img/loro.png" class="soloButton img-fluid animal-pointer">
+                <img id="icono-ch7" src="GUI/img/loro.png" class="soloButton img-fluid animal-pointer" data-toggle="tooltip" data-placement="top" title="SOLO">
               </div>
               <div class="dial_container d-none d-lg-block">
                 <div id="dial-ch7" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
@@ -1045,7 +1054,7 @@
             </div>
             <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup3">
               <div class="animal-icon">
-                <img id="icono-ch6" src="GUI/img/sapo.png" class="soloButton img-fluid animal-pointer">
+                <img id="icono-ch6" src="GUI/img/sapo.png" class="soloButton img-fluid animal-pointer" data-toggle="tooltip" data-placement="top" title="SOLO">
               </div>
               <div class="dial_container d-none d-lg-block">
                 <div id="dial-ch6" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
@@ -1053,15 +1062,15 @@
             </div>
             <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup4">
               <div class="animal-icon">
-                <img id="icono-ch5" src="GUI/img/pato.png" class="soloButton img-fluid animal-pointer">
-              </div>
+                <img id="icono-ch5" src="GUI/img/pato.png" class="soloButton img-fluid animal-pointer" data-toggle="tooltip" data-placement="top" title="SOLO">
+                 </div>
               <div class="dial_container d-none d-lg-block">
                 <div id="dial-ch5" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
               </div>
             </div>
             <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup5">
               <div class="animal-icon">
-                <img id="icono-ch4" src="GUI/img/mono.png" class="soloButton img-fluid animal-pointer">
+                <img id="icono-ch4" src="GUI/img/mono.png" class="soloButton img-fluid animal-pointer" data-toggle="tooltip" data-placement="top" title="SOLO">
               </div>
               <div class="dial_container d-none d-lg-block">
                 <div id="dial-ch4" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
@@ -1069,7 +1078,7 @@
             </div>
             <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup6">
               <div class="animal-icon">
-                <img id="icono-ch3" src="GUI/img/gato.png" class="soloButton img-fluid animal-pointer">
+                <img id="icono-ch3" src="GUI/img/gato.png" class="soloButton img-fluid animal-pointer" data-toggle="tooltip" data-placement="top" title="SOLO">
               </div>
               <div class="dial_container d-none d-lg-block">
                 <div id="dial-ch3" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
@@ -1077,21 +1086,20 @@
             </div>
             <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup7">
               <div class="animal-icon">
-                <img id="icono-ch2" src="GUI/img/oso.png" class="soloButton img-fluid animal-pointer">
+                <img id="icono-ch2" src="GUI/img/oso.png" class="soloButton img-fluid animal-pointer" data-toggle="tooltip" data-placement="top" title="SOLO">
               </div>
               <div class="dial_container d-none d-lg-block">
                 <div id="dial-ch2" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
               </div>
             </div>
-            <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup8">
-              <div class="animal-icon" id="animalChannel1">
-                <img id="icono-ch1" src="GUI/img/buho.png" class="soloButton img-fluid animal-pointer">
+         <div id="channelGroup8" class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup help-item" data-toggle="popover" title="CANALES" data-placement="right" data-content="Activa modo SOLO presionando el ícono de animal y ajusta el volumen con la perilla" >
+              <div id="animalChannel1" class="animal-icon help-item" data-toggle="popover" title="CANALES" data-placement="right" data-content="Activa modo SOLO presionando el ícono de animal">
+                <img id="icono-ch1" src="GUI/img/buho.png" class="soloButton img-fluid animal-pointer" data-toggle="tooltip" data-placement="top" title="SOLO">
               </div>
               <div class="dial_container d-none d-lg-block">
                 <div id="dial-ch1" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
               </div>
             </div>
-            <!-- íconos y diales end -->
 
 
             <!-- íconos y diales end -->
@@ -1118,7 +1126,8 @@
 
         <div id="jam-ajustes"
           class="col-xl-1 py-4 px-3 d-flex flex-xl-column justify-content-between fondo-1-animal corners1">
-          <div id="jam-sesion" class="mx-auto d-flex my-auto flex-lg-column">
+          <div id="jam-sesion" class="mx-auto d-flex my-auto flex-lg-column help-item" data-toggle="popover" title="JAM SESSION" data-placement="bottom" data-content="Invita más animales a tu sesión">
+        
             <a href="#" id="boton" data-toggle="modal" data-target="#jamModal" role="button"
               class="animal-icon jam-btn text-center">
               Jam
@@ -1127,8 +1136,8 @@
             </div>
           </div>
           <div id="combo-botones" class="mx-0 mx-xl-auto d-flex flex-row flex-xl-column">
-            <div id="help" class="d-none mx-auto align-self-baseline">
-              <a href="#" id="boton" data-toggle="modal" data-target="#helpModal" role="button">
+            <div id="help" class="mx-auto align-self-baseline">
+              <a id="help-btn" role="button">
                 <img src="GUI/svg/botones/boton_ayuda.svg" class="animal-icon">
               </a>
             </div>
@@ -1268,23 +1277,23 @@
         "fadeOut": "16n",
       }).toMaster();
 
-    var myShifter = [myShifter1, myShifter2, myShifter3, myShifter4, myShifter5, myShifter6, myShifter7, myShifter8];
+      var myShifter = [myShifter1, myShifter2, myShifter3, myShifter4, myShifter5, myShifter6, myShifter7, myShifter8];
       //the notes
       var scaleNotes = ["Cerdo", "Loro", "Pato", "Sapo", "Gato", "Mono", "Oso", "Buho"];
 
-  //    for (i = 0; i < 8; i++) {
-        //(sonidos.get(scaleNotes[(7 - myAnimalNumber)]).
-  //      myShifter[i] = new Tone.PitchShift(0); //.toMaster();
-  //      myShifter[i].windowSize = 0.03;
-  //      sonidos.get(scaleNotes[i]).chain(myShifter[i], Tone.Master);
-   //   }
+      //    for (i = 0; i < 8; i++) {
+      //(sonidos.get(scaleNotes[(7 - myAnimalNumber)]).
+      //      myShifter[i] = new Tone.PitchShift(0); //.toMaster();
+      //      myShifter[i].windowSize = 0.03;
+      //      sonidos.get(scaleNotes[i]).chain(myShifter[i], Tone.Master);
+      //   }
       var stepNumber = 0;
       var loop = 0;
 
 
       Tone.Transport.bpm.value = bpm;
       Tone.Transport.swing = swing;
-      Tone.Transport.swingSubdivision ="16n";
+      Tone.Transport.swingSubdivision = "16n";
 
 
 
@@ -1339,7 +1348,7 @@
 
       socket.on('chat message', function (msg) {
 
-        $('#messages').preppend('<li> ' + msg + ' </li>');
+        $('#messages').prepend('<li> ' + msg + ' </li>');
       });
 
 
@@ -1509,7 +1518,7 @@
       socket.on("swing", function (unswing) {
         swing = unswing;
 
-          Tone.Transport.swing = swing / 100;
+        Tone.Transport.swing = swing / 100;
         $("#swingNumber").html(swing);
       });
 
@@ -1520,7 +1529,7 @@
 
       $("#decrement-swing-btn").click(function () {
         if (swing > 0) {
-          swing=swing-5;
+          swing = swing - 5;
           $("#swingNumber").html(swing);
           emitSwing(swing);
         }
@@ -1528,7 +1537,7 @@
 
       $("#increment-swing-btn").click(function () {
         if (swing < 55) {
-          swing=swing+5;
+          swing = swing + 5;
           $("#swingNumber").html(swing);
           emitSwing(swing);
         }
@@ -1706,11 +1715,11 @@
         //console.log("entro a change pitch");
         //console.log(myAnimal);
         var myAnimalNumber = myAnimal.split("dial-ins")[1];
-      //  myShifter[8 - myAnimalNumber].pitch = value;
-        sonidos.get(scaleNotes[8 - myAnimalNumber]).playbackRate=value;
+        //  myShifter[8 - myAnimalNumber].pitch = value;
+        sonidos.get(scaleNotes[8 - myAnimalNumber]).playbackRate = value;
 
-        
-        console.log("changed playback rate animal " +( 8 - myAnimalNumber )+ "to value "+ value );
+
+        console.log("changed playback rate animal " + (8 - myAnimalNumber) + "to value " + value);
         //sonidos.get(scaleNotes[8 - myAnimalNumber]).volume.value = value;
       }
 
@@ -1819,12 +1828,38 @@
 
   </script>
 
-  <script type="text/javascript">
-    $(document).ready(function () {
-      $('#playModal').modal('show');
-      $('[data-toggle="tooltip"]').tooltip()
-    });
-  </script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('#playModal').modal('show');
+    $('[data-toggle="tooltip"]').tooltip();
+    $('[data-toggle="popover"]').popover()
+  });
+    
+  $('#help-btn').on('click', function() {    
+      $('#instrumentos').popover('toggle');   
+      $('#sel-ins-help').popover('toggle');   
+      $('#chat-help').popover('toggle');   
+      $('#jam-sesion').popover('toggle');  
+      $('#channelGroup8').popover('toggle');   
+      $('#animalChannel1').popover('toggle');
+      
+    $('.popover:eq(0)').addClass('instrumentos-help-item');
+    $('.popover:eq(1)').addClass('sel-ins-help-item');
+    $('.popover:eq(2)').addClass('chat-help-item');
+    $('.popover:eq(3)').addClass('jam-sesion-help-item');
+    $('.popover:eq(4)').addClass('canal-help-item');
+    $('.popover:eq(5)').addClass('solo-help-item');
+      
+  });
+    
+  $(document).on('click', function(e) {
+    var container = $("#help-btn");
+    if (!$(e.target).closest(container).length) {    
+          $('.help-item').popover('dispose'); 
+    }
+  });
+    
+</script>
 
 
 </body>
