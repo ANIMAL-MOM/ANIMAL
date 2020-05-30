@@ -122,7 +122,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  font-weight: 200;
+  font-weight: 400;
   color: var(--color-chocolate-animal);
 }
 html {
@@ -136,9 +136,34 @@ html {
   }
 }
 
+
+strong {
+    font-weight: inherit;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 200;
+  line-height: 1.5rem;
+    
+}
+
+h3 {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+#phrase h3{
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+}
+
+
 .title{
   font-size: 2.2rem;
-  font-weight: 800;
+  font-weight: 900;
   text-transform: uppercase;
   line-height: 1.5rem;
 }
@@ -153,28 +178,9 @@ html {
   font-size: 1.125rem;
 }
 
-h1 {
-  font-size: 1.5rem;
-  font-weight: 200;
-  line-height: 1.5rem;
-    
-}
-
-h3 {
-  font-size: 1.125rem;
-  font-weight: 200;
-  line-height: 1.5rem;
-}
-
-#phrase h3{
-  font-size: 2rem;
-  font-weight: 200;
-  line-height: 2.5rem;
-}
-
 .texto-chico{
   font-size: 0.85rem;
-  font-weight: 200;
+  font-weight: 400;
   line-height: 1rem;
 }
 
@@ -667,7 +673,7 @@ h3 {
 
 
   /* --------------------------------------------- */
-  /* Windows */
+  /* Windows como popovers y modals */
 
 
 .modal-content {
@@ -694,6 +700,38 @@ h3 {
     background-color: var(--color-fondo-1-animal);
   }
 
+.instrumentos-help-item, .sel-ins-help-item, .chat-help-item, .jam-sesion-help-item, .canal-help-item, .play-start-item {
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.popover{
+    padding: 5px;
+    font-family: 'Poppins', sans-serif !important;
+}
+.popover-header{
+    background-color: transparent;
+    border: none;
+    font-size: 1.125rem;
+    font-weight: 200;
+    padding-bottom: 0;
+    padding-top: 10px;
+}
+
+.play-start-item{
+    color:var(--color-blanco-ui-animal);
+    background-color: var(--color-blanco-ui-animal);
+    
+}
+.play-start-item .popover-body{
+    color: var(--color-blanco-ui-animal);
+    background-color: var(--color-rojo-ui-animal);
+    border-radius: 0 0 10px 10px;
+}
+.play-start-item .popover-header{
+    background-color: var(--color-rojo-ui-animal);
+    border-radius: 10px 10px 0 0;
+}
 
   /* --------------------------------------------- */
   /* Animation & transitions */
@@ -965,8 +1003,6 @@ h3 {
       border-left: 1px solid var(--color-fondo-1-animal);
       height: 100%;
     }
-      
-    
   }
 
   /* Extra large devices (large desktops, 1200px and up) */

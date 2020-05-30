@@ -816,7 +816,7 @@
                   <div id="rec-btn" class="col-lg-6 d-flex my-0 blanco-ui-animal animal-pointer">
                     <span class="m-auto text-center">Rec</span>
                   </div>
-                  <div id="mute-btn" class="col-lg-6 d-flex my-0 figura-1-animal mute-btn animal-pointer" data-toggle="popover" title="Popover title" data-placement="bottom" data-content="And here's some amazing content. It's very engaging. Right?">
+                  <div id="mute-btn" class="col-lg-6 d-flex my-0 figura-1-animal mute-btn animal-pointer start-item" data-toggle="popover" title="PLAY/STOP" data-placement="bottom" data-content="Comienza tu sesión haciendo clic en este botón.">
                  
                     <span class="m-auto text-center"></span>
                   </div>
@@ -1126,7 +1126,7 @@
 
         <div id="jam-ajustes"
           class="col-xl-1 py-4 px-3 d-flex flex-xl-column justify-content-between fondo-1-animal corners1">
-          <div id="jam-sesion" class="mx-auto d-flex my-auto flex-lg-column help-item" data-toggle="popover" title="JAM SESSION" data-placement="bottom" data-content="Invita más animales a tu sesión">
+          <div id="jam-sesion" class="mx-auto d-flex my-auto flex-lg-column help-item" data-toggle="popover" title="JAM SESSION" data-placement="right" data-content="Invita más animales a tu sesión">
         
             <a href="#" id="boton" data-toggle="modal" data-target="#jamModal" role="button"
               class="animal-icon jam-btn text-center">
@@ -1830,9 +1830,11 @@
 
 <script type="text/javascript">
   $(document).ready(function () {
-    $('#playModal').modal('show');
     $('[data-toggle="tooltip"]').tooltip();
-    $('[data-toggle="popover"]').popover()
+    $('[data-toggle="popover"]').popover();
+        
+    $('#mute-btn').popover('show');   
+    $('.popover:eq(0)').addClass('play-start-item corners-2');
   });
     
   $('#help-btn').on('click', function() {    
@@ -1843,19 +1845,20 @@
       $('#channelGroup8').popover('toggle');   
       $('#animalChannel1').popover('toggle');
       
-    $('.popover:eq(0)').addClass('instrumentos-help-item');
-    $('.popover:eq(1)').addClass('sel-ins-help-item');
-    $('.popover:eq(2)').addClass('chat-help-item');
-    $('.popover:eq(3)').addClass('jam-sesion-help-item');
-    $('.popover:eq(4)').addClass('canal-help-item');
-    $('.popover:eq(5)').addClass('solo-help-item');
+    $('.popover:eq(0)').addClass('instrumentos-help-item corners-2');
+    $('.popover:eq(1)').addClass('sel-ins-help-item corners-2');
+    $('.popover:eq(2)').addClass('chat-help-item corners-2');
+    $('.popover:eq(3)').addClass('jam-sesion-help-item corners-2');
+    $('.popover:eq(4)').addClass('canal-help-item corners-2');
+    $('.popover:eq(5)').addClass('solo-help-item corners-2');
       
   });
     
   $(document).on('click', function(e) {
-    var container = $("#help-btn");
-    if (!$(e.target).closest(container).length) {    
-          $('.help-item').popover('dispose'); 
+    var pvr = $("#help-btn");
+    if (!$(e.target).closest(pvr).length) {    
+          $('.help-item').popover('dispose');    
+          $('.start-item').popover('dispose'); 
     }
   });
     
