@@ -828,7 +828,8 @@
 
             <!-- INSTRUMENTO SELECCIONADO (#sel-inst) -->
 
-            <div id="sel-inst" class="m-0 p-0 pt-1 d-block d-lg-none d-flex align-items-end text-white overflow-hidden">
+            <span id="sel-inst-help" class="help-item" data-toggle="popover" title="INSTRUMENTOS" data-placement="bottom" data-content="Modifica el sonido girando la perilla de pitch y la de volumen.">
+                <div id="sel-inst" class="m-0 p-0 pt-1 d-block d-lg-none d-flex align-items-end text-white overflow-hidden">
 
               <span id="buhoInst" class="d-none instMobile">
                 <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal gris-animal">
@@ -850,7 +851,7 @@
                     <div id="mob-dial-ch1" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
                     </div>
                   </div>
-                </div>
+                
               </span>
 
               <span id="osoInst" class="d-none instMobile">
@@ -974,9 +975,8 @@
                     <div class="title mt-1">Lor</div>
                     <div class="sub_title">Sampler</div>
                   </div>
+                    
                   <div class="d-flex flex-column">
-
-
                     <div id="loro-rec" class="mb-1 ml-1" data-toggle="tooltip" data-placement="top" title="Rec">
                       <a href="#" data-toggle="modal" data-target="#lororecModal" role="button"
                         class="d-flex m-auto p-1 rec-icon-s-b">&nbsp;</a>
@@ -991,6 +991,7 @@
                       </div>
                     </div>
                   </div>
+                </div>
               </span>
           
             <span id="cerdoInst" class="d-block instMobile">
@@ -1016,6 +1017,8 @@
             </span>
 
           </div>
+            </span>
+              
 
         </div>
 
@@ -1837,20 +1840,25 @@
     $('.popover:eq(0)').addClass('play-start-item corners-2');
   });
     
-  $('#help-btn').on('click', function() {    
+    
+    
+  $('#help-btn').on('click', function() { 
+      $('#mute-btn').popover('hide');    
       $('#instrumentos').popover('toggle');   
-      $('#sel-ins-help').popover('toggle');   
+      $('#sel-inst-help').popover('toggle');   
       $('#chat-help').popover('toggle');   
       $('#jam-sesion').popover('toggle');  
       $('#channelGroup8').popover('toggle');   
       $('#animalChannel1').popover('toggle');
       
+    
     $('.popover:eq(0)').addClass('instrumentos-help-item corners-2');
     $('.popover:eq(1)').addClass('sel-ins-help-item corners-2');
     $('.popover:eq(2)').addClass('chat-help-item corners-2');
     $('.popover:eq(3)').addClass('jam-sesion-help-item corners-2');
     $('.popover:eq(4)').addClass('canal-help-item corners-2');
-    $('.popover:eq(5)').addClass('solo-help-item corners-2');
+    $('.popover:eq(5)').addClass('solo-help-item corners-2'); 
+    
       
   });
     

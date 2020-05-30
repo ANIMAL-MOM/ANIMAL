@@ -718,19 +718,23 @@ h3 {
     padding-top: 10px;
 }
 
-.play-start-item{
-    color:var(--color-blanco-ui-animal);
-    background-color: var(--color-blanco-ui-animal);
-    
-}
+
 .play-start-item .popover-body{
     color: var(--color-blanco-ui-animal);
     background-color: var(--color-rojo-ui-animal);
     border-radius: 0 0 10px 10px;
 }
 .play-start-item .popover-header{
+    color: var(--color-blanco-ui-animal);
     background-color: var(--color-rojo-ui-animal);
     border-radius: 10px 10px 0 0;
+}
+
+.instrumentos-help-item, .canal-help-item {
+  display:none;
+}
+.sel-ins-help-item, .solo-help-item {
+  display:block;
 }
 
   /* --------------------------------------------- */
@@ -1003,6 +1007,14 @@ h3 {
       border-left: 1px solid var(--color-fondo-1-animal);
       height: 100%;
     }
+      
+    .instrumentos-help-item, .canal-help-item {
+      display:block;
+    }
+    .sel-ins-help-item, .solo-help-item {
+      display:none;
+    }
+      
   }
 
   /* Extra large devices (large desktops, 1200px and up) */
