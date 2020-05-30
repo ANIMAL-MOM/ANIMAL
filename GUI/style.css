@@ -708,6 +708,7 @@ h3 {
 .popover{
     padding: 5px;
     font-family: 'Poppins', sans-serif !important;
+    max-width:175px;
 }
 .popover-header{
     background-color: transparent;
@@ -727,6 +728,16 @@ h3 {
 .play-start-item .popover-header{
     color: var(--color-blanco-ui-animal);
     background-color: var(--color-rojo-ui-animal);
+    border-radius: 10px 10px 0 0;
+}
+.jam-sesion-help-item .popover-body{
+    color: var(--color-blanco-ui-animal);
+    background-color: var(--color-verde-ui-animal);
+    border-radius: 0 0 10px 10px;
+}
+.jam-sesion-help-item .popover-header{
+    color: var(--color-blanco-ui-animal);
+    background-color: var(--color-verde-ui-animal);
     border-radius: 10px 10px 0 0;
 }
 

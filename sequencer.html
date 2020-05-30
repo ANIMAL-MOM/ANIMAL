@@ -759,7 +759,7 @@
           <!-- CHAT -->
           <div id="chat-animal" class="col-5 col-lg-12 p-0 d-flex">
          
-            <div id="chat-help" class="pt-4 pb-2 px-2 corners1 figura-1-animal help-item" data-toggle="popover" title="CHAT" data-placement="bottom" data-content="Coordina tus accions con otros animales">
+            <div id="chat-help" class="pt-4 pb-2 px-2 corners1 figura-1-animal help-item" data-toggle="popover" title="CHAT" data-placement="top" data-content="Coordina tus acciones con otros animales">
                 
               <ul id="messages" class="d-flex h-75 flex-column-reverse m-0 p-0 texto-chico"></ul>
 
@@ -816,7 +816,7 @@
                   <div id="rec-btn" class="col-lg-6 d-flex my-0 blanco-ui-animal animal-pointer">
                     <span class="m-auto text-center">Rec</span>
                   </div>
-                  <div id="mute-btn" class="col-lg-6 d-flex my-0 figura-1-animal mute-btn animal-pointer start-item" data-toggle="popover" title="PLAY/STOP" data-placement="bottom" data-content="Comienza tu sesión haciendo clic en este botón.">
+                  <div id="mute-btn" class="col-lg-6 d-flex my-0 figura-1-animal mute-btn animal-pointer start-item" data-toggle="popover" title="PLAY/STOP" data-placement="bottom" data-content="Comienza tu sesión presionando este botón.">
                  
                     <span class="m-auto text-center"></span>
                   </div>
@@ -1835,6 +1835,7 @@
   $(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip();
     $('[data-toggle="popover"]').popover();
+      
         
     $('#mute-btn').popover('show');   
     $('.popover:eq(0)').addClass('play-start-item corners-2');
@@ -1843,7 +1844,7 @@
     
     
   $('#help-btn').on('click', function() { 
-      $('#mute-btn').popover('hide');    
+      $('#mute-btn').popover('dispose');    
       $('#instrumentos').popover('toggle');   
       $('#sel-inst-help').popover('toggle');   
       $('#chat-help').popover('toggle');   
