@@ -68,10 +68,12 @@ app.get('/sequencer', (req, res) => {
 });
 
 
+
+
 app.use('/tone', express.static(__dirname + '/node_modules/tone/build/'));
 app.use('/audios', express.static(__dirname + '/audios/'));
 app.use('/GUI', express.static(__dirname + '/GUI/'));
-
+app.use('/script', express.static(__dirname + '/script/'));
 var rooms = [];
 
 var visitor = io.of('/start');
@@ -228,11 +230,12 @@ player.on('connection', (socket) => {
       socket.to(socket.room.id).emit('swing', unswing);
       socket.room.swing = unswing;
     });
-
+    socket.on("recLoro", function (blob) {
+      socket.to(socket.room.id).emit('recLoro', blob);
+     // socket.room.swing = unswing;
+    });
     socket.on('roomOpened', (channels) => {
       socket.channels = channels;
-      //console.log("abrio cuarto canales usados " + channels)
-
     });
 
   }
