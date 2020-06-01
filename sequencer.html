@@ -392,15 +392,19 @@
                   <img src="GUI/img/audio-trans.png" class="animal-pointer corners-l h-100 w-auto" data-toggle="tooltip"
                     data-placement="top" title="Escuchar">
                 </div>
-                <div class="d-flex align-items-center loro-rec corners-r">
-                  <a href="#" class="d-flex m-auto texto-chico rec-icon-s">Rec</a>
+                <div id="loro-rec-button" class="d-flex align-items-center loro-rec corners-r">
+
+                  <a href="#" id="recDuration" class="d-flex m-auto texto-chico rec-icon-s">Rec</a>
                 </div>
+                <span id="duration"></span>
               </div>
               <div class="mb-1">
                 Haz click en el parlante para escuchar, click en OK para usar el sonido.
               </div>
+              <audio id="player" controls></audio>
+
               <div class="mb-1">
-                <button type="button" class="btn btn-secondary px-4">
+                <button type="button" id="ok-rec-loro" class="btn btn-secondary px-4">
                   Ok
                 </button>
               </div>
@@ -564,7 +568,10 @@
       <!-- INSTRUMENTOS -->
 
       <span class="d-none d-lg-block">
-        <div id="instrumentos" class="row mx-5 mx-lg-0 px-5 px-lg-0 d-flex flex-row justify-content-around text-white help-item" data-toggle="popover" title="INSTRUMENTOS" data-placement="bottom" data-content="Modifica el sonido girando la perilla de pitch">
+        <div id="instrumentos"
+          class="row mx-5 mx-lg-0 px-5 px-lg-0 d-flex flex-row justify-content-around text-white help-item"
+          data-toggle="popover" title="INSTRUMENTOS" data-placement="bottom"
+          data-content="Modifica el sonido girando la perilla de pitch">
           <div id="buhoInst" class="col-auto m-0 mr-5 mr-xl-0 mt-2 p-0 instrumento8">
             <div id="" class="position-absolute opacity-4 corners1 destaque-animal w-100 h-100 disabled-overlay">
             </div>
@@ -682,7 +689,7 @@
             </div>
           </div>
 
-        
+
           <div id="loroInst" class="col-auto m-0 ml-1 mt-2 p-0 instrumento2">
             <div id="" class="position-absolute opacity-4 corners1 destaque-animal w-100 h-100 disabled-overlay">
             </div>
@@ -758,9 +765,10 @@
         <div class="row pr-lg-1 d-flex h-100">
           <!-- CHAT -->
           <div id="chat-animal" class="col-5 col-lg-12 p-0 d-flex">
-         
-            <div id="chat-help" class="pt-4 pb-2 px-2 corners1 figura-1-animal help-item" data-toggle="popover" title="CHAT" data-placement="bottom" data-content="Coordina tus accions con otros animales">
-                
+
+            <div id="chat-help" class="pt-4 pb-2 px-2 corners1 figura-1-animal help-item" data-toggle="popover"
+              title="CHAT" data-placement="bottom" data-content="Coordina tus accions con otros animales">
+
               <ul id="messages" class="d-flex h-75 flex-column-reverse m-0 p-0 texto-chico"></ul>
 
               <form action="" class="pt-2 d-flex h-25">
@@ -816,8 +824,10 @@
                   <div id="rec-btn" class="col-lg-6 d-flex my-0 blanco-ui-animal animal-pointer">
                     <span class="m-auto text-center">Rec</span>
                   </div>
-                  <div id="mute-btn" class="col-lg-6 d-flex my-0 figura-1-animal mute-btn animal-pointer" data-toggle="popover" title="Popover title" data-placement="bottom" data-content="And here's some amazing content. It's very engaging. Right?">
-                 
+                  <div id="mute-btn" class="col-lg-6 d-flex my-0 figura-1-animal mute-btn animal-pointer"
+                    data-toggle="popover" title="Popover title" data-placement="bottom"
+                    data-content="And here's some amazing content. It's very engaging. Right?">
+
                     <span class="m-auto text-center"></span>
                   </div>
                 </div>
@@ -846,153 +856,153 @@
                     </div>
                   </div>
                 </div>
+                <div class="dial_container mb-1 ml-1">
+                  <div id="mob-dial-ch1" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
+                  </div>
+                </div>
+            </div>
+            </span>
+
+            <span id="osoInst" class="d-none instMobile">
+              <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal chocolate-animal">
+                <div class="d-flex flex-column">
+                  <div class="animal-icon">
+                    <object type="image/svg+xml" data="GUI/svg/iconos/oso-w.svg" class="animal-icon">
+                      Oso
+                    </object>
+                  </div>
+                  <div class="title mt-1">Os</div>
+                  <div class="sub_title">Snare</div>
+                </div>
+                <div class="dial_container mb-1 ml-1">
+                  <div id="mob-dial-ins2" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch">
+                  </div>
+                </div>
+                <div class="dial_container mb-1 ml-1">
+                  <div id="mob-dial-ch2" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
+                  </div>
+                </div>
+              </div>
+            </span>
+
+            <span id="gatoInst" class="d-none instMobile">
+              <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal gris-animal">
+                <div class="d-flex flex-column">
+                  <div class="animal-icon">
+                    <object type="image/svg+xml" data="GUI/svg/iconos/gato-w.svg" class="animal-icon">
+                      Gato
+                    </object>
+                  </div>
+                  <div class="title mt-1">Gat</div>
+                  <div class="sub_title">Hi hat</div>
+                </div>
+                <div class="dial_container mb-1 ml-1">
+                  <div id="mob-dial-ins3" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch">
+                  </div>
+                </div>
+                <div class="dial_container mb-1 ml-1">
+                  <div id="mob-dial-ch3" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
+                  </div>
+                </div>
+              </div>
+            </span>
+
+            <span id="monoInst" class="d-none instMobile">
+              <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal marron-animal">
+                <div class="d-flex flex-column">
+                  <div class="animal-icon">
+                    <object type="image/svg+xml" data="GUI/svg/iconos/mono-w.svg" class="animal-icon">
+                      Mono
+                    </object>
+                  </div>
+                  <div class="title mt-1">Mon</div>
+                  <div class="sub_title">Bass</div>
+                </div>
+                <div class="dial_container mb-1 ml-1">
+                  <div id="mob-dial-ins4" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch">
+                  </div>
+                </div>
+                <div class="dial_container mb-1 ml-1">
+                  <div id="mob-dial-ch4" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
+                  </div>
+                </div>
+              </div>
+            </span>
+
+            <span id="patoInst" class="d-none instMobile">
+              <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal mostaza-animal">
+                <div class="d-flex flex-column">
+                  <div class="animal-icon">
+                    <object type="image/svg+xml" data="GUI/svg/iconos/pato-w.svg" class="animal-icon">
+                      Pato
+                    </object>
+                  </div>
+                  <div class="title mt-1">Pat</div>
+                  <div class="sub_title">Clave</div>
+                </div>
+                <div class="dial_container mb-1 ml-1">
+                  <div id="mob-dial-ins5" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch">
+                  </div>
+                </div>
+                <div class="dial_container mb-1 ml-1">
+                  <div id="mob-dial-ch5" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
+                  </div>
+                </div>
+              </div>
+            </span>
+
+            <span id="sapoInst" class="d-none instMobile">
+              <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal verde-animal">
+                <div class="d-flex flex-column">
+                  <div class="animal-icon">
+                    <object type="image/svg+xml" data="GUI/svg/iconos/sapo-w.svg" class="animal-icon">
+                      Sapo
+                    </object>
+                  </div>
+                  <div class="title mt-1">Sap</div>
+                  <div class="sub_title">Ride</div>
+                </div>
+                <div class="dial_container mb-1 ml-1">
+                  <div id="mob-dial-ins6" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch">
+                  </div>
+                </div>
+                <div class="dial_container mb-1 ml-1">
+                  <div id="mob-dial-ch6" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
+                  </div>
+                </div>
+              </div>
+            </span>
+
+            <span id="loroInst" class="d-none instMobile">
+              <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal verde-animal">
+                <div class="d-flex flex-column">
+                  <div class="animal-icon">
+                    <object type="image/svg+xml" data="GUI/svg/iconos/loro-w.svg" class="animal-icon">
+                      Loro
+                    </object>
+                  </div>
+                  <div class="title mt-1">Lor</div>
+                  <div class="sub_title">Sampler</div>
+                </div>
+                <div class="d-flex flex-column">
+
+
+                  <div id="loro-rec" class="mb-1 ml-1" data-toggle="tooltip" data-placement="top" title="Rec">
+                    <a href="#" data-toggle="modal" data-target="#lororecModal" role="button"
+                      class="d-flex m-auto p-1 rec-icon-s-b">&nbsp;</a>
+                  </div>
+
                   <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ch1" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
+                    <div id="mob-dial-ins7" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch">
+                    </div>
+                  </div>
+                  <div class="dial_container mb-1 ml-1">
+                    <div id="mob-dial-ch7" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
                     </div>
                   </div>
                 </div>
-              </span>
+            </span>
 
-              <span id="osoInst" class="d-none instMobile">
-                <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal chocolate-animal">
-                  <div class="d-flex flex-column">
-                    <div class="animal-icon">
-                      <object type="image/svg+xml" data="GUI/svg/iconos/oso-w.svg" class="animal-icon">
-                        Oso
-                      </object>
-                    </div>
-                    <div class="title mt-1">Os</div>
-                    <div class="sub_title">Snare</div>
-                  </div>
-                  <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ins2" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch">
-                    </div>
-                  </div>
-                  <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ch2" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
-                    </div>
-                  </div>
-                </div>
-              </span>
-
-              <span id="gatoInst" class="d-none instMobile">
-                <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal gris-animal">
-                  <div class="d-flex flex-column">
-                    <div class="animal-icon">
-                      <object type="image/svg+xml" data="GUI/svg/iconos/gato-w.svg" class="animal-icon">
-                        Gato
-                      </object>
-                    </div>
-                    <div class="title mt-1">Gat</div>
-                    <div class="sub_title">Hi hat</div>
-                  </div>
-                  <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ins3" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch">
-                    </div>
-                  </div>
-                  <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ch3" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
-                    </div>
-                  </div>
-                </div>
-              </span>
-
-              <span id="monoInst" class="d-none instMobile">
-                <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal marron-animal">
-                  <div class="d-flex flex-column">
-                    <div class="animal-icon">
-                      <object type="image/svg+xml" data="GUI/svg/iconos/mono-w.svg" class="animal-icon">
-                        Mono
-                      </object>
-                    </div>
-                    <div class="title mt-1">Mon</div>
-                    <div class="sub_title">Bass</div>
-                  </div>
-                  <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ins4" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch">
-                    </div>
-                  </div>
-                  <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ch4" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
-                    </div>
-                  </div>
-                </div>
-              </span>
-
-              <span id="patoInst" class="d-none instMobile">
-                <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal mostaza-animal">
-                  <div class="d-flex flex-column">
-                    <div class="animal-icon">
-                      <object type="image/svg+xml" data="GUI/svg/iconos/pato-w.svg" class="animal-icon">
-                        Pato
-                      </object>
-                    </div>
-                    <div class="title mt-1">Pat</div>
-                    <div class="sub_title">Clave</div>
-                  </div>
-                  <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ins5" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch">
-                    </div>
-                  </div>
-                  <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ch5" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
-                    </div>
-                  </div>
-                </div>
-              </span>
-
-              <span id="sapoInst" class="d-none instMobile">
-                <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal verde-animal">
-                  <div class="d-flex flex-column">
-                    <div class="animal-icon">
-                      <object type="image/svg+xml" data="GUI/svg/iconos/sapo-w.svg" class="animal-icon">
-                        Sapo
-                      </object>
-                    </div>
-                    <div class="title mt-1">Sap</div>
-                    <div class="sub_title">Ride</div>
-                  </div>
-                  <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ins6" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch">
-                    </div>
-                  </div>
-                  <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ch6" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
-                    </div>
-                  </div>
-                </div>
-              </span>
-
-              <span id="loroInst" class="d-none instMobile">
-                <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal verde-animal">
-                  <div class="d-flex flex-column">
-                    <div class="animal-icon">
-                      <object type="image/svg+xml" data="GUI/svg/iconos/loro-w.svg" class="animal-icon">
-                        Loro
-                      </object>
-                    </div>
-                    <div class="title mt-1">Lor</div>
-                    <div class="sub_title">Sampler</div>
-                  </div>
-                  <div class="d-flex flex-column">
-
-
-                    <div id="loro-rec" class="mb-1 ml-1" data-toggle="tooltip" data-placement="top" title="Rec">
-                      <a href="#" data-toggle="modal" data-target="#lororecModal" role="button"
-                        class="d-flex m-auto p-1 rec-icon-s-b">&nbsp;</a>
-                    </div>
-
-                    <div class="dial_container mb-1 ml-1">
-                      <div id="mob-dial-ins7" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch">
-                      </div>
-                    </div>
-                    <div class="dial_container mb-1 ml-1">
-                      <div id="mob-dial-ch7" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
-                      </div>
-                    </div>
-                  </div>
-              </span>
-          
             <span id="cerdoInst" class="d-block instMobile">
               <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal rosa-animal">
                 <div class="d-flex flex-column">
@@ -1038,7 +1048,8 @@
             <!-- ÍCONOS y DIALES -->
             <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup1">
               <div class="animal-icon">
-                <img id="icono-ch8" src="GUI/img/cerdo.png" class="soloButton img-fluid animal-pointer" data-toggle="tooltip" data-placement="top" title="SOLO">
+                <img id="icono-ch8" src="GUI/img/cerdo.png" class="soloButton img-fluid animal-pointer"
+                  data-toggle="tooltip" data-placement="top" title="SOLO">
               </div>
               <div class="dial_container d-none d-lg-block">
                 <div id="dial-ch8" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
@@ -1046,7 +1057,8 @@
             </div>
             <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup2">
               <div class="animal-icon">
-                <img id="icono-ch7" src="GUI/img/loro.png" class="soloButton img-fluid animal-pointer" data-toggle="tooltip" data-placement="top" title="SOLO">
+                <img id="icono-ch7" src="GUI/img/loro.png" class="soloButton img-fluid animal-pointer"
+                  data-toggle="tooltip" data-placement="top" title="SOLO">
               </div>
               <div class="dial_container d-none d-lg-block">
                 <div id="dial-ch7" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
@@ -1054,7 +1066,8 @@
             </div>
             <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup3">
               <div class="animal-icon">
-                <img id="icono-ch6" src="GUI/img/sapo.png" class="soloButton img-fluid animal-pointer" data-toggle="tooltip" data-placement="top" title="SOLO">
+                <img id="icono-ch6" src="GUI/img/sapo.png" class="soloButton img-fluid animal-pointer"
+                  data-toggle="tooltip" data-placement="top" title="SOLO">
               </div>
               <div class="dial_container d-none d-lg-block">
                 <div id="dial-ch6" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
@@ -1062,15 +1075,17 @@
             </div>
             <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup4">
               <div class="animal-icon">
-                <img id="icono-ch5" src="GUI/img/pato.png" class="soloButton img-fluid animal-pointer" data-toggle="tooltip" data-placement="top" title="SOLO">
-                 </div>
+                <img id="icono-ch5" src="GUI/img/pato.png" class="soloButton img-fluid animal-pointer"
+                  data-toggle="tooltip" data-placement="top" title="SOLO">
+              </div>
               <div class="dial_container d-none d-lg-block">
                 <div id="dial-ch5" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
               </div>
             </div>
             <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup5">
               <div class="animal-icon">
-                <img id="icono-ch4" src="GUI/img/mono.png" class="soloButton img-fluid animal-pointer" data-toggle="tooltip" data-placement="top" title="SOLO">
+                <img id="icono-ch4" src="GUI/img/mono.png" class="soloButton img-fluid animal-pointer"
+                  data-toggle="tooltip" data-placement="top" title="SOLO">
               </div>
               <div class="dial_container d-none d-lg-block">
                 <div id="dial-ch4" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
@@ -1078,7 +1093,8 @@
             </div>
             <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup6">
               <div class="animal-icon">
-                <img id="icono-ch3" src="GUI/img/gato.png" class="soloButton img-fluid animal-pointer" data-toggle="tooltip" data-placement="top" title="SOLO">
+                <img id="icono-ch3" src="GUI/img/gato.png" class="soloButton img-fluid animal-pointer"
+                  data-toggle="tooltip" data-placement="top" title="SOLO">
               </div>
               <div class="dial_container d-none d-lg-block">
                 <div id="dial-ch3" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
@@ -1086,15 +1102,21 @@
             </div>
             <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup7">
               <div class="animal-icon">
-                <img id="icono-ch2" src="GUI/img/oso.png" class="soloButton img-fluid animal-pointer" data-toggle="tooltip" data-placement="top" title="SOLO">
+                <img id="icono-ch2" src="GUI/img/oso.png" class="soloButton img-fluid animal-pointer"
+                  data-toggle="tooltip" data-placement="top" title="SOLO">
               </div>
               <div class="dial_container d-none d-lg-block">
                 <div id="dial-ch2" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
               </div>
             </div>
-         <div id="channelGroup8" class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup help-item" data-toggle="popover" title="CANALES" data-placement="right" data-content="Activa modo SOLO presionando el ícono de animal y ajusta el volumen con la perilla" >
-              <div id="animalChannel1" class="animal-icon help-item" data-toggle="popover" title="CANALES" data-placement="right" data-content="Activa modo SOLO presionando el ícono de animal">
-                <img id="icono-ch1" src="GUI/img/buho.png" class="soloButton img-fluid animal-pointer" data-toggle="tooltip" data-placement="top" title="SOLO">
+            <div id="channelGroup8"
+              class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup help-item"
+              data-toggle="popover" title="CANALES" data-placement="right"
+              data-content="Activa modo SOLO presionando el ícono de animal y ajusta el volumen con la perilla">
+              <div id="animalChannel1" class="animal-icon help-item" data-toggle="popover" title="CANALES"
+                data-placement="right" data-content="Activa modo SOLO presionando el ícono de animal">
+                <img id="icono-ch1" src="GUI/img/buho.png" class="soloButton img-fluid animal-pointer"
+                  data-toggle="tooltip" data-placement="top" title="SOLO">
               </div>
               <div class="dial_container d-none d-lg-block">
                 <div id="dial-ch1" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
@@ -1126,8 +1148,9 @@
 
         <div id="jam-ajustes"
           class="col-xl-1 py-4 px-3 d-flex flex-xl-column justify-content-between fondo-1-animal corners1">
-          <div id="jam-sesion" class="mx-auto d-flex my-auto flex-lg-column help-item" data-toggle="popover" title="JAM SESSION" data-placement="bottom" data-content="Invita más animales a tu sesión">
-        
+          <div id="jam-sesion" class="mx-auto d-flex my-auto flex-lg-column help-item" data-toggle="popover"
+            title="JAM SESSION" data-placement="bottom" data-content="Invita más animales a tu sesión">
+
             <a href="#" id="boton" data-toggle="modal" data-target="#jamModal" role="button"
               class="animal-icon jam-btn text-center">
               Jam
@@ -1141,7 +1164,7 @@
                 <img src="GUI/svg/botones/boton_ayuda.svg" class="animal-icon">
               </a>
             </div>
-            <div id="settings" class="d-none mx-auto align-self-baseline">
+            <div id="settings" class=" mx-auto align-self-baseline">
               <a href="#" id="boton" data-toggle="modal" data-target="#settingsModal" role="button">
                 <img src="GUI/svg/botones/boton_ajustes_w.svg" class="btn-icon">
               </a>
@@ -1184,6 +1207,324 @@
 
   <script> //NET
     $(function () {
+      //WZRecording
+
+      function WzRecorder(config) {
+
+        config = config || {};
+
+        var self = this;
+        var audioInput;
+        var audioNode;
+        var bufferSize = config.bufferSize || 4096;
+        var recordedData = [];
+        var recording = false;
+        var recordingLength = 0;
+        var startDate;
+        var audioCtx;
+
+        this.toggleRecording = function () {
+          recording ? self.stop() : self.start();
+        }
+
+
+        this.start = function () {
+
+          // reset any previous data
+          recordedData = [];
+          recordingLength = 0;
+
+          // webkit audio context shim
+          audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+          if (audioCtx.createJavaScriptNode) {
+            audioNode = audioCtx.createJavaScriptNode(bufferSize, 1, 1);
+          } else if (audioCtx.createScriptProcessor) {
+            audioNode = audioCtx.createScriptProcessor(bufferSize, 1, 1);
+          } else {
+            throw 'WebAudio not supported!';
+          }
+
+          audioNode.connect(audioCtx.destination);
+
+          navigator.mediaDevices.getUserMedia({ audio: true })
+            .then(onMicrophoneCaptured)
+            .catch(onMicrophoneError);
+        };
+
+        this.stop = function () {
+          stopRecording(function (blob) {
+            self.blob = blob;
+            config.onRecordingStop && config.onRecordingStop(blob);
+          });
+        };
+
+        this.upload = function (url, params, callback) {
+          var formData = new FormData();
+          formData.append("audio", self.blob, config.filename || 'recording.wav');
+
+          for (var i in params)
+            formData.append(i, params[i]);
+
+          var request = new XMLHttpRequest();
+          request.upload.addEventListener("progress", function (e) {
+            callback('progress', e, request);
+          });
+          request.upload.addEventListener("load", function (e) {
+            callback('load', e, request);
+          });
+
+          request.onreadystatechange = function (e) {
+            var status = 'loading';
+            if (request.readyState == 4) {
+              status = request.status == 200 ? 'done' : 'error';
+            }
+            callback(status, e, request);
+          };
+
+          request.open("POST", url);
+          request.send(formData);
+        };
+
+
+        function stopRecording(callback) {
+          // stop recording
+          recording = false;
+
+          // to make sure onaudioprocess stops firing
+          window.localStream.getTracks().forEach((track) => { track.stop(); });
+          audioInput.disconnect();
+          audioNode.disconnect();
+
+          exportWav({
+            sampleRate: sampleRate,
+            recordingLength: recordingLength,
+            data: recordedData
+          }, function (buffer, view) {
+            self.blob = new Blob([view], { type: 'audio/wav' });
+            callback && callback(self.blob);
+          });
+        }
+
+
+        function onMicrophoneCaptured(microphone) {
+
+          if (config.visualizer)
+            visualize(microphone);
+
+          // save the stream so we can disconnect it when we're done
+          window.localStream = microphone;
+
+          audioInput = audioCtx.createMediaStreamSource(microphone);
+          audioInput.connect(audioNode);
+
+          audioNode.onaudioprocess = onAudioProcess;
+
+          recording = true;
+          self.startDate = new Date();
+
+          config.onRecordingStart && config.onRecordingStart();
+          sampleRate = audioCtx.sampleRate;
+        }
+
+        function onMicrophoneError(e) {
+          console.log(e);
+          alert('Unable to access the microphone.');
+        }
+
+        function onAudioProcess(e) {
+          if (!recording) {
+            return;
+          }
+
+          recordedData.push(new Float32Array(e.inputBuffer.getChannelData(0)));
+          recordingLength += bufferSize;
+
+          self.recordingLength = recordingLength;
+          self.duration = new Date().getTime() - self.startDate.getTime();
+
+          config.onRecording && config.onRecording(self.duration);
+        }
+
+
+        function visualize(stream) {
+          var canvas = config.visualizer.element;
+          if (!canvas)
+            return;
+
+          var canvasCtx = canvas.getContext("2d");
+          var source = audioCtx.createMediaStreamSource(stream);
+
+          var analyser = audioCtx.createAnalyser();
+          analyser.fftSize = 2048;
+          var bufferLength = analyser.frequencyBinCount;
+          var dataArray = new Uint8Array(bufferLength);
+
+          source.connect(analyser);
+
+          function draw() {
+            // get the canvas dimensions
+            var width = canvas.width, height = canvas.height;
+
+            // ask the browser to schedule a redraw before the next repaint
+            requestAnimationFrame(draw);
+
+            // clear the canvas
+            canvasCtx.fillStyle = config.visualizer.backcolor || '#fff';
+            canvasCtx.fillRect(0, 0, width, height);
+
+            if (!recording)
+              return;
+
+            canvasCtx.lineWidth = config.visualizer.linewidth || 2;
+            canvasCtx.strokeStyle = config.visualizer.forecolor || '#f00';
+
+            canvasCtx.beginPath();
+
+            var sliceWidth = width * 1.0 / bufferLength;
+            var x = 0;
+
+
+            analyser.getByteTimeDomainData(dataArray);
+
+            for (var i = 0; i < bufferLength; i++) {
+
+              var v = dataArray[i] / 128.0;
+              var y = v * height / 2;
+
+              i == 0 ? canvasCtx.moveTo(x, y) : canvasCtx.lineTo(x, y);
+              x += sliceWidth;
+            }
+
+            canvasCtx.lineTo(canvas.width, canvas.height / 2);
+            canvasCtx.stroke();
+          }
+
+          draw();
+        }
+
+        function exportWav(config, callback) {
+          function inlineWebWorker(config, cb) {
+
+            var data = config.data.slice(0);
+            var sampleRate = config.sampleRate;
+            data = joinBuffers(data, config.recordingLength);
+
+            function joinBuffers(channelBuffer, count) {
+              var result = new Float64Array(count);
+              var offset = 0;
+              var lng = channelBuffer.length;
+
+              for (var i = 0; i < lng; i++) {
+                var buffer = channelBuffer[i];
+                result.set(buffer, offset);
+                offset += buffer.length;
+              }
+
+              return result;
+            }
+
+            function writeUTFBytes(view, offset, string) {
+              var lng = string.length;
+              for (var i = 0; i < lng; i++) {
+                view.setUint8(offset + i, string.charCodeAt(i));
+              }
+            }
+
+            var dataLength = data.length;
+
+            // create wav file
+            var buffer = new ArrayBuffer(44 + dataLength * 2);
+            var view = new DataView(buffer);
+
+            writeUTFBytes(view, 0, 'RIFF'); // RIFF chunk descriptor/identifier
+            view.setUint32(4, 44 + dataLength * 2, true); // RIFF chunk length
+            writeUTFBytes(view, 8, 'WAVE'); // RIFF type
+            writeUTFBytes(view, 12, 'fmt '); // format chunk identifier, FMT sub-chunk
+            view.setUint32(16, 16, true); // format chunk length
+            view.setUint16(20, 1, true); // sample format (raw)
+            view.setUint16(22, 1, true); // mono (1 channel)
+            view.setUint32(24, sampleRate, true); // sample rate
+            view.setUint32(28, sampleRate * 2, true); // byte rate (sample rate * block align)
+            view.setUint16(32, 2, true); // block align (channel count * bytes per sample)
+            view.setUint16(34, 16, true); // bits per sample
+            writeUTFBytes(view, 36, 'data'); // data sub-chunk identifier
+            view.setUint32(40, dataLength * 2, true); // data chunk length
+
+            // write the PCM samples
+            var index = 44;
+            for (var i = 0; i < dataLength; i++) {
+              view.setInt16(index, data[i] * 0x7FFF, true);
+              index += 2;
+            }
+
+            if (cb) {
+              return cb({
+                buffer: buffer,
+                view: view
+              });
+            }
+
+            postMessage({
+              buffer: buffer,
+              view: view
+            });
+          }
+
+          var webWorker = processInWebWorker(inlineWebWorker);
+
+          webWorker.onmessage = function (event) {
+            callback(event.data.buffer, event.data.view);
+
+            // release memory
+            URL.revokeObjectURL(webWorker.workerURL);
+          };
+
+          webWorker.postMessage(config);
+        }
+
+        function processInWebWorker(_function) {
+          var workerURL = URL.createObjectURL(new Blob([_function.toString(),
+          ';this.onmessage = function (e) {' + _function.name + '(e.data);}'
+          ], {
+            type: 'application/javascript'
+          }));
+
+          var worker = new Worker(workerURL);
+          worker.workerURL = workerURL;
+          return worker;
+        }
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1260,24 +1601,21 @@
 
       // TONEJS
       var myShifter1, myShifter2, myShifter3, myShifter4, myShifter5, myShifter6, myShifter7, myShifter8;
-      var sonidos = new Tone.Players({
-        "Cerdo": "/audios/kit-amazonia/8-cerdo-animalia.wav",//"/audios/kit-002/inicial_008_open hihat_cerdo.wav",//"/audios/kit-001/hd_008_cerdo.wav",
-        "Loro": "/audios/kit-amazonia/7-loro-animalia.wav",//"/audios/kit-002/inicial_007_loro_triangulo.wav",//"/audios/kit-001/hd_007_loro.wav",
-        "Sapo": "/audios/kit-amazonia/6-sapo-animalia.wav",//"/audios/kit-002/inicial_005_clave_sapo.wav",
-        "Pato": "/audios/kit-amazonia/5-pato-animalia.wav",//"/audios/kit-002/inicial_006_ride_pato.wav",//"/audios/kit-001/hd_006_pato.wav",
-        "Mono": "/audios/kit-amazonia/4-mono-animalia.wav",//"/audios/kit-002/inicial_003_bass_mono.wav",//"/audios/kit-001/hd_005_sapo.wav",        
-        "Gato": "/audios/kit-amazonia/3-gato-animalia.wav",//"/audios/kit-002/inicial_004_hihat_gato.wav",// "/audios/kit-001/hd_004_gato.wav",             
-        /*"/audios/kit-001/hd_003_mono.wav", */
-        "Oso": "/audios/kit-amazonia/2-oso-animalia.wav",//"/audios/kit-002/inicial_002_sd_oso.wav", /* "/audios/kit-001/hd_002_oso.wav",*/
-        "Buho": "/audios/kit-amazonia/1-buho-animalia.wav"//"/audios/kit-002/inicial_001_bd_buho.wav" /* "/audios/kit-001/hd_001_buho.wav" */
+      var sonidos;
+      var kitAnimalia = [];
+      kitAnimalia.push(new Tone.Player({  "url" : "/audios/kit-amazonia/8-cerdo-animalia.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitAnimalia.push(new Tone.Player({ "url" :"/audios/kit-amazonia/7-loro-animalia.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitAnimalia.push(new Tone.Player({ "url" : "/audios/kit-amazonia/6-sapo-animalia.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitAnimalia.push(new Tone.Player({ "url" : "/audios/kit-amazonia/5-pato-animalia.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitAnimalia.push(new Tone.Player({"url" : "/audios/kit-amazonia/4-mono-animalia.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitAnimalia.push(new Tone.Player({ "url" : "/audios/kit-amazonia/3-gato-animalia.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitAnimalia.push(new Tone.Player({"url" : "/audios/kit-amazonia/2-oso-animalia.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitAnimalia.push(new Tone.Player({"url" : "/audios/kit-amazonia/1-buho-animalia.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
 
 
-      }, {
-        "volume": -1,
-        "fadeOut": "16n",
-      }).toMaster();
-
-      var myShifter = [myShifter1, myShifter2, myShifter3, myShifter4, myShifter5, myShifter6, myShifter7, myShifter8];
+      //var kit
+      sonidos = kitAnimalia;
+      //   var myShifter = [myShifter1, myShifter2, myShifter3, myShifter4, myShifter5, myShifter6, myShifter7, myShifter8];
       //the notes
       var scaleNotes = ["Cerdo", "Loro", "Pato", "Sapo", "Gato", "Mono", "Oso", "Buho"];
 
@@ -1406,8 +1744,8 @@
       });
 
       function setMyChannel() {
-        $(".channelGroup").addClass("opacity-2");
-        $(".channelGroup").addClass("ajeno");
+        // $(".channelGroup").addClass("opacity-2");
+        //   $(".channelGroup").addClass("ajeno");
         $(".disabled-overlay").addClass("d-block");
 
         if (myChannel.length > 0) {
@@ -1443,7 +1781,7 @@
 
 
         $(".ajeno").click(function (e) {
-          e.preventDefault();
+          //   e.preventDefault();
           //console.log("entró a prevent");
         });
 
@@ -1578,7 +1916,7 @@
         }
         sonidos.get(scaleNotes[(7 - myAnimalNumber)]).mute = false;
         //console.log(scaleNotes[(7 - myAnimalNumber)]);
-  
+   
       } else {
         $(this).removeClass("activado");
         for (i = 0; i < 8; i++) {
@@ -1590,8 +1928,8 @@
         }
         
     }
-  
-  
+   
+   
     });*/
 
       //copy link
@@ -1617,17 +1955,12 @@
         ////console.log(v);
       });
 
-
-      ////GRABAR
+      /////REC and SAVE MUSIC
       var isRecording;
       const actx = Tone.context;
       const dest = actx.createMediaStreamDestination();
       let recorder = null;
       var chunks = [];
-
-
-
-
 
       $("#rec-btn").click(function () {
 
@@ -1661,12 +1994,12 @@
             a.target = "_blank"
             a.click();
             $(this).toggleClass('rec-btn-activo');
+            isRecording = false;
           };
         }
 
       });
-      ///GUARDA GRABACION
-
+      ///fin REC AND SAVE MUSIC
       $("#Animal_logo").click(function () { //inicia el sequencer
         playSequencer();
       });
@@ -1680,7 +2013,11 @@
             for (var i = 7; i >= 0; i--) {
 
               if (matrix[i][stepNumber] && (miSolo == -1 || miSolo == i)) {
-                sonidos.get(scaleNotes[i]).start(time, 0, "16n", 0, 1);
+                if (i != 1){
+                sonidos[i].start(time, 0, "16n", 0, 1);
+                }else {
+                  sonidos[i].start();
+                }
 
               }
 
@@ -1803,9 +2140,44 @@
         }
       });
 
+      $("#settings").click(function () {
+        Tone.Transport.stop();
+      })
+
+      // REC LORO
+      var loroAudio;
+      var myUrl;
+
+
+      var loroRecorder = new WzRecorder({
+        onRecordingStop: function (blob) {
+          myUrl = URL.createObjectURL(blob);
+          loroAudio = new Tone.Player({"url": myUrl, "volume": -1, "fadeOut": "16n" }).toMaster();
+        },
+        onRecording: function (milliseconds) {
+          document.getElementById('duration').innerText = milliseconds + 'ms';
+          if (milliseconds > 3000) {
+            loroRecorder.stop();
+          }
+        }
+      });
+      $("#loro-rec-preview").click(function () {
+        loroAudio.start();
+      });
+      $("#ok-rec-loro").click(function () {
+
+        //  sonidos.get(scaleNotes[1]).load(myUrl, function(){
+        //   $(".class").trigger('click');
+        // });
+        sonidos[1] = loroAudio;
+       // sonidos.get(scaleNotes[1]) = loroAudio;
+
+      });
+      // wire up the microphone button to toggle recording
+      document.getElementById('loro-rec-button').onclick = loroRecorder.toggleRecording;
+
 
     });
-
   </script>
 
   <script>
@@ -1828,39 +2200,38 @@
 
   </script>
 
-<script type="text/javascript">
-  $(document).ready(function () {
-    $('#playModal').modal('show');
-    $('[data-toggle="tooltip"]').tooltip();
-    $('[data-toggle="popover"]').popover()
-  });
-    
-  $('#help-btn').on('click', function() {    
-      $('#instrumentos').popover('toggle');   
-      $('#sel-ins-help').popover('toggle');   
-      $('#chat-help').popover('toggle');   
-      $('#jam-sesion').popover('toggle');  
-      $('#channelGroup8').popover('toggle');   
-      $('#animalChannel1').popover('toggle');
-      
-    $('.popover:eq(0)').addClass('instrumentos-help-item');
-    $('.popover:eq(1)').addClass('sel-ins-help-item');
-    $('.popover:eq(2)').addClass('chat-help-item');
-    $('.popover:eq(3)').addClass('jam-sesion-help-item');
-    $('.popover:eq(4)').addClass('canal-help-item');
-    $('.popover:eq(5)').addClass('solo-help-item');
-      
-  });
-    
-  $(document).on('click', function(e) {
-    var container = $("#help-btn");
-    if (!$(e.target).closest(container).length) {    
-          $('.help-item').popover('dispose'); 
-    }
-  });
-    
-</script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('#playModal').modal('show');
+      $('[data-toggle="tooltip"]').tooltip();
+      $('[data-toggle="popover"]').popover()
+    });
 
+    $('#help-btn').on('click', function () {
+      $('#instrumentos').popover('toggle');
+      $('#sel-ins-help').popover('toggle');
+      $('#chat-help').popover('toggle');
+      $('#jam-sesion').popover('toggle');
+      $('#channelGroup8').popover('toggle');
+      $('#animalChannel1').popover('toggle');
+
+      $('.popover:eq(0)').addClass('instrumentos-help-item');
+      $('.popover:eq(1)').addClass('sel-ins-help-item');
+      $('.popover:eq(2)').addClass('chat-help-item');
+      $('.popover:eq(3)').addClass('jam-sesion-help-item');
+      $('.popover:eq(4)').addClass('canal-help-item');
+      $('.popover:eq(5)').addClass('solo-help-item');
+
+    });
+
+    $(document).on('click', function (e) {
+      var container = $("#help-btn");
+      if (!$(e.target).closest(container).length) {
+        $('.help-item').popover('dispose');
+      }
+    });
+
+  </script>
 
 </body>
 
