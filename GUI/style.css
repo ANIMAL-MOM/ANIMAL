@@ -484,7 +484,7 @@ h3 {
 
   }
   #rec-btn:hover, #mute-btn:hover, #increment-swing-btn:hover, #increment-bpm-btn:hover, #decrement-swing-btn:hover, #decrement-bpm-btn:hover{
-    background-color:var(--color-figura-1-animal);
+    background-color:var(--color-figura-1-animal)!important;
   }
   #decrement-bpm-btn {
     border-top-left-radius: 15px;
@@ -568,6 +568,7 @@ h3 {
     height: 36px;
     border-radius: 50px;
     background-color: var(--color-blanco-ui-animal);
+    background-image:url('/GUI/img/audio_trans.png');
   }
   .icon-container-s, .audio-preview-container-s {
     width: 36px;
@@ -702,7 +703,7 @@ h3 {
     background-color: var(--color-fondo-1-animal);
   }
 
-.instrumentos-help-item, .sel-ins-help-item, .chat-help-item, .jam-sesion-help-item, .canal-help-item, .play-start-item {
+.instrumentos-help-item, .sel-ins-help-item, .chat-help-item, .jam-sesion-help-item, .canal-help-item, .solo-help-item, .play-start-item {
     border: none;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
