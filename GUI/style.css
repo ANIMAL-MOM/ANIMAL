@@ -25,7 +25,19 @@
   /* ---------------------------------------------- */
   /* Color & opacity */
 
-  
+  .instrumentos-help-item, .sel-ins-help-item, .chat-help-item, .jam-sesion-help-item, .canal-help-item, .solo-help-item {
+    background-color: red;
+}
+
+.kit-preview:hover {
+    filter:invert(0)!important;
+    background-color: var(--color-verde-ui-animal);
+  }
+
+ #audiopre-kit1:hover, .instrument-preview:hover {
+    filter:invert(0)!important;
+    background-color: var(--color-verde-ui-animal);
+  }
 
 
   .verde-animal {
@@ -122,7 +134,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  font-weight: 200;
+  font-weight: 400;
   color: var(--color-chocolate-animal);
 }
 html {
@@ -136,9 +148,34 @@ html {
   }
 }
 
+
+strong {
+    font-weight: inherit;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 200;
+  line-height: 1.5rem;
+    
+}
+
+h3 {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+#phrase h3{
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+}
+
+
 .title{
   font-size: 2.2rem;
-  font-weight: 800;
+  font-weight: 900;
   text-transform: uppercase;
   line-height: 1.5rem;
 }
@@ -153,28 +190,9 @@ html {
   font-size: 1.125rem;
 }
 
-h1 {
-  font-size: 1.5rem;
-  font-weight: 200;
-  line-height: 1.5rem;
-    
-}
-
-h3 {
-  font-size: 1.125rem;
-  font-weight: 200;
-  line-height: 1.5rem;
-}
-
-#phrase h3{
-  font-size: 2rem;
-  font-weight: 200;
-  line-height: 2.5rem;
-}
-
 .texto-chico{
   font-size: 0.85rem;
-  font-weight: 200;
+  font-weight: 400;
   line-height: 1rem;
 }
 
@@ -478,7 +496,7 @@ h3 {
 
   }
   #rec-btn:hover, #mute-btn:hover, #increment-swing-btn:hover, #increment-bpm-btn:hover, #decrement-swing-btn:hover, #decrement-bpm-btn:hover{
-    background-color:var(--color-figura-1-animal);
+    background-color:var(--color-figura-1-animal)!important;
   }
   #decrement-bpm-btn {
     border-top-left-radius: 15px;
@@ -530,7 +548,7 @@ h3 {
   }
 
 
-  #audiopre-kit1:hover, .instrument-preview:hover {
+  #audiopre-kit1:hover {
     filter:invert(0)!important;
     background-color: var(--color-verde-ui-animal);
   }
@@ -548,18 +566,21 @@ h3 {
     height: 44px;
     border-radius: 50%;
     background-color: var(--color-blanco-ui-animal);
+      border: none;
   }
   .animal-icon-s{
     width: 30px;
     height: 30px;
     border-radius: 50%;
     background-color: var(--color-blanco-ui-animal);
+      border: none;
   }
   .audio-preview-s {
     width: 36px;
     height: 36px;
     border-radius: 50px;
     background-color: var(--color-blanco-ui-animal);
+    background-image:url('/GUI/img/audio_trans.png');
   }
   .icon-container-s, .audio-preview-container-s {
     width: 36px;
@@ -573,10 +594,6 @@ h3 {
     border-color: var(--color-naranja-ui-animal);
   }
   #audio-preview:hover {
-    filter:invert(0)!important;
-    background-color: var(--color-verde-ui-animal);
-  }
-  .kit-preview:hover {
     filter:invert(0)!important;
     background-color: var(--color-verde-ui-animal);
   }
@@ -671,7 +688,7 @@ h3 {
 
 
   /* --------------------------------------------- */
-  /* Windows */
+  /* Windows como popovers y modals */
 
 
 .modal-content {
@@ -698,6 +715,53 @@ h3 {
     background-color: var(--color-fondo-1-animal);
   }
 
+.instrumentos-help-item, .sel-ins-help-item, .chat-help-item, .jam-sesion-help-item, .canal-help-item, .solo-help-item, .play-start-item {
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.popover{
+    padding: 5px;
+    font-family: 'Poppins', sans-serif !important;
+    max-width:175px;
+}
+.popover-header{
+    background-color: transparent;
+    border: none;
+    font-size: 1.125rem;
+    font-weight: 200;
+    padding-bottom: 0;
+    padding-top: 10px;
+}
+
+
+.play-start-item .popover-body{
+    color: var(--color-blanco-ui-animal);
+    background-color: var(--color-rojo-ui-animal);
+    border-radius: 0 0 10px 10px;
+}
+.play-start-item .popover-header{
+    color: var(--color-blanco-ui-animal);
+    background-color: var(--color-rojo-ui-animal);
+    border-radius: 10px 10px 0 0;
+}
+.jam-sesion-help-item .popover-body{
+    color: var(--color-blanco-ui-animal);
+    background-color: var(--color-verde-ui-animal);
+    border-radius: 0 0 10px 10px;
+}
+.jam-sesion-help-item .popover-header{
+    color: var(--color-blanco-ui-animal);
+    background-color: var(--color-verde-ui-animal);
+    border-radius: 10px 10px 0 0;
+}
+
+.instrumentos-help-item, .canal-help-item {
+  display:none;
+}
+.sel-ins-help-item, .solo-help-item {
+  display:block;
+}
 
   /* --------------------------------------------- */
   /* Animation & transitions */
@@ -758,7 +822,7 @@ h3 {
     clear: left;
 }
 
-.interloc-B {
+.interloc-B, .interloc-O, .interloc-P, .interloc-G, .interloc-M, .interloc-S, .interloc-L, .interloc-C {
     margin-right: 2px;
     font-weight: 600;
     float: left;
@@ -768,101 +832,31 @@ h3 {
     height: 20px;
     display: block;
     text-align: center;
-    color: var(--color-blanco-ui-animal);
+    color: var(--color-blanco-ui-animal);    
+}
+
+.interloc-B {
     background-color: var(--color-gris-animal);
 }
 .interloc-O {
-    margin-right: 2px;
-    font-weight: 600;
-    float: left;
-    border-radius: 50%;
-    float:left;
-    padding: 3px;
-    width: 20px;
-    height: 20px;
-    display: block;
-    text-align: center;
-    color: var(--color-blanco-ui-animal);
     background-color: var(--color-chocolate-animal);
 }
-
 .interloc-P {
-  margin-right: 2px;
-  font-weight: 600;
-  float: left;
-  border-radius: 50%;
-  padding: 3px;
-  width: 20px;
-  height: 20px;
-  display: block;
-  text-align: center;
-  color: var(--color-blanco-ui-animal);
-  background-color: var(--color-mostaza-animal);
+    background-color: var(--color-mostaza-animal);
 }
-
 .interloc-G {
-    margin-right: 2px;
-    font-weight: 600;
-    float: left;
-    border-radius: 50%;
-    padding: 3px;
-    width: 20px;
-    height: 20px;
-    display: block;
-    text-align: center;
-    color: var(--color-blanco-ui-animal);
     background-color: var(--color-gris-animal);
 }
 .interloc-M {
-    margin-right: 2px;
-    font-weight: 600;
-    float: left;
-    border-radius: 50%;
-    padding: 3px;
-    width: 20px;
-    height: 20px;
-    display: block;
-    text-align: center;
-    color: var(--color-blanco-ui-animal);
     background-color: var(--color-marron-animal);
 }
 .interloc-S {
-    margin-right: 2px;
-    font-weight: 600;
-    float: left;
-    border-radius: 50%;
-    padding: 3px;
-    width: 20px;
-    height: 20px;
-    display: block;
-    text-align: center;
-    color: var(--color-blanco-ui-animal);
     background-color: var(--color-verde-animal);
 }
 .interloc-L {
-    margin-right: 2px;
-    font-weight: 600;
-    float: left;
-    border-radius: 50%;
-    padding: 3px;
-    width: 20px;
-    height: 20px;
-    display: block;
-    text-align: center;
-    color: var(--color-blanco-ui-animal);
     background-color: var(--color-verde-animal);
 }
 .interloc-C {
-    margin-right: 2px;
-    font-weight: 600;
-    float: left;
-    border-radius: 50%;
-    padding: 3px;
-    width: 20px;
-    height: 20px;
-    display: block;
-    text-align: center;
-    color: var(--color-blanco-ui-animal);
     background-color: var(--color-rosa-animal);
 }
 
@@ -876,21 +870,7 @@ h3 {
   #alerta{
     height:100vh;
   }
-/*
-  @media (max-device-width: 480px)
-    and (orientation: portrait) {
-      #alerta{
-        display:block;
-      }
-  }
-  @media (max-device-width: 480px)
-    and (orientation: landscape) {
-      #alerta{
-        display:none;
-      }
-  }
 
-*/
 
   /* Small devices (landscape phones, 576px and up) */
 
@@ -970,7 +950,13 @@ h3 {
       height: 100%;
     }
       
-    
+    .instrumentos-help-item, .canal-help-item {
+      display:block;
+    }
+    .sel-ins-help-item, .solo-help-item {
+      display:none;
+    }
+      
   }
 
   /* Extra large devices (large desktops, 1200px and up) */

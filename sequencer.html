@@ -827,8 +827,8 @@
                     <span class="m-auto text-center">Rec</span>
                   </div>
                   <div id="mute-btn" class="col-lg-6 d-flex my-0 figura-1-animal mute-btn animal-pointer"
-                    data-toggle="popover" title="Popover title" data-placement="bottom"
-                    data-content="And here's some amazing content. It's very engaging. Right?">
+                    data-toggle="popover" title="PLAY/STOP" data-placement="bottom"
+                    data-content="Comienza tu sesión presionando este botón.">
 
                     <span class="m-auto text-center"></span>
                   </div>
@@ -839,7 +839,7 @@
 
 
             <!-- INSTRUMENTO SELECCIONADO (#sel-inst) -->
-            <span id="sel-ins-help" class="help-item" data-toggle="popover" title="INSTRUMENTOS" data-placement="bottom"
+            <span id="sel-inst-help" class="help-item" data-toggle="popover" title="INSTRUMENTOS" data-placement="bottom"
               data-content="Modifica el sonido y el volumen girando las perillas">
 
               <div id="sel-inst"
@@ -1191,7 +1191,18 @@
 
 
 
-
+<!-- FOOTER -->
+<div id="footer" class="container-fluid py-5 bg-white">
+  <div class="row py-md-5">
+    <div class="col-7 col-sm-4 col-lg-3 mx-auto mr-sm-0 my-0 px-5 pb-3">
+      <img src="GUI/img/landing/Animal-MoM-logo.png" class="img-fluid">
+    </div>
+    <div class="col-7 col-sm-4 col-lg-3 mx-auto ml-sm-0 mb-5 px-5 pb-3">
+      <img src="GUI/img/landing/ANII-logo.png" class="img-fluid">
+    </div>
+  </div>
+</div>
+<!-- footer end -->
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -2085,38 +2096,48 @@
 
   </script>
 
-  <script type="text/javascript">
-    $(document).ready(function () {
-      $('#playModal').modal('show');
-      $('[data-toggle="tooltip"]').tooltip();
-      $('[data-toggle="popover"]').popover()
-    });
 
-    $('#help-btn').on('click', function () {
-      $('#instrumentos').popover('toggle');
-      $('#sel-ins-help').popover('toggle');
-      $('#chat-help').popover('toggle');
-      $('#jam-sesion').popover('toggle');
-      $('#channelGroup8').popover('toggle');
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+    $('[data-toggle="popover"]').popover();
+      
+        
+    $('#mute-btn').popover('show');   
+    $('.popover:eq(0)').addClass('play-start-item corners-2');
+  });
+    
+    
+    
+  $('#help-btn').on('click', function() { 
+      $('#mute-btn').popover('dispose');    
+      $('#instrumentos').popover('toggle');   
+      $('#sel-inst-help').popover('toggle');   
+      $('#chat-help').popover('toggle');   
+      $('#jam-sesion').popover('toggle');  
+      $('#channelGroup8').popover('toggle');   
       $('#animalChannel1').popover('toggle');
-
-      $('.popover:eq(0)').addClass('instrumentos-help-item');
-      $('.popover:eq(1)').addClass('sel-ins-help-item');
-      $('.popover:eq(2)').addClass('chat-help-item');
-      $('.popover:eq(3)').addClass('jam-sesion-help-item');
-      $('.popover:eq(4)').addClass('canal-help-item');
-      $('.popover:eq(5)').addClass('solo-help-item');
-
-    });
-
-    $(document).on('click', function (e) {
-      var container = $("#help-btn");
-      if (!$(e.target).closest(container).length) {
-        $('.help-item').popover('dispose');
-      }
-    });
-
-  </script>
+      
+    
+    $('.popover:eq(0)').addClass('instrumentos-help-item corners-2');
+    $('.popover:eq(1)').addClass('sel-ins-help-item corners-2');
+    $('.popover:eq(2)').addClass('chat-help-item corners-2');
+    $('.popover:eq(3)').addClass('jam-sesion-help-item corners-2');
+    $('.popover:eq(4)').addClass('canal-help-item corners-2');
+    $('.popover:eq(5)').addClass('solo-help-item corners-2'); 
+    
+      
+  });
+    
+  $(document).on('click', function(e) {
+    var pvr = $("#help-btn");
+    if (!$(e.target).closest(pvr).length) {    
+          $('.help-item').popover('dispose');    
+          $('.start-item').popover('dispose'); 
+    }
+  });
+    
+</script>
 
 </body>
 
