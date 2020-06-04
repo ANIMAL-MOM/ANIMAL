@@ -25,9 +25,7 @@
   /* ---------------------------------------------- */
   /* Color & opacity */
 
-  .instrumentos-help-item, .sel-ins-help-item, .chat-help-item, .jam-sesion-help-item, .canal-help-item, .solo-help-item {
-    background-color: red;
-}
+
 
 .kit-preview:hover {
     filter:invert(0)!important;
