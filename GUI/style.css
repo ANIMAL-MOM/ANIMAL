@@ -530,7 +530,7 @@ h3 {
   }
 
 
-  #audiopre-kit1:hover {
+  #audiopre-kit1:hover, .instrument-preview:hover {
     filter:invert(0)!important;
     background-color: var(--color-verde-ui-animal);
   }
@@ -573,6 +573,10 @@ h3 {
     border-color: var(--color-naranja-ui-animal);
   }
   #audio-preview:hover {
+    filter:invert(0)!important;
+    background-color: var(--color-verde-ui-animal);
+  }
+  .kit-preview:hover {
     filter:invert(0)!important;
     background-color: var(--color-verde-ui-animal);
   }
