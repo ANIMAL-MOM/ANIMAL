@@ -766,7 +766,7 @@
       <div id="izq" class="col-12 col-lg-3 col-xl-2 d-flex flex-column flex-lg-row">
         <div class="row pr-lg-1 d-flex h-100">
           <!-- CHAT -->
-          <div id="chat-animal" class="col-5 col-lg-12 p-0 d-flex">
+          <div id="chat-animal" class="col-5 col-lg-12 p-0 d-flex" style="display: none !important;">
 
             <div id="chat-help" class="pt-4 pb-2 px-2 corners1 figura-1-animal help-item" data-toggle="popover"
               title="CHAT" data-placement="bottom" data-content="Coordina tus accions con otros animales">
@@ -1476,14 +1476,16 @@
         $(".disabled-overlay").addClass("d-none");
         myChannel = [1, 2, 3, 4, 5, 6, 7, 8];
         sequencer.matrix.set.all(seqInicial);
-        $("#chat-animal").attr("style", "display: none !important");
+      //  $("#chat-animal").attr("style", "display: none !important");
 
       });
 
 
       socket.on('guest', function (pattern, michannel, unbpm, unkitnum) {
-        myKitNum = unkitnum;
-        sonidos = misKits[myKitNum];
+        myKitNum = unkitnum-1;        
+        sonidos = misKits[myKitNum-1];
+        
+        console.log("guest entered room kit" + myKitNum);
         $("#jam-sesion").addClass("opacity-3");
         $("#jam-sesion").addClass("ajeno");
         $("#settings").addClass("ajeno");
@@ -1499,6 +1501,7 @@
         $("#decrement-bpm-btn").addClass("ajeno");
         $("#increment-bpm-btn").addClass("opacity-3");
         $("#increment-bpm-btn").addClass("ajeno");
+        $("#chat-animal").attr("style", "");
       });
 
       socket.on('chat message', function (msg) {
@@ -1564,6 +1567,7 @@
 
 
           socket.emit('roomOpened', myChannel, myKitNum);
+          console.log("emit open room kit" + myKitNum);
 
           $("#chat-animal").attr("style", "display");
          
@@ -1841,7 +1845,7 @@
             var url = URL.createObjectURL(blob);
             var a = document.createElement('a');
             a.href = url;
-            a.download = 'ANIMAL Recording.ogg';
+            a.download = 'sesion ANIMAL.ogg';
             a.target = "_blank"
             a.click();
             $(this).toggleClass('rec-btn-activo');
@@ -2032,7 +2036,9 @@
       document.getElementById('loro-rec-button').onmousedown = loroRecorder.toggleRecording;
       document.getElementById('loro-rec-button').onmouseup = loroRecorder.stop;
       $("#loro-rec").click(function () {
-        Tone.Transport.stop();
+        if (Tone.Transport.state == "started") {
+          $("#mute-btn").trigger("click");
+        }
       });
 
 
@@ -2052,13 +2058,16 @@
       //kits
 
       socket.on('changeKit', function (unkit) {
-        myKitNum = unkit;
-      })
+        myKitNum = unkit;        
+        sonidos = misKits[myKitNum];
+        console.log("kit " + unkit)
+      });
+
       $(".kits").click(function () {
         var myKitNumtemp = this.id;
         myKitNumtemp = myKitNumtemp.split("kit")[1];
-        sonidos = misKits[myKitNumtemp-1];
-        myKitNum = myKitNumtemp;
+        myKitNum = myKitNumtemp-1;
+        sonidos = misKits[myKitNum];
         socket.emit("changeKit", myKitNum);
         //kits miKitNum;
       });
