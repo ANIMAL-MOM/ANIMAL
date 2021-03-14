@@ -2106,13 +2106,19 @@
   </script>
 
 
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#playModal').modal('show');
+      });
+    </script>
+
 <script type="text/javascript">
   $(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip();
     $('[data-toggle="popover"]').popover();
 
 
-    //$('#mute-btn').popover('show');   
+    $('#mute-btn').popover('show');
     $('.popover:eq(0)').addClass('play-start-item corners-2');
   });
 
