@@ -596,6 +596,9 @@ h3 {
     filter:invert(0)!important;
     background-color: var(--color-verde-ui-animal);
   }
+  #loro-rec {
+    display: none;
+  }
 .rec-icon-s-b{
     text-decoration: none;
     width: 30px;
