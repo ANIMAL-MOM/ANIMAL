@@ -2070,6 +2070,7 @@
         //kits miKitNum;
       });
 
+      
       $(".kit-preview").click(function () {
         var myKitNumpre = this.id;
         myKitNumpre = myKitNumpre.split("kit-preview")[1];
@@ -2122,7 +2123,7 @@
 
 
   $('#help-btn').on('click', function() {
-      $('#mute-btn').popover('dispose');
+      $('#mute-btn').popover('toggle');
       $('#instrumentos').popover('toggle');
       $('#sel-inst-help').popover('toggle');
       $('#chat-help').popover('toggle');
