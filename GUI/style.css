@@ -557,6 +557,9 @@ h3 {
     background-color: var(--color-blanco-ui-animal);
       border: none;
   }
+  #help-btn .animal-icon {
+    padding-top:12px;
+  }
   .animal-icon-s{
     width: 30px;
     height: 30px;
