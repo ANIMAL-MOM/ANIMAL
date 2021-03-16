@@ -1905,6 +1905,8 @@
           var oldText = $("#mute-btn").find("span").text();
           var newText = $("#mute-btn").find("span").data('text');
           $("#mute-btn").find("span").text(newText).data('text',oldText);
+
+          $(this).toggleClass('mute-btn-activo');
       });
 
       function changePitch(myAnimal, value) {

@@ -464,9 +464,13 @@ h3 {
     border-top-right-radius: 15px;
     height:50%;
   }
-  .rec-btn-activo, .jam-btn-activo {
-    -webkit-animation:blinkingRecJam 1.2s infinite;
-    animation:blinkingRecJam 1.2s infinite;
+  .mute-btn-activo, .jam-btn-activo {
+    -webkit-animation:blinkingMuteJam 1.2s infinite;
+    animation:blinkingMuteJam 1.2s infinite;
+  }
+  .rec-btn-activo {
+    -webkit-animation:blinkingRec 1.2s infinite;
+    animation:blinkingRec 1.2s infinite;
   }
 
 .jam-btn:hover{
@@ -760,22 +764,22 @@ h3 {
   /* --------------------------------------------- */
   /* Animation & transitions */
 
-  @keyframes blinkingPlay{
+  @keyframes blinkingRec{
     0%{     background-color:var(--color-rojo-ui-animal);}
     35%{    background-color:var(--color-rojo-ui-animal);}
     85%{    color:var(--color-blanco-ui-animal);}
   }
-  @webkit-keyframes blinkingPlay{
+  @webkit-keyframes blinkingRec{
     0%{     background-color:var(--color-rojo-ui-animal);}
     35%{    background-color:var(--color-rojo-ui-animal);}
     85%{    color:var(--color-blanco-ui-animal);}
   }
-  @keyframes blinkingRecJam{
+  @keyframes blinkingMuteJam{
     0%{     background-color:var(--color-verde-ui-animal);}
     35%{    background-color:var(--color-verde-ui-animal);}
     85%{    color:var(--color-blanco-ui-animal);}
   }
-  @webkit-keyframes blinkingRecJam{
+  @webkit-keyframes blinkingMuteJam{
     0%{     background-color:var(--color-verde-ui-animal);}
     35%{    background-color:var(--color-verde-ui-animal);}
     85%{    color:var(--color-blanco-ui-animal);}
