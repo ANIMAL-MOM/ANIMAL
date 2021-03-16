@@ -829,8 +829,8 @@
                   <div id="mute-btn" class="col-lg-6 d-flex my-0 figura-1-animal mute-btn animal-pointer"
                     data-toggle="popover" title="" data-placement="bottom"
                     data-content="...">
+<span class="m-auto text-center js-textEdit" data-text="Stop">Play</span>
 
-                    <span class="m-auto text-center">Play</span>
                   </div>
                 </div>
               </div>
@@ -1898,8 +1898,13 @@
       };
 
       $("#mute-btn").click(function () {
-        playSequencer();
-        $(this).find("span").attr('data-content','Stop');
+          playSequencer();
+      });
+
+      $('.js-textEdit').click(function () {
+          var oldText = $(this).text();
+          var newText = $(this).data('text');
+          $(this).text(newText).data('text',oldText);
       });
 
       function changePitch(myAnimal, value) {
