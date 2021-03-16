@@ -553,9 +553,6 @@ h3 {
     background-color: var(--color-figura-1-animal);
 
   }
-.audio-preview-active, .audio-preview:hover{
-    background-color: var(--color-verde-ui-animal);
-}
   .animal-icon, .jam-btn {
     width: 44px;
     height: 44px;
