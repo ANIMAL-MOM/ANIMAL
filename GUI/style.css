@@ -947,6 +947,7 @@ h3 {
       border-top-right-radius: 15px;
       border-bottom-right-radius: 15px;
       border-bottom-left-radius: 0;
+      border-left: 1px solid var(--color-fondo-1-animal);
       height: 100%;
     }
 
