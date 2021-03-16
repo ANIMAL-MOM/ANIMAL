@@ -824,11 +824,11 @@
               <div id="rec-mute" class="col-4 col-lg-12 mt-lg-1 ">
                 <div class="row h-100 my-0 pl-1 pl-lg-0 d-flex flex-column flex-lg-row ">
                   <div id="rec-btn" class="col-lg-6 d-flex my-0 blanco-ui-animal animal-pointer">
-                    <span class="m-auto text-center">Rec</span>
+                    <span class="m-auto text-center" data-text="Stop">Rec</span>
                   </div>
                   <div id="mute-btn" class="col-lg-6 d-flex my-0 figura-1-animal mute-btn animal-pointer"
                     data-toggle="popover">
-                    <span class="m-auto text-center js-textEdit" data-text="Alto">Seguir</span>
+                    <span class="m-auto text-center" data-text="Stop">Play</span>
 
                   </div>
                 </div>
@@ -1814,6 +1814,10 @@
       var chunks = [];
 
       $("#rec-btn").click(function () {
+
+        var oldText = $("#mute-btn").find("span").text();
+        var newText = $("#mute-btn").find("span").data('text');
+        $("#mute-btn").find("span").text(newText).data('text',oldText);
 
         if (isRecording) {
           recorder.stop();
