@@ -830,7 +830,7 @@
                     data-toggle="popover" title="" data-placement="bottom"
                     data-content="...">
 
-                    <span class="m-auto text-center"></span>
+                    <span class="m-auto text-center">Play</span>
                   </div>
                 </div>
               </div>
@@ -1899,6 +1899,7 @@
 
       $("#mute-btn").click(function () {
         playSequencer();
+        $(this).find("span").attr('data-content','Stop');
       });
 
       function changePitch(myAnimal, value) {
