@@ -1815,9 +1815,9 @@
 
       $("#rec-btn").click(function () {
 
-        var oldText = $("#mute-btn").find("span").text();
-        var newText = $("#mute-btn").find("span").data('text');
-        $("#mute-btn").find("span").text(newText).data('text',oldText);
+        var oldText = $("#rec-btn").find("span").text();
+        var newText = $("#rec-btn").find("span").data('text');
+        $("#rec-btn").find("span").text(newText).data('text',oldText);
 
         if (isRecording) {
           recorder.stop();

@@ -481,8 +481,12 @@ h3 {
   .mute-btn:hover {
     color: var(--color-blanco-ui-animal);
     background-color: var(--color-verde-ui-animal);
-}
-  #rec-btn:hover, #mute-btn:hover, #increment-swing-btn:hover, #increment-bpm-btn:hover, #decrement-swing-btn:hover, #decrement-bpm-btn:hover{
+  }
+  .rec-btn:hover {
+    color: var(--color-blanco-ui-animal);
+    background-color: var(--color-rojo-ui-animal);
+  }
+  #increment-swing-btn:hover, #increment-bpm-btn:hover, #decrement-swing-btn:hover, #decrement-bpm-btn:hover{
     background-color:var(--color-figura-1-animal)!important;
   }
   #decrement-bpm-btn {
