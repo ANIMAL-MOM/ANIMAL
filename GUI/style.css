@@ -473,9 +473,13 @@ h3 {
     animation:blinkingRec 1.2s infinite;
   }
 
-.jam-btn:hover, #help-btn:hover{
+.jam-btn:hover {
     color: var(--color-blanco-ui-animal);
     background-color: var(--color-verde-ui-animal);
+}
+#help-btn:hover{
+   color: var(--color-blanco-ui-animal);
+   background-color: var(--color-figura-1-animal);
 }
   #mute-btn{
     border-bottom-left-radius: 15px;
@@ -486,7 +490,7 @@ h3 {
     color: var(--color-blanco-ui-animal);
     background-color: var(--color-verde-ui-animal);
   }
-  .rec-btn:hover {
+  #rec-btn:hover {
     color: var(--color-blanco-ui-animal);
     background-color: var(--color-rojo-ui-animal);
   }
