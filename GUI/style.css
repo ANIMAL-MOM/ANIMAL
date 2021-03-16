@@ -483,12 +483,6 @@ h3 {
     animation-play-state: initial !important;
 
   }
-  .mute-btn-activo span:after{
-    content: 'Stop' !important;
-  }
-  .mute-btn span:after{
-    content: 'Play';
-  }
   .mute-btn{
     -webkit-animation:blinkingPlay 1.2s infinite;
     animation:blinkingPlay 1.2s infinite;

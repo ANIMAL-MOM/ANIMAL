@@ -1899,6 +1899,9 @@
 
       $("#mute-btn").click(function () {
           playSequencer();
+          var oldText = $(this).find("span").text();
+          var newText = $(this).find("span").data('text');
+          $(this).find("span").text(newText).data('text',oldText);
       });
 
       $('.js-textEdit').click(function () {
