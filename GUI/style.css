@@ -473,7 +473,7 @@ h3 {
     animation:blinkingRec 1.2s infinite;
   }
 
-.jam-btn:hover{
+.jam-btn:hover, #help-btn:hover{
     color: var(--color-blanco-ui-animal);
     background-color: var(--color-verde-ui-animal);
 }
@@ -557,7 +557,7 @@ h3 {
     background-color: var(--color-blanco-ui-animal);
       border: none;
   }
-  #help-btn .animal-icon {
+  #help-btn {
     padding-top:12px;
   }
   .animal-icon-s{
