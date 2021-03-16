@@ -775,12 +775,10 @@ h3 {
   @keyframes blinkingMuteJam{
     0%{     background-color:var(--color-verde-ui-animal);}
     35%{    background-color:var(--color-verde-ui-animal);}
-    85%{    color:var(--color-blanco-ui-animal);}
   }
   @webkit-keyframes blinkingMuteJam{
     0%{     background-color:var(--color-verde-ui-animal);}
     35%{    background-color:var(--color-verde-ui-animal);}
-    85%{    color:var(--color-blanco-ui-animal);}
   }
 
   @keyframes blinkingloroRec{
