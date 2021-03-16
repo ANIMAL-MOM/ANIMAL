@@ -32,7 +32,7 @@
     background-color: var(--color-verde-ui-animal);
   }
 
- #audiopre-kit1:hover, .instrument-preview:hover {
+ .instrument-preview:hover {
     filter:invert(0)!important;
     background-color: var(--color-verde-ui-animal);
   }
@@ -543,10 +543,7 @@ h3 {
   }
 
 
-  #audiopre-kit1:hover {
-    filter:invert(0)!important;
-    background-color: var(--color-verde-ui-animal);
-  }
+
   .audio-preview, .loro-rec {
     width: 44px;
     height: 44px;
@@ -572,7 +569,9 @@ h3 {
     height: 36px;
     border-radius: 50px;
     background-color: var(--color-blanco-ui-animal);
-    background-image:url('/GUI/img/audio_trans.png');
+    background-image: url(/GUI/img/audio_trans.png);
+    margin-left: 5px;
+    margin-top: 4px;
   }
   .icon-container-s, .audio-preview-container-s {
     width: 36px;
