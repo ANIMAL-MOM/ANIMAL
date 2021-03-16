@@ -827,9 +827,8 @@
                     <span class="m-auto text-center">Rec</span>
                   </div>
                   <div id="mute-btn" class="col-lg-6 d-flex my-0 figura-1-animal mute-btn animal-pointer"
-                    data-toggle="popover" title="" data-placement="bottom"
-                    data-content="...">
-<span class="m-auto text-center js-textEdit" data-text="Stop">Play</span>
+                    data-toggle="popover">
+                    <span class="m-auto text-center js-textEdit" data-text="Stop">Play</span>
 
                   </div>
                 </div>
@@ -1899,16 +1898,11 @@
 
       $("#mute-btn").click(function () {
           playSequencer();
-          var oldText = $(this).find("span").text();
-          var newText = $(this).find("span").data('text');
-          $(this).find("span").text(newText).data('text',oldText);
+          var oldText = $(this > span).text();
+          var newText = $(this > span).data('text');
+          $(this > span).text(newText).data('text',oldText);
       });
 
-      $('.js-textEdit').click(function () {
-          var oldText = $(this).text();
-          var newText = $(this).data('text');
-          $(this).text(newText).data('text',oldText);
-      });
 
       function changePitch(myAnimal, value) {
         //console.log("entro a change pitch");
