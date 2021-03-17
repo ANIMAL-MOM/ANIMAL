@@ -464,6 +464,10 @@ h3 {
     border-top-right-radius: 15px;
     height:50%;
   }
+  .mute-btn {
+      color: var(--color-chocolate-animal);
+      background-color: var(--color-blanco-ui-animal);
+  }
   .mute-btn-activo, .jam-btn-activo {
     -webkit-animation:blinkingMuteJam 1.2s infinite;
     animation:blinkingMuteJam 1.2s infinite;
