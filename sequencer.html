@@ -540,7 +540,7 @@
           <img src="GUI/img/Animal_logo_v0.png" height="40px">
         </div>
         <div id="MoM_logo" class="d-flex mr-2 my-auto">
-          <a id="creditos" class="data-item" role="button" tabindex="0" data-toggle="popover" data-html="true" data-placement="right" data-content="
+          <a id="creditos" class="start-item" role="button" tabindex="0" data-toggle="popover" data-html="true" data-placement="right" data-content="
             <h3>Créditos</h3>
             <hr>
             <b>Idea original:</b></br>
@@ -2172,13 +2172,10 @@
 
   $(document).on('click', function(e) {
     var pvr = $("#help-btn");
-    var pvr2 = $("#MoM_logo");
     if (!$(e.target).closest(pvr).length) {
           $('.help-item').popover('dispose');
           $('.start-item').popover('dispose');
-    }else if (!$(e.target).closest(pvr2).length) {
-            $('.data-item').popover('dispose');
-      }
+    }
   });
 
 </script>
