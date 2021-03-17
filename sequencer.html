@@ -540,7 +540,7 @@
           <img src="GUI/img/Animal_logo_v0.png" height="40px">
         </div>
         <div id="MoM_logo" class="d-flex mr-2 my-auto">
-          <a id="creditos" class="help-item" tabindex="0" data-toggle="popover" data-html="true" data-placement="right" data-content="
+          <a id="creditos" class="data-item" tabindex="0" data-toggle="popover" data-html="true" data-placement="right" data-content="
             <h3>Créditos</h3>
             <hr>
             Idea original: Androoval</br>
@@ -2169,6 +2169,7 @@
     if (!$(e.target).closest(pvr).length) {
           $('.help-item').popover('dispose');
           $('.start-item').popover('dispose');
+          $('.data-item').popover('dispose');
     }
   });
 
