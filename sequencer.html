@@ -540,7 +540,7 @@
           <img src="GUI/img/Animal_logo_v0.png" height="40px">
         </div>
         <div id="MoM_logo" class="d-flex mr-2 my-auto">
-          <a tabindex="0" data-toggle="popover" data-html="true" data-placement="right" data-content="
+          <a id="creditos" tabindex="0" data-toggle="popover" data-html="true" data-placement="right" data-content="
             <h3>Créditos</h3>
             <hr>
             Idea original: Androoval</br>
@@ -2139,7 +2139,10 @@
   });
 
 
-
+  $('#creditos').on('click', function() {
+    $('#creditos').popover('toggle');
+  });
+  
   $('#help-btn').on('click', function() {
       $('#mute-btn').popover('toggle');
       $('#instrumentos').popover('toggle');
