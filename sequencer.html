@@ -2166,11 +2166,13 @@
 
   $(document).on('click', function(e) {
     var pvr = $("#help-btn");
+    var pvr2 = $("#MoM_logo");
     if (!$(e.target).closest(pvr).length) {
           $('.help-item').popover('dispose');
           $('.start-item').popover('dispose');
-          $('.data-item').popover('dispose');
-    }
+    }else if (!$(e.target).closest(pvr2).length) {
+            $('.data-item').popover('dispose');
+      }
   });
 
 </script>
