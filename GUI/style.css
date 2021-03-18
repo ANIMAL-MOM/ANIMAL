@@ -293,9 +293,7 @@ h3 {
   }
   #jam-sesion a:hover {
     color: var(--color-blanco-ui-animal);
-  }
-  #jam-sesion:hover {
-    background-color: var(--color-verde-ui-animal);
+      background-color: var(--color-verde-ui-animal);
   }
 
   /* --------------------------------------------- */
