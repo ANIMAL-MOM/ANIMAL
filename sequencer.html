@@ -541,17 +541,17 @@
         </div>
         <div id="MoM_logo" class="d-flex mr-2 my-auto">
           <a id="creditos" role="button" tabindex="0" data-toggle="popover" data-html="true" data-placement="right" data-content="
-            <h3>Créditos</h3>
+            <h4>Animal v1.0 [MoM]</h4>
             <hr>
-            <strong>Idea original:</strong></br>
+            <b>Idea original:</b></br>
             Androoval</br>
-            <strong>Programación:</strong></br>
+            <b>Programación:</b></br>
             Carolina Zunino</br>
-            <strong>Diseño de producto:</strong></br>
+            <b>Diseño UX:</b></br>
             MoM + C.Z.</br>
-            <strong>Diseño UI:</strong></br>
+            <b>Diseño UI:</b></br>
             Antar Kuri</br>
-            <strong>Diseño sonoro:</strong></br>
+            <b>Diseño sonoro:</b></br>
             Andrés Perez</br>"
             data-original-title="" title="">
                 [MoM]
@@ -1184,11 +1184,11 @@
             <div id="combo-botones" class="mx-0 mx-xl-auto d-flex flex-row flex-xl-column">
               <div id="settings" class="animal-icon mb-2" data-toggle="tooltip" data-placement="top" title="Ajustes">
                 <a href="#" id="boton" data-toggle="modal" data-target="#settingsModal" role="button">
-                  <img src="GUI/img/boton_ajustes_r.png" class="btn-icon">
+                  <img src="GUI/svg/botones/boton_ajustes_o.svg" class="btn-icon">
                 </a>
               </div>
                 <a id="help-btn" class="mx-auto align-self-baseline help-icon text-center" role="button">
-                    <img src="GUI/svg/botones/boton_ayuda_w.svg" class="btn-icon">
+                    <img src="GUI/svg/botones/boton_ayuda_g.svg" class="btn-icon">
                 </a>
             </div>
           </div>
@@ -2147,7 +2147,7 @@
 
   $('#creditos').on('click', function() {
     $('#creditos').popover('toggle');
-    $('.popover:eq(0)').addClass('corners-2');
+    $('.popover:eq(0)').addClass('play-start-item corners-2');
   });
 
   $('#help-btn').on('click', function() {
@@ -2171,12 +2171,12 @@
   });
 
   $(document).on('click', function(e) {
+    $('.data-item').popover('dispose');
     var pvr = $("#help-btn");
     if (!$(e.target).closest(pvr).length) {
           $('.help-item').popover('dispose');
           $('.start-item').popover('dispose');
     }
-          $('.data-item').popover('dispose');
   });
 
 
