@@ -288,13 +288,14 @@ h3 {
 
   #jam-sesion a{
     padding-top:12px;
+      color: var(--color-destaque-animal);
     text-decoration: none !important;
   }
-  #jam-sesion {
-    color: var(--color-destaque-animal);
+  #jam-sesion a:hover {
+    color: var(--color-blanco-ui-animal);
   }
   #jam-sesion:hover {
-    color: var(--color-blanco-ui-animal);
+    background-color: var(--color-verde-ui-animal);
   }
 
   /* --------------------------------------------- */
@@ -481,10 +482,6 @@ h3 {
     animation:blinkingRec 1.2s infinite;
   }
 
-.jam-btn:hover {
-    color: var(--color-blanco-ui-animal);
-    background-color: var(--color-verde-ui-animal);
-}
 #help-btn:hover, #settings:hover{
    background-color: var(--color-figura-1-animal);
 }
