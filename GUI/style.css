@@ -480,7 +480,7 @@ h3 {
     color: var(--color-blanco-ui-animal);
     background-color: var(--color-verde-ui-animal);
 }
-#help-btn:hover{
+#help-btn:hover, #settings:hover{
    background-color: var(--color-figura-1-animal);
 }
   #mute-btn{
