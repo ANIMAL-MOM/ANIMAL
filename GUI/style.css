@@ -407,7 +407,6 @@ h3 {
   /* Buttons & icons */
 
 .modal-header .close {
-    font-size: 1.85rem;
 }
 #Animal_logo{
   height:65px;
@@ -482,8 +481,8 @@ h3 {
     background-color: var(--color-verde-ui-animal);
 }
 #help-btn:hover{
-   color: var(--color-blanco-ui-animal);
-   background-color: var(--color-figura-1-animal);
+   color: var(--color-figura-1-animal);
+   background-color: var(--color-blanco-ui-animal);
 }
   #mute-btn{
     border-bottom-left-radius: 15px;
@@ -564,6 +563,13 @@ h3 {
     height: 44px;
     border-radius: 50%;
     background-color: var(--color-blanco-ui-animal);
+      border: none;
+  }
+  .help-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--color-figura-1-animal);
       border: none;
   }
   #help-btn {
