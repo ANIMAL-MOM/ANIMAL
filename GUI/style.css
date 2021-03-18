@@ -288,8 +288,11 @@ h3 {
 
   #jam-sesion a{
     padding-top:12px;
-    color: var(--color-chocolate-animal);
+    color: var(--color-fondo-1-animal);
     text-decoration: none !important;
+  }
+  #jam-sesion:hover {
+    color: var(--color-blanco-ui-animal);
   }
 
   /* --------------------------------------------- */
