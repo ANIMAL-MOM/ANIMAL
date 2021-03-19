@@ -421,23 +421,7 @@ h3 {
     color: var(--color-figura-1-animal);
 }
 
-.btn-secondary:hover {
-    color: #fff;
-    background-color: var(--color-destaque-animal);
-    border-color: var(--color-destaque-animal);
-}
 
-.btn-secondary:focus {
-    color: #fff;
-    background-color: var(--color-naranja-ui-animal);
-    border-color: var(--color-naranja-ui-animal);
-    box-shadow: none;
-}
-.btn-secondary:not(:disabled):not(.disabled):active {
-    color: #fff;
-    background-color: var(--color-naranja-ui-animal);
-    border-color: var(--color-naranja-ui-animal);
-}
 
   .btn-group-lg>.btn, .btn-lg, .btn {
     border-radius: 15px;
@@ -447,15 +431,33 @@ h3 {
     background-color: var(--color-blanco-ui-animal);
     border-color: var(--color-blanco-ui-animal);
   }
-.btn-primary:hover {
-    color: var(--color-blanco-ui-animal);
-    background-color: var(--color-naranja-ui-animal);
-    border-color: var(--color-naranja-ui-animal);
-}
+  .btn-primary:hover {
+      color: var(--color-blanco-ui-animal);
+      background-color: var(--color-naranja-ui-animal);
+      border-color: var(--color-naranja-ui-animal);
+  }
   .btn-secondary{
     background-color: var(--color-figura-1-animal);
     border:none;
   }
+  .btn-secondary:hover {
+      color: #fff;
+      background-color: var(--color-destaque-animal);
+      border-color: var(--color-destaque-animal);
+  }
+
+  .btn-secondary:focus {
+      color: #fff;
+      background-color: var(--color-naranja-ui-animal);
+      border-color: var(--color-naranja-ui-animal);
+      box-shadow: none;
+  }
+  .btn-secondary:not(:disabled):not(.disabled):active {
+      color: #fff;
+      background-color: var(--color-naranja-ui-animal);
+      border-color: var(--color-naranja-ui-animal);
+  }
+
   .audiopre {
     cursor: pointer;
   }
