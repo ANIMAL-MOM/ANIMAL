@@ -1482,14 +1482,16 @@
         newUrl = url.href;
         let stateObj = { id: "100" };
         window.history.replaceState(stateObj, "roomID", newUrl);
-        var seqInicial = [[true, false, false, false, false, false, false, false, true, false, false, false, false, false, false, true],
-        [false, false, true, false, false, true, false, false, false, false, true, false, false, false, true, false],
-        [true, false, false, false, false, false, false, false, true, false, false, false, false, true, false, false],
-        [false, false, true, false, false, true, false, false, false, false, true, false, false, false, false, false],
+        var seqInicial = [
+        [true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
+        [false, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false],
+        [false, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false],
+        [false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false],
+        [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true],
+        [false, false, false, false, false, true, false, false, false, false, true, false, false, false, false, false],
         [false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false],
-        [true, false, false, false, true, false, false, false, true, false, true, false, false, true, false, true],
-        [false, false, false, false, true, false, true, false, false, false, false, false, false, false, false, false],
-        [true, false, true, false, false, true, false, false, true, false, false, false, false, true, false, true]];
+        [false, false, false, false, false, false, false, false, true, false, false, false, false, false, true, false]
+        ];
         socket.emit('sequencer', sequencer.matrix.pattern);
 
         $(".disabled-overlay").addClass("d-none");
