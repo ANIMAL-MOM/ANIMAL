@@ -2038,11 +2038,16 @@
       //  }
 
         $("#settingsModal").find( "button" ).removeClass('cKit');
-        
+
         var currKit = "kit"+(myKitNum+1)
         console.log(currKit);
         $('#' + currKit).addClass('cKit');
 
+      })
+
+      $("#settingsModal").find(".button").click(function () {
+        $("#settingsModal").find( "button" ).removeClass('cKit');
+        $(this).addClass('cKit');
       })
 
       // REC LORO
