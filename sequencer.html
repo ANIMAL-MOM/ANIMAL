@@ -2045,10 +2045,8 @@
         if ( visitado != 1){
           var currKit = "kit"+(myKitNum);
           visitado = 1;
-            alert("primera vez");
         } else {
-        var currKit = "kit"+(myKitNum+1);
-        alert("visitado");
+          var currKit = "kit"+(myKitNum+1);
         }
         $("#settingsModal").find( "button" ).removeClass('cKit');
         $('#' + currKit).addClass('cKit');
