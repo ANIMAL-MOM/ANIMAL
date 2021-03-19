@@ -2038,12 +2038,12 @@
       //  }
         var visitado;
         if ( visitado != 1){
-          var currKit = "kit"+(myKitNum)
-          console.log("primera vez");
+          var currKit = "kit"+(myKitNum);
+          alert("primera vez");
         } else {
-          var currKit = "kit"+(myKitNum+1)
+          var currKit = "kit"+(myKitNum+1);
           visitado = 1;
-          console.log("conocido");
+          console.log("visitado");
         }
         $("#settingsModal").find( "button" ).removeClass('cKit');
         $('#' + currKit).addClass('cKit');
