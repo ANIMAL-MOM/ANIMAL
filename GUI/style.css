@@ -552,8 +552,8 @@ h3 {
   .set-num {
     font-weight: 600;
     text-align: center;
-    background-color: white;
-    color: rebeccapurple;
+    background-color: var(--color-blanco-ui-animal);
+    color: var(--color-figura-1-animal);
     border-radius: 50%;
     height: 36px;
     width: 36px;
