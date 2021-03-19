@@ -1516,10 +1516,10 @@
         sonidos = misKits[myKitNum-1];
 
         console.log("guest entered room kit" + myKitNum);
-        $("#jam-sesion").addClass("opacity-3");
+        $("#jam-sesion").addClass("d-none");
         $("#jam-sesion").addClass("ajeno");
         $("#settings").addClass("ajeno");
-        $("#settings").addClass("opacity-3");
+        $("#settings").addClass("d-none");
         sequencer.matrix.set.all(pattern);
         myChannel = michannel;
         setMyChannel();
@@ -2032,11 +2032,12 @@
         }
       });
 
-      //$("#settings").click(function () {
+      $("#settings").click(function () {
       //  if (Tone.Transport.state == "started") {
       //    $("#mute-btn").trigger("click");
       //  }
-    //  })
+        console.log("kit " + myKitNum);
+      })
 
       // REC LORO
       var loroAudio;
