@@ -2038,14 +2038,14 @@
       //  }
 
         $("#settingsModal").find( "button" ).removeClass('cKit');
-
         var currKit = "kit"+(myKitNum+1)
-        console.log(currKit);
         $('#' + currKit).addClass('cKit');
 
       })
 
       $(".kit").click(function () {
+
+        console.log("kit"+this);
         $("#settingsModal").find( "button" ).removeClass('cKit');
         $(this).addClass('cKit');
       })
