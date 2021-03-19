@@ -2036,10 +2036,13 @@
       //  if (Tone.Transport.state == "started") {
       //    $("#mute-btn").trigger("click");
       //  }
-        //console.log("kit " + myKitNum);
+
+        $("#settingsModal").find( "button" ).removeClass('cKit');
+        
         var currKit = "kit"+(myKitNum+1)
         console.log(currKit);
         $('#' + currKit).addClass('cKit');
+
       })
 
       // REC LORO
