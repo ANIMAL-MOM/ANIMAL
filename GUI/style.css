@@ -420,6 +420,11 @@ h3 {
     opacity: 1;
     color: var(--color-figura-1-animal);
 }
+.btn-secondary:hover {
+    color: #fff;
+    background-color: var(--color-figura-1-animal);
+    border-color: var(--color-figura-1-animal);
+}
   .btn-group-lg>.btn, .btn-lg, .btn {
     border-radius: 15px;
   }
