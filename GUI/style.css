@@ -423,15 +423,20 @@ h3 {
 
 .btn-secondary:hover {
     color: #fff;
-    background-color: var(--color-figura-1-animal);
-    border-color: var(--color-figura-1-animal);
+    background-color: var(--color-destaque-animal);
+    border-color: var(--color-destaque-animal);
 }
 
 .btn-secondary:focus {
     color: #fff;
-    background-color: var(--color-naranja-1-animal);
-    border-color: var(--color-naranja-1-animal);
+    background-color: var(--color-naranja-ui-animal);
+    border-color: var(--color-naranja-ui-animal);
     box-shadow: none;
+}
+.btn-secondary:not(:disabled):not(.disabled):active {
+    color: #fff;
+    background-color: var(--color-naranja-ui-animal);
+    border-color: var(--color-naranja-ui-animal);
 }
 
   .btn-group-lg>.btn, .btn-lg, .btn {
