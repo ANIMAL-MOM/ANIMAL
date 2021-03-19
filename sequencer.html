@@ -2039,9 +2039,11 @@
         var visitado;
         if ( visitado != 1){
           var currKit = "kit"+(myKitNum)
+          console.log("primera vez");
         } else {
           var currKit = "kit"+(myKitNum+1)
           visitado = 1;
+          console.log("conocido");
         }
         $("#settingsModal").find( "button" ).removeClass('cKit');
         $('#' + currKit).addClass('cKit');
