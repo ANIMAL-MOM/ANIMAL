@@ -2042,19 +2042,8 @@
       //  if (Tone.Transport.state == "started") {
       //    $("#mute-btn").trigger("click");
       //  }
-        var newKit = myKitNum;
-        if ( visitado != 1){
-          var currKit = "kit"+(myKitNum);
-          visitado = 1;
-          //oldKit = myKitNum;
-        //} else if (oldKit==newKit){
-          //var currKit = "kit"+(myKitNum);
-        } else {
-          var currKit = "kit"+(myKitNum+1);
-        }
-
-        $("#settingsModal").find( "button" ).removeClass('cKit');
-        $('#' + currKit).addClass('cKit');
+        var currKit = "kit"+(myKitNum+1);
+        $('#' + currKit).trigger("click");
 
       });
 
@@ -2176,12 +2165,11 @@
 
       $(window).on('blur', function () {
         if (Tone.Transport.state == "started"){
-        var oldText = $("#mute-btn").find("span").text();
-        var newText = $("#mute-btn").find("span").data('text');
-        $("#mute-btn").find("span").text(newText).data('text',oldText);
+          var oldText = $("#mute-btn").find("span").text();
+          var newText = $("#mute-btn").find("span").data('text');
+          $("#mute-btn").find("span").text(newText).data('text',oldText);
 
-        $("#mute-btn").removeClass('mute-btn-activo');
-          
+          $("#mute-btn").removeClass('mute-btn-activo');
         }
         console.log('The window lost focus');
       });
