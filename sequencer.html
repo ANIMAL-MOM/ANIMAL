@@ -2036,7 +2036,7 @@
             // Modal SETTINGS
 
       var visitado;
-      var oldKit;
+      //var oldKit;
 
       $("#settings").click(function () {
       //  if (Tone.Transport.state == "started") {
@@ -2046,9 +2046,9 @@
         if ( visitado != 1){
           var currKit = "kit"+(myKitNum);
           visitado = 1;
-          oldKit = myKitNum;
-        } else if (oldKit==newKit){
-          var currKit = "kit"+(myKitNum);
+          //oldKit = myKitNum;
+        //} else if (oldKit==newKit){
+          //var currKit = "kit"+(myKitNum);
         } else {
           var currKit = "kit"+(myKitNum+1);
         }
