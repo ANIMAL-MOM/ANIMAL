@@ -2167,7 +2167,7 @@
     });
 
 
-    // 
+    //
     $(document).ready(function () {
 
       $(window).on('focus', function () {
@@ -2179,7 +2179,7 @@
         var newText = $("#mute-btn").find("span").data('text');
         $("#mute-btn").find("span").text(newText).data('text',oldText);
 
-        $("#mute-btn").toggleClass('mute-btn-activo');
+        $("#mute-btn").removeClass('mute-btn-activo');
         console.log('The window lost focus');
       });
     });
