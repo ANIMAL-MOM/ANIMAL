@@ -2036,18 +2036,23 @@
             // Modal SETTINGS
 
       var visitado;
+      var oldKit;
 
       $("#settings").click(function () {
       //  if (Tone.Transport.state == "started") {
       //    $("#mute-btn").trigger("click");
       //  }
-
+        var newKit = myKitNum;
         if ( visitado != 1){
           var currKit = "kit"+(myKitNum);
           visitado = 1;
+          oldKit = myKitNum;
+        } else if (oldKit==newKit){
+          var currKit = "kit"+(myKitNum);
         } else {
           var currKit = "kit"+(myKitNum+1);
         }
+
         $("#settingsModal").find( "button" ).removeClass('cKit');
         $('#' + currKit).addClass('cKit');
 
