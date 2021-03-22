@@ -1513,7 +1513,7 @@
 
       socket.on('guest', function (pattern, michannel, unbpm, unkitnum) {
         myKitNum = unkitnum-1;
-        sonidos = misKits[myKitNum-1];
+        sonidos = misKits[myKitNum];
 
         console.log("guest entered room kit" + myKitNum);
         $("#jam-sesion").addClass("d-none");
