@@ -203,7 +203,7 @@ var mobdialins8 = new Nexus.Dial('#mob-dial-ins8',{
  var dialch1 = new Nexus.Dial('#dial-ch1',{
    'interaction': 'vertical', // "radial", "vertical", or "horizontal"
    'mode': 'relative', // "relative" or "relative"
-   'min': -50,
+   'min': -100,
    'max': 10,
    'step':1,
    'value': 5
@@ -218,7 +218,7 @@ var mobdialins8 = new Nexus.Dial('#mob-dial-ins8',{
  var dialch2 = new Nexus.Dial('#dial-ch2',{
    'interaction': 'vertical', // "radial", "vertical", or "horizontal"
    'mode': 'relative', // "relative" or "relative"
-   'min': -50,
+   'min': -100,
    'max': 10,
    'step':1,
    'value': 5
@@ -231,7 +231,7 @@ var mobdialins8 = new Nexus.Dial('#mob-dial-ins8',{
  var dialch3 = new Nexus.Dial('#dial-ch3',{
    'interaction': 'vertical', // "radial", "vertical", or "horizontal"
    'mode': 'relative', // "relative" or "relative"
-   'min': -50,
+   'min': -100,
    'max': 10,
    'step':1,
    'value': 5
@@ -244,7 +244,7 @@ var mobdialins8 = new Nexus.Dial('#mob-dial-ins8',{
  var dialch4 = new Nexus.Dial('#dial-ch4',{
    'interaction': 'vertical', // "radial", "vertical", or "horizontal"
    'mode': 'relative', // "relative" or "relative"
-   'min': -50,
+   'min': -100,
    'max': 10,
    'step': 1,
    'value': 5
@@ -257,7 +257,7 @@ var mobdialins8 = new Nexus.Dial('#mob-dial-ins8',{
  var dialch5 = new Nexus.Dial('#dial-ch5',{
    'interaction': 'vertical', // "radial", "vertical", or "horizontal"
    'mode': 'relative', // "relative" or "relative"
-   'min': -50,
+   'min': -100,
    'max': 10,
    'step':1,
    'value': 5
@@ -270,7 +270,7 @@ var mobdialins8 = new Nexus.Dial('#mob-dial-ins8',{
  var dialch6 = new Nexus.Dial('#dial-ch6',{
    'interaction': 'vertical', // "radial", "vertical", or "horizontal"
    'mode': 'relative', // "relative" or "relative"
-   'min': -50,
+   'min': -100,
    'max': 10,
    'step':1,
    'value': 5
@@ -283,7 +283,7 @@ var mobdialins8 = new Nexus.Dial('#mob-dial-ins8',{
  var dialch7 = new Nexus.Dial('#dial-ch7',{
    'interaction': 'vertical', // "radial", "vertical", or "horizontal"
    'mode': 'relative', // "relative" or "relative"
-   'min': -50,
+   'min': -100,
    'max': 10,
    'step':1,
    'value': 5
@@ -296,7 +296,7 @@ var mobdialins8 = new Nexus.Dial('#mob-dial-ins8',{
  var dialch8 = new Nexus.Dial('#dial-ch8',{
    'interaction': 'vertical', // "radial", "vertical", or "horizontal"
    'mode': 'relative', // "relative" or "relative"
-   'min': -50,
+   'min': -100,
    'max': 10,
    'step':1,
    'value': 5
