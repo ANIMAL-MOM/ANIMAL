@@ -5,6 +5,7 @@ class Room {
     // this.sequencer = '';//sequencer;
     this.bpm = 120;
     this.soundkit = 1;
+    this.kitNum = 4;
     var matrix = [];
     for (var i = 0; i < 17; i++) {
       matrix[i] = new Array(17);
@@ -27,18 +28,35 @@ class Room {
     set sequencer(matrix) {
       this._sequencer = matrix;
     }*/
-  set soundKit(kitID) {
-    this._bpm = bpm;
-  }
-  get soundKit() {
-    return this._kitID;
-  }
+  /*  set soundKit(kitID) {
+      this._bpm = bpm;
+    }
+    get soundKit() {
+      return this._kitID;
+    }*/
   addPlayer(player) {
     this.players.push(player);
+    console.log("playes lenght "+ this.players.length );
   }
   leave(player) {
-    this.players.remove(player);
+    var myPlayerIndex = "";
+    for (i = 0; i < this.players.length; i++) {
+      if (this.players[i] == player) {
+        myPlayerIndex = i;
+        console.log("index " + i + player);
+      }
+    }
+    try {
+      if (myPlayerIndex != "") {
+        this.players.splice(myPlayerIndex,1);
+        console.log("se fue el  player " + myPlayerIndex);
+      }
+    } catch (error) {
+
+    }
   }
+  // this.players.remove(player);
+
   sayHello() {
     //console.log('Hello, my name is ' + this.name + ', I have ID: ' + this.id);
   }
@@ -68,10 +86,12 @@ app.get('/sequencer', (req, res) => {
 });
 
 
+
+
 app.use('/tone', express.static(__dirname + '/node_modules/tone/build/'));
 app.use('/audios', express.static(__dirname + '/audios/'));
 app.use('/GUI', express.static(__dirname + '/GUI/'));
-
+app.use('/script', express.static(__dirname + '/script/'));
 var rooms = [];
 
 var visitor = io.of('/start');
@@ -104,7 +124,7 @@ visitor.on('connection', (socket) => {
           });
         }
       });
-      socket.emit('usedChannels', usados);
+      socket.emit('usedChannels', usados, theRoom.kitNum);
       //console.log('emito usados' + usados);
     } else {
       //console.log("no emito usados");
@@ -114,6 +134,8 @@ visitor.on('connection', (socket) => {
 
 
 var player = io.of('/sequencer');
+
+
 
 player.on('connection', (socket) => {
 
@@ -177,7 +199,7 @@ player.on('connection', (socket) => {
             });*/
 
         //console.log('emito bpm de ' + socket.room.bpm);
-        socket.emit('guest', socket.room.sequencer, socket.channels, socket.room.bpm);
+        socket.emit('guest', socket.room.sequencer, socket.channels, socket.room.bpm, socket.room.kitNum);
       }//
       //Que vaya al inicio
     }
@@ -190,6 +212,8 @@ player.on('connection', (socket) => {
     });
     //rooms.push(socket.roomID);
     socket.on('disconnect', () => {
+      //sacar player del room y liberar canales.
+
       //console.log('user disconnected');
       //BORRAR CUARTo si es host
       // socket.room.removePlayer(socket);
@@ -206,14 +230,14 @@ player.on('connection', (socket) => {
 
     socket.on('toggleStep', (miStep) => {
       ////console.log('emit changes to room: ' + socket.room.id);
-      socket.broadcast.to(socket.room.id).emit('toggleStep', miStep);      
+      socket.broadcast.to(socket.room.id).emit('toggleStep', miStep);
       // //console.log('add changes to server matrix' + miStep.row + ',' + miStep.column + ',' + miStep.state);
       socket.room.sequencer[miStep.row][miStep.column] = miStep.state;
-     // //console.log("emito cambio desde el server", //console.log(socket));
+      // //console.log("emito cambio desde el server", //console.log(socket));
     });
 
     socket.on('volumeChanged', (myAnimal, value) => {
-      socket.to(socket.room.id).emit('volumeChange', myAnimal, value);
+      //    socket.to(socket.room.id).emit('volumeChange', myAnimal, value);
     });
     socket.on('pitchChange', (myAnimal, value) => {
       socket.to(socket.room.id).emit('pitchChange', myAnimal, value);
@@ -224,13 +248,32 @@ player.on('connection', (socket) => {
       socket.room.bpm = unbpm;
     });
 
-    socket.on('roomOpened', (channels) => {
-      socket.channels = channels;
-      //console.log("abrio cuarto canales usados " + channels)
 
+    socket.on("changeKit", function (unKitNum) {
+      socket.to(socket.room.id).emit('changeKit', unKitNum);
+      socket.room.kitNum = unKitNum;
+    });
+
+    socket.on("swing", function (unswing) {
+      socket.to(socket.room.id).emit('swing', unswing);
+      socket.room.swing = unswing;
+    });
+    socket.on("recLoro", function (blob) {
+      socket.to(socket.room.id).emit('recLoro', blob);
+      // socket.room.swing = unswing;
+    });
+    socket.on('roomOpened', (channels, kitNum) => {
+      socket.channels = channels;
+      socket.room.kitNum = kitNum;
     });
 
   }
+
+
+
+  socket.on('disconnect', () => {
+    socket.room.leave(socket);
+  });
 });
 
 

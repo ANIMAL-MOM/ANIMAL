@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
-  <title>Animalv0.1</title>
+  <title>Animal v0.1</title>
 
 
 
@@ -27,16 +27,15 @@
       pointer-events: none;
     }
   </style>
-  
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167506651-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-167506651-1');
-</script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167506651-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-167506651-1');
+  </script>
 
 
 </head>
@@ -44,10 +43,10 @@
 <body>
   <div id="alerta" class="fondo-aqua-animal" style="display:none">
     <div class="container">
-      <div class="col-12 text-center">
+      <div class="col-12 pt-5 text-center">
         <h1 class="mt-5">¡Opa!</h1>
-        <h3 class="mt-1">Animal funciona en modo horizontal.</br>
-          ¡Porfavor rota tu dispositivo!</h3>
+        <h3 class="mt-1">Animal funciona en modo horizontal.<br />
+          ¡Porfavor rota tu dispositivo! y regresa al <a href="https://mom-lab.xyz/" >inicio</a></h3>
         <div class="w-25 mx-auto mt-3">
           <img src="/GUI/img/rotate-devise.png" class="img-fluid">
         </div>
@@ -74,11 +73,29 @@
               <div id="Animal_logo" class="mx-auto">
                 <img src="GUI/img/Animal_logo_v0.png" width="300px">
               </div>
-              <h1 class="mt-5">¡Bienvenido!</h1>
-              <h3 class="mt-1">Presiona el botón de PLAY para comenzar</h3>
-              <div class="w-25 mx-auto mt-3">
-                <img src="/GUI/img/landing/push-play.png" class="img-fluid">
+              <h1 class="my-5">Welcome!</h1>
+                <h3 >
+                  Click outside this window to close it.
+                </h3>
+              <div class="row">
+                <div class="col-6">
+                  <h3 class="mt-1">
+                    Press the SETTINGS button to change the sounds.
+                  </h3>
+                  <div class="w-50 mx-auto mt-3">
+                    <img src="GUI/svg/push-settings-gris.svg" class="img-fluid">
+                  </div>
+                </div>
+                <div class="col-6">
+                  <h3 class="mt-1">
+                    Activate the Jam session to invite more musical explorers.
+                  </h3>
+                  <div class="w-50 mx-auto mt-3">
+                    <img src="GUI/svg/push-jam.svg" class="img-fluid">
+                  </div>
+                </div>
               </div>
+
             </div>
           </div>
         </div>
@@ -97,15 +114,15 @@
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
-          <h5 class="modal-title" id="jamModalLabel">Jam</h5>
+          <h4 class="modal-title" id="jamModalLabel">Jam</h4>
         </div>
 
         <!-- MODAL BODY -->
 
-        <div class="modal-body">
+        <div class="modal-body px-3 pt-0 pb-3">
 
           <div class="mb-1">
-            Escoge tus instrumentos
+            Choose your instruments
           </div>
           <div id="sel-inst" class="row mb-1">
 
@@ -115,20 +132,20 @@
                 <div class="d-flex justify-content-around">
 
                   <div class="audio-preview-s">
-                    <object id="audio-preview" type="image/svg+xml" data="GUI/svg/botones/boton_audio_w.svg"
-                      class="audio-preview-s">
-                      Audio preview
-                    </object>
+                    <img id="instrument-preview1" src="GUI/img/audio_trans.png"
+                      class="audio-preview-s instrument-preview ">
                   </div>
+
+
 
                   <div id="sel-ch8" class="icon-container-s ml-1">
                     <object type="image/svg+xml" data="GUI/svg/iconos/cerdo-w.svg" class="animal-icon-s">
-                      Cerdo
+                      Pig
                     </object>
                   </div>
 
                 </div>
-                <div class="titulo text-center pt-1">Cerdo</div>
+                <div class="titulo text-center pt-1">Pig</div>
               </div>
             </div>
 
@@ -138,20 +155,18 @@
                 <div class="d-flex justify-content-around">
 
                   <div class="audio-preview-s">
-                    <object id="audio-preview" type="image/svg+xml" data="GUI/svg/botones/boton_audio_w.svg"
-                      class="audio-preview-s">
-                      Audio preview
-                    </object>
+                    <img id="instrument-preview2" src="GUI/img/audio_trans.png"
+                      class="audio-preview-s instrument-preview ">
                   </div>
 
                   <div id="sel-ch7" class="icon-container-s ml-1">
                     <object type="image/svg+xml" data="GUI/svg/iconos/loro-w.svg" class="animal-icon-s">
-                      Loro
+                      Bird
                     </object>
                   </div>
 
                 </div>
-                <div class="titulo text-center pt-1">Loro</div>
+                <div class="titulo text-center pt-1">Bird</div>
               </div>
             </div>
 
@@ -161,20 +176,18 @@
                 <div class="d-flex justify-content-around">
 
                   <div class="audio-preview-s">
-                    <object id="audio-preview" type="image/svg+xml" data="GUI/svg/botones/boton_audio_w.svg"
-                      class="audio-preview-s">
-                      Audio preview
-                    </object>
+                    <img id="instrument-preview3" src="GUI/img/audio_trans.png"
+                      class="audio-preview-s instrument-preview ">
                   </div>
 
                   <div id="sel-ch6" class="icon-container-s ml-1">
                     <object type="image/svg+xml" data="GUI/svg/iconos/sapo-w.svg" class="animal-icon-s">
-                      Sapo
+                      Frog
                     </object>
                   </div>
 
                 </div>
-                <div class="titulo text-center pt-1">Sapo</div>
+                <div class="titulo text-center pt-1">Frog</div>
               </div>
             </div>
 
@@ -184,20 +197,18 @@
                 <div class="d-flex justify-content-around">
 
                   <div class="audio-preview-s">
-                    <object id="audio-preview" type="image/svg+xml" data="GUI/svg/botones/boton_audio_w.svg"
-                      class="audio-preview-s">
-                      Audio preview
-                    </object>
+                    <img id="instrument-preview4" src="GUI/img/audio_trans.png"
+                      class="audio-preview-s instrument-preview ">
                   </div>
 
                   <div id="sel-ch5" class="icon-container-s ml-1">
                     <object type="image/svg+xml" data="GUI/svg/iconos/pato-w.svg" class="animal-icon-s">
-                      Pato
+                      Duck
                     </object>
                   </div>
 
                 </div>
-                <div class="titulo text-center pt-1">Pato</div>
+                <div class="titulo text-center pt-1">Duck</div>
               </div>
             </div>
 
@@ -207,20 +218,18 @@
                 <div class="d-flex justify-content-around">
 
                   <div class="audio-preview-s">
-                    <object id="audio-preview" type="image/svg+xml" data="GUI/svg/botones/boton_audio_w.svg"
-                      class="audio-preview-s">
-                      Audio preview
-                    </object>
+                    <img id="instrument-preview5" src="GUI/img/audio_trans.png"
+                      class="audio-preview-s instrument-preview ">
                   </div>
 
                   <div id="sel-ch4" class="icon-container-s ml-1">
                     <object type="image/svg+xml" data="GUI/svg/iconos/mono-w.svg" class="animal-icon-s">
-                      Mono
+                      Ape
                     </object>
                   </div>
 
                 </div>
-                <div class="titulo text-center pt-1">Mono</div>
+                <div class="titulo text-center pt-1">Ape</div>
               </div>
             </div>
 
@@ -230,20 +239,18 @@
                 <div class="d-flex justify-content-around">
 
                   <div class="audio-preview-s">
-                    <object id="audio-preview" type="image/svg+xml" data="GUI/svg/botones/boton_audio_w.svg"
-                      class="audio-preview-s">
-                      Audio preview
-                    </object>
+                    <img id="instrument-preview6" src="GUI/img/audio_trans.png"
+                      class="audio-preview-s instrument-preview ">
                   </div>
 
                   <div id="sel-ch3" class="icon-container-s ml-1">
                     <object type="image/svg+xml" data="GUI/svg/iconos/gato-w.svg" class="animal-icon-s">
-                      Gato
+                      Cat
                     </object>
                   </div>
 
                 </div>
-                <div class="titulo text-center pt-1">Gato</div>
+                <div class="titulo text-center pt-1">Cat</div>
               </div>
             </div>
 
@@ -253,20 +260,18 @@
                 <div class="d-flex justify-content-around">
 
                   <div class="audio-preview-s">
-                    <object id="audio-preview" type="image/svg+xml" data="GUI/svg/botones/boton_audio_w.svg"
-                      class="audio-preview-s">
-                      Audio preview
-                    </object>
+                    <img id="instrument-preview7" src="GUI/img/audio_trans.png"
+                      class="audio-preview-s instrument-preview ">
                   </div>
 
                   <div id="sel-ch2" class="icon-container-s ml-1">
                     <object type="image/svg+xml" data="GUI/svg/iconos/oso-w.svg" class="animal-icon-s">
-                      Oso
+                      Bear
                     </object>
                   </div>
 
                 </div>
-                <div class="titulo text-center pt-1">Oso</div>
+                <div class="titulo text-center pt-1">Bear</div>
               </div>
             </div>
 
@@ -276,29 +281,31 @@
                 <div class="d-flex justify-content-around">
 
                   <div class="audio-preview-s">
-                    <object id="audio-preview" type="image/svg+xml" data="GUI/svg/botones/boton_audio_w.svg"
-                      class="audio-preview-s">
-                      Audio preview
-                    </object>
+                    <img id="instrument-preview8" src="GUI/img/audio_trans.png"
+                      class="audio-preview-s instrument-preview  ">
                   </div>
 
                   <div id="sel-ch1" class="icon-container-s ml-1">
                     <object type="image/svg+xml" data="GUI/svg/iconos/buho-w.svg" class="animal-icon-s">
-                      Buho
+                      Owl
                     </object>
                   </div>
 
                 </div>
-                <div class="titulo text-center pt-1">Buho</div>
+                <div class="titulo text-center pt-1">Owl</div>
               </div>
             </div>
 
           </div>
-          <input type="button" value="ok" id="okCanales">
-
+          <!-- <input type="button" value="ok" id="okCanales"> -->
+          <div class="mb-1">
+            <button type="button" value="ok" id="okCanales" class="btn btn-secondary px-4">
+              Ok
+            </button>
+          </div>
 
           <div class="mt-3">
-            Invitá animales
+            Invite music explorers
           </div>
 
           <div id="enlace">
@@ -306,7 +313,7 @@
               <input type="text" class="form-control" placeholder="enlace sesión" id="linkText" aria-label="sesion"
                 aria-describedby="basic-addon2">
               <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button">Copiar</button>
+                <button class="btn btn-outline-secondary" type="button">Copy</button>
               </div>
             </div>
           </div>
@@ -350,6 +357,57 @@
   </div>
 
   <!-- help modal end -->
+  <!-- LORO REC Modal -->
+  <div class="modal fade" id="lororecModal" tabindex="-1" role="dialog" aria-labelledby="settingsModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title" id="settingsModalLabel">Rec sample</h4>
+        </div>
+        <!-- MODAL BODY -->
+        <div class="modal-body px-3 pt-0 pb-3">
+
+          <div class="row">
+            <div id="rec-play" class="col">
+              <div class="mb-1">
+                Puedes grabar un sonido de hasta 3 segundos.
+              </div>
+              <div class="btn-group my-2" role="group" aria-label="Basic example">
+                <div id="loro-rec-preview" class="audio-preview corners-l">
+                  <img src="GUI/img/audio-trans.png" class="animal-pointer corners-l h-100 w-auto" data-toggle="tooltip"
+                    data-placement="top" title="Escuchar">
+                </div>
+                <div id="loro-rec-button" class="d-flex align-items-center loro-rec corners-r">
+
+                  <a href="#" id="recDuration" class="d-flex m-auto texto-chico rec-icon-s">Rec</a>
+                </div>
+                <span id="duration"></span>
+              </div>
+              <div class="mb-1">
+                Haz click en el parlante para escuchar, click en OK para usar el sonido.
+              </div>
+
+              <div class="mb-1">
+                <button type="button" id="ok-rec-loro" class="btn btn-secondary px-4">
+                  Ok
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- modal body end -->
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- loro rec end -->
+  <!-- SETTINGS Modal -->
 
   <!-- SETTINGS Modal -->
 
@@ -361,88 +419,112 @@
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
-          <h5 class="modal-title" id="settingsModalLabel">Ajustes</h5>
+          <h4 class="modal-title" id="settingsModalLabel">Ajustes</h4>
 
         </div>
 
         <!-- MODAL BODY -->
 
-        <div class="modal-body">
+        <div class="modal-body px-3 pt-0 pb-3">
           <div class="row">
-            <div class="col-12">Fondos</div>
+            <!-- <div class="col-12">Fondos</div>
             <div class="col-12 m-0 d-flex">
               <div class="color-chip-1 mr-3"></div>
               <div class="color-chip-2 mr-3"></div>
               <div class="color-chip-3 mr-3"></div>
               <div class="color-chip-4 mr-3"></div>
               <div class="color-chip-5 mr-3"></div>
-            </div>
+            </div> -->
             <div class="col-12 mt-3">Sonidos</div>
             <div class="row m-0">
               <div id="sonidos-kit-1" class="col-6">
                 <div class="btn-group my-2" role="group" aria-label="Basic example">
-                  <div class="audio-preview corners-l">
-                    <object id="audiopre-kit1" type="image/svg+xml" data="GUI/svg/botones/boton_audio_w.svg"
-                      class="audio-preview corners-l">
-                      Audio preview
-                    </object>
+                  <div class="audio-preview corners-l audio-pre-kit" id="audiopre-kit1">
+                    <h1 class="set-num">1</h1>
+                    <img id="kit-preview1" src="GUI/img/audio_trans.png"
+                    class="d-none audio-preview-s kit-preview ">
                   </div>
-                  <button type="button" class="btn btn-secondary">Rock and roll</button>
+                  <button type="button" id="kit1" class="pl-1 btn btn-secondary kits">Mano</button>
                 </div>
               </div>
-              <div id="sonidos-kit-1" class="col-6">
+              <div id="sonidos-kit-2" class="col-6">
                 <div class="btn-group my-2" role="group" aria-label="Basic example">
-                  <div class="audio-preview corners-l">
-                    <object id="audiopre-kit1" type="image/svg+xml" data="GUI/svg/botones/boton_audio_w.svg"
-                      class="audio-preview corners-l">
-                      Audio preview
-                    </object>
+                  <div class="audio-preview corners-l audio-pre-kit" id="audiopre-kit2">
+                    <h1 class="set-num">2</h1>
+                    <img id="kit-preview2" src="GUI/img/audio_trans.png"
+                    class="d-none audio-preview-s kit-preview ">
                   </div>
-                  <button type="button" class="btn btn-secondary">rock</button>
+                  <button type="button" id="kit2" class="pl-1 btn btn-secondary kits">Animal</button>
                 </div>
               </div>
-              <div id="sonidos-kit-1" class="col-6">
+              <div id="sonidos-kit-3" class="col-6">
                 <div class="btn-group my-2" role="group" aria-label="Basic example">
-                  <div class="audio-preview corners-l">
-                    <object id="audiopre-kit1" type="image/svg+xml" data="GUI/svg/botones/boton_audio_w.svg"
-                      class="audio-preview corners-l">
-                      Audio preview
-                    </object>
+                  <div class="audio-preview corners-l audio-pre-kit" id="audiopre-kit3">
+                    <h1 class="set-num">3</h1>
+                    <img id="kit-preview3" src="GUI/img/audio_trans.png"
+                    class="d-none audio-preview-s kit-preview ">
                   </div>
-                  <button type="button" class="btn btn-secondary">rock</button>
+                  <button type="button" id="kit3" class="pl-1 btn btn-secondary kits">Plátano</button>
                 </div>
               </div>
-              <div id="sonidos-kit-1" class="col-6">
+              <div id="sonidos-kit-4" class="col-6">
                 <div class="btn-group my-2" role="group" aria-label="Basic example">
-                  <div class="audio-preview corners-l">
-                    <object id="audiopre-kit1" type="image/svg+xml" data="GUI/svg/botones/boton_audio_w.svg"
-                      class="audio-preview corners-l">
-                      Audio preview
-                    </object>
+                  <div class="audio-preview corners-l audio-pre-kit" id="audiopre-kit4">
+                    <h1 class="set-num">4</h1>
+                    <img id="kit-preview4" src="GUI/img/audio_trans.png"
+                      class="d-none audio-preview-s kit-preview ">
                   </div>
-                  <button type="button" class="btn btn-secondary">rock</button>
+                  <button type="button" id="kit4" class="pl-1 btn btn-secondary kits">Amazonia</button>
                 </div>
               </div>
-              <div id="sonidos-kit-1" class="col-6">
+              <div id="sonidos-kit-5" class="col-6">
                 <div class="btn-group my-2" role="group" aria-label="Basic example">
-                  <div class="audio-preview corners-l">
-                    <object id="audiopre-kit1" type="image/svg+xml" data="GUI/svg/botones/boton_audio_w.svg"
-                      class="audio-preview corners-l">
-                      Audio preview
-                    </object>
+                  <div class="audio-preview corners-l audio-pre-kit" id="audiopre-kit5">
+                  <h1 class="set-num">5</h1>
+                  <img id="kit-preview5" src="GUI/img/audio_trans.png"
+                  class="d-none audio-preview-s kit-preview ">
                   </div>
-                  <button type="button" class="btn btn-secondary">rock</button>
+                  <button type="button" id="kit5" class="pl-1 btn btn-secondary kits">Mágico</button>
                 </div>
               </div>
-              <div id="sonidos-kit-1" class="col-6">
+              <div id="sonidos-kit-6" class="col-6">
                 <div class="btn-group my-2" role="group" aria-label="Basic example">
-                  <div class="audio-preview corners-l">
-                    <object id="audiopre-kit1" type="image/svg+xml" data="GUI/svg/botones/boton_audio_w.svg"
-                      class="audio-preview corners-l">
-                      Audio preview
-                    </object>
+                  <div class="audio-preview corners-l audio-pre-kit" id="audiopre-kit6">
+                    <h1 class="set-num">6</h1>
+                    <img id="kit-preview6" src="GUI/img/audio_trans.png"
+                    class="d-none audio-preview-s kit-preview ">
                   </div>
-                  <button type="button" class="btn btn-secondary">rock</button>
+                  <button type="button" id="kit6" class="pl-1 btn btn-secondary kits">Safari</button>
+                </div>
+              </div>
+              <div id="sonidos-kit-7" class="col-6">
+                <div class="btn-group my-2" role="group" aria-label="Basic example">
+                  <div class="audio-preview corners-l audio-pre-kit" id="audiopre-kit7">
+                    <h1 class="set-num">7</h1>
+                    <img id="kit-preview7" src="GUI/img/audio_trans.png"
+                      class="d-none audio-preview-s kit-preview ">
+                  </div>
+                  <button type="button" id="kit7" class="pl-1 btn btn-secondary kits">Banda</button>
+                </div>
+              </div>
+              <div id="sonidos-kit-8" class="col-6">
+                <div class="btn-group my-2" role="group" aria-label="Basic example">
+                  <div class="audio-preview corners-l audio-pre-kit" id="audiopre-kit8">
+                    <h1 class="set-num">8</h1>
+                    <img id="kit-preview8" src="GUI/img/audio_trans.png"
+                    class="d-none audio-preview-s kit-preview ">
+                  </div>
+                  <button type="button" id="kit8" class="pl-1 btn btn-secondary kits">PumPum</button>
+                </div>
+              </div>
+              <div id="sonidos-kit-9" class="col-6">
+                <div class="btn-group my-2" role="group" aria-label="Basic example">
+                  <div class="audio-preview corners-l audio-pre-kit" id="audiopre-kit9">
+                    <h1 class="set-num">9</h1>
+                    <img id="kit-preview9" src="GUI/img/audio_trans.png"
+                    class="d-none audio-preview-s kit-preview ">
+                  </div>
+                  <button type="button" id="kit9" class="pl-1 btn btn-secondary kits">Bata</button>
                 </div>
               </div>
             </div>
@@ -469,7 +551,11 @@
         <div id="Animal_logo" class="d-flex flex-column justify-content-arround">
           <img src="GUI/img/Animal_logo_v0.png" height="40px">
         </div>
-        <div id="MoM_logo" class="d-flex mr-2 my-auto">[MoM]</div>
+        <div id="MoM_logo" class="d-flex mr-2 my-auto">
+          <div>
+            [MoM]
+          </div>
+        </div>
       </div>
     </div>
     <!-- header end -->
@@ -498,7 +584,11 @@
       <!-- INSTRUMENTOS -->
 
       <span class="d-none d-lg-block">
-        <div id="instrumentos" class="row mx-5 mx-lg-0 px-5 px-lg-0 d-flex flex-row justify-content-around text-white">
+
+        <div id="instrumentos"
+          class="row mx-5 mx-lg-0 px-5 px-lg-0 d-flex flex-row justify-content-around text-white help-item"
+          data-toggle="popover" title="INSTRUMENTOS" data-placement="bottom"
+          data-content="Modifica el sonido girando la perilla de Tone">
 
           <div id="buhoInst" class="col-auto m-0 mr-5 mr-xl-0 mt-2 p-0 instrumento8">
             <div id="" class="position-absolute opacity-4 corners1 destaque-animal w-100 h-100 disabled-overlay">
@@ -507,14 +597,14 @@
               <div class="d-flex flex-column">
                 <div class="animal-icon">
                   <object type="image/svg+xml" data="GUI/svg/iconos/buho-w.svg" class="animal-icon">
-                    Buho
+                    Owl
                   </object>
                 </div>
-                <div class="title mt-1">Buh</div>
+                <div class="title mt-1 mb-3">Owl</div>
                 <div class="sub_title">Base drum</div>
               </div>
               <div class="dial_container mb-1 ml-1">
-                <div id="dial-ins1" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch"></div>
+                <div id="dial-ins1" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone"></div>
               </div>
             </div>
           </div>
@@ -527,14 +617,14 @@
               <div class="d-flex flex-column">
                 <div class="animal-icon">
                   <object type="image/svg+xml" data="GUI/svg/iconos/oso-w.svg" class="animal-icon">
-                    Oso
+                    Bear
                   </object>
                 </div>
-                <div class="title mt-1">Os</div>
+                <div class="title mt-1 mb-3">Bear</div>
                 <div class="sub_title">Snare</div>
               </div>
               <div class="dial_container mb-1 ml-1">
-                <div id="dial-ins2" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch"></div>
+                <div id="dial-ins2" class="mom_dial" data-toggle="tooltip" data-placement="top" title=""></div>
               </div>
             </div>
           </div>
@@ -547,14 +637,14 @@
               <div class="d-flex flex-column">
                 <div class="animal-icon">
                   <object type="image/svg+xml" data="GUI/svg/iconos/gato-w.svg" class="animal-icon">
-                    Gato
+                    Cat
                   </object>
                 </div>
-                <div class="title mt-1">Gat</div>
+                <div class="title mt-1 mb-3">Cat</div>
                 <div class="sub_title">Hi hat</div>
               </div>
               <div class="dial_container mb-1 ml-1">
-                <div id="dial-ins3" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch"></div>
+                <div id="dial-ins3" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone"></div>
               </div>
             </div>
           </div>
@@ -566,14 +656,14 @@
               <div class="d-flex flex-column">
                 <div class="animal-icon">
                   <object type="image/svg+xml" data="GUI/svg/iconos/mono-w.svg" class="animal-icon">
-                    Mono
+                    Ape
                   </object>
                 </div>
-                <div class="title mt-1">Mon</div>
+                <div class="title mt-1 mb-3">Ape</div>
                 <div class="sub_title">Bass</div>
               </div>
               <div class="dial_container mb-1 ml-1">
-                <div id="dial-ins4" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch"></div>
+                <div id="dial-ins4" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone"></div>
               </div>
             </div>
           </div>
@@ -586,14 +676,14 @@
               <div class="d-flex flex-column">
                 <div class="animal-icon">
                   <object type="image/svg+xml" data="GUI/svg/iconos/pato-w.svg" class="animal-icon">
-                    Pato
+                    Duck
                   </object>
                 </div>
-                <div class="title mt-1">Pat</div>
+                <div class="title mt-1 mb-3">Duck</div>
                 <div class="sub_title">Clave</div>
               </div>
               <div class="dial_container mb-1 ml-1">
-                <div id="dial-ins5" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch"></div>
+                <div id="dial-ins5" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone"></div>
               </div>
             </div>
           </div>
@@ -605,17 +695,18 @@
               <div class="d-flex flex-column">
                 <div class="animal-icon">
                   <object type="image/svg+xml" data="GUI/svg/iconos/sapo-w.svg" class="animal-icon">
-                    Sapo
+                    Frog
                   </object>
                 </div>
-                <div class="title mt-1">Sap</div>
+                <div class="title mt-1 mb-3">Frog</div>
                 <div class="sub_title">Ride</div>
               </div>
               <div class="dial_container mb-1 ml-1">
-                <div id="dial-ins6" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch"></div>
+                <div id="dial-ins6" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone"></div>
               </div>
             </div>
           </div>
+
 
           <div id="loroInst" class="col-auto m-0 ml-1 mt-2 p-0 instrumento2">
             <div id="" class="position-absolute opacity-4 corners1 destaque-animal w-100 h-100 disabled-overlay">
@@ -624,18 +715,23 @@
               <div class="d-flex flex-column">
                 <div class="animal-icon">
                   <object type="image/svg+xml" data="GUI/svg/iconos/loro-w.svg" class="animal-icon">
-                    Loro
+                    Bird
                   </object>
                 </div>
-                <div class="title mt-1">Lor</div>
+                <div class="title mt-1 mb-3">Bird</div>
                 <div class="sub_title">Sampler</div>
               </div>
-              <div class="dial_container mb-1 ml-1">
-                <div id="dial-ins7" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch"></div>
+              <div class="d-flex flex-column">
+                <div id="loro-rec" class="mb-1 ml-1" data-toggle="tooltip" data-placement="top" title="Rec">
+                  <a href="#" data-toggle="modal" data-target="#lororecModal" role="button"
+                    class="d-flex m-auto p-1 rec-icon-s-b">&nbsp;</a>
+                </div>
+                <div class="dial_container mb-1 ml-1">
+                  <div id="dial-ins7" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone"></div>
+                </div>
               </div>
             </div>
           </div>
-
           <div id="cerdoInst" class="col-auto m-0 ml-1 mr-5 mr-xl-0 mt-2 p-0 instrumento1">
             <div id="" class="d-none position-absolute opacity-4 corners1 destaque-animal w-100 h-100 disabled-overlay">
             </div>
@@ -643,14 +739,14 @@
               <div class="d-flex flex-column">
                 <div class="animal-icon">
                   <object type="image/svg+xml" data="GUI/svg/iconos/cerdo-w.svg" class="animal-icon">
-                    Cerdo
+                    Pig
                   </object>
                 </div>
-                <div class="title mt-1">Cerd</div>
+                <div class="title mt-1 mb-3 mb-3">Pig</div>
                 <div class="sub_title">Scratch</div>
               </div>
               <div class="dial_container mb-1 ml-1">
-                <div id="dial-ins8" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch"></div>
+                <div id="dial-ins8" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone"></div>
               </div>
             </div>
           </div>
@@ -686,9 +782,13 @@
       <div id="izq" class="col-12 col-lg-3 col-xl-2 d-flex flex-column flex-lg-row">
         <div class="row pr-lg-1 d-flex h-100">
           <!-- CHAT -->
-          <div id="chat-animal" class="col-5 col-lg-12 p-0 d-flex">
-            <div class="pt-4 pb-2 px-2 corners1 figura-1-animal">
-              <ul id="messages" class="m-0 p-0 h-75 texto-chico"></ul>
+          <div id="chat-animal" class="col-5 col-lg-12 p-0 d-flex" style="display: none !important;">
+
+            <div id="chat-help" class="pt-4 pb-2 px-2 corners1 figura-1-animal help-item" data-toggle="popover"
+              title="CHAT" data-placement="bottom" data-content="Coordina tus acciones con otros animales">
+
+              <ul id="messages" class="d-flex h-75 flex-column-reverse m-0 p-0 texto-chico"></ul>
+
               <form action="" class="pt-2 d-flex h-25">
                 <input id="m" autocomplete="off" class="w-75 border-0 corners1" />
                 <button class="ml-1 p-1 animal-icon-s"><img src="GUI/img/ok-btn.png" class="img-fluid"></button>
@@ -720,7 +820,7 @@
                     </div>
                   </div>
                   <!-- SWING -->
-                  <div id="swing" class="col-12">
+                  <div id="swing" class="col-12 d-none">
                     <div class="row d-flex h-100">
                       <div id="decrement-swing-btn" class="col-3 d-flex my-0 blanco-ui-animal animal-pointer">
                         <strong class="m-auto text-center">-</strong>
@@ -729,7 +829,7 @@
                         <strong class="m-auto text-center">+</strong>
                       </div>
                       <div id="swing-display" class="col-6 numero-animal d-flex my-0 blanco-ui-animal">
-                        <strong id="swingNumber" class="m-auto text-center">96</strong>
+                        <strong id="swingNumber" class="m-auto text-center">0</strong>
                         <span class="m-auto pl-1 texto-chico text-center">swing</span>
                       </div>
                     </div>
@@ -740,10 +840,12 @@
               <div id="rec-mute" class="col-4 col-lg-12 mt-lg-1 ">
                 <div class="row h-100 my-0 pl-1 pl-lg-0 d-flex flex-column flex-lg-row ">
                   <div id="rec-btn" class="col-lg-6 d-flex my-0 blanco-ui-animal animal-pointer">
-                    <span class="m-auto text-center">Rec</span>
+                    <span class="m-auto text-center" data-text="Stop">Rec</span>
                   </div>
-                  <div id="mute-btn" class="col-lg-6 d-flex my-0 figura-1-animal mute-btn animal-pointer">
-                    <span class="m-auto text-center"></span>
+                  <div id="mute-btn" class="col-lg-6 d-flex my-0 mute-btn blanco-ui-animal animal-pointer"
+                    data-toggle="popover">
+                    <span class="m-auto text-center" data-text="Stop">Play</span>
+
                   </div>
                 </div>
               </div>
@@ -752,187 +854,200 @@
 
 
             <!-- INSTRUMENTO SELECCIONADO (#sel-inst) -->
+            <span id="sel-inst-help" class="help-item" data-toggle="popover" title="INSTRUMENTOS" data-placement="bottom"
+              data-content="Modifica el sonido y el volumen girando las perillas">
 
-            <div id="sel-inst" class="m-0 p-0 pt-1 d-block d-lg-none d-flex align-items-end text-white overflow-hidden">
+              <div id="sel-inst"
+                class="m-0 p-0 pt-1 d-block d-lg-none d-flex align-items-end text-white overflow-hidden">
 
-              <span id="buhoInst" class="d-none instMobile">
-                <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal gris-animal">
-                  <div class="d-flex flex-column">
-                    <div class="animal-icon">
-                      <object type="image/svg+xml" data="GUI/svg/iconos/buho-w.svg" class="animal-icon">
-                        Buho
-                      </object>
+                <span id="buhoInst" class="d-none instMobile">
+                  <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal gris-animal">
+                    <div class="d-flex flex-column">
+                      <div class="animal-icon">
+                        <object type="image/svg+xml" data="GUI/svg/iconos/buho-w.svg" class="animal-icon">
+                          Buho
+                        </object>
+                      </div>
+                      <div class="title mt-1 mb-3 mb-3">Buh</div>
+                      <div class="sub_title">Base drum</div>
                     </div>
-                    <div class="title mt-1">Buh</div>
-                    <div class="sub_title">Base drum</div>
-                  </div>
-                  <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ins1" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch">
+                    <div class="dial_container mb-1 ml-1">
+                      <div id="mob-dial-ins1" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone">
+                      </div>
+                    </div>
+                    <div class="dial_container mb-1 ml-1">
+                      <div id="mob-dial-ch1" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
+                      </div>
                     </div>
                   </div>
-                  <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ch1" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
-                    </div>
-                  </div>
-                </div>
-              </span>
+                </span>
 
-              <span id="osoInst" class="d-none instMobile">
-                <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal chocolate-animal">
-                  <div class="d-flex flex-column">
-                    <div class="animal-icon">
-                      <object type="image/svg+xml" data="GUI/svg/iconos/oso-w.svg" class="animal-icon">
-                        Loro
-                      </object>
+                <span id="osoInst" class="d-none instMobile">
+                  <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal chocolate-animal">
+                    <div class="d-flex flex-column">
+                      <div class="animal-icon">
+                        <object type="image/svg+xml" data="GUI/svg/iconos/oso-w.svg" class="animal-icon">
+                          Oso
+                        </object>
+                      </div>
+                      <div class="title mt-1 mb-3">Os</div>
+                      <div class="sub_title">Snare</div>
                     </div>
-                    <div class="title mt-1">Os</div>
-                    <div class="sub_title">Snare</div>
-                  </div>
-                  <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ins2" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch">
+                    <div class="dial_container mb-1 ml-1">
+                      <div id="mob-dial-ins2" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone">
+                      </div>
+                    </div>
+                    <div class="dial_container mb-1 ml-1">
+                      <div id="mob-dial-ch2" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
+                      </div>
                     </div>
                   </div>
-                  <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ch2" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
-                    </div>
-                  </div>
-                </div>
-              </span>
+                </span>
 
-              <span id="gatoInst" class="d-none instMobile">
-                <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal gris-animal">
-                  <div class="d-flex flex-column">
-                    <div class="animal-icon">
-                      <object type="image/svg+xml" data="GUI/svg/iconos/gato-w.svg" class="animal-icon">
-                        Gato
-                      </object>
+                <span id="gatoInst" class="d-none instMobile">
+                  <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal gris-animal">
+                    <div class="d-flex flex-column">
+                      <div class="animal-icon">
+                        <object type="image/svg+xml" data="GUI/svg/iconos/gato-w.svg" class="animal-icon">
+                          Gato
+                        </object>
+                      </div>
+                      <div class="title mt-1 mb-3">Gat</div>
+                      <div class="sub_title">Hi hat</div>
                     </div>
-                    <div class="title mt-1">Gat</div>
-                    <div class="sub_title">Hi hat</div>
-                  </div>
-                  <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ins3" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch">
+                    <div class="dial_container mb-1 ml-1">
+                      <div id="mob-dial-ins3" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone">
+                      </div>
+                    </div>
+                    <div class="dial_container mb-1 ml-1">
+                      <div id="mob-dial-ch3" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
+                      </div>
                     </div>
                   </div>
-                  <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ch3" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
-                    </div>
-                  </div>
-                </div>
-              </span>
+                </span>
 
-              <span id="monoInst" class="d-none instMobile">
-                <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal marron-animal">
-                  <div class="d-flex flex-column">
-                    <div class="animal-icon">
-                      <object type="image/svg+xml" data="GUI/svg/iconos/mono-w.svg" class="animal-icon">
-                        Mono
-                      </object>
+                <span id="monoInst" class="d-none instMobile">
+                  <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal marron-animal">
+                    <div class="d-flex flex-column">
+                      <div class="animal-icon">
+                        <object type="image/svg+xml" data="GUI/svg/iconos/mono-w.svg" class="animal-icon">
+                          Mono
+                        </object>
+                      </div>
+                      <div class="title mt-1 mb-3">Mon</div>
+                      <div class="sub_title">Bass</div>
                     </div>
-                    <div class="title mt-1">Mon</div>
-                    <div class="sub_title">Bass</div>
-                  </div>
-                  <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ins4" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch">
+                    <div class="dial_container mb-1 ml-1">
+                      <div id="mob-dial-ins4" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone">
+                      </div>
+                    </div>
+                    <div class="dial_container mb-1 ml-1">
+                      <div id="mob-dial-ch4" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
+                      </div>
                     </div>
                   </div>
-                  <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ch4" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
-                    </div>
-                  </div>
-                </div>
-              </span>
+                </span>
 
-              <span id="patoInst" class="d-none instMobile">
-                <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal mostaza-animal">
-                  <div class="d-flex flex-column">
-                    <div class="animal-icon">
-                      <object type="image/svg+xml" data="GUI/svg/iconos/pato-w.svg" class="animal-icon">
-                        Pato
-                      </object>
+                <span id="patoInst" class="d-none instMobile">
+                  <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal mostaza-animal">
+                    <div class="d-flex flex-column">
+                      <div class="animal-icon">
+                        <object type="image/svg+xml" data="GUI/svg/iconos/pato-w.svg" class="animal-icon">
+                          Pato
+                        </object>
+                      </div>
+                      <div class="title mt-1 mb-3">Pat</div>
+                      <div class="sub_title">Clave</div>
                     </div>
-                    <div class="title mt-1">Pat</div>
-                    <div class="sub_title">Clave</div>
-                  </div>
-                  <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ins5" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch">
+                    <div class="dial_container mb-1 ml-1">
+                      <div id="mob-dial-ins5" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone">
+                      </div>
+                    </div>
+                    <div class="dial_container mb-1 ml-1">
+                      <div id="mob-dial-ch5" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
+                      </div>
                     </div>
                   </div>
-                  <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ch5" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
-                    </div>
-                  </div>
-                </div>
-              </span>
+                </span>
 
-              <span id="sapoInst" class="d-none instMobile">
-                <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal verde-animal">
-                  <div class="d-flex flex-column">
-                    <div class="animal-icon">
-                      <object type="image/svg+xml" data="GUI/svg/iconos/sapo-w.svg" class="animal-icon">
-                        Sapo
-                      </object>
+                <span id="sapoInst" class="d-none instMobile">
+                  <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal verde-animal">
+                    <div class="d-flex flex-column">
+                      <div class="animal-icon">
+                        <object type="image/svg+xml" data="GUI/svg/iconos/sapo-w.svg" class="animal-icon">
+                          Sapo
+                        </object>
+                      </div>
+                      <div class="title mt-1 mb-3">Sap</div>
+                      <div class="sub_title">Ride</div>
                     </div>
-                    <div class="title mt-1">Sap</div>
-                    <div class="sub_title">Ride</div>
-                  </div>
-                  <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ins6" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch">
+                    <div class="dial_container mb-1 ml-1">
+                      <div id="mob-dial-ins6" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone">
+                      </div>
+                    </div>
+                    <div class="dial_container mb-1 ml-1">
+                      <div id="mob-dial-ch6" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
+                      </div>
                     </div>
                   </div>
-                  <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ch6" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
-                    </div>
-                  </div>
-                </div>
-              </span>
+                </span>
 
-              <span id="loroInst" class="d-none instMobile">
-                <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal verde-animal">
-                  <div class="d-flex flex-column">
-                    <div class="animal-icon">
-                      <object type="image/svg+xml" data="GUI/svg/iconos/loro-w.svg" class="animal-icon">
-                        Loro
-                      </object>
+                <span id="loroInst" class="d-none instMobile">
+                  <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal verde-animal">
+                    <div class="d-flex flex-column">
+                      <div class="animal-icon">
+                        <object type="image/svg+xml" data="GUI/svg/iconos/loro-w.svg" class="animal-icon">
+                          Loro
+                        </object>
+                      </div>
+                      <div class="title mt-1 mb-3">Lor</div>
+                      <div class="sub_title">Sampler</div>
                     </div>
-                    <div class="title mt-1">Lor</div>
-                    <div class="sub_title">Sampler</div>
-                  </div>
-                  <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ins7" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch">
-                    </div>
-                  </div>
-                  <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ch7" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
-                    </div>
-                  </div>
-                </div>
-              </span>
+                    <div class="d-flex flex-column">
 
-              <span id="cerdoInst" class="d-block instMobile">
-                <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal rosa-animal">
-                  <div class="d-flex flex-column">
-                    <div class="animal-icon">
-                      <object type="image/svg+xml" data="GUI/svg/iconos/cerdo-w.svg" class="animal-icon">
-                        Cerdo
-                      </object>
-                    </div>
-                    <div class="title mt-1">Cerd</div>
-                    <div class="sub_title">Scratch</div>
-                  </div>
-                  <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ins8" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Pitch">
-                    </div>
-                  </div>
-                  <div class="dial_container mb-1 ml-1">
-                    <div id="mob-dial-ch8" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
-                    </div>
-                  </div>
-                </div>
-              </span>
 
-            </div>
+                      <div id="loro-rec" class="mb-1 ml-1" data-toggle="tooltip" data-placement="top" title="Rec">
+                        <a href="#" data-toggle="modal" data-target="#lororecModal" role="button"
+                          class="d-flex m-auto p-1 rec-icon-s-b">&nbsp;</a>
+                      </div>
 
+                      <div class="dial_container mb-1 ml-1">
+                        <div id="mob-dial-ins7" class="mom_dial" data-toggle="tooltip" data-placement="top"
+                          title="Tone">
+                        </div>
+                      </div>
+                      <div class="dial_container mb-1 ml-1">
+                        <div id="mob-dial-ch7" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </span>
+
+                <span id="cerdoInst" class="d-block instMobile">
+                  <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal rosa-animal">
+                    <div class="d-flex flex-column">
+                      <div class="animal-icon">
+                        <object type="image/svg+xml" data="GUI/svg/iconos/cerdo-w.svg" class="animal-icon">
+                          Cerdo
+                        </object>
+                      </div>
+                      <div class="title mt-1 mb-3">Cerd</div>
+                      <div class="sub_title">Scratch</div>
+                    </div>
+                    <div class="dial_container mb-1 ml-1">
+                      <div id="mob-dial-ins8" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone">
+                      </div>
+                    </div>
+                    <div class="dial_container mb-1 ml-1">
+                      <div id="mob-dial-ch8" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
+                      </div>
+                    </div>
+                  </div>
+                </span>
+
+              </div>
+            </span>
           </div>
 
           <!-- controles end -->
@@ -954,7 +1069,8 @@
               <!-- ÍCONOS y DIALES -->
               <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup1">
                 <div class="animal-icon">
-                  <img id="icono-ch8" src="GUI/img/cerdo.png" class="soloButton img-fluid animal-pointer">
+                  <img id="icono-ch8" src="GUI/img/cerdo.png" class="soloButton img-fluid animal-pointer"
+                    data-toggle="tooltip" data-placement="top" title="SOLO">
                 </div>
                 <div class="dial_container d-none d-lg-block">
                   <div id="dial-ch8" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
@@ -962,7 +1078,8 @@
               </div>
               <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup2">
                 <div class="animal-icon">
-                  <img id="icono-ch7" src="GUI/img/loro.png" class="soloButton img-fluid animal-pointer">
+                  <img id="icono-ch7" src="GUI/img/loro.png" class="soloButton img-fluid animal-pointer"
+                    data-toggle="tooltip" data-placement="top" title="SOLO">
                 </div>
                 <div class="dial_container d-none d-lg-block">
                   <div id="dial-ch7" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
@@ -970,15 +1087,18 @@
               </div>
               <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup3">
                 <div class="animal-icon">
-                  <img id="icono-ch6" src="GUI/img/sapo.png" class="soloButton img-fluid animal-pointer">
+                  <img id="icono-ch6" src="GUI/img/sapo.png" class="soloButton img-fluid animal-pointer"
+                    data-toggle="tooltip" data-placement="top" title="SOLO">
                 </div>
                 <div class="dial_container d-none d-lg-block">
                   <div id="dial-ch6" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
                 </div>
               </div>
               <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup4">
-                <div class="animal-icon">
-                  <img id="icono-ch5" src="GUI/img/pato.png" class="soloButton img-fluid animal-pointer">
+                <div id="animalChannel1" class="animal-icon help-item" data-toggle="popover" title="CANALES"
+                  data-placement="right" data-content="Activa modo SOLO presionando el ícono de animal">
+                  <img id="icono-ch5" src="GUI/img/pato.png" class="soloButton img-fluid animal-pointer"
+                    data-toggle="tooltip" data-placement="top" title="SOLO">
                 </div>
                 <div class="dial_container d-none d-lg-block">
                   <div id="dial-ch5" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
@@ -986,7 +1106,8 @@
               </div>
               <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup5">
                 <div class="animal-icon">
-                  <img id="icono-ch4" src="GUI/img/mono.png" class="soloButton img-fluid animal-pointer">
+                  <img id="icono-ch4" src="GUI/img/mono.png" class="soloButton img-fluid animal-pointer"
+                    data-toggle="tooltip" data-placement="top" title="SOLO">
                 </div>
                 <div class="dial_container d-none d-lg-block">
                   <div id="dial-ch4" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
@@ -994,29 +1115,35 @@
               </div>
               <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup6">
                 <div class="animal-icon">
-                  <img id="icono-ch3" src="GUI/img/gato.png" class="soloButton img-fluid animal-pointer">
+                  <img id="icono-ch3" src="GUI/img/gato.png" class="soloButton img-fluid animal-pointer"
+                    data-toggle="tooltip" data-placement="top" title="SOLO">
                 </div>
                 <div class="dial_container d-none d-lg-block">
                   <div id="dial-ch3" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
                 </div>
               </div>
-              <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup7">
+              <div id="channelGroup7"
+                class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" >
                 <div class="animal-icon">
-                  <img id="icono-ch2" src="GUI/img/oso.png" class="soloButton img-fluid animal-pointer">
+                  <img id="icono-ch2" src="GUI/img/oso.png" class="soloButton img-fluid animal-pointer"
+                    data-toggle="tooltip" data-placement="top" title="SOLO">
                 </div>
                 <div class="dial_container d-none d-lg-block">
                   <div id="dial-ch2" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
                 </div>
               </div>
-              <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup8">
-                <div class="animal-icon" id="animalChannel1">
-                  <img id="icono-ch1" src="GUI/img/buho.png" class="soloButton img-fluid animal-pointer">
+              <div id="channelGroup8"
+                class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup help-item"
+                data-toggle="popover" title="CANALES" data-placement="right"
+                data-content="Ajusta el volumen con la perilla">
+                <div class="animal-icon">
+                  <img id="icono-ch1" src="GUI/img/buho.png" class="soloButton img-fluid animal-pointer"
+                    data-toggle="tooltip" data-placement="top" title="SOLO">
                 </div>
                 <div class="dial_container d-none d-lg-block">
                   <div id="dial-ch1" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
                 </div>
               </div>
-              <!-- íconos y diales end -->
 
 
               <!-- íconos y diales end -->
@@ -1043,25 +1170,25 @@
 
           <div id="jam-ajustes"
             class="col-xl-1 py-4 px-3 d-flex flex-xl-column justify-content-between fondo-1-animal corners1">
-            <div id="jam-sesion" class="mx-auto d-flex my-auto flex-lg-column">
+            <div id="jam-sesion" class="mx-auto d-flex my-auto flex-lg-column help-item" data-toggle="popover"
+              title="JAM SESSION" data-placement="bottom" data-content="Invita más animales a tu sesión">
+
               <a href="#" id="boton" data-toggle="modal" data-target="#jamModal" role="button"
-                class="animal-icon text-center">
+                class="animal-icon jam-btn text-center">
                 Jam
               </a>
               <div class="m-auto text-center">
               </div>
             </div>
-            <div id="combo-botones" class="mx-auto d-flex flex-row flex-xl-column">
-              <div id="help" class="d-none mx-auto align-self-baseline">
-                <a href="#" id="boton" data-toggle="modal" data-target="#helpModal" role="button">
-                  <img src="GUI/svg/botones/boton_ayuda.svg" class="animal-icon">
-                </a>
-              </div>
-              <div id="settings" class="d-none mx-auto align-self-baseline">
+            <div id="combo-botones" class="mx-0 mx-xl-auto d-flex flex-row flex-xl-column">
+              <div id="settings" class="animal-icon mb-2" data-toggle="tooltip" data-placement="top" title="Ajustes">
                 <a href="#" id="boton" data-toggle="modal" data-target="#settingsModal" role="button">
-                  <img src="GUI/svg/botones/boton_ajustes_w.svg" class="btn-icon">
+                  <img src="GUI/svg/botones/boton_ajustes_b.svg" class="btn-icon">
                 </a>
               </div>
+                <a id="help-btn" class="mx-auto align-self-baseline help-icon text-center" role="button">
+                    <img src="GUI/svg/botones/boton_ayuda_b.svg" class="btn-icon">
+                </a>
             </div>
           </div>
 
@@ -1073,12 +1200,54 @@
 
     <!-- main-down end -->
 
+    <!-- contact-bar -->
+
+    <div class="row">
+      <div class="col p-2 chocolate-animal text-white texto-chico">
+        [MoM] 2021 / <a id="creditos" role="button" tabindex="0" data-toggle="popover" data-html="true" data-placement="right" data-content="
+          <h4>Animal v1.0 [MoM]</h4>
+          <hr>
+          <b>Idea:</b></br>
+          Androoval</br>
+          <b>Programación:</b></br>
+          Carolina Zunino</br>
+          y Antar Kuri</br>
+          <b>Diseño UX:</b></br>
+          MoM + Carolina Zunino</br>
+          <b>Diseño UI:</b></br>
+          Antar Kuri</br>
+          <b>Diseño sonoro:</b></br>
+          Andrés Perez</br>"
+          data-original-title="" title="">
+              Credits
+        </a> / hello@mom-lab.studio / UY [598]96453083
+      </div>
+    </div>
+
+
+    <!-- contact-bar end -->
+
 
   </div>
 
 
 
+<!-- FOOTER -->
+<div id="footer" class="container-fluid py-5 bg-white">
+  <div class="row py-md-5">
+    <div class="col-7 col-sm-4 col-lg-3 mx-auto mr-sm-0 my-0 px-5 pb-3">
+      <img src="GUI/img/ANIMAL.png" class="img-fluid">
+    </div>
+    <div class="col-7 col-sm-4 col-lg-3 mx-auto mx-sm-0 px-5 pb-3">
+      <img src="GUI/img/ANII.png" class="img-fluid">
+    </div>
+    <div class="col-7 col-sm-4 col-lg-3 mx-auto ml-sm-0 px-5 pb-3">
+      <img src="GUI/img/THALES.png" class="img-fluid">
+    </div>
 
+  </div>
+</div>
+<!-- footer end -->
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -1098,10 +1267,11 @@
 
   <script src="/socket.io/socket.io.js"></script>
 
+
+  <script src="script/WzRecorder.js"></script>
+
   <script> //NET
     $(function () {
-
-
 
       var myChannel = [];//todos
       var socket = io(window.location.href);
@@ -1110,7 +1280,10 @@
       var selectedChannels = [];
       var soloOn;
       var bpm = 90;
-
+      var swing = 0;
+      var mikit = $("#sonidos-kit-4")[0];
+      mikit = $(mikit).find("button")[0];
+      $(mikit).trigger("click");
 
       if (window.innerHeight > window.innerWidth) {
         $("#alerta").css("display", "block");
@@ -1118,11 +1291,11 @@
         $("#alerta").css("display", "none");
       }
 
-      //Query screen size to create grid  
+      //Query screen size to create grid
       //smallest devices bootstrap default  GRILLA w:330 h:380
       // Small devices (landscape phones, 576px and up) @media (min-width: 576px) { ... } GRILLA w:430 h:380
       // Medium devices (tablets, 768px and up)  @media (min-width: 768px) { ... }  GRILLA w:580 h:380
-      // Large devices (desktops, 992px and up) @media (min-width: 992px) { ... }  GRILLA w:580 h:380 
+      // Large devices (desktops, 992px and up) @media (min-width: 992px) { ... }  GRILLA w:580 h:380
       // Extra large devices (large desktops, 1200px and up)  @media (min-width: 1200px) { ... } GRILLA w:690 h:380
       var sequencer;
 
@@ -1162,6 +1335,7 @@
         });
       }
 
+      sequencer.colorize("accent", "#5EC20A");
       //NEXUs
       /*  var sequencer = new Nexus.Sequencer('#seq-animal', {
           'size': [580, 380],
@@ -1173,31 +1347,151 @@
       ///
 
       // TONEJS
-      var sonidos = new Tone.Players({
-        "Cerdo": "/audios/kit-002/inicial_008_open hihat_cerdo.wav",//"/audios/kit-001/hd_008_cerdo.wav",
-        "Loro": "/audios/kit-002/inicial_007_loro_triangulo.wav",//"/audios/kit-001/hd_007_loro.wav",
-        "Sapo": "/audios/kit-002/inicial_005_clave_sapo.wav",
-        "Pato": "/audios/kit-002/inicial_006_ride_pato.wav",//"/audios/kit-001/hd_006_pato.wav",
-        "Mono": "/audios/kit-002/inicial_003_bass_mono.wav",//"/audios/kit-001/hd_005_sapo.wav",        
-        "Gato": "/audios/kit-002/inicial_004_hihat_gato.wav",// "/audios/kit-001/hd_004_gato.wav",             
-        /*"/audios/kit-001/hd_003_mono.wav", */
-        "Oso": "/audios/kit-002/inicial_002_sd_oso.wav", /* "/audios/kit-001/hd_002_oso.wav",*/
-        "Buho": "/audios/kit-002/inicial_001_bd_buho.wav" /* "/audios/kit-001/hd_001_buho.wav" */
+      var myShifter1, myShifter2, myShifter3, myShifter4, myShifter5, myShifter6, myShifter7, myShifter8;
+      var sonidos;
+      var misKits = [];
+      var misLoops = [];
+      var miKitElegido;
+      var loopMano = new Tone.Player({ "url": "/audios/kit1-mano/loopx4.wav", "volume": -1 }).toMaster();
+      misLoops.push(loopMano);
+      var kitMano = [];
+      kitMano.push(new Tone.Player({ "url": "/audios/kit1-mano/8-cerdo-mano.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitMano.push(new Tone.Player({ "url": "/audios/kit1-mano/7-loro-mano.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitMano.push(new Tone.Player({ "url": "/audios/kit1-mano/6-sapo-mano.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitMano.push(new Tone.Player({ "url": "/audios/kit1-mano/5-pato-mano.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitMano.push(new Tone.Player({ "url": "/audios/kit1-mano/4-mono-mano.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitMano.push(new Tone.Player({ "url": "/audios/kit1-mano/3-gato-mano.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitMano.push(new Tone.Player({ "url": "/audios/kit1-mano/2-oso-mano.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitMano.push(new Tone.Player({ "url": "/audios/kit1-mano/1-buho-mano.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      misKits.push(kitMano);
 
 
+      var loopAnimal = new Tone.Player({ "url": "/audios/kit2-animal/loopx4.wav", "volume": -1 }).toMaster();
+      misLoops.push(loopAnimal);
+      var kitAnimal = [];
+      kitAnimal.push(new Tone.Player({ "url": "/audios/kit2-animal/8-cerdo-animal.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitAnimal.push(new Tone.Player({ "url": "/audios/kit2-animal/7-loro-animal.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitAnimal.push(new Tone.Player({ "url": "/audios/kit2-animal/6-sapo-animal.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitAnimal.push(new Tone.Player({ "url": "/audios/kit2-animal/5-pato-animal.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitAnimal.push(new Tone.Player({ "url": "/audios/kit2-animal/4-mono-animal.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitAnimal.push(new Tone.Player({ "url": "/audios/kit2-animal/3-gato-animal.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitAnimal.push(new Tone.Player({ "url": "/audios/kit2-animal/2-oso-animal.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitAnimal.push(new Tone.Player({ "url": "/audios/kit2-animal/1-buho-animal.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      misKits.push(kitAnimal);
 
-      }, {
-        "volume": -1,
-        "fadeOut": "16n",
-      }).toMaster();
+      var loopRap = new Tone.Player({ "url": "/audios/kit3-rap/loopx4.wav", "volume": -1 }).toMaster();
+      misLoops.push(loopRap);
+      var kitRap = [];
+      kitRap.push(new Tone.Player({ "url": "/audios/kit3-rap/8-cerdo-rap.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitRap.push(new Tone.Player({ "url": "/audios/kit3-rap/7-loro-rap.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitRap.push(new Tone.Player({ "url": "/audios/kit3-rap/6-sapo-rap.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitRap.push(new Tone.Player({ "url": "/audios/kit3-rap/5-pato-rap.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitRap.push(new Tone.Player({ "url": "/audios/kit3-rap/4-mono-rap.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitRap.push(new Tone.Player({ "url": "/audios/kit3-rap/3-gato-rap.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitRap.push(new Tone.Player({ "url": "/audios/kit3-rap/2-oso-rap.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitRap.push(new Tone.Player({ "url": "/audios/kit3-rap/1-buho-rap.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      misKits.push(kitRap);
 
+      var loopAnimalia = new Tone.Player({ "url": "/audios/kit4-amazonia/loopx4.wav", "volume": -1 }).toMaster();
+      misLoops.push(loopAnimalia);
+      var kitAnimalia = [];
+      kitAnimalia.push(new Tone.Player({ "url": "/audios/kit4-amazonia/8-cerdo-amazonia.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitAnimalia.push(new Tone.Player({ "url": "/audios/kit4-amazonia/7-loro-amazonia.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitAnimalia.push(new Tone.Player({ "url": "/audios/kit4-amazonia/6-sapo-amazonia.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitAnimalia.push(new Tone.Player({ "url": "/audios/kit4-amazonia/5-pato-amazonia.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitAnimalia.push(new Tone.Player({ "url": "/audios/kit4-amazonia/4-mono-amazonia.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitAnimalia.push(new Tone.Player({ "url": "/audios/kit4-amazonia/3-gato-amazonia.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitAnimalia.push(new Tone.Player({ "url": "/audios/kit4-amazonia/2-oso-amazonia.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitAnimalia.push(new Tone.Player({ "url": "/audios/kit4-amazonia/1-buho-amazonia.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      misKits.push(kitAnimalia);
 
+      var loopMagico = new Tone.Player({ "url": "/audios/kit5-magico/loopx4.wav", "volume": -1 }).toMaster();
+      misLoops.push(loopMagico);
+      var kitMagico = [];
+      kitMagico.push(new Tone.Player({ "url": "/audios/kit5-magico/8-cerdo-magico.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitMagico.push(new Tone.Player({ "url": "/audios/kit5-magico/7-loro-magico.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitMagico.push(new Tone.Player({ "url": "/audios/kit5-magico/6-sapo-magico.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitMagico.push(new Tone.Player({ "url": "/audios/kit5-magico/5-pato-magico.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitMagico.push(new Tone.Player({ "url": "/audios/kit5-magico/4-mono-magico.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitMagico.push(new Tone.Player({ "url": "/audios/kit5-magico/3-gato-magico.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitMagico.push(new Tone.Player({ "url": "/audios/kit5-magico/2-oso-magico.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitMagico.push(new Tone.Player({ "url": "/audios/kit5-magico/1-buho-magico.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      misKits.push(kitMagico);
 
+      var loopSafari = new Tone.Player({ "url": "/audios/kit6-safari/loopx4.wav", "volume": -1 }).toMaster();
+      misLoops.push(loopSafari);
+      var kitSafari = [];
+      kitSafari.push(new Tone.Player({ "url": "/audios/kit6-safari/8-cerdo-safari.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitSafari.push(new Tone.Player({ "url": "/audios/kit6-safari/7-loro-safari.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitSafari.push(new Tone.Player({ "url": "/audios/kit6-safari/6-sapo-safari.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitSafari.push(new Tone.Player({ "url": "/audios/kit6-safari/5-pato-safari.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitSafari.push(new Tone.Player({ "url": "/audios/kit6-safari/4-mono-safari.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitSafari.push(new Tone.Player({ "url": "/audios/kit6-safari/3-gato-safari.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitSafari.push(new Tone.Player({ "url": "/audios/kit6-safari/2-oso-safari.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitSafari.push(new Tone.Player({ "url": "/audios/kit6-safari/1-buho-safari.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      misKits.push(kitSafari);
+
+      var loopBanda = new Tone.Player({ "url": "/audios/kit7-banda/loopx4.wav", "volume": -1 }).toMaster();
+      misLoops.push(loopBanda);
+      var kitBanda = [];
+      kitBanda.push(new Tone.Player({ "url": "/audios/kit7-banda/8-cerdo-banda.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitBanda.push(new Tone.Player({ "url": "/audios/kit7-banda/7-loro-banda.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitBanda.push(new Tone.Player({ "url": "/audios/kit7-banda/6-sapo-banda.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitBanda.push(new Tone.Player({ "url": "/audios/kit7-banda/5-pato-banda.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitBanda.push(new Tone.Player({ "url": "/audios/kit7-banda/4-mono-banda.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitBanda.push(new Tone.Player({ "url": "/audios/kit7-banda/3-gato-banda.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitBanda.push(new Tone.Player({ "url": "/audios/kit7-banda/2-oso-banda.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitBanda.push(new Tone.Player({ "url": "/audios/kit7-banda/1-buho-banda.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      misKits.push(kitBanda);
+
+      var loopPumpum = new Tone.Player({ "url": "/audios/kit8-pumpum/loopx4.wav", "volume": -1 }).toMaster();
+      misLoops.push(loopPumpum);
+      var kitPumpum = [];
+      kitPumpum.push(new Tone.Player({ "url": "/audios/kit8-pumpum/8-cerdo-pumpum.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitPumpum.push(new Tone.Player({ "url": "/audios/kit8-pumpum/7-loro-pumpum.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitPumpum.push(new Tone.Player({ "url": "/audios/kit8-pumpum/6-sapo-pumpum.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitPumpum.push(new Tone.Player({ "url": "/audios/kit8-pumpum/5-pato-pumpum.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitPumpum.push(new Tone.Player({ "url": "/audios/kit8-pumpum/4-mono-pumpum.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitPumpum.push(new Tone.Player({ "url": "/audios/kit8-pumpum/3-gato-pumpum.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitPumpum.push(new Tone.Player({ "url": "/audios/kit8-pumpum/2-oso-pumpum.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitPumpum.push(new Tone.Player({ "url": "/audios/kit8-pumpum/1-buho-pumpum.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      misKits.push(kitPumpum);
+
+      var loopBata = new Tone.Player({ "url": "/audios/kit9-bata/loopx4.wav", "volume": -1 }).toMaster();
+      misLoops.push(loopBata);
+      var kitBata = [];
+      kitBata.push(new Tone.Player({ "url": "/audios/kit9-bata/8-cerdo-bata.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitBata.push(new Tone.Player({ "url": "/audios/kit9-bata/7-loro-bata.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitBata.push(new Tone.Player({ "url": "/audios/kit9-bata/6-sapo-bata.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitBata.push(new Tone.Player({ "url": "/audios/kit9-bata/5-pato-bata.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitBata.push(new Tone.Player({ "url": "/audios/kit9-bata/4-mono-bata.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitBata.push(new Tone.Player({ "url": "/audios/kit9-bata/3-gato-bata.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitBata.push(new Tone.Player({ "url": "/audios/kit9-bata/2-oso-bata.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitBata.push(new Tone.Player({ "url": "/audios/kit9-bata/1-buho-bata.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      misKits.push(kitBata);
+
+      //var kit
+      sonidos = kitAnimalia;
+      //   var myShifter = [myShifter1, myShifter2, myShifter3, myShifter4, myShifter5, myShifter6, myShifter7, myShifter8];
       //the notes
       var scaleNotes = ["Cerdo", "Loro", "Pato", "Sapo", "Gato", "Mono", "Oso", "Buho"];
+
+      //    for (i = 0; i < 8; i++) {
+      //(sonidos.get(scaleNotes[(7 - myAnimalNumber)]).
+      //      myShifter[i] = new Tone.PitchShift(0); //.toMaster();
+      //      myShifter[i].windowSize = 0.03;
+      //      sonidos.get(scaleNotes[i]).chain(myShifter[i], Tone.Master);
+      //   }
       var stepNumber = 0;
       var loop = 0;
+      var myKitNum = 4;
+
       Tone.Transport.bpm.value = bpm;
+      Tone.Transport.swing = swing;
+      Tone.Transport.swingSubdivision = "16n";
+
+
+
       var matrix = sequencer.matrix.pattern;
       //  io.connect);
       //esconde enlace
@@ -1214,42 +1508,52 @@
         newUrl = url.href;
         let stateObj = { id: "100" };
         window.history.replaceState(stateObj, "roomID", newUrl);
-        var seqInicial = [[true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false],
-        [false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true],
-        [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
-        [false, true, false, false, false, true, false, false, false, true, false, true, false, true, false, true],
-        [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
-        [false, true, false, false, false, true, false, false, false, false, false, true, false, true, false, true],
+        var seqInicial = [
+        [true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
+        [false, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false],
+        [false, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false],
         [false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false],
-        [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true]];
+        [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true],
+        [false, false, false, false, false, true, false, false, false, false, true, false, false, false, false, false],
+        [false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false],
+        [false, false, false, false, false, false, false, false, true, false, false, false, false, false, true, false]
+        ];
         socket.emit('sequencer', sequencer.matrix.pattern);
 
         $(".disabled-overlay").addClass("d-none");
         myChannel = [1, 2, 3, 4, 5, 6, 7, 8];
         sequencer.matrix.set.all(seqInicial);
+      //  $("#chat-animal").attr("style", "display: none !important");
 
       });
 
 
-      socket.on('guest', function (pattern, michannel, unbpm) {
-        $("#jam-sesion").addClass("opacity-3");
+      socket.on('guest', function (pattern, michannel, unbpm, unkitnum) {
+        myKitNum = unkitnum-1;
+        sonidos = misKits[myKitNum];
+
+        console.log("guest entered room kit" + myKitNum);
+        $("#jam-sesion").addClass("d-none");
         $("#jam-sesion").addClass("ajeno");
+        $("#settings").addClass("ajeno");
+        $("#settings").addClass("d-none");
         sequencer.matrix.set.all(pattern);
         myChannel = michannel;
         setMyChannel();
         bpm = unbpm;
         Tone.Transport.bpm.value = bpm;
         //console.log("me llegó bpm de " + unbpm);
-        //sacarbpm 
+        //sacarbpm
         $("#decrement-bpm-btn").addClass("opacity-3");
         $("#decrement-bpm-btn").addClass("ajeno");
         $("#increment-bpm-btn").addClass("opacity-3");
         $("#increment-bpm-btn").addClass("ajeno");
+        $("#chat-animal").attr("style", "");
       });
 
       socket.on('chat message', function (msg) {
 
-        $('#messages').append('<li> ' + msg + ' </li>');
+        $('#messages').prepend('<li> ' + msg + ' </li>');
       });
 
 
@@ -1262,13 +1566,20 @@
             myLetters = myLetters + '<span class="interloc-' + myAnimalsLetter[channel - 1] + '">' + myAnimalsLetter[channel - 1] + '</span>';
           }
         });
-        var emitMe = myLetters + ":<br> " + $('#m').val()
+        var emitMe = myLetters + "<p class='mt-1 mb-0 pb-2'>" + $('#m').val() + "</p>"
         socket.emit('chat message', emitMe);
-        $('#messages').append('<li> ' + emitMe + ' </li>');
+        $('#messages').prepend('<li> ' + emitMe + ' </li>');
         $('#m').val('');
         return false;
       });
 
+
+      // JAM SECTION
+      $(".jam-btn").click(function () {
+        if (Tone.Transport.state == "started") {
+          $("#mute-btn").trigger("click");
+        }
+      })
       $(".channelsInvite").click(function () {
         var selectedCH = $(this)[0];
         if ($(selectedCH).attr("sel") == "false") {
@@ -1302,13 +1613,35 @@
           $("#linkText").val(window.location.origin + "?roomID=" + roomID);
 
 
-          socket.emit('roomOpened', myChannel);
+          socket.emit('roomOpened', myChannel, myKitNum);
+          console.log("emit open room kit" + myKitNum);
+
+          $("#chat-animal").attr("style", "display");
+
+
+
         }
       });
 
+      $(".instrument-preview").click(function (e) {
+        e.stopPropagation();
+        var myId = this.id.split("instrument-preview")[1];
+        sonidos[myId - 1].start();
+
+      });
+      $(".instrument-preview, .kit-preview").hover(function () {
+        this.src = "GUI/img/audio_over.png"
+      },
+        function () { this.src = "GUI/img/audio_trans.png" }
+
+      );
+      //END JAM SECTION
+
+
+
       function setMyChannel() {
-        $(".channelGroup").addClass("opacity-2");
-        $(".channelGroup").addClass("ajeno");
+        // $(".channelGroup").addClass("opacity-2");
+        //   $(".channelGroup").addClass("ajeno");
         $(".disabled-overlay").addClass("d-block");
 
         if (myChannel.length > 0) {
@@ -1344,7 +1677,7 @@
 
 
         $(".ajeno").click(function (e) {
-          e.preventDefault();
+          //   e.preventDefault();
           //console.log("entró a prevent");
         });
 
@@ -1365,7 +1698,7 @@
          myChannel.forEach(channel => {
            if (v.row == channel) {
              itsMyChannel = true;
-             ///TENGO QUE PONERLRE     pointer-events: none; a todas las otras rows           
+             ///TENGO QUE PONERLRE     pointer-events: none; a todas las otras rows
            }
          });*/
         /* //console.log("es un cambio");
@@ -1390,6 +1723,7 @@
 
       });
 
+
       socket.on("bpm", function (unbpm) {
         bpm = unbpm;
         Tone.Transport.bpm.value = bpm;
@@ -1412,6 +1746,38 @@
         $("#bpmNumber").html(bpm);
         emitBpm(bpm);
       });
+
+
+
+
+      socket.on("swing", function (unswing) {
+        swing = unswing;
+
+        Tone.Transport.swing = swing / 100;
+        $("#swingNumber").html(swing);
+      });
+
+      function emitSwing(swing) {
+        Tone.Transport.swing = swing / 100;
+        socket.emit('swing', swing);
+      }
+
+      $("#decrement-swing-btn").click(function () {
+        if (swing > 0) {
+          swing = swing - 5;
+          $("#swingNumber").html(swing);
+          emitSwing(swing);
+        }
+      });
+
+      $("#increment-swing-btn").click(function () {
+        if (swing < 55) {
+          swing = swing + 5;
+          $("#swingNumber").html(swing);
+          emitSwing(swing);
+        }
+      });
+
 
 
       //chicons
@@ -1459,7 +1825,7 @@
           //console.log(scaleNotes[i]);
           //console.log("quedó muteado " +sonidos.get(scaleNotes[i]).mute);
         }
-        
+
     }
 
 
@@ -1488,19 +1854,18 @@
         ////console.log(v);
       });
 
-
-      ////GRABAR
+      /////REC and SAVE MUSIC
       var isRecording;
       const actx = Tone.context;
       const dest = actx.createMediaStreamDestination();
       let recorder = null;
       var chunks = [];
 
-
-
-
-
       $("#rec-btn").click(function () {
+
+        var oldText = $("#rec-btn").find("span").text();
+        var newText = $("#rec-btn").find("span").data('text');
+        $("#rec-btn").find("span").text(newText).data('text',oldText);
 
         if (isRecording) {
           recorder.stop();
@@ -1512,7 +1877,10 @@
           } catch (err) {
             return err.name;     /* return the error name */
           }
-          sonidos.connect(dest);
+          sonidos.forEach(sonido => {
+            sonido.connect(dest);
+          });
+
           isRecording = true;
           chunks = [];
           $(this).toggleClass('rec-btn-activo');
@@ -1528,16 +1896,16 @@
             var url = URL.createObjectURL(blob);
             var a = document.createElement('a');
             a.href = url;
-            a.download = 'ANIMAL Recording.ogg';
+            a.download = 'sesion ANIMAL.ogg';
             a.target = "_blank"
             a.click();
             $(this).toggleClass('rec-btn-activo');
+            isRecording = false;
           };
         }
 
       });
-      ///GUARDA GRABACION
-
+      ///END REC AND SAVE MUSIC
       $("#Animal_logo").click(function () { //inicia el sequencer
         playSequencer();
       });
@@ -1551,7 +1919,11 @@
             for (var i = 7; i >= 0; i--) {
 
               if (matrix[i][stepNumber] && (miSolo == -1 || miSolo == i)) {
-                sonidos.get(scaleNotes[i]).start(time, 0, "16n", 0, 1);
+                if (i != 1) {
+                  sonidos[i].start(time, 0, "16n", 0, 1);
+                } else {
+                  sonidos[i].start();
+                }
 
               }
 
@@ -1577,28 +1949,36 @@
       };
 
       $("#mute-btn").click(function () {
-        playSequencer();
-        $(this).toggleClass("mute-btn");
-        $(this).toggleClass("mute-btn-activo");
+          playSequencer();
+          var oldText = $("#mute-btn").find("span").text();
+          var newText = $("#mute-btn").find("span").data('text');
+          $("#mute-btn").find("span").text(newText).data('text',oldText);
+
+          $(this).toggleClass('mute-btn-activo');
       });
 
       function changePitch(myAnimal, value) {
         //console.log("entro a change pitch");
         //console.log(myAnimal);
         var myAnimalNumber = myAnimal.split("dial-ins")[1];
-        sonidos.get(scaleNotes[8 - myAnimalNumber]).volume.value = value;
+        //  myShifter[8 - myAnimalNumber].pitch = value;
+        sonidos[8 - myAnimalNumber].playbackRate = value;
+
+
+        console.log("changed playback rate animal " + (8 - myAnimalNumber) + "to value " + value);
+        //sonidos.get(scaleNotes[8 - myAnimalNumber]).volume.value = value;
       }
 
       function changeVolume(myAnimal, value) {
         //console.log("entro a change volume");
         //console.log(myAnimal);
         var myAnimalNumber = myAnimal.split("dial-ch")[1];
-        sonidos.get(scaleNotes[8 - myAnimalNumber]).volume.value = value;
+        sonidos[8 - myAnimalNumber].volume.value = value;
       }
 
 
       socket.on('pitchChange', function (myAnimal, value) {
-        changePitch(myAnimal, value)
+        changePitch(myAnimal, value);
       });
 
 
@@ -1633,7 +2013,7 @@
       //VISIBILITY PAUSE
       // Set the name of the hidden property and the change event for visibility
       var hidden, visibilityChange;
-      if (typeof document.hidden !== "undefined") { // Opera 12.10 and Firefox 18 and later support 
+      if (typeof document.hidden !== "undefined") { // Opera 12.10 and Firefox 18 and later support
         hidden = "hidden";
         visibilityChange = "visibilitychange";
       } else if (typeof document.msHidden !== "undefined") {
@@ -1655,7 +2035,7 @@
       if (typeof document.addEventListener === "undefined" || hidden === undefined) {
         //console.log("This demo requires a browser, such as Google Chrome or Firefox, that supports the Page Visibility API.");
       } else {
-        // Handle page visibility change   
+        // Handle page visibility change
         document.addEventListener(visibilityChange, handleVisibilityChange, false);
       }
       // END  VISIBILITY PAUSE
@@ -1670,8 +2050,118 @@
       });
 
 
-    });
+            // Modal SETTINGS
 
+      var visitado;
+
+      $("#settings").click(function () {
+      //  if (Tone.Transport.state == "started") {
+      //    $("#mute-btn").trigger("click");
+      //  }
+
+        if ( visitado != 1){
+          var currKit = "kit"+(myKitNum);
+          visitado = 1;
+        } else {
+          var currKit = "kit"+(myKitNum+1);
+        }
+
+        $("#settingsModal").find( "button" ).removeClass('cKit');
+        $('#' + currKit).addClass('cKit');
+
+	    });
+
+
+      $(".kits").click(function () {
+
+        $("#settingsModal").find( "button" ).removeClass('cKit');
+        $(this).addClass('cKit');
+      });
+
+
+      // REC LORO
+      var loroAudio;
+      var myUrl;
+      var myBlob;
+      //.rec-icon-s-activo
+
+
+      var loroRecorder = new WzRecorder({
+        onRecordingStop: function (blob) {
+          myBlob = blob;
+          myUrl = URL.createObjectURL(blob);
+          loroAudio = new Tone.Player({ "url": myUrl, "volume": -1 }).toMaster();
+        },
+        onRecording: function (milliseconds) {
+          document.getElementById('duration').innerText = milliseconds + 'ms';
+          if (milliseconds > 3000) {
+            loroRecorder.stop();
+          }
+        }
+      });
+      $("#loro-rec-preview").click(function () {
+        loroAudio.start();
+      });
+      $("#ok-rec-loro").click(function () {
+
+        sonidos[1] = loroAudio;
+        emitLoro();
+        $(".close").trigger('click');
+
+      });
+
+      // wire up the microphone button to toggle recording
+      document.getElementById('loro-rec-button').onmousedown = loroRecorder.toggleRecording;
+      document.getElementById('loro-rec-button').onmouseup = loroRecorder.stop;
+      $("#loro-rec").click(function () {
+        if (Tone.Transport.state == "started") {
+          $("#mute-btn").trigger("click");
+        }
+      });
+
+
+      socket.on('recLoro', function (elcasiblob) {
+        var blob = new Blob([elcasiblob]);
+        myUrl = URL.createObjectURL(blob);
+        loroAudio = new Tone.Player({ "url": myUrl, "volume": -1 }).toMaster();
+        sonidos[1] = loroAudio;
+      });
+
+      function emitLoro() {
+        socket.emit('recLoro', myBlob);
+      }
+
+      //END REC-LORO
+
+      //kits
+
+      socket.on('changeKit', function (unkit) {
+        myKitNum = unkit;
+        sonidos = misKits[myKitNum];
+        console.log("kit " + unkit)
+      });
+
+      $(".kits").click(function () {
+        var myKitNumtemp = this.id;
+        myKitNumtemp = myKitNumtemp.split("kit")[1];
+        myKitNum = myKitNumtemp-1;
+        sonidos = misKits[myKitNum];
+        socket.emit("changeKit", myKitNum);
+        //kits miKitNum;
+      });
+
+
+      $(".kit-preview").click(function () {
+        var myKitNumpre = this.id;
+        myKitNumpre = myKitNumpre.split("kit-preview")[1];
+        misLoops.forEach(loop => {
+          loop.stop();
+        });
+        misLoops[myKitNumpre-1].start();
+        //sonidos = misKits[myKitNum];
+      });
+
+    });
   </script>
 
   <script>
@@ -1690,17 +2180,81 @@
     });
 
 
-
-
-  </script>
-
-  <script type="text/javascript">
+    //
     $(document).ready(function () {
-      $('#playModal').modal('show');
-      $('[data-toggle="tooltip"]').tooltip()
+
+      $(window).on('focus', function () {
+        console.log('The window has focus');
+      });
+
+      $(window).on('blur', function () {
+        if (Tone.Transport.state == "started"){
+          var oldText = $("#mute-btn").find("span").text();
+          var newText = $("#mute-btn").find("span").data('text');
+          $("#mute-btn").find("span").text(newText).data('text',oldText);
+
+          $("#mute-btn").removeClass('mute-btn-activo');
+        }
+        console.log('The window lost focus');
+      });
     });
+
   </script>
 
+<!-- MODAL inicial -->
+  <!--  <script type="text/javascript">
+      $(document).ready(function () {
+        $('#playModal').modal('show');
+      });
+    </script> -->
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+    $('[data-toggle="popover"]').popover();
+
+
+    $('.popover:eq(0)').addClass('play-start-item corners-2');
+  });
+
+
+  $('#creditos').on('click', function() {
+    $('#creditos').popover('toggle');
+    $('.popover:eq(0)').addClass('play-start-item corners-2');
+  });
+
+  $('#help-btn').on('click', function() {
+      $('#mute-btn').popover('toggle');
+      $('#instrumentos').popover('toggle');
+      $('#sel-inst-help').popover('toggle');
+      // $('#chat-help').popover('toggle');
+      $('#jam-sesion').popover('toggle');
+      $('#channelGroup8').popover('toggle');
+      $('#animalChannel1').popover('toggle');
+
+
+    $('.popover:eq(0)').addClass('instrumentos-help-item corners-2');
+    $('.popover:eq(1)').addClass('sel-ins-help-item corners-2');
+    $('.popover:eq(2)').addClass('chat-help-item corners-2');
+    $('.popover:eq(3)').addClass('jam-sesion-help-item corners-2');
+    $('.popover:eq(4)').addClass('canal-help-item corners-2');
+    $('.popover:eq(5)').addClass('solo-help-item corners-2');
+
+
+  });
+
+  $(document).on('click', function(e) {
+    $('.data-item').popover('dispose');
+    var pvr = $("#help-btn");
+    if (!$(e.target).closest(pvr).length) {
+          $('.help-item').popover('dispose');
+          $('.start-item').popover('dispose');
+    }
+  });
+
+
+
+</script>
 
 </body>
 
