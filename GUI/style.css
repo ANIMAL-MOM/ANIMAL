@@ -214,6 +214,9 @@ h3 {
     height:65px;
 }
 
+.half-height{
+  min-height: 50vh;
+}
   .navbar {
     position: absolute;
     top: 0;
