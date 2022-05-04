@@ -1964,7 +1964,7 @@ ALERTA end -->
 
               if (matrix[i][stepNumber] && (miSolo == -1 || miSolo == i)) {
                 if (i != 1) {
-                  sonidos[i].start(time, 0, "16n", 0, 1);
+                  sonidos[i].start(time, 0, "32n", 0, 1);
                 } else {
                   sonidos[i].start();
                 }
@@ -1974,10 +1974,10 @@ ALERTA end -->
             }
             sequencer.next();
             stepNumber++;
-            stepNumber = stepNumber % 16;
+            stepNumber = stepNumber % 32;
 
 
-          }, scaleNotes, "16n");
+          }, scaleNotes, "32n");
           loop.start();
 
           loop.loop = true;
