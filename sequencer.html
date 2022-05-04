@@ -1343,41 +1343,13 @@ ALERTA end -->
       // Extra large devices (large desktops, 1200px and up)  @media (min-width: 1200px) { ... } GRILLA w:690 h:380
       var sequencer;
 
-      if ($(window).width() > 1200) {
-        //console.log('creo seq Extra large devices (large desktops, 1200px and up)  @media (min-width: 1200px) { ... } GRILLA w:690 h:380 ');
-        sequencer = new Nexus.Sequencer('#seq-animal', {
+      sequencer = new Nexus.Sequencer('#seq-animal', {
           'size': [690, 380],
           'mode': 'toggle',
           'rows': 8,
-          'columns': 16
-        });
-      } else if (($(window).width() > 768)) {
-        //console.log('creo seq Large devices (desktops, 768 y992px and up) @media (min-width: 992px y 768) { ... }  GRILLA w:580 h:380 ');
-        sequencer = new Nexus.Sequencer('#seq-animal', {
-          'size': [580, 380],
-          'mode': 'toggle',
-          'rows': 8,
-          'columns': 16
-        });
+          'columns': 32
+      });
 
-      } else if (($(window).width() > 576)) {
-        //console.log('creo seq Small devices (landscape phones, 576px and up) @media (min-width: 576px) { ... } GRILLA w:430 h:380');
-        sequencer = new Nexus.Sequencer('#seq-animal', {
-          'size': [430, 380],
-          'mode': 'toggle',
-          'rows': 8,
-          'columns': 16
-        });
-
-      } else {
-        //console.log('creo seq S//smallest devices bootstrap default  GRILLA w:330 h:380');
-        sequencer = new Nexus.Sequencer('#seq-animal', {
-          'size': [330, 380],
-          'mode': 'toggle',
-          'rows': 8,
-          'columns': 16
-        });
-      }
 
       sequencer.colorize("accent", "#5EC20A");
       //NEXUs
@@ -1553,14 +1525,14 @@ ALERTA end -->
         let stateObj = { id: "100" };
         window.history.replaceState(stateObj, "roomID", newUrl);
         var seqInicial = [
-        [true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
-        [false, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false],
-        [false, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false],
-        [false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false],
-        [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true],
-        [false, false, false, false, false, true, false, false, false, false, true, false, false, false, false, false],
-        [false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false],
-        [false, false, false, false, false, false, false, false, true, false, false, false, false, false, true, false]
+        [true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
+        [false, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
+        [false, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
+        [false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
+        [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
+        [false, false, false, false, false, true, false, false, false, false, true, false, false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
+        [false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
+        [false, false, false, false, false, false, false, false, true, false, false, false, false, false, true, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
         ];
         socket.emit('sequencer', sequencer.matrix.pattern);
 
@@ -1703,7 +1675,7 @@ ALERTA end -->
           for (i = 0; i < cuadrados.length; i++) {
             var mio = false;
             myChannel.forEach(function (channel) {
-              if (Math.floor(i / 16) == channel - 1) {
+              if (Math.floor(i / 32) == channel - 1) {
                 mio = true;
               }
             });
@@ -1974,7 +1946,7 @@ ALERTA end -->
             }
             sequencer.next();
             stepNumber++;
-            stepNumber = stepNumber % 16;
+            stepNumber = stepNumber % 32;
 
 
           }, scaleNotes, "16n");
