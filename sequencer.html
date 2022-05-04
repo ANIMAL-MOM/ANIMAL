@@ -41,7 +41,7 @@
 </head>
 
 <body>
-nuevo
+
   <!-- ALERTA start
 
   <div id="alerta" class="fondo-aqua-animal" style="display:none">
@@ -1703,7 +1703,7 @@ ALERTA end -->
           for (i = 0; i < cuadrados.length; i++) {
             var mio = false;
             myChannel.forEach(function (channel) {
-              if (Math.floor(i / 16) == channel - 1) {
+              if (Math.floor(i / 32) == channel - 1) {
                 mio = true;
               }
             });
