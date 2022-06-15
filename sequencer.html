@@ -1838,11 +1838,11 @@ ALERTA end -->
         if (miSolo == (7 - myAnimalNumber)) {
           $(this).removeClass("activado");
           miSolo = -1;
-          alert("remove");
+          alert("remove" + myAnimalNumber);
         } else {
           $(this).addClass("activado");
           miSolo = (7 - myAnimalNumber);
-          alert("add");
+          alert("add" + myAnimalNumber);
         }
       });
       /*
