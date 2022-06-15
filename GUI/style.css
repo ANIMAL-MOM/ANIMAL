@@ -1024,3 +1024,12 @@ h3 {
         height: 254px;
     }
   }
+
+    /* Channel related styles */
+
+    .cnh-solo {
+      background-color: #000000;
+    }
+    .cnh-mute {
+      background-color: #000000;
+    }
