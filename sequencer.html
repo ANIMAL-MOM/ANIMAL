@@ -1838,10 +1838,15 @@ ALERTA end -->
         if (miSolo == (7 - myAnimalNumber)) {
           $(this).removeClass("activado");
           miSolo = -1;
+          $('#seq-animal span').removeClass( "chn-solo" );
         } else {
           $(this).addClass("activado");
           miSolo = (7 - myAnimalNumber);
-          alert(myArray);
+          $('#seq-animal span').each(function() {
+            if ($.inArray($(this).index(), myArray) < 0)
+              return;
+            $(this).addClass( "chn-solo" );
+          });
         }
       });
       /*
