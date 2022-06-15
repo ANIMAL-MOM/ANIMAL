@@ -1028,6 +1028,9 @@ h3 {
     /* Channel related styles */
 
     .chn-solo {
+      background-color: rgba(186,218,242,0.3);
+    }
+    .chn-not-solo {
       background-color: #000000;
     }
     .chn-mute {
