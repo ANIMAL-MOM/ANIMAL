@@ -1833,17 +1833,14 @@ ALERTA end -->
         var myId = this.id;
         var myAnimalNumber = myId.split("icono-ch")[1];
         myAnimalNumber--;
-        var myArray = myAnimalNumber+1;
         $($(".instMobile")[myAnimalNumber]).addClass("d-block");
         $(".soloButton").removeClass("activado");
         if (miSolo == (7 - myAnimalNumber)) {
           $(this).removeClass("activado");
           miSolo = -1;
-          alert("remove " + myAnimalNumber + "/" + "myArray " + myArray);
         } else {
           $(this).addClass("activado");
           miSolo = (7 - myAnimalNumber);
-          alert("add " + myAnimalNumber + "/" + "myArray " + myArray);
         }
       });
       /*
