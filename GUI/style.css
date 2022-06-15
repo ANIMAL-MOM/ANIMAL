@@ -1028,7 +1028,7 @@ h3 {
     /* Channel related styles */
 
     .chn-solo {
-      background-color: var(--color-rojo-ui-animal);
+      background-color: var(--color-verde-ui-animal);
     }
     .chn-not-solo {
       background-color: #000000;
