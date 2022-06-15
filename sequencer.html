@@ -2277,12 +2277,11 @@ ALERTA end -->
 
 <script>
 
+  $("#icono-ch1").click(function(){
+    $(this).addClass('chn-solo');
+    $('#seq-animal').addClass('chn-solo');
+    $('#channelGroup8').addClass('chn-solo');
 
-  $(document).on('click', function(e) {
-    var pvr = $("#icono-ch1");
-    if (!$(e.target).closest(pvr).length) {
-          $('#seq-animal').addClass('chn-solo');
-    }
   });
 
 </script>
