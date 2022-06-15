@@ -1675,7 +1675,7 @@ ALERTA end -->
           for (i = 0; i < cuadrados.length; i++) {
             var mio = false;
             myChannel.forEach(function (channel) {
-              if (Math.floor(i / 32) == channel - 1) {
+              if (Math.floor(i / 16) == channel - 1) {
                 mio = true;
               }
             });
@@ -1946,7 +1946,7 @@ ALERTA end -->
             }
             sequencer.next();
             stepNumber++;
-            stepNumber = stepNumber % 32;
+            stepNumber = stepNumber % 16;
 
 
           }, scaleNotes, "16n");
