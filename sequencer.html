@@ -2276,13 +2276,15 @@ ALERTA end -->
 <!-- COLOREAR div -->
 
 <script>
-var arr = [2, 5];
-$('#seq-animal span').each(function() {
-    if ($.inArray($(this).index(), arr) < 0)
-        return;
-    $(this).addClass('chn-solo');
+
+$("#icono-ch1").click(function(){
+     var arr = [2, 5];
+    $('#seq-animal span').each(function() {
+        if ($.inArray($(this).index(), arr) < 0)
+            return;
+        $(this).addClass( "chn-solo" );
+    });
 });
-  
 
 </script>
 
