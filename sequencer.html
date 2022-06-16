@@ -1891,10 +1891,12 @@ ALERTA end -->
       sequencer.on('change', function (v) {
         // //console.log(v);
       });
-
+      var tempnum= 1;
       sequencer.on('step', function (v) {
-        console.log(v);
+        //console.log(v);
+        tempnum += 1
         $('#settings').toggleClass('no-ver');
+        console.log(tempnum);
       });
 
       /////REC and SAVE MUSIC
