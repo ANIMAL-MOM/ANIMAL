@@ -1893,8 +1893,7 @@ ALERTA end -->
       });
 
       sequencer.on('step', function (v) {
-        //console.log(v);
-        $('#Animal_logo').toggleClass('no-ver');
+        console.log(v);
       });
 
       /////REC and SAVE MUSIC
@@ -2004,6 +2003,8 @@ ALERTA end -->
       document.addEventListener('keyup', event => {
         if (event.code === 'Space') {
           playSequencer();
+
+          $('#Animal_logo').toggleClass('no-ver');
         }
       });
 
