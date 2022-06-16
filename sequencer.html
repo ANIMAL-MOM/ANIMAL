@@ -1893,9 +1893,9 @@ ALERTA end -->
       });
 
       sequencer.on('step', function (v) {
-        //console.log(v);
-        num1 ++;
-        remainder = num1 % 4;
+
+        var num1 ++;
+        var remainder = num1 % 4;
         if (remainder === 0) {
           $('#settings').toggleClass('no-ver');
           console.log(num1);
