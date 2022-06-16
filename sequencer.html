@@ -1891,11 +1891,11 @@ ALERTA end -->
       sequencer.on('change', function (v) {
         // //console.log(v);
       });
-
+var num1
       sequencer.on('step', function (v) {
 
-        var num1 ++;
-        var remainder = num1 % 4;
+        num1 ++;
+        const remainder = num1 % 4;
         if (remainder === 0) {
           $('#settings').toggleClass('no-ver');
           console.log(num1);
