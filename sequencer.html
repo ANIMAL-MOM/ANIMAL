@@ -1905,8 +1905,16 @@ ALERTA end -->
           count.innerHTML=++metro;
           if (metro === 16){
             metro=0;
+          } else if (metro === 13) {
             $('#metronome').addClass('metronome-step');
+          } else if (metro === 9) {
+            $('#metronome').addClass('metronome-step');
+          } else if (metro === 5) {
+            $('#metronome').addClass('metronome-step');
+          } else if (metro === 1) {
+            $('#metronome').addClass('metronome-accent');
           } else {
+            $('#metronome').removeClass('metronome-accent');
             $('#metronome').removeClass('metronome-step');
           }
 
