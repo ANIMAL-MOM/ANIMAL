@@ -1042,3 +1042,10 @@ h3 {
     .no-ver {
       display: none;
     }
+    #metronome {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      color: var(--color-destaque-animal();
+      background-color: var(--color-blanco-ui-animal();
+    }
