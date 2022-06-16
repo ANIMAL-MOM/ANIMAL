@@ -1999,6 +1999,13 @@ ALERTA end -->
           $(this).toggleClass('mute-btn-activo');
       });
 
+      // event = keyup or keydown
+      document.addEventListener('keyup', event => {
+        if (event.code === 'Space') {
+          playSequencer();
+        }
+      });
+
       function changePitch(myAnimal, value) {
         //console.log("entro a change pitch");
         //console.log(myAnimal);
@@ -2294,13 +2301,7 @@ ALERTA end -->
     }
   });
 
-  // event = keyup or keydown
-  document.addEventListener('keyup', event => {
-    if (event.code === 'Space') {
-      
-      playSequencer();
-    }
-  })
+
 
 </script>
 
