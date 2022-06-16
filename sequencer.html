@@ -1891,15 +1891,14 @@ ALERTA end -->
       sequencer.on('change', function (v) {
         // //console.log(v);
       });
-var num1
+      let upto=0;
       sequencer.on('step', function (v) {
 
-        num1 ++;
-        const remainder = num1 % 4;
-        if (remainder === 0) {
+
           $('#settings').toggleClass('no-ver');
-          console.log(num1);
-        }
+
+          var count= document.getElementById("counter");
+          count.innerHTML=++upto;
 
       });
 
