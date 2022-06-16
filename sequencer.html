@@ -1895,11 +1895,11 @@ ALERTA end -->
       sequencer.on('change', function (v) {
         // //console.log(v);
       });
+
+
+      /////// METRONOMO
       let metro=0;
       sequencer.on('step', function (v) {
-
-
-          //$('#settings').toggleClass('no-ver');
 
           var count= document.getElementById("metronome");
           count.innerHTML=++metro;
