@@ -1039,3 +1039,6 @@ h3 {
     .chn-normal{
       background-color: #cccccc;
     }
+.no-ver {
+  display: none;
+}
