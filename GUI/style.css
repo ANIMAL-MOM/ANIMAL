@@ -1042,11 +1042,16 @@ h3 {
     .no-ver {
       display: none;
     }
-    #metronome {
+    .metronome-normal {
       width: 44px;
       height: 44px;
       border-radius: 50%;
       padding-top: 12px;
-      color: var(--color-dblanco-ui-animal);
-      background-color: var(--color-rojo-ui-animal);
+      background-color: var(--color-blanco-ui-animal);
+    }
+    .metronome-step {
+      background-color: var(--color-verde-ui-animal) !important;
+    }
+    .metronome-accent {
+      background-color: var(--color-rojo-ui-animal) !important;
     }

@@ -1234,7 +1234,7 @@ ALERTA end -->
 
           <div id="jam-ajustes"
             class="col-xl-1 py-4 px-3 d-flex flex-xl-column justify-content-between fondo-1-animal corners1">
-            <div id="metronome" class="text-center">
+            <div id="metronome" class="metronome-normal text-center">
               --
             </div>
             <div id="jam-sesion" class="mx-auto d-flex my-auto flex-lg-column help-item" data-toggle="popover"
@@ -1895,14 +1895,20 @@ ALERTA end -->
       sequencer.on('change', function (v) {
         // //console.log(v);
       });
-      let upto=0;
+      let metro=0;
       sequencer.on('step', function (v) {
 
 
           //$('#settings').toggleClass('no-ver');
 
           var count= document.getElementById("metronome");
-          count.innerHTML=++upto;
+          count.innerHTML=++metro;
+          if (metro === 16){
+            metro=0;
+            $('#metronome').addClass('metronome-step');
+          } else {
+            $('#metronome').removeClass('metronome-step');
+          }
 
       });
 
