@@ -1293,6 +1293,7 @@ ALERTA end -->
     </div>
   </div>
 
+<div id="muteBtn1"> MUTE 1 </div>
 <!-- footer end -->
 
 
@@ -1846,7 +1847,7 @@ ALERTA end -->
           // aplica estilo a BOTON solo
           $(this).addClass("activado");
           miSolo = (7 - myAnimalNumber);
-          console.log("misolo"+ miSolo)
+          //console.log("misolo"+ miSolo)
           // quita y aplica estilo a casilleros del sequencer
           $('#seq-animal span').removeClass( "chn-solo" );
           $('#seq-animal span').each(function() {
@@ -2333,6 +2334,9 @@ ALERTA end -->
           $('.start-item').popover('dispose');
     }
   });
+  $(#muteBtn1).on('click', function() {
+    sonidos[1].start();
+  }
 
 
 
