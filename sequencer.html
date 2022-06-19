@@ -1295,7 +1295,7 @@ ALERTA end -->
 
   <div class="audio-preview-s">
     <img id="channel-mute3" src="GUI/img/audio_trans.png"
-      class="audio-preview-s channel-mute ">
+      class="audio-preview-s channel-mute">
   </div>
 <!-- footer end -->
 
@@ -1665,6 +1665,15 @@ ALERTA end -->
       );
       //END JAM SECTION
 
+      // MUTE channel
+      $(".channel-mute").click(function (e) {
+        e.stopPropagation();
+        var myId = this.id.split("channel-mute")[1];
+        //sonidos[myId - 1].mute = true;
+        sonidos[myId - 1].mute();
+        prueba1 = sonidos[myId - 1];
+        console.log("mutenado canal: " + prueba1);
+      });
 
 
       function setMyChannel() {
@@ -2335,16 +2344,6 @@ ALERTA end -->
           $('.help-item').popover('dispose');
           $('.start-item').popover('dispose');
     }
-  });
-
-  // MUTE channel
-  $(".channel-mute").click(function (e) {
-    e.stopPropagation();
-    var myId = this.id.split("channel-mute")[1];
-    //sonidos[myId - 1].mute = true;
-    sonidos[myId - 1].play();
-    prueba1 = sonidos[myId - 1];
-    console.log("mutenado canal: " + prueba1);
   });
 
 
