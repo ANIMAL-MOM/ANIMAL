@@ -1293,7 +1293,10 @@ ALERTA end -->
     </div>
   </div>
 
-<div id="muteBtn1"> MUTE 1 </div>
+  <div class="audio-preview-s">
+    <img id="instrument-preview3" src="GUI/img/audio_trans.png"
+      class="audio-preview-s instrument-preview ">
+  </div>
 <!-- footer end -->
 
 
@@ -1653,6 +1656,8 @@ ALERTA end -->
         e.stopPropagation();
         var myId = this.id.split("instrument-preview")[1];
         sonidos[myId - 1].start();
+        prueba1 = sonidos[myId - 1];
+        console.log("probando" + prueba1);
 
       });
       $(".instrument-preview, .kit-preview").hover(function () {
@@ -2335,7 +2340,8 @@ ALERTA end -->
     }
   });
   $(#muteBtn1).on('click', function() {
-    sonidos[1].start();
+    sonidos[2].start();
+    alert()
   }
 
 
