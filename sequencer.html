@@ -1294,8 +1294,8 @@ ALERTA end -->
   </div>
 
   <div class="audio-preview-s">
-    <img id="instrument-preview3" src="GUI/img/audio_trans.png"
-      class="audio-preview-s instrument-preview ">
+    <img id="channel-mute3" src="GUI/img/audio_trans.png"
+      class="audio-preview-s channel-mute ">
   </div>
 <!-- footer end -->
 
@@ -1656,9 +1656,6 @@ ALERTA end -->
         e.stopPropagation();
         var myId = this.id.split("instrument-preview")[1];
         sonidos[myId - 1].start();
-        prueba1 = sonidos[myId - 1];
-        console.log("probando" + prueba1);
-
       });
       $(".instrument-preview, .kit-preview").hover(function () {
         this.src = "GUI/img/audio_over.png"
@@ -2339,10 +2336,15 @@ ALERTA end -->
           $('.start-item').popover('dispose');
     }
   });
-  $(#muteBtn1).on('click', function() {
-    sonidos[2].start();
-    alert()
-  }
+
+  // MUTE channel
+  $(".channel-mute").click(function (e) {
+    e.stopPropagation();
+    var myId = this.id.split("channel-mute")[1];
+    sonidos[myId - 1].mute = true;
+    prueba1 = sonidos[myId - 1];
+    console.log("mutenado canal: " + prueba1);
+  });
 
 
 
