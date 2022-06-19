@@ -37,7 +37,7 @@
     gtag('config', 'UA-167506651-1');
   </script>
 
-
+<script src="https://unpkg.com/unmute" data-add-button="true"></script>
 </head>
 
 <body>
@@ -2341,7 +2341,8 @@ ALERTA end -->
   $(".channel-mute").click(function (e) {
     e.stopPropagation();
     var myId = this.id.split("channel-mute")[1];
-    sonidos[myId - 1].mute = true;
+    //sonidos[myId - 1].mute = true;
+    sonidos[myId - 1].play();
     prueba1 = sonidos[myId - 1];
     console.log("mutenado canal: " + prueba1);
   });
