@@ -1868,11 +1868,11 @@ ALERTA end -->
       });
 
       // MUTE channel
-      var miMute = 0;
+      var miMute = false;
       $(".channel-mute").click(function (e) {
         e.stopPropagation();
         var myId = this.id.split("channel-mute")[1];
-        if (miMute == 1){
+        if (miMute){
           sonidos[myId - 1].mute = false;
           $(this).removeClass("chn-muted");
           miMute = 0;
@@ -1881,7 +1881,6 @@ ALERTA end -->
           $(this).addClass("chn-muted");
           miMute = 1;
         }
-        console.log(miMute);
       });
       /*
       myAnimalNumber--;

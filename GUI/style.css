@@ -1032,8 +1032,16 @@ h3 {
     .chn-not-solo {
       background-color: #000000;
     }
+    .channel-mute{
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background-color: var(--color-celeste-ui-animal);
+      font-size: 10px;
+    }
     .chn-muted {
-      background-color: #000000 !important;
+      background-color: var(--color-rojo-ui-animal) !important;
+      color: #ffffff !important;
     }
     .chn-normal{
       background-color: #cccccc;
