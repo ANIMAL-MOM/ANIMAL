@@ -1037,18 +1037,20 @@ h3 {
       height: 21px;
       border-radius: 50%;
       background-color: var(--color-verde-ui-animal);
-      font-size: 10px;
+      font-size: 9px;
       text-align: center;
-      padding-top: 2px;
+      padding-top: 3px;
+      cursor: pointer;
     }
     .channel-mute{
       width: 21px;
       height: 21px;
       border-radius: 50%;
       background-color: var(--color-celeste-ui-animal);
-      font-size: 10px;
+      font-size: 9px;
       text-align: center;
-      padding-top: 2px;
+      padding-top: 3px;
+      cursor: pointer;
     }
     .chn-muted {
       background-color: var(--color-rojo-ui-animal) !important;
