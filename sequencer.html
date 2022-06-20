@@ -1093,6 +1093,7 @@ ALERTA end -->
                     data-toggle="tooltip" data-placement="top" title="SOLO">
                 </div>
                 <div id="channel-mute1" class="channel-mute">M</div>
+                <div id="channel-solo1" class="channel-solo">S</div>
                 <div class="dial_container d-none d-lg-block">
                   <div id="dial-ch8" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
                 </div>
@@ -1670,12 +1671,7 @@ ALERTA end -->
       );
       //END JAM SECTION
 
-      // MUTE channel
-      $(".channel-mute").click(function (e) {
-        e.stopPropagation();
-        var myId = this.id.split("channel-mute")[1];
-        sonidos[myId - 1].mute = true;
-      });
+
 
 
       function setMyChannel() {
@@ -1869,6 +1865,13 @@ ALERTA end -->
             $(this).addClass( "chn-solo" );
           });
         }
+      });
+
+      // MUTE channel
+      $(".channel-mute").click(function (e) {
+        e.stopPropagation();
+        var myId = this.id.split("channel-mute")[1];
+        sonidos[myId - 1].mute = true;
       });
       /*
       myAnimalNumber--;
