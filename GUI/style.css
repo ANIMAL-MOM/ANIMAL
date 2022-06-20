@@ -1035,21 +1035,21 @@ h3 {
     .channel-solo {
       width: 21px;
       height: 21px;
-      border-radius: 50%;
-      background-color: var(--color-verde-ui-animal);
+      line-height: 21px;
       font-size: 9px;
       text-align: center;
-      padding-top: 3px;
+      border-radius: 50%;
+      background-color: var(--color-verde-ui-animal);
       cursor: pointer;
     }
     .channel-mute{
       width: 21px;
       height: 21px;
-      border-radius: 50%;
-      background-color: var(--color-celeste-ui-animal);
+      line-height: 21px;
       font-size: 9px;
       text-align: center;
-      padding-top: 3px;
+      border-radius: 50%;
+      background-color: var(--color-celeste-ui-animal);
       cursor: pointer;
     }
     .chn-muted {
