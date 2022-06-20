@@ -1032,8 +1032,8 @@ h3 {
     .chn-not-solo {
       background-color: #000000;
     }
-    .chn-mute {
-      background-color: #000000;
+    .chn-muted {
+      background-color: #000000 !important;
     }
     .chn-normal{
       background-color: #cccccc;
