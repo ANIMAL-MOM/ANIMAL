@@ -1848,18 +1848,18 @@ ALERTA end -->
         var myAnimalNumber = myId.split("channel-solo")[1];
         myAnimalNumber--;
         $($(".instMobile")[myAnimalNumber]).addClass("d-block");
-        $(".soloButton").removeClass("activado");
+        $(".soloButton").removeClass("chn-solo");
 
         if (miSolo == (7 - myAnimalNumber)) {
           // quita estilo a BOTON solo
-          $(this).removeClass("activado");
+          $(this).removeClass("chn-solo");
           miSolo = -1;
           // quita estilo a casilleros del sequencer
           $('#seq-animal span').removeClass( "chn-solo" );
 
         } else {
           // aplica estilo a BOTON solo
-          $(this).addClass("activado");
+          $(this).addClass("chn-solo");
           miSolo = (7 - myAnimalNumber);
           //console.log("misolo"+ miSolo)
           // quita y aplica estilo a casilleros del sequencer

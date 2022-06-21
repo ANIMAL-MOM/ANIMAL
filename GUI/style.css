@@ -1026,27 +1026,28 @@ h3 {
   }
 
     /* Channel related styles */
-    .chn-solo {
-      background-color: var(--color-verde-ui-animal);
-    }
-    .chn-not-solo {
-      background-color: #000000;
-    }
+
     .channel-solo {
       width: 21px;
       height: 21px;
       line-height: 21px;
       font-size: 9px;
+      font-weight: bold;
       text-align: center;
       border-radius: 50%;
-      background-color: var(--color-verde-ui-animal);
+      background-color: var(--color-celeste-ui-animal);
       cursor: pointer;
+    }
+    .chn-solo {
+      background-color: var(--color-verde-ui-animal);
+      color: #ffffff !important;
     }
     .channel-mute{
       width: 21px;
       height: 21px;
       line-height: 21px;
       font-size: 9px;
+      font-weight: bold;
       text-align: center;
       border-radius: 50%;
       background-color: var(--color-celeste-ui-animal);
