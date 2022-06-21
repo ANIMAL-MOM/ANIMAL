@@ -1884,12 +1884,12 @@ ALERTA end -->
         $(".channel-mute").removeClass("chn-muted");
 
         if (myMute == (7 - myAnimalNumber)) {
-          sonidos[myAnimalNumber - 1].mute = false;
+          sonidos[myAnimalNumber].mute = false;
           // quita estilo a BOTON mute
           $(this).removeClass("chn-muted");
           myMute = -1;
         } else {
-          sonidos[myAnimalNumber - 1].mute = true;
+          sonidos[myAnimalNumber].mute = true;
           // aplica estilo a BOTON solo
           $(this).addClass("chn-muted");
           myMute = (7 - myAnimalNumber);
