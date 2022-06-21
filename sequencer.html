@@ -1871,28 +1871,17 @@ ALERTA end -->
           });
         }
       });
-
-
-
-      var myMute = -1;
-
+    
       $(".channel-mute").click(function () {
-
         var myId = this.id;
         var myAnimalNumber = myId.split("channel-mute")[1];
         myAnimalNumber--;
-        $(".channel-mute").removeClass("chn-muted");
-
-        if (myMute == (7 - myAnimalNumber)) {
+        if ($(this).hasClass('chn-muted')) {
           sonidos[myAnimalNumber].mute = false;
-          // quita estilo a BOTON mute
           $(this).removeClass("chn-muted");
-          myMute = -1;
         } else {
           sonidos[myAnimalNumber].mute = true;
-          // aplica estilo a BOTON solo
           $(this).addClass("chn-muted");
-          myMute = (7 - myAnimalNumber);
         }
       });
 
