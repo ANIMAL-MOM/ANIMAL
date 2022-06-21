@@ -1325,7 +1325,6 @@ ALERTA end -->
 
   <script src="GUI/scriptGUI.js"></script>
 
-  <script src="GUI/svgDraw.js"></script>
 
 
   <script src="/socket.io/socket.io.js"></script>
@@ -1363,14 +1362,14 @@ ALERTA end -->
       var sequencer;
 
       sequencer = new Nexus.Sequencer('#seq-animal', {
-          'size': [1200, 400],
+          'size': [400, 400],
           'mode': 'toggle',
           'rows': 8,
           'columns': 16
       });
 
 
-      sequencer.colorize("accent", "#5EC20A");
+      sequencer.colorize("accent", "#FF7809");
       //NEXUs
       /*  var sequencer = new Nexus.Sequencer('#seq-animal', {
           'size': [580, 380],
@@ -1871,7 +1870,7 @@ ALERTA end -->
           });
         }
       });
-    
+
       $(".channel-mute").click(function () {
         var myId = this.id;
         var myAnimalNumber = myId.split("channel-mute")[1];
@@ -1884,19 +1883,6 @@ ALERTA end -->
           $(this).addClass("chn-muted");
         }
       });
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
