@@ -1195,7 +1195,7 @@ ALERTA end -->
               <div id="channelGroup7"
                 class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" >
                 <div class="d-flex flex-column justify-content-around">
-                  <div id="channel-mute71" class="channel-mute">M</div>
+                  <div id="channel-mute7" class="channel-mute">M</div>
                   <div id="channel-solo2" class="channel-solo soloButton">S</div>
                 </div>
                 <div class="dial_container d-none d-lg-block">
@@ -1872,21 +1872,45 @@ ALERTA end -->
         }
       });
 
-      // MUTE channel
-      var miMute = false;
-      $(".channel-mute").click(function (e) {
-        e.stopPropagation();
-        var myId = this.id.split("channel-mute")[1];
-        if (miMute){
-          sonidos[myId - 1].mute = false;
+
+
+      var myMute = -1;
+
+      $(".channel-mute").click(function () {
+
+        var myId = this.id;
+        var myAnimalNumber = myId.split("channel-mute")[1];
+        myAnimalNumber--;
+        $(".channel-mute").removeClass("chn-muted");
+
+        if (myMute == (7 - myAnimalNumber)) {
+          sonidos[myAnimalNumber - 1].mute = false;
+          // quita estilo a BOTON mute
           $(this).removeClass("chn-muted");
-          miMute = 0;
+          myMute = -1;
         } else {
-          sonidos[myId - 1].mute = true;
+          sonidos[myAnimalNumber - 1].mute = true;
+          // aplica estilo a BOTON solo
           $(this).addClass("chn-muted");
-          miMute = 1;
+          myMute = (7 - myAnimalNumber);
         }
       });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       /*
       myAnimalNumber--;
       if (!(sonidos.get(scaleNotes[(7 - myAnimalNumber)]).mute)) {

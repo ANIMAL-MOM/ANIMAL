@@ -1032,7 +1032,6 @@ h3 {
       height: 21px;
       line-height: 21px;
       font-size: 9px;
-      font-weight: bold;
       text-align: center;
       border-radius: 50%;
       background-color: var(--color-celeste-ui-animal);
@@ -1041,13 +1040,13 @@ h3 {
     .chn-solo {
       background-color: var(--color-verde-ui-animal);
       color: #ffffff !important;
+      font-weight: bold;
     }
     .channel-mute{
       width: 21px;
       height: 21px;
       line-height: 21px;
       font-size: 9px;
-      font-weight: bold;
       text-align: center;
       border-radius: 50%;
       background-color: var(--color-celeste-ui-animal);
@@ -1056,6 +1055,7 @@ h3 {
     .chn-muted {
       background-color: var(--color-rojo-ui-animal) !important;
       color: #ffffff !important;
+      font-weight: bold;
     }
     .chn-normal{
       background-color: #cccccc;
