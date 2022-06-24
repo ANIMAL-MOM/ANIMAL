@@ -1088,10 +1088,10 @@ ALERTA end -->
               <!-- Ch1 -->
 
               <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup1">
-              <!--   <div class="animal-icon">
-                  <img id="icono-ch8" src="GUI/img/cerdo.png" class="soloButton img-fluid animal-pointer"
+                <div class="animal-icon">
+                  <img id="icono-ch8" src="GUI/img/cerdo.png" class="sound-preview img-fluid animal-pointer"
                     data-toggle="tooltip" data-placement="top" title="SOLO">
-                </div> -->
+                </div>
                 <div class="d-flex flex-column justify-content-around">
                   <div id="channel-mute1" class="channel-mute">M</div>
                   <div id="channel-solo8" class="channel-solo soloButton">S</div>
@@ -1673,6 +1673,12 @@ ALERTA end -->
 
       );
       //END JAM SECTION
+      $(".sound-preview").click(function (e) {
+        e.stopPropagation();
+        console.log("sowd preview");
+      });
+
+
 
 
 
