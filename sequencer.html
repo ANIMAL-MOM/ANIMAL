@@ -1089,7 +1089,7 @@ ALERTA end -->
 
               <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup1">
                 <div class="animal-icon">
-                  <img id="icono-ch8" src="GUI/img/cerdo.png" class="sound-preview img-fluid animal-pointer"
+                  <img id="icono-ch1" src="GUI/img/cerdo.png" class="sound-preview img-fluid animal-pointer"
                     data-toggle="tooltip" data-placement="top" title="SOLO">
                 </div>
                 <div class="d-flex flex-column justify-content-around">
@@ -1675,7 +1675,9 @@ ALERTA end -->
       //END JAM SECTION
       $(".sound-preview").click(function (e) {
         e.stopPropagation();
-        console.log("sowd preview");
+        var myId = this.id.split("icono-ch")[1];
+        sonidos[myId - 1].start();
+        console.log("preview sound " + myId);
       });
 
 
