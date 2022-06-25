@@ -1701,7 +1701,7 @@ ALERTA end -->
         for (i = 0; i < 8; i++) {
           var snum = i;
           console.log(snum);
-          if (event.key === snum) {
+          if (event.key === [snum]) {
             sonidos[snum].start();
             console.log("keydown "+ snum);
           }
