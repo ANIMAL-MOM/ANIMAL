@@ -1695,10 +1695,25 @@ ALERTA end -->
         var myId = this.id.split("icono-ch")[1];
         sonidos[myId - 1].start();
       });
-      // CHANNEL NUMBER event = keyup or keydown
+      // AUDIT (channel number) event keydown
       document.addEventListener('keydown', event => {
+        // sin cuantizar
         if (event.key === '1') {
           sonidos[0].start();
+        } else if (event.key === '2') {
+          sonidos[1].start();
+        } else if (event.key === '3') {
+          sonidos[2].start();
+        } else if (event.key === '4') {
+          sonidos[3].start();
+        } else if (event.key === '5') {
+          sonidos[4].start();
+        } else if (event.key === '6') {
+          sonidos[5].start();
+        } else if (event.key === '7') {
+          sonidos[6].start();
+        } else (event.key === '8') {
+          sonidos[7].start();
         }
       });
 
