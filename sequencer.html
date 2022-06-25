@@ -1688,13 +1688,19 @@ ALERTA end -->
 
       );
       //END JAM SECTION
+
+      // AUDIT channel sounds
       $(".sound-preview").click(function (e) {
         e.stopPropagation();
         var myId = this.id.split("icono-ch")[1];
         sonidos[myId - 1].start();
-        console.log("preview sound " + myId);
       });
-
+      // CHANNEL NUMBER event = keyup or keydown
+      document.addEventListener('keyup', event => {
+        if (event.code === '49') {
+          sonidos[0].start();
+        }
+      });
 
 
 
@@ -2081,7 +2087,7 @@ ALERTA end -->
           $(this).toggleClass('mute-btn-activo');
       });
 
-      // event = keyup or keydown
+      // SPACE BAR event = keyup or keydown
       document.addEventListener('keyup', event => {
         if (event.code === 'Space') {
           playSequencer();
