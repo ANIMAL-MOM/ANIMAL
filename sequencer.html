@@ -2128,7 +2128,8 @@ ALERTA end -->
       });
 
       $("#eraseAll").click(function () {
-        sequencer.matrix.populate.all( [0,0] )
+        sequencer.matrix.populate.all( [0,0] );
+        playSequencer();
         console.log("erase all")
       });
 
