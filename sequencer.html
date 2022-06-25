@@ -1565,16 +1565,6 @@ ALERTA end -->
       $("#enlace").addClass("opacity-3");
       $("#enlace").css("pointer-events", "none");
       $("#okCanales").attr("disabled", true);
-      var seqCero = [
-      [true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
-      [false, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false],
-      [false, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false],
-      [false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false],
-      [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true],
-      [false, false, false, false, false, true, false, false, false, false, true, false, false, false, false, false],
-      [false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false],
-      [false, false, false, false, false, false, false, false, true, false, false, false, false, false, true, false]
-      ];
 
       socket.on('host', function (newroomID) {
 
@@ -1585,7 +1575,16 @@ ALERTA end -->
         newUrl = url.href;
         let stateObj = { id: "100" };
         window.history.replaceState(stateObj, "roomID", newUrl);
-        var seqInicial = seqCero;
+        var seqInicial = [
+        [true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
+        [false, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false],
+        [false, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false],
+        [false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false],
+        [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true],
+        [false, false, false, false, false, true, false, false, false, false, true, false, false, false, false, false],
+        [false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false],
+        [false, false, false, false, false, false, false, false, true, false, false, false, false, false, true, false]
+        ];
         socket.emit('sequencer', sequencer.matrix.pattern);
 
         $(".disabled-overlay").addClass("d-none");
@@ -2138,15 +2137,8 @@ ALERTA end -->
       $("#eraseAll").click(function () {
         sequencer.matrix.populate.all( [0,0] );
         playSequencer();
-        console.log("erase all")
+        // console.log("erase all")
       });
-
-      $("#resetAll").click(function () {
-        sequencer.matrix.populate.all(seqCero);
-        playSequencer();
-        console.log("reset all " + seqCero)
-      });
-
 
       function changePitch(myAnimal, value) {
         //console.log("entro a change pitch");
