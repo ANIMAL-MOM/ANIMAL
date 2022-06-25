@@ -1696,7 +1696,7 @@ ALERTA end -->
         sonidos[myId - 1].start();
       });
       // CHANNEL NUMBER event = keyup or keydown
-      document.addEventListener('keyup', event => {
+      document.addEventListener('keydown', event => {
         if (event.key === '1') {
           sonidos[0].start();
         }
@@ -2088,7 +2088,7 @@ ALERTA end -->
       });
 
       // SPACE BAR event = keyup or keydown
-      document.addEventListener('keyup', event => {
+      document.addEventListener('keydown', event => {
         if (event.code === 'Space') {
           playSequencer();
         }
