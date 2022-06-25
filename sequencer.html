@@ -2142,7 +2142,7 @@ ALERTA end -->
       });
 
       $("#resetAll").click(function () {
-        sequencer.matrix.set.all(seqCero);
+        sequencer.matrix.populate.all(seqCero);
         playSequencer();
         console.log("reset all " + seqCero)
       });
