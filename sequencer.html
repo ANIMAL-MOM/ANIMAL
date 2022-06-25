@@ -1689,7 +1689,7 @@ ALERTA end -->
       );
       //END JAM SECTION
 
-      // AUDIT channel sounds
+      // AUDIT  (channel icon)
       $(".sound-preview").click(function (e) {
         e.stopPropagation();
         var myId = this.id.split("icono-ch")[1];
@@ -1698,22 +1698,11 @@ ALERTA end -->
       // AUDIT (channel number) event keydown
       document.addEventListener('keydown', event => {
         // sin cuantizar
-        if (event.key === '1') {
-          sonidos[0].start();
-        } else if (event.key === '2') {
-          sonidos[1].start();
-        } else if (event.key === '3') {
-          sonidos[2].start();
-        } else if (event.key === '4') {
-          sonidos[3].start();
-        } else if (event.key === '5') {
-          sonidos[4].start();
-        } else if (event.key === '6') {
-          sonidos[5].start();
-        } else if (event.key === '7') {
-          sonidos[6].start();
-        } else if (event.key === '8') {
-          sonidos[7].start();
+        for (i = 0; i < 8; i++) {
+          var snum = i;
+          if (event.key === snum) {
+            sonidos[snum].start();
+          }
         }
       });
 
