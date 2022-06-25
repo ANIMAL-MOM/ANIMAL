@@ -1277,6 +1277,13 @@ ALERTA end -->
               <div class="m-auto text-center">
               </div>
             </div>
+            <div id="eraseCh1" class="mx-auto d-flex my-auto flex-lg-column help-item">
+              <a href="#" id="boton" class="animal-icon jam-btn text-center">
+                <span translate="no">erase Ch1</span>
+              </a>
+              <div class="m-auto text-center">
+              </div>
+            </div>
             <div id="resetAll" class="mx-auto d-flex my-auto flex-lg-column help-item">
               <a href="https://sesion-gui.onrender.com/" id="boton" class="animal-icon jam-btn text-center">
                 <span translate="no">Restart</span>
@@ -2136,6 +2143,11 @@ ALERTA end -->
 
       $("#eraseAll").click(function () {
         sequencer.matrix.populate.all( [0,0] );
+        playSequencer();
+        // console.log("erase all")
+      });
+      $("#eraseCh1").click(function () {
+        sequencer.matrix.populate.row( 0, [0,0] )
         playSequencer();
         // console.log("erase all")
       });
