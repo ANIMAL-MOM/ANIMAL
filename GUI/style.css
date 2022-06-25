@@ -1028,7 +1028,8 @@ h3 {
     /* Channel related styles */
 
     .channelGroup {
-      height:63px;
+      height: 62px;
+      margin-bottom: 1px;
     }
     .channel-solo {
       width: 21px;
