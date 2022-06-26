@@ -1259,7 +1259,7 @@ ALERTA end -->
           <!-- REGISTRO COMPARTIR (#jam-ajustes) -->
 
 
-          <div id="jam-ajustes" class="col-12 py-4 px-3 d-flex flex-xl-column justify-content-between fondo-1-animal corners1">
+          <div id="jam-ajustes" class="col-12 py-4 px-3 d-flex justify-content-between fondo-1-animal corners1">
             <div id="metronome" class="metronome-normal text-center">
               --
             </div>
@@ -1271,9 +1271,30 @@ ALERTA end -->
               </div>
             </div> -->
 
-            <div id="soundLenght" class="mx-auto d-flex my-auto flex-lg-column help-item">
+            <div id="lenght1n" class="mx-auto d-flex my-auto flex-lg-column help-item">
               <a href="#" id="boton" class="animal-icon jam-btn text-center">
                 <span translate="no">1n</span>
+              </a>
+              <div class="m-auto text-center">
+              </div>
+            </div>
+            <div id="lenght4n" class="mx-auto d-flex my-auto flex-lg-column help-item">
+              <a href="#" id="boton" class="animal-icon jam-btn text-center">
+                <span translate="no">4n</span>
+              </a>
+              <div class="m-auto text-center">
+              </div>
+            </div>
+            <div id="lenght8n" class="mx-auto d-flex my-auto flex-lg-column help-item">
+              <a href="#" id="boton" class="animal-icon jam-btn text-center">
+                <span translate="no">8n</span>
+              </a>
+              <div class="m-auto text-center">
+              </div>
+            </div>
+            <div id="lenght16n" class="mx-auto d-flex my-auto flex-lg-column help-item">
+              <a href="#" id="boton" class="animal-icon jam-btn text-center">
+                <span translate="no">16n</span>
               </a>
               <div class="m-auto text-center">
               </div>
@@ -1709,10 +1730,34 @@ ALERTA end -->
         }
       });
 
-      // SOUND length
-      $("#soundLenght").click(function (e) {
+      // CHANGE sound LENGHT
+      $("#lenght1n").click(function (e) {
         e.stopPropagation();
-        sonidos[6].fadeOut = "1n";
+        for (i = 0; i < 8; i++) {
+          sonidos[i].fadeOut = "1n";
+        }
+        playSequencer();
+      });
+      $("#lenght4n").click(function (e) {
+        e.stopPropagation();
+        for (i = 0; i < 8; i++) {
+          sonidos[i].fadeOut = "4n";
+        }
+        playSequencer();
+      });
+      $("#lenght8n").click(function (e) {
+        e.stopPropagation();
+        for (i = 0; i < 8; i++) {
+          sonidos[i].fadeOut = "8n";
+        }
+        playSequencer();
+      });
+      $("#lenght16n").click(function (e) {
+        e.stopPropagation();
+        for (i = 0; i < 8; i++) {
+          sonidos[i].fadeOut = "16n";
+        }
+        playSequencer();
       });
 
       // AUDIT sounds (jam window)?
