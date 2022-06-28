@@ -1026,7 +1026,6 @@ h3 {
   }
 
     /* Channel related styles */
-
     .channelGroup {
       height: 62px;
       margin-bottom: 1px;
@@ -1082,4 +1081,12 @@ h3 {
     }
     .metronome-accent {
       background-color: var(--color-rojo-ui-animal) !important;
+    }
+
+      /* stepIndicator related styles */
+    .stepIndicator {
+      height: 50px;
+    }
+    .stepIndicator-step {
+
     }
