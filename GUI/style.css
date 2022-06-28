@@ -1084,12 +1084,15 @@ h3 {
     }
 
       /* stepIndicator related styles */
-    .stepIndicator {
+    .stepper {
       height: 20px;
     }
-    .stepIndicator-step {
+    .stepIndicator {
       width: 12px;
       height: 12px;
       border-radius: 50%;
       background-color: var(--color-celeste-ui-animal);
+    }
+    .stepIndicator-step{
+      background-color: var(--color-verde-ui-animal) !important;
     }

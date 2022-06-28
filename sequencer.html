@@ -1082,7 +1082,7 @@ ALERTA end -->
 
           <div id="ch_control" class="col-2 my-1 my-lg-0 p-4 corners-l fondo-1-animal">
             <div class="row ">
-              <div class="stepIndicator">&nbsp;</div>
+              <div class="stepper">&nbsp;</div>
 
               <!-- ÍCONOS y DIALES -->
 
@@ -1251,23 +1251,23 @@ ALERTA end -->
           <div id="secuenciador" class="col-10 mx-0 my-1 my-lg-0 p-0 pr-lg-1">
 
             <div class="pl-0 py-4 pr-4 corners-r overflow-auto fondo-1-animal">
-              <div id="stepIndicator" class="grid-size d-flex flex-row justify-content-around stepIndicator">
-                <span id="step1" class="stepIndicator-step"></span>
-                <span id="step2" class="stepIndicator-step"></span>
-                <span id="step3" class="stepIndicator-step"></span>
-                <span id="step4" class="stepIndicator-step"></span>
-                <span id="step5" class="stepIndicator-step"></span>
-                <span id="step6" class="stepIndicator-step"></span>
-                <span id="step7" class="stepIndicator-step"></span>
-                <span id="step8" class="stepIndicator-step"></span>
-                <span id="step9" class="stepIndicator-step"></span>
-                <span id="step10" class="stepIndicator-step"></span>
-                <span id="step11" class="stepIndicator-step"></span>
-                <span id="step12" class="stepIndicator-step"></span>
-                <span id="step13" class="stepIndicator-step"></span>
-                <span id="step14" class="stepIndicator-step"></span>
-                <span id="step15" class="stepIndicator-step"></span>
-                <span id="step16" class="stepIndicator-step"></span>
+              <div id="stepIndicator" class="grid-size d-flex flex-row justify-content-around stepper">
+                <span id="step1" class="stepIndicator"></span>
+                <span id="step2" class="stepIndicator"></span>
+                <span id="step3" class="stepIndicator"></span>
+                <span id="step4" class="stepIndicator"></span>
+                <span id="step5" class="stepIndicator"></span>
+                <span id="step6" class="stepIndicator"></span>
+                <span id="step7" class="stepIndicator"></span>
+                <span id="step8" class="stepIndicator"></span>
+                <span id="step9" class="stepIndicator"></span>
+                <span id="step10" class="stepIndicator"></span>
+                <span id="step11" class="stepIndicator"></span>
+                <span id="step12" class="stepIndicator"></span>
+                <span id="step13" class="stepIndicator"></span>
+                <span id="step14" class="stepIndicator"></span>
+                <span id="step15" class="stepIndicator"></span>
+                <span id="step16" class="stepIndicator"></span>
               </div>
               <div id="seq-animal" class="grid-size">
 
@@ -2081,8 +2081,66 @@ ALERTA end -->
         // //console.log(v);
       });
 
+      // STEPINDICATOR
+      let stepInd=0;
+      sequencer.on('step', function (v) {
 
-      /////// METRONOMO
+          var count= document.getElementById("stepIndicator");
+          count.innerHTML=++stepInd;
+          if (stepInd === 1){
+            $('.stepIndicator').removeClass('stepIndicator-step');
+            $('#step1').addClass('stepIndicator-step');
+          } else if (stepInd === 2) {
+            $('.stepIndicator').removeClass('stepIndicator-step');
+            $('#step2').addClass('stepIndicator-step');
+          } else if (stepInd === 3) {
+            $('.stepIndicator').removeClass('stepIndicator-step');
+            $('#step3').addClass('stepIndicator-step');
+          } else if (stepInd === 4) {
+            $('.stepIndicator').removeClass('stepIndicator-step');
+            $('#step4').addClass('stepIndicator-step');
+          } else if (stepInd === 5) {
+            $('.stepIndicator').removeClass('stepIndicator-step');
+            $('#step5').addClass('stepIndicator-step');
+          } else if (stepInd === 6) {
+            $('.stepIndicator').removeClass('stepIndicator-step');
+            $('#step6').addClass('stepIndicator-step');
+          } else if (stepInd === 7) {
+            $('.stepIndicator').removeClass('stepIndicator-step');
+            $('#step7').addClass('stepIndicator-step');
+          } else if (stepInd === 8) {
+            $('.stepIndicator').removeClass('stepIndicator-step');
+            $('#step8').addClass('stepIndicator-step');
+          } else if (stepInd === 9) {
+            $('.stepIndicator').removeClass('stepIndicator-step');
+            $('#step9').addClass('stepIndicator-step');
+          } else if (stepInd === 10) {
+            $('.stepIndicator').removeClass('stepIndicator-step');
+            $('#step10').addClass('stepIndicator-step');
+          } else if (stepInd === 11) {
+            $('.stepIndicator').removeClass('stepIndicator-step');
+            $('#step11').addClass('stepIndicator-step');
+          } else if (stepInd === 12) {
+            $('.stepIndicator').removeClass('stepIndicator-step');
+            $('#step12').addClass('stepIndicator-step');
+          } else if (stepInd === 13) {
+            $('.stepIndicator').removeClass('stepIndicator-step');
+            $('#step13').addClass('stepIndicator-step');
+          } else if (stepInd === 14) {
+            $('.stepIndicator').removeClass('stepIndicator-step');
+            $('#step14').addClass('stepIndicator-step');
+          } else if (stepInd === 15) {
+            $('.stepIndicator').removeClass('stepIndicator-step');
+            $('#step15').addClass('stepIndicator-step');
+          } else {
+            $('.stepIndicator').removeClass('stepIndicator-step');
+            $('#step16').addClass('stepIndicator-step');
+            stepInd=0;
+          }
+
+      });
+
+      // METRONOMO
       let metro=0;
       sequencer.on('step', function (v) {
 
