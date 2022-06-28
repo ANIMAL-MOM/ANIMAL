@@ -1434,6 +1434,8 @@ ALERTA end -->
       var roomID;
       var selectedChannels = [];
       var soloOn;
+      var gridW = 850;
+      var gridH = 505;
       var bpm = 90;
       var swing = 0;
       var mikit = $("#sonidos-kit-4")[0];
@@ -1455,7 +1457,7 @@ ALERTA end -->
       var sequencer;
 
       sequencer = new Nexus.Sequencer('#seq-animal', {
-          'size': [850, 505],
+          'size': [gridW, gridH],
           'mode': 'toggle',
           'rows': 8,
           'columns': 16
