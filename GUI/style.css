@@ -1085,11 +1085,11 @@ h3 {
 
       /* stepIndicator related styles */
     .stepIndicator {
-      height: 50px;
+      height: 20px;
     }
     .stepIndicator-step {
-      width: 16px;
-      height: 16px;
+      width: 12px;
+      height: 12px;
       border-radius: 50%;
       background-color: var(--color-celeste-ui-animal);
     }
