@@ -817,7 +817,7 @@ ALERTA end -->
 
           <!-- chat end -->
 
-          <!-- CONTROLES -->
+          <!-- TRANSPORT -->
 
           <div id="controles" class="col-6 col-lg-12 p-0 pt-lg-1 d-flex flex-column flex-lg-row">
             <div class="row m-0 p-2 d-flex custom-height corners1 fondo-1-animal">
@@ -1080,9 +1080,10 @@ ALERTA end -->
 
           <!-- CHANNEL CONTROL (#ch_control) -->
 
-          <div id="ch_control" class="col-3 my-1 my-lg-0 p-4 corners-l fondo-1-animal">
+          <div id="ch_control" class="col-2 my-1 my-lg-0 p-4 corners-l fondo-1-animal">
             <div class="row ">
-
+              <div class="stepIndicator"></div>
+              
               <!-- ÍCONOS y DIALES -->
 
               <!-- Ch1 (cerdo) -->
@@ -1247,10 +1248,22 @@ ALERTA end -->
           <!-- SECUENCIADOR (#secuenciador) -->
 
 
-          <div id="secuenciador" class="col-9 col-xl-9 mx-0 my-1 my-lg-0 p-0 pr-lg-1">
+          <div id="secuenciador" class="col-10 mx-0 my-1 my-lg-0 p-0 pr-lg-1">
 
             <div class="pl-0 py-4 pr-4 corners-r overflow-auto fondo-1-animal">
-              <div id="seq-animal" class="grid-size "></div>
+              <div id="stepIndicator" class="w-100 d-flex flex-row justify-content-around stepIndicator">
+                <span id="step1" class="stepIndicator-step"></span>
+                <span id="step2" class="stepIndicator-step"></span>
+                <span id="step3" class="stepIndicator-step"></span>
+                <span id="step4" class="stepIndicator-step"></span>
+                <span id="step5" class="stepIndicator-step"></span>
+                <span id="step6" class="stepIndicator-step"></span>
+                <span id="step7" class="stepIndicator-step"></span>
+                <span id="step8" class="stepIndicator-step"></span>
+              </div>
+              <div id="seq-animal" class="grid-size ">
+
+              </div>
             </div>
           </div>
 
