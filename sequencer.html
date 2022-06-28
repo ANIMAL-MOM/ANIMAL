@@ -2084,8 +2084,8 @@ ALERTA end -->
       // STEPINDICATOR
       let stepInd=0;
       sequencer.on('step', function (v) {
-        var count2= document.getElementById("stepIndicator");
-        count.innerHTML=++stepInd;
+        var contador= document.getElementById("stepIndicator");
+        contador.innerHTML=++stepInd;
         if (stepInd === 1){
           $('.stepIndicator').removeClass('stepIndicator-step');
           $('#step1').addClass('stepIndicator-step');
