@@ -43,1240 +43,1364 @@
 </head>
 
 <body>
-
   <!-- ALERTA start
 
-  <div id="alerta" class="fondo-aqua-animal" style="display:none">
-    <div class="container">
-      <div class="col-12 pt-5 text-center">
-        <h1 class="mt-5">¡Opa!</h1>
-        <h3 class="mt-1">Animal funciona en modo horizontal.<br />
-          ¡Porfavor rota tu dispositivo! y regresa al <a href="https://mom-lab.xyz/" >inicio</a></h3>
-        <div class="w-25 mx-auto mt-3">
-          <img src="/GUI/img/rotate-devise.png" class="img-fluid">
-        </div>
-      </div>
-    </div>
-  </div>
-
-ALERTA end -->
-
-<!-- MODALS -->
-
-  <!-- PLAY Modal -->
-  <div class="modal fade" id="playModal" tabindex="-1" role="dialog" aria-labelledby="settingsModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header fondo-aqua-animal">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <!-- MODAL BODY -->
-        <div class="modal-body fondo-aqua-animal">
-          <div class="row mb-5">
-            <div class="col-12 text-center">
-              <div id="Animal_logo" class="mx-auto">
-                <img src="GUI/img/Animal_logo_v0.png" width="300px">
-              </div>
-              <h1 class="my-5">Welcome!</h1>
-                <h3 >
-                  Click outside this window to close it.
-                </h3>
-              <div class="row">
-                <div class="col-6">
-                  <h3 class="mt-1">
-                    Press the SETTINGS button to change the sounds.
-                  </h3>
-                  <div class="w-50 mx-auto mt-3">
-                    <img src="GUI/svg/push-settings-gris.svg" class="img-fluid">
-                  </div>
-                </div>
-                <div class="col-6">
-                  <h3 class="mt-1">
-                    Activate the <span translate="no">Jam</span> session to invite more musical explorers.
-                  </h3>
-                  <div class="w-50 mx-auto mt-3">
-                    <img src="GUI/svg/push-jam.svg" class="img-fluid">
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-        <!-- modal body end -->
-      </div>
-    </div>
-  </div>
-  <!-- PLAY modal end -->
-
-  <!-- JAM Modal -->
-
-  <div class="modal fade" id="jamModal" tabindex="-1" role="dialog" aria-labelledby="jamModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-          <h4 class="modal-title" id="jamModalLabel"><span translate="no">Jam</span></h4>
-        </div>
-
-        <!-- MODAL BODY -->
-
-        <div class="modal-body px-3 pt-0 pb-3">
-
-          <div class="mb-1">
-            Choose your instruments
-          </div>
-          <div id="sel-inst" class="row mb-1">
-
-            <div class="col-3 my-1">
-              <div class="corners-2 fondo-1-animal p-2 channelsInvite" sel="false" channelNumber="1"
-                id="channelsInvite1">
-                <div class="d-flex justify-content-around">
-
-                  <div class="audio-preview-s">
-                    <img id="instrument-preview1" src="GUI/img/audio_trans.png"
-                      class="audio-preview-s instrument-preview ">
-                  </div>
-
-
-
-                  <div id="sel-ch8" class="icon-container-s ml-1">
-                    <object type="image/svg+xml" data="GUI/svg/iconos/cerdo-w.svg" class="animal-icon-s">
-                      Pig
-                    </object>
-                  </div>
-
-                </div>
-                <div class="titulo text-center pt-1">Pig</div>
-              </div>
-            </div>
-
-            <div class="col-3 my-1">
-              <div class="corners-2 fondo-1-animal p-2 channelsInvite" sel="false" channelNumber="2"
-                id="channelsInvite2">
-                <div class="d-flex justify-content-around">
-
-                  <div class="audio-preview-s">
-                    <img id="instrument-preview2" src="GUI/img/audio_trans.png"
-                      class="audio-preview-s instrument-preview ">
-                  </div>
-
-                  <div id="sel-ch7" class="icon-container-s ml-1">
-                    <object type="image/svg+xml" data="GUI/svg/iconos/loro-w.svg" class="animal-icon-s">
-                      Bird
-                    </object>
-                  </div>
-
-                </div>
-                <div class="titulo text-center pt-1">Bird</div>
-              </div>
-            </div>
-
-            <div class="col-3 my-1">
-              <div class="corners-2 fondo-1-animal p-2 channelsInvite" sel="false" channelNumber="3"
-                id="channelsInvite3">
-                <div class="d-flex justify-content-around">
-
-                  <div class="audio-preview-s">
-                    <img id="instrument-preview3" src="GUI/img/audio_trans.png"
-                      class="audio-preview-s instrument-preview ">
-                  </div>
-
-                  <div id="sel-ch6" class="icon-container-s ml-1">
-                    <object type="image/svg+xml" data="GUI/svg/iconos/sapo-w.svg" class="animal-icon-s">
-                      Frog
-                    </object>
-                  </div>
-
-                </div>
-                <div class="titulo text-center pt-1">Frog</div>
-              </div>
-            </div>
-
-            <div class="col-3 my-1">
-              <div class="corners-2 fondo-1-animal p-2 channelsInvite" sel="false" channelNumber="4"
-                id="channelsInvite4">
-                <div class="d-flex justify-content-around">
-
-                  <div class="audio-preview-s">
-                    <img id="instrument-preview4" src="GUI/img/audio_trans.png"
-                      class="audio-preview-s instrument-preview ">
-                  </div>
-
-                  <div id="sel-ch5" class="icon-container-s ml-1">
-                    <object type="image/svg+xml" data="GUI/svg/iconos/pato-w.svg" class="animal-icon-s">
-                      Duck
-                    </object>
-                  </div>
-
-                </div>
-                <div class="titulo text-center pt-1">Duck</div>
-              </div>
-            </div>
-
-            <div class="col-3 my-1">
-              <div class="corners-2 fondo-1-animal p-2 channelsInvite" sel="false" channelNumber="5"
-                id="channelsInvite5">
-                <div class="d-flex justify-content-around">
-
-                  <div class="audio-preview-s">
-                    <img id="instrument-preview5" src="GUI/img/audio_trans.png"
-                      class="audio-preview-s instrument-preview ">
-                  </div>
-
-                  <div id="sel-ch4" class="icon-container-s ml-1">
-                    <object type="image/svg+xml" data="GUI/svg/iconos/mono-w.svg" class="animal-icon-s">
-                      Ape
-                    </object>
-                  </div>
-
-                </div>
-                <div class="titulo text-center pt-1">Ape</div>
-              </div>
-            </div>
-
-            <div class="col-3 my-1">
-              <div class="corners-2 fondo-1-animal p-2 channelsInvite" sel="false" channelNumber="6"
-                id="channelsInvite6">
-                <div class="d-flex justify-content-around">
-
-                  <div class="audio-preview-s">
-                    <img id="instrument-preview6" src="GUI/img/audio_trans.png"
-                      class="audio-preview-s instrument-preview ">
-                  </div>
-
-                  <div id="sel-ch3" class="icon-container-s ml-1">
-                    <object type="image/svg+xml" data="GUI/svg/iconos/gato-w.svg" class="animal-icon-s">
-                      Cat
-                    </object>
-                  </div>
-
-                </div>
-                <div class="titulo text-center pt-1">Cat</div>
-              </div>
-            </div>
-
-            <div class="col-3 my-1">
-              <div class="corners-2 fondo-1-animal p-2 channelsInvite" sel="false" channelNumber="7"
-                id="channelsInvite7">
-                <div class="d-flex justify-content-around">
-
-                  <div class="audio-preview-s">
-                    <img id="instrument-preview7" src="GUI/img/audio_trans.png"
-                      class="audio-preview-s instrument-preview ">
-                  </div>
-
-                  <div id="sel-ch2" class="icon-container-s ml-1">
-                    <object type="image/svg+xml" data="GUI/svg/iconos/oso-w.svg" class="animal-icon-s">
-                      Bear
-                    </object>
-                  </div>
-
-                </div>
-                <div class="titulo text-center pt-1">Bear</div>
-              </div>
-            </div>
-
-            <div class="col-3 my-1">
-              <div class="corners-2 fondo-1-animal p-2 channelsInvite" sel="false" channelNumber="8"
-                id="channelsInvite8">
-                <div class="d-flex justify-content-around">
-
-                  <div class="audio-preview-s">
-                    <img id="instrument-preview8" src="GUI/img/audio_trans.png"
-                      class="audio-preview-s instrument-preview  ">
-                  </div>
-
-                  <div id="sel-ch1" class="icon-container-s ml-1">
-                    <object type="image/svg+xml" data="GUI/svg/iconos/buho-w.svg" class="animal-icon-s">
-                      Owl
-                    </object>
-                  </div>
-
-                </div>
-                <div class="titulo text-center pt-1">Owl</div>
-              </div>
-            </div>
-
-          </div>
-          <!-- <input type="button" value="ok" id="okCanales"> -->
-          <div class="mb-1">
-            <button type="button" value="ok" id="okCanales" class="btn btn-secondary px-4">
-              <span translate="no">Ok</span>
-            </button>
-          </div>
-
-          <div class="mt-3">
-            Invite music explorers
-          </div>
-
-          <div id="enlace">
-            <div class="input-group mb-3">
-              <input type="text" class="form-control" placeholder="session link" id="linkText" aria-label="sesion"
-                aria-describedby="basic-addon2">
-              <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button"><span translate="no">Copy</span></button>
-              </div>
-            </div>
-          </div>
-
-          <!-- modal body end -->
-
-        </div>
-        <div class="modal-footer">
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- jam modal end -->
-
-  <!-- HELP Modal -->
-
-  <div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="helpModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="helpModalLabel">Help</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-
-        <!-- MODAL BODY -->
-
-        <div class="modal-body">
-          ...
-        </div>
-
-        <!-- modal body end -->
-
-        <div class="modal-footer">
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- help modal end -->
-
-  <!-- LORO REC Modal -->
-
-  <div class="modal fade" id="lororecModal" tabindex="-1" role="dialog" aria-labelledby="settingsModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-sm" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-          <h4 class="modal-title" id="settingsModalLabel">Rec sample</h4>
-        </div>
-        <!-- MODAL BODY -->
-        <div class="modal-body px-3 pt-0 pb-3">
-
-          <div class="row">
-            <div id="rec-play" class="col">
-              <div class="mb-1">
-                Puedes grabar un sonido de hasta 3 segundos.
-              </div>
-              <div class="btn-group my-2" role="group" aria-label="Basic example">
-                <div id="loro-rec-preview" class="audio-preview corners-l">
-                  <img src="GUI/img/audio-trans.png" class="animal-pointer corners-l h-100 w-auto" data-toggle="tooltip"
-                    data-placement="top" title="Escuchar">
-                </div>
-                <div id="loro-rec-button" class="d-flex align-items-center loro-rec corners-r">
-
-                  <a href="#" id="recDuration" class="d-flex m-auto texto-chico rec-icon-s">Rec</a>
-                </div>
-                <span id="duration"></span>
-              </div>
-              <div class="mb-1">
-                Haz click en el parlante para escuchar, click en OK para usar el sonido.
-              </div>
-
-              <div class="mb-1">
-                <button type="button" id="ok-rec-loro" class="btn btn-secondary px-4">
-                  Ok
-                </button>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <!-- modal body end -->
-        <div class="modal-footer">
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- loro rec end -->
-
-  <!-- SETTINGS Modal -->
-
-  <div class="modal fade" id="settingsModal" tabindex="-1" role="dialog" aria-labelledby="settingsModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-          <h4 class="modal-title" id="settingsModalLabel">Settings</h4>
-
-        </div>
-
-        <!-- MODAL BODY -->
-
-        <div class="modal-body px-3 pt-0 pb-3">
-          <div class="row">
-            <!-- <div class="col-12">Fondos</div>
-            <div class="col-12 m-0 d-flex">
-              <div class="color-chip-1 mr-3"></div>
-              <div class="color-chip-2 mr-3"></div>
-              <div class="color-chip-3 mr-3"></div>
-              <div class="color-chip-4 mr-3"></div>
-              <div class="color-chip-5 mr-3"></div>
-            </div> -->
-            <div class="col-12 mt-3">Sound kits</div>
-            <div class="row m-0">
-              <div id="sonidos-kit-1" class="col-6">
-                <div class="btn-group my-2" role="group" aria-label="Basic example">
-                  <div class="audio-preview corners-l audio-pre-kit" id="audiopre-kit1">
-                    <h1 class="set-num">1</h1>
-                    <img id="kit-preview1" src="GUI/img/audio_trans.png"
-                    class="d-none audio-preview-s kit-preview ">
-                  </div>
-                  <button type="button" id="kit1" class="pl-1 btn btn-secondary kits">Mano</button>
-                </div>
-              </div>
-              <div id="sonidos-kit-2" class="col-6">
-                <div class="btn-group my-2" role="group" aria-label="Basic example">
-                  <div class="audio-preview corners-l audio-pre-kit" id="audiopre-kit2">
-                    <h1 class="set-num">2</h1>
-                    <img id="kit-preview2" src="GUI/img/audio_trans.png"
-                    class="d-none audio-preview-s kit-preview ">
-                  </div>
-                  <button type="button" id="kit2" class="pl-1 btn btn-secondary kits">Animal</button>
-                </div>
-              </div>
-              <div id="sonidos-kit-3" class="col-6">
-                <div class="btn-group my-2" role="group" aria-label="Basic example">
-                  <div class="audio-preview corners-l audio-pre-kit" id="audiopre-kit3">
-                    <h1 class="set-num">3</h1>
-                    <img id="kit-preview3" src="GUI/img/audio_trans.png"
-                    class="d-none audio-preview-s kit-preview ">
-                  </div>
-                  <button type="button" id="kit3" class="pl-1 btn btn-secondary kits">Plátano</button>
-                </div>
-              </div>
-              <div id="sonidos-kit-4" class="col-6">
-                <div class="btn-group my-2" role="group" aria-label="Basic example">
-                  <div class="audio-preview corners-l audio-pre-kit" id="audiopre-kit4">
-                    <h1 class="set-num">4</h1>
-                    <img id="kit-preview4" src="GUI/img/audio_trans.png"
-                      class="d-none audio-preview-s kit-preview ">
-                  </div>
-                  <button type="button" id="kit4" class="pl-1 btn btn-secondary kits">Amazonia</button>
-                </div>
-              </div>
-              <div id="sonidos-kit-5" class="col-6">
-                <div class="btn-group my-2" role="group" aria-label="Basic example">
-                  <div class="audio-preview corners-l audio-pre-kit" id="audiopre-kit5">
-                  <h1 class="set-num">5</h1>
-                  <img id="kit-preview5" src="GUI/img/audio_trans.png"
-                  class="d-none audio-preview-s kit-preview ">
-                  </div>
-                  <button type="button" id="kit5" class="pl-1 btn btn-secondary kits">Mágico</button>
-                </div>
-              </div>
-              <div id="sonidos-kit-6" class="col-6">
-                <div class="btn-group my-2" role="group" aria-label="Basic example">
-                  <div class="audio-preview corners-l audio-pre-kit" id="audiopre-kit6">
-                    <h1 class="set-num">6</h1>
-                    <img id="kit-preview6" src="GUI/img/audio_trans.png"
-                    class="d-none audio-preview-s kit-preview ">
-                  </div>
-                  <button type="button" id="kit6" class="pl-1 btn btn-secondary kits">Safari</button>
-                </div>
-              </div>
-              <div id="sonidos-kit-7" class="col-6">
-                <div class="btn-group my-2" role="group" aria-label="Basic example">
-                  <div class="audio-preview corners-l audio-pre-kit" id="audiopre-kit7">
-                    <h1 class="set-num">7</h1>
-                    <img id="kit-preview7" src="GUI/img/audio_trans.png"
-                      class="d-none audio-preview-s kit-preview ">
-                  </div>
-                  <button type="button" id="kit7" class="pl-1 btn btn-secondary kits">Banda</button>
-                </div>
-              </div>
-              <div id="sonidos-kit-8" class="col-6">
-                <div class="btn-group my-2" role="group" aria-label="Basic example">
-                  <div class="audio-preview corners-l audio-pre-kit" id="audiopre-kit8">
-                    <h1 class="set-num">8</h1>
-                    <img id="kit-preview8" src="GUI/img/audio_trans.png"
-                    class="d-none audio-preview-s kit-preview ">
-                  </div>
-                  <button type="button" id="kit8" class="pl-1 btn btn-secondary kits">PumPum</button>
-                </div>
-              </div>
-              <div id="sonidos-kit-9" class="col-6">
-                <div class="btn-group my-2" role="group" aria-label="Basic example">
-                  <div class="audio-preview corners-l audio-pre-kit" id="audiopre-kit9">
-                    <h1 class="set-num">9</h1>
-                    <img id="kit-preview9" src="GUI/img/audio_trans.png"
-                    class="d-none audio-preview-s kit-preview ">
-                  </div>
-                  <button type="button" id="kit9" class="pl-1 btn btn-secondary kits">Bata</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- modal body end -->
-
-        <div class="modal-footer">
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- setings modal end -->
-
-  <!-- CREDITS Modal -->
-
-  <div class="modal fade" id="creditsModal" tabindex="-1" role="dialog" aria-labelledby="jamModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-          <h4 class="modal-title" id="creditsModalLabel" translate="no">Credits</h4>
-          <h4 class="modal-title" translate="no">Animal v0.2</span>
-
-        </div>
-
-        <!-- MODAL BODY -->
-
-        <div class="modal-body px-3 pt-0 pb-3">
-          <b>Programming:</b></br>
-          Carolina Zunino, Antar Kuri</br>
-          <b>UX:</b></br>
-          <span translate="no">[MoM]</span>, Carolina Zunino</br>
-          <b>UI:</b></br>
-          <span translate="no">[MoM]</span></br>
-          <b>Sound design:</b></br>
-          Andrés Perez</br>
-          <hr>
-          <span translate="no">[MoM]</span> <a href="https://mom-lab.studio/" target="_blank" translate="no" class="text-dark">mom-lab.studio</a>
-        </div>
-        <div class="modal-footer">
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- CREDITS modal end -->
-
-  <div class="container">
-
-    <!-- HEADER -->
-
-    <div id="Header" class="row">
-      <div class="col-md-12 d-flex p-3 flex-row justify-content-between">
-        <div id="Animal_logo" class="d-flex flex-column justify-content-arround">
-          <img src="GUI/img/Animal_logo_v0.png" height="40px">
-        </div>
-        <div id="MoM_logo" class="d-flex mr-2 my-auto">
-          <div>
-            <a href="https://mom-lab.studio/" target="_blank" translate="no" class="text-dark">[MoM]</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- header end -->
-
-    <!-- MAIN-UP -->
-
-
-    <div id="Main-up" class="row ">
-      <!-- PATHS SVG (#svgContainer) -->
-
-      <div id="svgContainer" style="margin: 50px 50px;">
-        <svg id="svg1" width="0" height="0">
-          <path id="path1" d="M0 0" stroke="#6D777E" fill="none" stroke-width="8px" ; />
-          <path id="path2" d="M0 0" stroke="#B8C5D0" fill="none" stroke-width="8px" ; />
-          <path id="path3" d="M0 0" stroke="#6D777E" fill="none" stroke-width="8px" ; />
-          <path id="path4" d="M0 0" stroke="#B8C5D0" fill="none" stroke-width="8px" ; />
-          <path id="path5" d="M0 0" stroke="#6D777E" fill="none" stroke-width="8px" ; />
-          <path id="path6" d="M0 0" stroke="#B8C5D0" fill="none" stroke-width="8px" ; />
-          <path id="path7" d="M0 0" stroke="#6D777E" fill="none" stroke-width="8px" ; />
-          <path id="path8" d="M0 0" stroke="#B8C5D0" fill="none" stroke-width="8px" ; />
-        </svg>
-      </div>
-
-      <!-- paths svg end -->
-
-      <!-- INSTRUMENTOS -->
-
-      <span class="d-none d-lg-block">
-
-        <div id="instrumentos"
-          class="row mx-5 mx-lg-0 px-5 px-lg-0 d-flex flex-row justify-content-around text-white help-item"
-          data-toggle="popover" title="INSTRUMENTS" data-placement="bottom"
-          data-content="You can modify the sound by turning the Tone knob">
-
-          <div id="buhoInst" class="col-auto m-0 mr-5 mr-xl-0 mt-2 p-0 instrumento8">
-            <div id="" class="position-absolute opacity-4 corners1 destaque-animal w-100 h-100 disabled-overlay">
-            </div>
-            <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal gris-animal">
-              <div class="d-flex flex-column">
-                <div class="animal-icon">
-                  <object type="image/svg+xml" data="GUI/svg/iconos/buho-w.svg" class="animal-icon">
-                    Owl
-                  </object>
-                </div>
-                <div class="title mt-1 mb-3">Owl</div>
-                <div class="sub_title">Base drum</div>
-              </div>
-              <div class="dial_container mb-1 ml-1">
-                <div id="dial-ins1" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone"></div>
-              </div>
-            </div>
-          </div>
-
-
-          <div id="osoInst" class="col-auto m-0 ml-1 mt-2 p-0 instrumento7">
-            <div id="" class="position-absolute opacity-4 corners1 destaque-animal w-100 h-100 disabled-overlay">
-            </div>
-            <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal chocolate-animal">
-              <div class="d-flex flex-column">
-                <div class="animal-icon">
-                  <object type="image/svg+xml" data="GUI/svg/iconos/oso-w.svg" class="animal-icon">
-                    Bear
-                  </object>
-                </div>
-                <div class="title mt-1 mb-3">Bear</div>
-                <div class="sub_title">Snare</div>
-              </div>
-              <div class="dial_container mb-1 ml-1">
-                <div id="dial-ins2" class="mom_dial" data-toggle="tooltip" data-placement="top" title=""></div>
-              </div>
-            </div>
-          </div>
-
-
-          <div id="gatoInst" class="col-auto m-0 ml-1 mr-5 mr-xl-0 mt-2 p-0 instrumento6">
-            <div id="" class="position-absolute opacity-4 corners1 destaque-animal w-100 h-100 disabled-overlay">
-            </div>
-            <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal gris-animal">
-              <div class="d-flex flex-column">
-                <div class="animal-icon">
-                  <object type="image/svg+xml" data="GUI/svg/iconos/gato-w.svg" class="animal-icon">
-                    Cat
-                  </object>
-                </div>
-                <div class="title mt-1 mb-3">Cat</div>
-                <div class="sub_title">Hi hat</div>
-              </div>
-              <div class="dial_container mb-1 ml-1">
-                <div id="dial-ins3" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone"></div>
-              </div>
-            </div>
-          </div>
-
-          <div id="monoInst" class="col-auto m-0 ml-1 mr-5 mr-xl-0 mt-2 p-0 instrumento5">
-            <div id="" class="position-absolute opacity-4 corners1 destaque-animal w-100 h-100 disabled-overlay">
-            </div>
-            <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal marron-animal">
-              <div class="d-flex flex-column">
-                <div class="animal-icon">
-                  <object type="image/svg+xml" data="GUI/svg/iconos/mono-w.svg" class="animal-icon">
-                    Ape
-                  </object>
-                </div>
-                <div class="title mt-1 mb-3">Ape</div>
-                <div class="sub_title">Bass</div>
-              </div>
-              <div class="dial_container mb-1 ml-1">
-                <div id="dial-ins4" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone"></div>
-              </div>
-            </div>
-          </div>
-
-
-          <div id="patoInst" class="col-auto m-0 ml-1 mr-5 mr-xl-0 mt-2 p-0 instrumento4">
-            <div id="" class="position-absolute opacity-4 corners1 destaque-animal w-100 h-100 disabled-overlay">
-            </div>
-            <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal mostaza-animal">
-              <div class="d-flex flex-column">
-                <div class="animal-icon">
-                  <object type="image/svg+xml" data="GUI/svg/iconos/pato-w.svg" class="animal-icon">
-                    Duck
-                  </object>
-                </div>
-                <div class="title mt-1 mb-3">Duck</div>
-                <div class="sub_title">Clave</div>
-              </div>
-              <div class="dial_container mb-1 ml-1">
-                <div id="dial-ins5" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone"></div>
-              </div>
-            </div>
-          </div>
-
-          <div id="sapoInst" class="col-auto m-0 ml-5 ml-xl-1 mt-2 p-0 instrumento3">
-            <div id="" class="position-absolute opacity-4 corners1 destaque-animal w-100 h-100 disabled-overlay">
-            </div>
-            <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal verde-animal">
-              <div class="d-flex flex-column">
-                <div class="animal-icon">
-                  <object type="image/svg+xml" data="GUI/svg/iconos/sapo-w.svg" class="animal-icon">
-                    Frog
-                  </object>
-                </div>
-                <div class="title mt-1 mb-3">Frog</div>
-                <div class="sub_title">Ride</div>
-              </div>
-              <div class="dial_container mb-1 ml-1">
-                <div id="dial-ins6" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone"></div>
-              </div>
-            </div>
-          </div>
-
-
-          <div id="loroInst" class="col-auto m-0 ml-1 mt-2 p-0 instrumento2">
-            <div id="" class="position-absolute opacity-4 corners1 destaque-animal w-100 h-100 disabled-overlay">
-            </div>
-            <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal verde-animal">
-              <div class="d-flex flex-column">
-                <div class="animal-icon">
-                  <object type="image/svg+xml" data="GUI/svg/iconos/loro-w.svg" class="animal-icon">
-                    Bird
-                  </object>
-                </div>
-                <div class="title mt-1 mb-3">Bird</div>
-                <div class="sub_title">Sampler</div>
-              </div>
-              <div class="d-flex flex-column">
-                <div id="loro-rec" class="mb-1 ml-1" data-toggle="tooltip" data-placement="top" title="Rec">
-                  <a href="#" data-toggle="modal" data-target="#lororecModal" role="button"
-                    class="d-flex m-auto p-1 rec-icon-s-b">&nbsp;</a>
-                </div>
-                <div class="dial_container mb-1 ml-1">
-                  <div id="dial-ins7" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="cerdoInst" class="col-auto m-0 ml-1 mr-5 mr-xl-0 mt-2 p-0 instrumento1">
-            <div id="" class="d-none position-absolute opacity-4 corners1 destaque-animal w-100 h-100 disabled-overlay">
-            </div>
-            <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal rosa-animal">
-              <div class="d-flex flex-column">
-                <div class="animal-icon">
-                  <object type="image/svg+xml" data="GUI/svg/iconos/cerdo-w.svg" class="animal-icon">
-                    Pig
-                  </object>
-                </div>
-                <div class="title mt-1 mb-3 mb-3">Pig</div>
-                <div class="sub_title">Scratch</div>
-              </div>
-              <div class="dial_container mb-1 ml-1">
-                <div id="dial-ins8" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone"></div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </span>
-
-      <!-- instrumentos end -->
-
-    </div>
-
-    <!-- main-up end -->
-
-
-    <!-- MAIN-DOWN -->
-
-    <div id="Main-down" class="row mb-5">
-
-      <!-- AUDIO CABLES (#cables) -->
-      <div id="cables" class="col-10 offset-lg-2 pr-5 d-none d-lg-block">
-        <div id="outer" class="w-100 d-flex flex-row justify-content-center">
-          <div id="inlet1"></div>
-          <div id="inlet2"></div>
-          <div id="inlet3"></div>
-          <div id="inlet4"></div>
-          <div id="inlet5"></div>
-          <div id="inlet6"></div>
-          <div id="inlet7"></div>
-          <div id="inlet8"></div>
-        </div>
-      </div>
-      <!-- audio cables end -->
-      <div id="izq" class="col-12 col-lg-3 col-xl-2 d-flex flex-column flex-lg-row">
-        <div class="row pr-lg-1 d-flex h-100">
-          <!-- CHAT -->
-          <div id="chat-animal" class="col-5 col-lg-12 p-0 d-flex" style="display: none !important;">
-
-            <div id="chat-help" class="pt-4 pb-2 px-2 corners1 figura-1-animal help-item" data-toggle="popover"
-              title="CHAT" data-placement="bottom" data-content="Coordinate your actions with other music explorers">
-
-              <ul id="messages" class="d-flex h-75 flex-column-reverse m-0 p-0 texto-chico"></ul>
-
-              <form action="" class="pt-2 d-flex h-25">
-                <input id="m" autocomplete="off" class="w-75 border-0 corners1" />
-                <button class="ml-1 p-1 animal-icon-s"><img src="GUI/img/ok-btn.png" class="img-fluid"></button>
-              </form>
-
-
-            </div>
-
-          </div>
-          <!-- chat end -->
-          <!-- CONTROLES -->
-          <div id="controles" class="col-6 col-lg-12 p-0 pt-lg-1 d-flex flex-column flex-lg-row">
-            <div class="row m-0 p-2 d-flex custom-height corners1 fondo-1-animal">
-              <div class="col-8 col-lg-12">
-                <div class="row h-100">
-                  <!-- BPM -->
-                  <div id="bpm" class="col-12">
-                    <div class="row d-flex h-100">
-                      <div id="decrement-bpm-btn" class="col-3 d-flex my-0 blanco-ui-animal animal-pointer">
-                        <strong class="m-auto text-center">-</strong>
-                      </div>
-                      <div id="increment-bpm-btn" class="col-3 d-flex my-0 blanco-ui-animal animal-pointer">
-                        <strong class="m-auto text-center">+</strong>
-                      </div>
-                      <div id="bpm-display" class="col-6 numero-animal d-flex my-0 blanco-ui-animal">
-                        <strong id="bpmNumber" class="m-auto text-center">90</strong>
-                        <span class="m-auto pl-1 texto-chico text-center">bpm</span>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- SWING -->
-                  <div id="swing" class="col-12 d-none">
-                    <div class="row d-flex h-100">
-                      <div id="decrement-swing-btn" class="col-3 d-flex my-0 blanco-ui-animal animal-pointer">
-                        <strong class="m-auto text-center">-</strong>
-                      </div>
-                      <div id="increment-swing-btn" class="col-3 d-flex my-0 blanco-ui-animal animal-pointer">
-                        <strong class="m-auto text-center">+</strong>
-                      </div>
-                      <div id="swing-display" class="col-6 numero-animal d-flex my-0 blanco-ui-animal">
-                        <strong id="swingNumber" class="m-auto text-center">0</strong>
-                        <span class="m-auto pl-1 texto-chico text-center">swing</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- REC + MUTE -->
-              <div id="rec-mute" class="col-4 col-lg-12 mt-lg-1 ">
-                <div class="row h-100 my-0 pl-1 pl-lg-0 d-flex flex-column flex-lg-row ">
-                  <div id="rec-btn" class="col-lg-6 d-flex my-0 blanco-ui-animal animal-pointer">
-                    <span class="m-auto text-center" data-text="Stop" translate="no">Rec</span>
-                  </div>
-                  <div id="mute-btn" class="col-lg-6 d-flex my-0 mute-btn blanco-ui-animal animal-pointer"
-                    data-toggle="popover">
-                    <span class="m-auto text-center" data-text="Stop" translate="no">Play</span>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-
-            <!-- INSTRUMENTO SELECCIONADO (#sel-inst) -->
-            <span id="sel-inst-help" class="help-item" data-toggle="popover" title="INSTRUMENTS" data-placement="bottom"
-              data-content="Modify the sound and volume by turning the knobs">
-
-              <div id="sel-inst"
-                class="m-0 p-0 pt-1 d-block d-lg-none d-flex align-items-end text-white overflow-hidden">
-
-                <span id="buhoInst" class="d-none instMobile">
-                  <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal gris-animal">
-                    <div class="d-flex flex-column">
-                      <div class="animal-icon">
-                        <object type="image/svg+xml" data="GUI/svg/iconos/buho-w.svg" class="animal-icon">
-                          Buho
-                        </object>
-                      </div>
-                      <div class="title mt-1 mb-3 mb-3">Buh</div>
-                      <div class="sub_title">Base drum</div>
-                    </div>
-                    <div class="dial_container mb-1 ml-1">
-                      <div id="mob-dial-ins1" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone">
-                      </div>
-                    </div>
-                    <div class="dial_container mb-1 ml-1">
-                      <div id="mob-dial-ch1" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
-                      </div>
-                    </div>
-                  </div>
-                </span>
-
-                <span id="osoInst" class="d-none instMobile">
-                  <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal chocolate-animal">
-                    <div class="d-flex flex-column">
-                      <div class="animal-icon">
-                        <object type="image/svg+xml" data="GUI/svg/iconos/oso-w.svg" class="animal-icon">
-                          Oso
-                        </object>
-                      </div>
-                      <div class="title mt-1 mb-3">Os</div>
-                      <div class="sub_title">Snare</div>
-                    </div>
-                    <div class="dial_container mb-1 ml-1">
-                      <div id="mob-dial-ins2" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone">
-                      </div>
-                    </div>
-                    <div class="dial_container mb-1 ml-1">
-                      <div id="mob-dial-ch2" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
-                      </div>
-                    </div>
-                  </div>
-                </span>
-
-                <span id="gatoInst" class="d-none instMobile">
-                  <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal gris-animal">
-                    <div class="d-flex flex-column">
-                      <div class="animal-icon">
-                        <object type="image/svg+xml" data="GUI/svg/iconos/gato-w.svg" class="animal-icon">
-                          Gato
-                        </object>
-                      </div>
-                      <div class="title mt-1 mb-3">Gat</div>
-                      <div class="sub_title">Hi hat</div>
-                    </div>
-                    <div class="dial_container mb-1 ml-1">
-                      <div id="mob-dial-ins3" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone">
-                      </div>
-                    </div>
-                    <div class="dial_container mb-1 ml-1">
-                      <div id="mob-dial-ch3" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
-                      </div>
-                    </div>
-                  </div>
-                </span>
-
-                <span id="monoInst" class="d-none instMobile">
-                  <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal marron-animal">
-                    <div class="d-flex flex-column">
-                      <div class="animal-icon">
-                        <object type="image/svg+xml" data="GUI/svg/iconos/mono-w.svg" class="animal-icon">
-                          Mono
-                        </object>
-                      </div>
-                      <div class="title mt-1 mb-3">Mon</div>
-                      <div class="sub_title">Bass</div>
-                    </div>
-                    <div class="dial_container mb-1 ml-1">
-                      <div id="mob-dial-ins4" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone">
-                      </div>
-                    </div>
-                    <div class="dial_container mb-1 ml-1">
-                      <div id="mob-dial-ch4" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
-                      </div>
-                    </div>
-                  </div>
-                </span>
-
-                <span id="patoInst" class="d-none instMobile">
-                  <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal mostaza-animal">
-                    <div class="d-flex flex-column">
-                      <div class="animal-icon">
-                        <object type="image/svg+xml" data="GUI/svg/iconos/pato-w.svg" class="animal-icon">
-                          Pato
-                        </object>
-                      </div>
-                      <div class="title mt-1 mb-3">Pat</div>
-                      <div class="sub_title">Clave</div>
-                    </div>
-                    <div class="dial_container mb-1 ml-1">
-                      <div id="mob-dial-ins5" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone">
-                      </div>
-                    </div>
-                    <div class="dial_container mb-1 ml-1">
-                      <div id="mob-dial-ch5" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
-                      </div>
-                    </div>
-                  </div>
-                </span>
-
-                <span id="sapoInst" class="d-none instMobile">
-                  <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal verde-animal">
-                    <div class="d-flex flex-column">
-                      <div class="animal-icon">
-                        <object type="image/svg+xml" data="GUI/svg/iconos/sapo-w.svg" class="animal-icon">
-                          Sapo
-                        </object>
-                      </div>
-                      <div class="title mt-1 mb-3">Sap</div>
-                      <div class="sub_title">Ride</div>
-                    </div>
-                    <div class="dial_container mb-1 ml-1">
-                      <div id="mob-dial-ins6" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone">
-                      </div>
-                    </div>
-                    <div class="dial_container mb-1 ml-1">
-                      <div id="mob-dial-ch6" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
-                      </div>
-                    </div>
-                  </div>
-                </span>
-
-                <span id="loroInst" class="d-none instMobile">
-                  <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal verde-animal">
-                    <div class="d-flex flex-column">
-                      <div class="animal-icon">
-                        <object type="image/svg+xml" data="GUI/svg/iconos/loro-w.svg" class="animal-icon">
-                          Loro
-                        </object>
-                      </div>
-                      <div class="title mt-1 mb-3">Lor</div>
-                      <div class="sub_title">Sampler</div>
-                    </div>
-                    <div class="d-flex flex-column">
-
-
-                      <div id="loro-rec" class="mb-1 ml-1" data-toggle="tooltip" data-placement="top" title="Rec">
-                        <a href="#" data-toggle="modal" data-target="#lororecModal" role="button"
-                          class="d-flex m-auto p-1 rec-icon-s-b">&nbsp;</a>
-                      </div>
-
-                      <div class="dial_container mb-1 ml-1">
-                        <div id="mob-dial-ins7" class="mom_dial" data-toggle="tooltip" data-placement="top"
-                          title="Tone">
-                        </div>
-                      </div>
-                      <div class="dial_container mb-1 ml-1">
-                        <div id="mob-dial-ch7" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </span>
-
-                <span id="cerdoInst" class="d-block instMobile">
-                  <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal rosa-animal">
-                    <div class="d-flex flex-column">
-                      <div class="animal-icon">
-                        <object type="image/svg+xml" data="GUI/svg/iconos/cerdo-w.svg" class="animal-icon">
-                          Cerdo
-                        </object>
-                      </div>
-                      <div class="title mt-1 mb-3">Cerd</div>
-                      <div class="sub_title">Scratch</div>
-                    </div>
-                    <div class="dial_container mb-1 ml-1">
-                      <div id="mob-dial-ins8" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone">
-                      </div>
-                    </div>
-                    <div class="dial_container mb-1 ml-1">
-                      <div id="mob-dial-ch8" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
-                      </div>
-                    </div>
-                  </div>
-                </span>
-
-              </div>
-            </span>
-          </div>
-
-          <!-- controles end -->
-
-        </div>
-
-      </div>
-      <div id="der" class="col-12 col-lg-9 col-xl-10">
-
-        <div class="row">
-
-          <!-- CHANNEL CONTROL (#ch_control) -->
-
-          <div id="ch_control" class="col-2 my-1 my-lg-0 p-4 corners-l fondo-1-animal">
-            <div class="row ">
-
-              <!-- ÍCONOS y DIALES -->
-
-              <!-- ÍCONOS y DIALES -->
-              <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup1">
-                <div class="animal-icon">
-                  <img id="icono-ch8" src="GUI/img/cerdo.png" class="soloButton img-fluid animal-pointer"
-                    data-toggle="tooltip" data-placement="top" title="SOLO">
-                </div>
-                <div class="dial_container d-none d-lg-block">
-                  <div id="dial-ch8" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
-                </div>
-              </div>
-              <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup2">
-                <div class="animal-icon">
-                  <img id="icono-ch7" src="GUI/img/loro.png" class="soloButton img-fluid animal-pointer"
-                    data-toggle="tooltip" data-placement="top" title="SOLO">
-                </div>
-                <div class="dial_container d-none d-lg-block">
-                  <div id="dial-ch7" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
-                </div>
-              </div>
-              <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup3">
-                <div class="animal-icon">
-                  <img id="icono-ch6" src="GUI/img/sapo.png" class="soloButton img-fluid animal-pointer"
-                    data-toggle="tooltip" data-placement="top" title="SOLO">
-                </div>
-                <div class="dial_container d-none d-lg-block">
-                  <div id="dial-ch6" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
-                </div>
-              </div>
-              <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup4">
-                <div id="animalChannel1" class="animal-icon help-item" data-toggle="popover" title="CHANNELS"
-                  data-placement="right" data-content="Activate SOLO mode by clicking on the animal iconn">
-                  <img id="icono-ch5" src="GUI/img/pato.png" class="soloButton img-fluid animal-pointer"
-                    data-toggle="tooltip" data-placement="top" title="SOLO">
-                </div>
-                <div class="dial_container d-none d-lg-block">
-                  <div id="dial-ch5" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
-                </div>
-              </div>
-              <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup5">
-                <div class="animal-icon">
-                  <img id="icono-ch4" src="GUI/img/mono.png" class="soloButton img-fluid animal-pointer"
-                    data-toggle="tooltip" data-placement="top" title="SOLO">
-                </div>
-                <div class="dial_container d-none d-lg-block">
-                  <div id="dial-ch4" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
-                </div>
-              </div>
-              <div class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" id="channelGroup6">
-                <div class="animal-icon">
-                  <img id="icono-ch3" src="GUI/img/gato.png" class="soloButton img-fluid animal-pointer"
-                    data-toggle="tooltip" data-placement="top" title="SOLO">
-                </div>
-                <div class="dial_container d-none d-lg-block">
-                  <div id="dial-ch3" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
-                </div>
-              </div>
-              <div id="channelGroup7"
-                class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup" >
-                <div class="animal-icon">
-                  <img id="icono-ch2" src="GUI/img/oso.png" class="soloButton img-fluid animal-pointer"
-                    data-toggle="tooltip" data-placement="top" title="SOLO">
-                </div>
-                <div class="dial_container d-none d-lg-block">
-                  <div id="dial-ch2" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
-                </div>
-              </div>
-              <div id="channelGroup8"
-                class="col-12 m-0 mb-1 p-0 d-flex flex-row justify-content-around channelGroup help-item"
-                data-toggle="popover" title="CHANNELS" data-placement="right"
-                data-content="Adjust the volume with the knob">
-                <div class="animal-icon">
-                  <img id="icono-ch1" src="GUI/img/buho.png" class="soloButton img-fluid animal-pointer"
-                    data-toggle="tooltip" data-placement="top" title="SOLO">
-                </div>
-                <div class="dial_container d-none d-lg-block">
-                  <div id="dial-ch1" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
-                </div>
-              </div>
-
-
-              <!-- íconos y diales end -->
-
-            </div>
-          </div>
-
-          <!-- channel control end -->
-
-          <!-- SECUENCIADOR (#secuenciador) -->
-
-
-          <div id="secuenciador" class="col-10 col-xl-9 mx-0 my-1 my-lg-0 p-0 pr-lg-1">
-
-            <div class="pl-0 py-4 pr-4 corners-r overflow-hidden fondo-1-animal">
-              <div id="seq-animal" class="grid-size"></div>
-            </div>
-          </div>
-
-          <!-- secuenciador end -->
-
-          <!-- REGISTRO COMPARTIR (#jam-ajustes) -->
-
-
-          <div id="jam-ajustes"
-            class="col-xl-1 py-4 px-3 d-flex flex-xl-column justify-content-between fondo-1-animal corners1">
-            <div id="jam-sesion" class="mx-auto d-flex my-auto flex-lg-column help-item" data-toggle="popover"
-              title="JAM SESSION" data-placement="bottom" data-content="Invite more music explorers to your session">
-
-              <a href="#" id="boton" data-toggle="modal" data-target="#jamModal" role="button"
-                class="animal-icon jam-btn text-center">
-                <span translate="no">Jam</span>
-              </a>
-              <div class="m-auto text-center">
-              </div>
-            </div>
-            <div id="combo-botones" class="mx-0 mx-xl-auto d-flex flex-row flex-xl-column">
-              <div id="settings" class="animal-icon mb-2" data-toggle="tooltip" data-placement="top" title="Settings">
-                <a href="#" id="boton" data-toggle="modal" data-target="#settingsModal" role="button">
-                  <img src="GUI/svg/botones/boton_ajustes_b.svg" class="btn-icon">
-                </a>
-              </div>
-                <a id="help-btn" class="mx-auto align-self-baseline help-icon text-center" role="button">
-                    <img src="GUI/svg/botones/boton_ayuda_b.svg" class="btn-icon">
-                </a>
-            </div>
-          </div>
-
-          <!-- registro compartir end -->
-
-        </div>
-      </div>
-    </div>
-
-    <!-- main-down end -->
-
-    <!-- contact-bar -->
-
-    <div class="row">
-      <div class="col p-2 chocolate-animal text-white texto-chico">
-        <a href="https://mom-lab.studio/" target="_blank" translate="no" class="text-white">[MoM]</a> 2022 /
-        <a href="#" id="boton" data-toggle="modal" data-target="#creditsModal" role="button" class="text-white">Credits</a>
-        / hello@mom-lab.studio / UY [598]96453083
-      </div>
-    </div>
-
-
-
-
-
-
-
-
-    <!-- contact-bar end -->
-
-
-  </div>
-
-
-<!-- FOOTER -->
-
-  <div id="footer" class="container-fluid py-5 bg-white">
-    <div class="row py-md-5">
-      <div class="col-12 col-lg-7 mx-auto my-0 px-5 pb-3">
-        <img src="GUI\img\VIT-VIN_logos.png" class="img-fluid">
-      </div>
-    </div>
-  </div>
-<!-- footer end -->
+   <div id="alerta" class="fondo-aqua-animal" style="display:none">
+     <div class="container">
+       <div class="col-12 pt-5 text-center">
+         <h1 class="mt-5">¡Opa!</h1>
+         <h3 class="mt-1">Animal funciona en modo horizontal.<br />
+           ¡Porfavor rota tu dispositivo! y regresa al <a href="https://mom-lab.xyz/" >inicio</a></h3>
+         <div class="w-25 mx-auto mt-3">
+           <img src="/GUI/img/rotate-devise.png" class="img-fluid">
+         </div>
+       </div>
+     </div>
+   </div>
+
+ ALERTA end -->
+
+ <!-- MODALS -->
+
+   <!-- PLAY Modal -->
+   <div class="modal fade" id="playModal" tabindex="-1" role="dialog" aria-labelledby="settingsModalLabel"
+     aria-hidden="true">
+     <div class="modal-dialog" role="document">
+       <div class="modal-content">
+         <div class="modal-header fondo-aqua-animal">
+           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+           </button>
+         </div>
+         <!-- MODAL BODY -->
+         <div class="modal-body fondo-aqua-animal">
+           <div class="row mb-5">
+             <div class="col-12 text-center">
+               <div id="Animal_logo" class="mx-auto">
+                 <img src="GUI/img/Animal_logo_v0.png" width="300px">
+               </div>
+               <h1 class="my-5">Welcome!</h1>
+                 <h3 >
+                   Click outside this window to close it.
+                 </h3>
+               <div class="row">
+                 <div class="col-6">
+                   <h3 class="mt-1">
+                     Press the SETTINGS button to change the sounds.
+                   </h3>
+                   <div class="w-50 mx-auto mt-3">
+                     <img src="GUI/svg/push-settings-gris.svg" class="img-fluid">
+                   </div>
+                 </div>
+                 <div class="col-6">
+                   <h3 class="mt-1">
+                     Activate the <span translate="no">Jam</span> session to invite more musical explorers.
+                   </h3>
+                   <div class="w-50 mx-auto mt-3">
+                     <img src="GUI/svg/push-jam.svg" class="img-fluid">
+                   </div>
+                 </div>
+               </div>
+
+             </div>
+           </div>
+         </div>
+         <!-- modal body end -->
+       </div>
+     </div>
+   </div>
+   <!-- PLAY modal end -->
+
+   <!-- JAM Modal -->
+
+   <div class="modal fade" id="jamModal" tabindex="-1" role="dialog" aria-labelledby="jamModalLabel" aria-hidden="true">
+     <div class="modal-dialog" role="document">
+       <div class="modal-content">
+         <div class="modal-header">
+           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+           </button>
+           <h4 class="modal-title" id="jamModalLabel"><span translate="no">Jam</span></h4>
+         </div>
+
+         <!-- MODAL BODY -->
+
+         <div class="modal-body px-3 pt-0 pb-3">
+
+           <div class="mb-1">
+             Choose your instruments
+           </div>
+           <div id="sel-inst" class="row mb-1">
+
+             <div class="col-3 my-1">
+               <div class="corners-2 fondo-1-animal p-2 channelsInvite" sel="false" channelNumber="1"
+                 id="channelsInvite1">
+                 <div class="d-flex justify-content-around">
+
+                   <div class="audio-preview-s">
+                     <img id="instrument-preview1" src="GUI/img/audio_trans.png"
+                       class="audio-preview-s instrument-preview ">
+                   </div>
+
+
+
+                   <div id="sel-ch8" class="icon-container-s ml-1">
+                     <object type="image/svg+xml" data="GUI/svg/iconos/cerdo-w.svg" class="animal-icon-s">
+                       Pig
+                     </object>
+                   </div>
+
+                 </div>
+                 <div class="titulo text-center pt-1">Pig</div>
+               </div>
+             </div>
+
+             <div class="col-3 my-1">
+               <div class="corners-2 fondo-1-animal p-2 channelsInvite" sel="false" channelNumber="2"
+                 id="channelsInvite2">
+                 <div class="d-flex justify-content-around">
+
+                   <div class="audio-preview-s">
+                     <img id="instrument-preview2" src="GUI/img/audio_trans.png"
+                       class="audio-preview-s instrument-preview ">
+                   </div>
+
+                   <div id="sel-ch7" class="icon-container-s ml-1">
+                     <object type="image/svg+xml" data="GUI/svg/iconos/loro-w.svg" class="animal-icon-s">
+                       Bird
+                     </object>
+                   </div>
+
+                 </div>
+                 <div class="titulo text-center pt-1">Bird</div>
+               </div>
+             </div>
+
+             <div class="col-3 my-1">
+               <div class="corners-2 fondo-1-animal p-2 channelsInvite" sel="false" channelNumber="3"
+                 id="channelsInvite3">
+                 <div class="d-flex justify-content-around">
+
+                   <div class="audio-preview-s">
+                     <img id="instrument-preview3" src="GUI/img/audio_trans.png"
+                       class="audio-preview-s instrument-preview ">
+                   </div>
+
+                   <div id="sel-ch6" class="icon-container-s ml-1">
+                     <object type="image/svg+xml" data="GUI/svg/iconos/sapo-w.svg" class="animal-icon-s">
+                       Frog
+                     </object>
+                   </div>
+
+                 </div>
+                 <div class="titulo text-center pt-1">Frog</div>
+               </div>
+             </div>
+
+             <div class="col-3 my-1">
+               <div class="corners-2 fondo-1-animal p-2 channelsInvite" sel="false" channelNumber="4"
+                 id="channelsInvite4">
+                 <div class="d-flex justify-content-around">
+
+                   <div class="audio-preview-s">
+                     <img id="instrument-preview4" src="GUI/img/audio_trans.png"
+                       class="audio-preview-s instrument-preview ">
+                   </div>
+
+                   <div id="sel-ch5" class="icon-container-s ml-1">
+                     <object type="image/svg+xml" data="GUI/svg/iconos/pato-w.svg" class="animal-icon-s">
+                       Duck
+                     </object>
+                   </div>
+
+                 </div>
+                 <div class="titulo text-center pt-1">Duck</div>
+               </div>
+             </div>
+
+             <div class="col-3 my-1">
+               <div class="corners-2 fondo-1-animal p-2 channelsInvite" sel="false" channelNumber="5"
+                 id="channelsInvite5">
+                 <div class="d-flex justify-content-around">
+
+                   <div class="audio-preview-s">
+                     <img id="instrument-preview5" src="GUI/img/audio_trans.png"
+                       class="audio-preview-s instrument-preview ">
+                   </div>
+
+                   <div id="sel-ch4" class="icon-container-s ml-1">
+                     <object type="image/svg+xml" data="GUI/svg/iconos/mono-w.svg" class="animal-icon-s">
+                       Ape
+                     </object>
+                   </div>
+
+                 </div>
+                 <div class="titulo text-center pt-1">Ape</div>
+               </div>
+             </div>
+
+             <div class="col-3 my-1">
+               <div class="corners-2 fondo-1-animal p-2 channelsInvite" sel="false" channelNumber="6"
+                 id="channelsInvite6">
+                 <div class="d-flex justify-content-around">
+
+                   <div class="audio-preview-s">
+                     <img id="instrument-preview6" src="GUI/img/audio_trans.png"
+                       class="audio-preview-s instrument-preview ">
+                   </div>
+
+                   <div id="sel-ch3" class="icon-container-s ml-1">
+                     <object type="image/svg+xml" data="GUI/svg/iconos/gato-w.svg" class="animal-icon-s">
+                       Cat
+                     </object>
+                   </div>
+
+                 </div>
+                 <div class="titulo text-center pt-1">Cat</div>
+               </div>
+             </div>
+
+             <div class="col-3 my-1">
+               <div class="corners-2 fondo-1-animal p-2 channelsInvite" sel="false" channelNumber="7"
+                 id="channelsInvite7">
+                 <div class="d-flex justify-content-around">
+
+                   <div class="audio-preview-s">
+                     <img id="instrument-preview7" src="GUI/img/audio_trans.png"
+                       class="audio-preview-s instrument-preview ">
+                   </div>
+
+                   <div id="sel-ch2" class="icon-container-s ml-1">
+                     <object type="image/svg+xml" data="GUI/svg/iconos/oso-w.svg" class="animal-icon-s">
+                       Bear
+                     </object>
+                   </div>
+
+                 </div>
+                 <div class="titulo text-center pt-1">Bear</div>
+               </div>
+             </div>
+
+             <div class="col-3 my-1">
+               <div class="corners-2 fondo-1-animal p-2 channelsInvite" sel="false" channelNumber="8"
+                 id="channelsInvite8">
+                 <div class="d-flex justify-content-around">
+
+                   <div class="audio-preview-s">
+                     <img id="instrument-preview8" src="GUI/img/audio_trans.png"
+                       class="audio-preview-s instrument-preview  ">
+                   </div>
+
+                   <div id="sel-ch1" class="icon-container-s ml-1">
+                     <object type="image/svg+xml" data="GUI/svg/iconos/buho-w.svg" class="animal-icon-s">
+                       Owl
+                     </object>
+                   </div>
+
+                 </div>
+                 <div class="titulo text-center pt-1">Owl</div>
+               </div>
+             </div>
+
+           </div>
+           <!-- <input type="button" value="ok" id="okCanales"> -->
+           <div class="mb-1">
+             <button type="button" value="ok" id="okCanales" class="btn btn-secondary px-4">
+               <span translate="no">Ok</span>
+             </button>
+           </div>
+
+           <div class="mt-3">
+             Invite music explorers
+           </div>
+
+           <div id="enlace">
+             <div class="input-group mb-3">
+               <input type="text" class="form-control" placeholder="session link" id="linkText" aria-label="sesion"
+                 aria-describedby="basic-addon2">
+               <div class="input-group-append">
+                 <button class="btn btn-outline-secondary" type="button"><span translate="no">Copy</span></button>
+               </div>
+             </div>
+           </div>
+
+           <!-- modal body end -->
+
+         </div>
+         <div class="modal-footer">
+         </div>
+       </div>
+     </div>
+   </div>
+
+   <!-- jam modal end -->
+
+   <!-- HELP Modal -->
+
+   <div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="helpModalLabel"
+     aria-hidden="true">
+     <div class="modal-dialog" role="document">
+       <div class="modal-content">
+         <div class="modal-header">
+           <h5 class="modal-title" id="helpModalLabel">Help</h5>
+           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+           </button>
+         </div>
+
+         <!-- MODAL BODY -->
+
+         <div class="modal-body">
+           ...
+         </div>
+
+         <!-- modal body end -->
+
+         <div class="modal-footer">
+         </div>
+       </div>
+     </div>
+   </div>
+
+   <!-- help modal end -->
+
+ <!-- LORO REC Modal -->
+
+   <div class="modal fade" id="lororecModal" tabindex="-1" role="dialog" aria-labelledby="settingsModalLabel"
+     aria-hidden="true">
+     <div class="modal-dialog modal-sm" role="document">
+       <div class="modal-content">
+         <div class="modal-header">
+           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+           </button>
+           <h4 class="modal-title" id="settingsModalLabel">Rec sample</h4>
+         </div>
+         <!-- MODAL BODY -->
+         <div class="modal-body px-3 pt-0 pb-3">
+
+           <div class="row">
+             <div id="rec-play" class="col">
+               <div class="mb-1">
+                 Puedes grabar un sonido de hasta 3 segundos.
+               </div>
+               <div class="btn-group my-2" role="group" aria-label="Basic example">
+                 <div id="loro-rec-preview" class="audio-preview corners-l">
+                   <img src="GUI/img/audio-trans.png" class="animal-pointer corners-l h-100 w-auto" data-toggle="tooltip"
+                     data-placement="top" title="Escuchar">
+                 </div>
+                 <div id="loro-rec-button" class="d-flex align-items-center loro-rec corners-r">
+
+                   <a href="#" id="recDuration" class="d-flex m-auto texto-chico rec-icon-s">Rec</a>
+                 </div>
+                 <span id="duration"></span>
+               </div>
+               <div class="mb-1">
+                 Haz click en el parlante para escuchar, click en OK para usar el sonido.
+               </div>
+
+               <div class="mb-1">
+                 <button type="button" id="ok-rec-loro" class="btn btn-secondary px-4">
+                   Ok
+                 </button>
+               </div>
+             </div>
+           </div>
+
+         </div>
+         <!-- modal body end -->
+         <div class="modal-footer">
+         </div>
+       </div>
+     </div>
+   </div>
+
+ <!-- loro rec end -->
+
+ <!-- SETTINGS Modal -->
+
+   <div class="modal fade" id="settingsModal" tabindex="-1" role="dialog" aria-labelledby="settingsModalLabel"
+     aria-hidden="true">
+     <div class="modal-dialog" role="document">
+       <div class="modal-content">
+         <div class="modal-header">
+           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+           </button>
+           <h4 class="modal-title" id="settingsModalLabel">Settings</h4>
+
+         </div>
+
+         <!-- MODAL BODY -->
+
+         <div class="modal-body px-3 pt-0 pb-3">
+           <div class="row">
+             <!-- <div class="col-12">Fondos</div>
+             <div class="col-12 m-0 d-flex">
+               <div class="color-chip-1 mr-3"></div>
+               <div class="color-chip-2 mr-3"></div>
+               <div class="color-chip-3 mr-3"></div>
+               <div class="color-chip-4 mr-3"></div>
+               <div class="color-chip-5 mr-3"></div>
+             </div> -->
+             <div class="col-12 mt-3">Sound kits</div>
+             <div class="row m-0">
+               <div id="sonidos-kit-1" class="col-6">
+                 <div class="btn-group my-2" role="group" aria-label="Basic example">
+                   <div class="audio-preview corners-l audio-pre-kit" id="audiopre-kit1">
+                     <h1 class="set-num">1</h1>
+                     <img id="kit-preview1" src="GUI/img/audio_trans.png"
+                     class="d-none audio-preview-s kit-preview ">
+                   </div>
+                   <button type="button" id="kit1" class="pl-1 btn btn-secondary kits">Mano</button>
+                 </div>
+               </div>
+               <div id="sonidos-kit-2" class="col-6">
+                 <div class="btn-group my-2" role="group" aria-label="Basic example">
+                   <div class="audio-preview corners-l audio-pre-kit" id="audiopre-kit2">
+                     <h1 class="set-num">2</h1>
+                     <img id="kit-preview2" src="GUI/img/audio_trans.png"
+                     class="d-none audio-preview-s kit-preview ">
+                   </div>
+                   <button type="button" id="kit2" class="pl-1 btn btn-secondary kits">Animal</button>
+                 </div>
+               </div>
+               <div id="sonidos-kit-3" class="col-6">
+                 <div class="btn-group my-2" role="group" aria-label="Basic example">
+                   <div class="audio-preview corners-l audio-pre-kit" id="audiopre-kit3">
+                     <h1 class="set-num">3</h1>
+                     <img id="kit-preview3" src="GUI/img/audio_trans.png"
+                     class="d-none audio-preview-s kit-preview ">
+                   </div>
+                   <button type="button" id="kit3" class="pl-1 btn btn-secondary kits">Plátano</button>
+                 </div>
+               </div>
+               <div id="sonidos-kit-4" class="col-6">
+                 <div class="btn-group my-2" role="group" aria-label="Basic example">
+                   <div class="audio-preview corners-l audio-pre-kit" id="audiopre-kit4">
+                     <h1 class="set-num">4</h1>
+                     <img id="kit-preview4" src="GUI/img/audio_trans.png"
+                       class="d-none audio-preview-s kit-preview ">
+                   </div>
+                   <button type="button" id="kit4" class="pl-1 btn btn-secondary kits">Amazonia</button>
+                 </div>
+               </div>
+               <div id="sonidos-kit-5" class="col-6">
+                 <div class="btn-group my-2" role="group" aria-label="Basic example">
+                   <div class="audio-preview corners-l audio-pre-kit" id="audiopre-kit5">
+                   <h1 class="set-num">5</h1>
+                   <img id="kit-preview5" src="GUI/img/audio_trans.png"
+                   class="d-none audio-preview-s kit-preview ">
+                   </div>
+                   <button type="button" id="kit5" class="pl-1 btn btn-secondary kits">Mágico</button>
+                 </div>
+               </div>
+               <div id="sonidos-kit-6" class="col-6">
+                 <div class="btn-group my-2" role="group" aria-label="Basic example">
+                   <div class="audio-preview corners-l audio-pre-kit" id="audiopre-kit6">
+                     <h1 class="set-num">6</h1>
+                     <img id="kit-preview6" src="GUI/img/audio_trans.png"
+                     class="d-none audio-preview-s kit-preview ">
+                   </div>
+                   <button type="button" id="kit6" class="pl-1 btn btn-secondary kits">Safari</button>
+                 </div>
+               </div>
+               <div id="sonidos-kit-7" class="col-6">
+                 <div class="btn-group my-2" role="group" aria-label="Basic example">
+                   <div class="audio-preview corners-l audio-pre-kit" id="audiopre-kit7">
+                     <h1 class="set-num">7</h1>
+                     <img id="kit-preview7" src="GUI/img/audio_trans.png"
+                       class="d-none audio-preview-s kit-preview ">
+                   </div>
+                   <button type="button" id="kit7" class="pl-1 btn btn-secondary kits">Banda</button>
+                 </div>
+               </div>
+               <div id="sonidos-kit-8" class="col-6">
+                 <div class="btn-group my-2" role="group" aria-label="Basic example">
+                   <div class="audio-preview corners-l audio-pre-kit" id="audiopre-kit8">
+                     <h1 class="set-num">8</h1>
+                     <img id="kit-preview8" src="GUI/img/audio_trans.png"
+                     class="d-none audio-preview-s kit-preview ">
+                   </div>
+                   <button type="button" id="kit8" class="pl-1 btn btn-secondary kits">PumPum</button>
+                 </div>
+               </div>
+               <div id="sonidos-kit-9" class="col-6">
+                 <div class="btn-group my-2" role="group" aria-label="Basic example">
+                   <div class="audio-preview corners-l audio-pre-kit" id="audiopre-kit9">
+                     <h1 class="set-num">9</h1>
+                     <img id="kit-preview9" src="GUI/img/audio_trans.png"
+                     class="d-none audio-preview-s kit-preview ">
+                   </div>
+                   <button type="button" id="kit9" class="pl-1 btn btn-secondary kits">Bata</button>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+
+         <!-- modal body end -->
+
+         <div class="modal-footer">
+         </div>
+       </div>
+     </div>
+   </div>
+
+ <!-- setings modal end -->
+
+ <!-- CREDITS Modal -->
+
+   <div class="modal fade" id="creditsModal" tabindex="-1" role="dialog" aria-labelledby="jamModalLabel" aria-hidden="true">
+     <div class="modal-dialog" role="document">
+       <div class="modal-content">
+         <div class="modal-header">
+           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+           </button>
+           <h4 class="modal-title" id="creditsModalLabel" translate="no">Credits</h4>
+           <h4 class="modal-title" translate="no">Animal v0.2</span>
+
+         </div>
+
+         <!-- MODAL BODY -->
+
+         <div class="modal-body px-3 pt-0 pb-3">
+           <b>Programming:</b></br>
+           Carolina Zunino, Antar Kuri</br>
+           <b>UX:</b></br>
+           <span translate="no">[MoM]</span>, Carolina Zunino</br>
+           <b>UI:</b></br>
+           <span translate="no">[MoM]</span></br>
+           <b>Sound design:</b></br>
+           Andrés Perez</br>
+           <hr>
+           <span translate="no">[MoM]</span> <a href="https://mom-lab.studio/" target="_blank" translate="no" class="text-dark">mom-lab.studio</a>
+         </div>
+         <div class="modal-footer">
+         </div>
+       </div>
+     </div>
+   </div>
+
+ <!-- CREDITS modal end -->
+
+   <div class="container">
+
+ <!-- HEADER -->
+
+     <div id="Header" class="row">
+       <div class="col-md-12 d-flex p-3 flex-row justify-content-between">
+         <div id="Animal_logo" class="d-flex flex-column justify-content-arround">
+           <img src="GUI/img/Animal_logo_v0.png" height="40px">
+         </div>
+         <div id="MoM_logo" class="d-flex mr-2 my-auto">
+           <div>
+             <a href="https://mom-lab.studio/" target="_blank" translate="no" class="text-dark">[MoM]</a>
+           </div>
+         </div>
+       </div>
+     </div>
+
+ <!-- header end -->
+
+     <!-- MAIN-UP -->
+
+
+     <div id="Main-up" class="row ">
+
+       <!-- INSTRUMENTOS -->
+
+     <!--  <span class="d-none">
+
+         <div id="instrumentos"
+           class="row mx-5 mx-lg-0 px-5 px-lg-0 d-flex flex-row justify-content-around text-white help-item"
+           data-toggle="popover" title="INSTRUMENTS" data-placement="bottom"
+           data-content="You can modify the sound by turning the Tone knob">
+
+           <div id="buhoInst" class="col-auto m-0 mr-5 mr-xl-0 mt-2 p-0 instrumento8">
+             <div id="" class="position-absolute opacity-4 corners1 destaque-animal w-100 h-100 disabled-overlay">
+             </div>
+             <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal gris-animal">
+               <div class="d-flex flex-column">
+                 <div class="animal-icon">
+                   <object type="image/svg+xml" data="GUI/svg/iconos/buho-w.svg" class="animal-icon">
+                     Owl
+                   </object>
+                 </div>
+                 <div class="title mt-1 mb-3">Owl</div>
+                 <div class="sub_title">Base drum</div>
+               </div>
+               <div class="dial_container mb-1 ml-1">
+                 <div id="dial-ins1" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone"></div>
+               </div>
+             </div>
+           </div>
+
+
+           <div id="osoInst" class="col-auto m-0 ml-1 mt-2 p-0 instrumento7">
+             <div id="" class="position-absolute opacity-4 corners1 destaque-animal w-100 h-100 disabled-overlay">
+             </div>
+             <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal chocolate-animal">
+               <div class="d-flex flex-column">
+                 <div class="animal-icon">
+                   <object type="image/svg+xml" data="GUI/svg/iconos/oso-w.svg" class="animal-icon">
+                     Bear
+                   </object>
+                 </div>
+                 <div class="title mt-1 mb-3">Bear</div>
+                 <div class="sub_title">Snare</div>
+               </div>
+               <div class="dial_container mb-1 ml-1">
+                 <div id="dial-ins2" class="mom_dial" data-toggle="tooltip" data-placement="top" title=""></div>
+               </div>
+             </div>
+           </div>
+
+
+           <div id="gatoInst" class="col-auto m-0 ml-1 mr-5 mr-xl-0 mt-2 p-0 instrumento6">
+             <div id="" class="position-absolute opacity-4 corners1 destaque-animal w-100 h-100 disabled-overlay">
+             </div>
+             <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal gris-animal">
+               <div class="d-flex flex-column">
+                 <div class="animal-icon">
+                   <object type="image/svg+xml" data="GUI/svg/iconos/gato-w.svg" class="animal-icon">
+                     Cat
+                   </object>
+                 </div>
+                 <div class="title mt-1 mb-3">Cat</div>
+                 <div class="sub_title">Hi hat</div>
+               </div>
+               <div class="dial_container mb-1 ml-1">
+                 <div id="dial-ins3" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone"></div>
+               </div>
+             </div>
+           </div>
+
+           <div id="monoInst" class="col-auto m-0 ml-1 mr-5 mr-xl-0 mt-2 p-0 instrumento5">
+             <div id="" class="position-absolute opacity-4 corners1 destaque-animal w-100 h-100 disabled-overlay">
+             </div>
+             <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal marron-animal">
+               <div class="d-flex flex-column">
+                 <div class="animal-icon">
+                   <object type="image/svg+xml" data="GUI/svg/iconos/mono-w.svg" class="animal-icon">
+                     Ape
+                   </object>
+                 </div>
+                 <div class="title mt-1 mb-3">Ape</div>
+                 <div class="sub_title">Bass</div>
+               </div>
+               <div class="dial_container mb-1 ml-1">
+                 <div id="dial-ins4" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone"></div>
+               </div>
+             </div>
+           </div>
+
+
+           <div id="patoInst" class="col-auto m-0 ml-1 mr-5 mr-xl-0 mt-2 p-0 instrumento4">
+             <div id="" class="position-absolute opacity-4 corners1 destaque-animal w-100 h-100 disabled-overlay">
+             </div>
+             <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal mostaza-animal">
+               <div class="d-flex flex-column">
+                 <div class="animal-icon">
+                   <object type="image/svg+xml" data="GUI/svg/iconos/pato-w.svg" class="animal-icon">
+                     Duck
+                   </object>
+                 </div>
+                 <div class="title mt-1 mb-3">Duck</div>
+                 <div class="sub_title">Clave</div>
+               </div>
+               <div class="dial_container mb-1 ml-1">
+                 <div id="dial-ins5" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone"></div>
+               </div>
+             </div>
+           </div>
+
+           <div id="sapoInst" class="col-auto m-0 ml-5 ml-xl-1 mt-2 p-0 instrumento3">
+             <div id="" class="position-absolute opacity-4 corners1 destaque-animal w-100 h-100 disabled-overlay">
+             </div>
+             <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal verde-animal">
+               <div class="d-flex flex-column">
+                 <div class="animal-icon">
+                   <object type="image/svg+xml" data="GUI/svg/iconos/sapo-w.svg" class="animal-icon">
+                     Frog
+                   </object>
+                 </div>
+                 <div class="title mt-1 mb-3">Frog</div>
+                 <div class="sub_title">Ride</div>
+               </div>
+               <div class="dial_container mb-1 ml-1">
+                 <div id="dial-ins6" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone"></div>
+               </div>
+             </div>
+           </div>
+
+
+           <div id="loroInst" class="col-auto m-0 ml-1 mt-2 p-0 instrumento2">
+             <div id="" class="position-absolute opacity-4 corners1 destaque-animal w-100 h-100 disabled-overlay">
+             </div>
+             <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal verde-animal">
+               <div class="d-flex flex-column">
+                 <div class="animal-icon">
+                   <object type="image/svg+xml" data="GUI/svg/iconos/loro-w.svg" class="animal-icon">
+                     Bird
+                   </object>
+                 </div>
+                 <div class="title mt-1 mb-3">Bird</div>
+                 <div class="sub_title">Sampler</div>
+               </div>
+               <div class="d-flex flex-column">
+                 <div id="loro-rec" class="mb-1 ml-1" data-toggle="tooltip" data-placement="top" title="Rec">
+                   <a href="#" data-toggle="modal" data-target="#lororecModal" role="button"
+                     class="d-flex m-auto p-1 rec-icon-s-b">&nbsp;</a>
+                 </div>
+                 <div class="dial_container mb-1 ml-1">
+                   <div id="dial-ins7" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone"></div>
+                 </div>
+               </div>
+             </div>
+           </div>
+           <div id="cerdoInst" class="col-auto m-0 ml-1 mr-5 mr-xl-0 mt-2 p-0 instrumento1">
+             <div id="" class="d-none position-absolute opacity-4 corners1 destaque-animal w-100 h-100 disabled-overlay">
+             </div>
+             <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal rosa-animal">
+               <div class="d-flex flex-column">
+                 <div class="animal-icon">
+                   <object type="image/svg+xml" data="GUI/svg/iconos/cerdo-w.svg" class="animal-icon">
+                     Pig
+                   </object>
+                 </div>
+                 <div class="title mt-1 mb-3 mb-3">Pig</div>
+                 <div class="sub_title">Scratch</div>
+               </div>
+               <div class="dial_container mb-1 ml-1">
+                 <div id="dial-ins8" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone"></div>
+               </div>
+             </div>
+           </div>
+
+         </div>
+
+       </span>
+
+        -->
+
+     </div>
+
+     <!-- main-up end -->
+
+
+     <!-- MAIN-DOWN -->
+
+     <div id="Main-down" class="row mb-5">
+
+       <div id="izq" class="col-12 d-flex flex-column flex-lg-row">
+         <div class="row pr-lg-1 d-flex h-100">
+
+           <!-- CHAT -->
+
+           <div id="chat-animal" class="col-5 col-lg-12 p-0 d-flex" style="display: none !important;">
+
+             <div id="chat-help" class="pt-4 pb-2 px-2 corners1 figura-1-animal help-item" data-toggle="popover"
+               title="CHAT" data-placement="bottom" data-content="Coordinate your actions with other music explorers">
+
+               <ul id="messages" class="d-flex h-75 flex-column-reverse m-0 p-0 texto-chico"></ul>
+
+               <form action="" class="pt-2 d-flex h-25">
+                 <input id="m" autocomplete="off" class="w-75 border-0 corners1" />
+                 <button class="ml-1 p-1 animal-icon-s"><img src="GUI/img/ok-btn.png" class="img-fluid"></button>
+               </form>
+
+
+             </div>
+
+           </div>
+
+           <!-- chat end -->
+
+           <!-- TRANSPORT -->
+
+           <div id="controles" class="col-6 col-lg-12 p-0 pt-lg-1 d-flex flex-column flex-lg-row">
+             <div class="row m-0 p-2 d-flex custom-height corners1 fondo-1-animal">
+               <div class="col-8 col-lg-12">
+                 <div class="row h-100">
+                   <!-- BPM -->
+                   <div id="bpm" class="col-12">
+                     <div class="row d-flex h-100">
+                       <div id="decrement-bpm-btn" class="col-3 d-flex my-0 blanco-ui-animal animal-pointer">
+                         <strong class="m-auto text-center">-</strong>
+                       </div>
+                       <div id="increment-bpm-btn" class="col-3 d-flex my-0 blanco-ui-animal animal-pointer">
+                         <strong class="m-auto text-center">+</strong>
+                       </div>
+                       <div id="bpm-display" class="col-6 numero-animal d-flex my-0 blanco-ui-animal">
+                         <strong id="bpmNumber" class="m-auto text-center">90</strong>
+                         <span class="m-auto pl-1 texto-chico text-center">bpm</span>
+                       </div>
+                     </div>
+                   </div>
+                   <!-- SWING -->
+                   <div id="swing" class="col-12 d-none">
+                     <div class="row d-flex h-100">
+                       <div id="decrement-swing-btn" class="col-3 d-flex my-0 blanco-ui-animal animal-pointer">
+                         <strong class="m-auto text-center">-</strong>
+                       </div>
+                       <div id="increment-swing-btn" class="col-3 d-flex my-0 blanco-ui-animal animal-pointer">
+                         <strong class="m-auto text-center">+</strong>
+                       </div>
+                       <div id="swing-display" class="col-6 numero-animal d-flex my-0 blanco-ui-animal">
+                         <strong id="swingNumber" class="m-auto text-center">0</strong>
+                         <span class="m-auto pl-1 texto-chico text-center">swing</span>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+               <!-- REC + MUTE -->
+               <div id="rec-mute" class="col-4 col-lg-12 mt-lg-1 ">
+                 <div class="row h-100 my-0 pl-1 pl-lg-0 d-flex flex-column flex-lg-row ">
+                   <div id="rec-btn" class="col-lg-6 d-flex my-0 blanco-ui-animal animal-pointer">
+                     <span class="m-auto text-center" data-text="Stop" translate="no">Rec</span>
+                   </div>
+                   <div id="mute-btn" class="col-lg-6 d-flex my-0 mute-btn blanco-ui-animal animal-pointer"
+                     data-toggle="popover">
+                     <span class="m-auto text-center" data-text="Stop" translate="no">Play</span>
+
+                   </div>
+                 </div>
+               </div>
+             </div>
+
+
+
+             <!-- INSTRUMENTO SELECCIONADO (#sel-inst) -->
+             <span id="sel-inst-help" class="help-item" data-toggle="popover" title="INSTRUMENTS" data-placement="bottom"
+               data-content="Modify the sound and volume by turning the knobs">
+
+               <div id="sel-inst"
+                 class="m-0 p-0 pt-1 d-block d-lg-none d-flex align-items-end text-white overflow-hidden">
+
+                 <span id="buhoInst" class="d-none instMobile">
+                   <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal gris-animal">
+                     <div class="d-flex flex-column">
+                       <div class="animal-icon">
+                         <object type="image/svg+xml" data="GUI/svg/iconos/buho-w.svg" class="animal-icon">
+                           Buho
+                         </object>
+                       </div>
+                       <div class="title mt-1 mb-3 mb-3">Buh</div>
+                       <div class="sub_title">Base drum</div>
+                     </div>
+                     <div class="dial_container mb-1 ml-1">
+                       <div id="mob-dial-ins1" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone">
+                       </div>
+                     </div>
+                     <div class="dial_container mb-1 ml-1">
+                       <div id="mob-dial-ch1" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
+                       </div>
+                     </div>
+                   </div>
+                 </span>
+
+                 <span id="osoInst" class="d-none instMobile">
+                   <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal chocolate-animal">
+                     <div class="d-flex flex-column">
+                       <div class="animal-icon">
+                         <object type="image/svg+xml" data="GUI/svg/iconos/oso-w.svg" class="animal-icon">
+                           Oso
+                         </object>
+                       </div>
+                       <div class="title mt-1 mb-3">Os</div>
+                       <div class="sub_title">Snare</div>
+                     </div>
+                     <div class="dial_container mb-1 ml-1">
+                       <div id="mob-dial-ins2" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone">
+                       </div>
+                     </div>
+                     <div class="dial_container mb-1 ml-1">
+                       <div id="mob-dial-ch2" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
+                       </div>
+                     </div>
+                   </div>
+                 </span>
+
+                 <span id="gatoInst" class="d-none instMobile">
+                   <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal gris-animal">
+                     <div class="d-flex flex-column">
+                       <div class="animal-icon">
+                         <object type="image/svg+xml" data="GUI/svg/iconos/gato-w.svg" class="animal-icon">
+                           Gato
+                         </object>
+                       </div>
+                       <div class="title mt-1 mb-3">Gat</div>
+                       <div class="sub_title">Hi hat</div>
+                     </div>
+                     <div class="dial_container mb-1 ml-1">
+                       <div id="mob-dial-ins3" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone">
+                       </div>
+                     </div>
+                     <div class="dial_container mb-1 ml-1">
+                       <div id="mob-dial-ch3" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
+                       </div>
+                     </div>
+                   </div>
+                 </span>
+
+                 <span id="monoInst" class="d-none instMobile">
+                   <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal marron-animal">
+                     <div class="d-flex flex-column">
+                       <div class="animal-icon">
+                         <object type="image/svg+xml" data="GUI/svg/iconos/mono-w.svg" class="animal-icon">
+                           Mono
+                         </object>
+                       </div>
+                       <div class="title mt-1 mb-3">Mon</div>
+                       <div class="sub_title">Bass</div>
+                     </div>
+                     <div class="dial_container mb-1 ml-1">
+                       <div id="mob-dial-ins4" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone">
+                       </div>
+                     </div>
+                     <div class="dial_container mb-1 ml-1">
+                       <div id="mob-dial-ch4" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
+                       </div>
+                     </div>
+                   </div>
+                 </span>
+
+                 <span id="patoInst" class="d-none instMobile">
+                   <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal mostaza-animal">
+                     <div class="d-flex flex-column">
+                       <div class="animal-icon">
+                         <object type="image/svg+xml" data="GUI/svg/iconos/pato-w.svg" class="animal-icon">
+                           Pato
+                         </object>
+                       </div>
+                       <div class="title mt-1 mb-3">Pat</div>
+                       <div class="sub_title">Clave</div>
+                     </div>
+                     <div class="dial_container mb-1 ml-1">
+                       <div id="mob-dial-ins5" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone">
+                       </div>
+                     </div>
+                     <div class="dial_container mb-1 ml-1">
+                       <div id="mob-dial-ch5" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
+                       </div>
+                     </div>
+                   </div>
+                 </span>
+
+                 <span id="sapoInst" class="d-none instMobile">
+                   <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal verde-animal">
+                     <div class="d-flex flex-column">
+                       <div class="animal-icon">
+                         <object type="image/svg+xml" data="GUI/svg/iconos/sapo-w.svg" class="animal-icon">
+                           Sapo
+                         </object>
+                       </div>
+                       <div class="title mt-1 mb-3">Sap</div>
+                       <div class="sub_title">Ride</div>
+                     </div>
+                     <div class="dial_container mb-1 ml-1">
+                       <div id="mob-dial-ins6" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone">
+                       </div>
+                     </div>
+                     <div class="dial_container mb-1 ml-1">
+                       <div id="mob-dial-ch6" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
+                       </div>
+                     </div>
+                   </div>
+                 </span>
+
+                 <span id="loroInst" class="d-none instMobile">
+                   <div class="p-2 d-none d-flex flex-row align-items-end corners1 instrumento-animal verde-animal">
+                     <div class="d-flex flex-column">
+                       <div class="animal-icon">
+                         <object type="image/svg+xml" data="GUI/svg/iconos/loro-w.svg" class="animal-icon">
+                           Loro
+                         </object>
+                       </div>
+                       <div class="title mt-1 mb-3">Lor</div>
+                       <div class="sub_title">Sampler</div>
+                     </div>
+                     <div class="d-flex flex-column">
+
+
+                       <div id="loro-rec" class="mb-1 ml-1" data-toggle="tooltip" data-placement="top" title="Rec">
+                         <a href="#" data-toggle="modal" data-target="#lororecModal" role="button"
+                           class="d-flex m-auto p-1 rec-icon-s-b">&nbsp;</a>
+                       </div>
+
+                       <div class="dial_container mb-1 ml-1">
+                         <div id="mob-dial-ins7" class="mom_dial" data-toggle="tooltip" data-placement="top"
+                           title="Tone">
+                         </div>
+                       </div>
+                       <div class="dial_container mb-1 ml-1">
+                         <div id="mob-dial-ch7" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                 </span>
+
+                 <span id="cerdoInst" class="d-block instMobile">
+                   <div class="p-2 d-flex flex-row align-items-end corners1 instrumento-animal rosa-animal">
+                     <div class="d-flex flex-column">
+                       <div class="animal-icon">
+                         <object type="image/svg+xml" data="GUI/svg/iconos/cerdo-w.svg" class="animal-icon">
+                           Cerdo
+                         </object>
+                       </div>
+                       <div class="title mt-1 mb-3">Cerd</div>
+                       <div class="sub_title">Scratch</div>
+                     </div>
+                     <div class="dial_container mb-1 ml-1">
+                       <div id="mob-dial-ins8" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone">
+                       </div>
+                     </div>
+                     <div class="dial_container mb-1 ml-1">
+                       <div id="mob-dial-ch8" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol.">
+                       </div>
+                     </div>
+                   </div>
+                 </span>
+
+               </div>
+             </span>
+           </div>
+
+           <!-- controles end -->
+
+         </div>
+
+       </div>
+       <div id="der" class="col-12 ">
+
+         <div class="row">
+
+           <!-- CHANNEL CONTROL (#ch_control) -->
+
+           <div id="ch_control" class="col-2 my-1 my-lg-0 p-4 corners-l fondo-1-animal">
+             <div class="row ">
+               <div class="stepper">&nbsp;</div>
+
+               <!-- ÍCONOS y DIALES -->
+
+               <!-- Ch1 (cerdo) -->
+
+               <div class="col-12 p-0 d-flex flex-row justify-content-around align-items-center channelGroup" id="channelGroup1">
+                 <div id="icono-ch1" class="animal-icon sound-preview" data-toggle="tooltip" data-placement="top" title="AUDIT">
+                   <img src="GUI\svg\iconos\cerdo.svg" class="img-fluid animal-pointer">
+                 </div>
+                 <div class="d-flex flex-column justify-content-around">
+                   <div id="channel-mute1" class="channel-mute">M</div>
+                   <div id="channel-solo8" class="channel-solo soloButton">S</div>
+                 </div>
+
+                 <div class="dial_container">
+                   <div id="dial-ch8" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
+                 </div>
+                 <div class="dial_container">
+                   <div id="dial-ins8" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone"></div>
+                 </div>
+               </div>
+
+               <!-- Ch2 (loro) -->
+
+               <div class="col-12 p-0 d-flex flex-row justify-content-around align-items-center channelGroup" id="channelGroup2">
+                 <div id="icono-ch2" class="animal-icon sound-preview" data-toggle="tooltip" data-placement="top" title="AUDIT">
+                   <img src="GUI\svg\iconos\loro.svg" class="img-fluid animal-pointer">
+                 </div>
+                 <div class="d-flex flex-column justify-content-around">
+                   <div id="channel-mute2" class="channel-mute">M</div>
+                   <div id="channel-solo7" class="channel-solo soloButton">S</div>
+                 </div>
+                 <div class="dial_container">
+                   <div id="dial-ch7" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
+                 </div>
+                 <div class="dial_container">
+                   <div id="dial-ins7" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone"></div>
+                 </div>
+               </div>
+
+               <!-- Ch3 (sapo)-->
+
+               <div class="col-12 p-0 d-flex flex-row justify-content-around align-items-center channelGroup" id="channelGroup3">
+                 <div id="icono-ch3" class="animal-icon sound-preview" data-toggle="tooltip" data-placement="top" title="AUDIT">
+                   <img src="GUI\svg\iconos\sapo.svg" class="img-fluid animal-pointer">
+                 </div>
+                 <div class="d-flex flex-column justify-content-around">
+                   <div id="channel-mute3" class="channel-mute">M</div>
+                   <div id="channel-solo6" class="channel-solo soloButton">S</div>
+                 </div>
+                 <div class="dial_container">
+                   <div id="dial-ch6" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
+                 </div>
+                 <div class="dial_container">
+                   <div id="dial-ins6" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone"></div>
+                 </div>
+               </div>
+
+               <!-- Ch4 (pato) -->
+
+               <div class="col-12 p-0 d-flex flex-row justify-content-around align-items-center channelGroup" id="channelGroup4">
+                 <!-- <div id="animalChannel1" class="animal-icon help-item" data-toggle="popover" title="CHANNELS"
+                   data-placement="right" data-content="Activate SOLO mode by clicking on the animal iconn">
+                   <img id="icono-ch5" src="GUI/img/pato.png" class="soloButton img-fluid animal-pointer"
+                     data-toggle="tooltip" data-placement="top" title="SOLO">
+                 </div> -->
+                 <div id="icono-ch4" class="animal-icon sound-preview" data-toggle="tooltip" data-placement="top" title="AUDIT">
+                   <img src="GUI\svg\iconos\pato.svg" class="img-fluid animal-pointer">
+                 </div>
+                 <div class="d-flex flex-column justify-content-around">
+                   <div id="channel-mute4" class="channel-mute">M</div>
+                   <div id="channel-solo5" class="channel-solo soloButton">S</div>
+                 </div>
+                 <div class="dial_container">
+                   <div id="dial-ch5" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
+                 </div>
+                 <div class="dial_container">
+                   <div id="dial-ins5" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone"></div>
+                 </div>
+               </div>
+
+               <!-- Ch5 (mono)-->
+
+               <div class="col-12 p-0 d-flex flex-row justify-content-around align-items-center channelGroup" id="channelGroup5">
+                 <div id="icono-ch5" class="animal-icon sound-preview" data-toggle="tooltip" data-placement="top" title="AUDIT">
+                   <img src="GUI\svg\iconos\mono.svg" class="img-fluid animal-pointer">
+                 </div>
+                 <div class="d-flex flex-column justify-content-around">
+                   <div id="channel-mute5" class="channel-mute">M</div>
+                   <div id="channel-solo4" class="channel-solo soloButton">S</div>
+                 </div>
+                 <div class="dial_container">
+                   <div id="dial-ch4" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
+                 </div>
+                 <div class="dial_container">
+                   <div id="dial-ins4" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone"></div>
+                 </div>
+               </div>
+
+               <!-- Ch6 (gato) -->
+
+               <div class="col-12 p-0 d-flex flex-row justify-content-around align-items-center channelGroup" id="channelGroup6">
+                 <div id="icono-ch6" class="animal-icon sound-preview" data-toggle="tooltip" data-placement="top" title="AUDIT">
+                   <img src="GUI\svg\iconos\gato.svg" class="img-fluid animal-pointer">
+                 </div>
+                 <div class="d-flex flex-column justify-content-around">
+                   <div id="channel-mute6" class="channel-mute">M</div>
+                   <div id="channel-solo3" class="channel-solo soloButton">S</div>
+                 </div>
+                 <div class="dial_container">
+                   <div id="dial-ch3" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
+                 </div>
+                 <div class="dial_container">
+                   <div id="dial-ins3" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone"></div>
+                 </div>
+               </div>
+
+               <!-- Ch7 (oso) -->
+
+               <div id="channelGroup7" class="col-12 p-0 d-flex flex-row justify-content-around align-items-center channelGroup" >
+                 <div id="icono-ch7" class="animal-icon sound-preview" data-toggle="tooltip" data-placement="top" title="AUDIT">
+                   <img src="GUI\svg\iconos\oso.svg" class="img-fluid animal-pointer">
+                 </div>
+                 <div class="d-flex flex-column justify-content-around">
+                   <div id="channel-mute7" class="channel-mute">M</div>
+                   <div id="channel-solo2" class="channel-solo soloButton">S</div>
+                 </div>
+                 <div class="dial_container">
+                   <div id="dial-ch2" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
+                 </div>
+                 <div class="dial_container">
+                   <div id="dial-ins2" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone"></div>
+                 </div>
+               </div>
+
+               <!-- Ch8 (buho) -->
+
+               <div id="channelGroup8" class="col-12 p-0 d-flex flex-row justify-content-around align-items-center channelGroup help-item"
+                 data-toggle="popover" title="CHANNELS" data-placement="right"
+                 data-content="Adjust the volume with the knob">
+                 <div id="icono-ch8" class="animal-icon sound-preview" data-toggle="tooltip" data-placement="top" title="AUDIT">
+                   <img src="GUI\svg\iconos\buho.svg" class="img-fluid animal-pointer">
+                 </div>
+                 <div class="d-flex flex-column justify-content-around">
+                   <div id="channel-mute8" class="channel-mute">M</div>
+                   <div id="channel-solo1" class="channel-solo soloButton">S</div>
+                 </div>
+                 <div class="dial_container">
+                   <div id="dial-ch1" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Vol."></div>
+                 </div>
+                 <div class="dial_container">
+                   <div id="dial-ins1" class="mom_dial" data-toggle="tooltip" data-placement="top" title="Tone"></div>
+                 </div>
+               </div>
+
+               <!-- íconos y diales end -->
+
+             </div>
+           </div>
+
+           <!-- channel control end -->
+
+           <!-- SECUENCIADOR (#secuenciador) -->
+
+
+           <div id="secuenciador" class="col-10 mx-0 my-1 my-lg-0 p-0 pr-lg-1">
+
+             <div class="pl-0 py-4 pr-4 corners-r overflow-auto fondo-1-animal">
+               <div id="stepIndicator" class="grid-size d-flex flex-row justify-content-around stepper" style="width: 850px;">
+                 <span id="step1" class="stepIndicator"></span>
+                 <span id="step2" class="stepIndicator"></span>
+                 <span id="step3" class="stepIndicator"></span>
+                 <span id="step4" class="stepIndicator"></span>
+                 <span id="step5" class="stepIndicator"></span>
+                 <span id="step6" class="stepIndicator"></span>
+                 <span id="step7" class="stepIndicator"></span>
+                 <span id="step8" class="stepIndicator"></span>
+                 <span id="step9" class="stepIndicator"></span>
+                 <span id="step10" class="stepIndicator"></span>
+                 <span id="step11" class="stepIndicator"></span>
+                 <span id="step12" class="stepIndicator"></span>
+                 <span id="step13" class="stepIndicator"></span>
+                 <span id="step14" class="stepIndicator"></span>
+                 <span id="step15" class="stepIndicator"></span>
+                 <span id="step16" class="stepIndicator"></span>
+               </div>
+               <div id="seq-animal" class="grid-size">
+
+
+               </div>
+             </div>
+           </div>
+
+           <!-- secuenciador end -->
+
+           <!-- REGISTRO COMPARTIR (#jam-ajustes) -->
+
+
+           <div id="jam-ajustes" class="col-12 py-4 px-3 d-flex justify-content-between fondo-1-animal corners1">
+             <div id="metronome" class="metronome-normal text-center">
+               --
+             </div>
+             <!-- <div id="ToggleAll" class="mx-auto d-flex my-auto flex-lg-column help-item">
+               <a href="#" id="boton" class="animal-icon jam-btn text-center">
+                 <span translate="no">Toggle</span>
+               </a>
+               <div class="m-auto text-center">
+               </div>
+             </div> -->
+
+             <div id="lenght1n" class="mx-auto d-flex my-auto flex-lg-column help-item">
+               <a href="#" id="boton" class="animal-icon jam-btn text-center">
+                 <span translate="no">1n</span>
+               </a>
+               <div class="m-auto text-center">
+               </div>
+             </div>
+             <div id="lenght4n" class="mx-auto d-flex my-auto flex-lg-column help-item">
+               <a href="#" id="boton" class="animal-icon jam-btn text-center">
+                 <span translate="no">4n</span>
+               </a>
+               <div class="m-auto text-center">
+               </div>
+             </div>
+             <div id="lenght8n" class="mx-auto d-flex my-auto flex-lg-column help-item">
+               <a href="#" id="boton" class="animal-icon jam-btn text-center">
+                 <span translate="no">8n</span>
+               </a>
+               <div class="m-auto text-center">
+               </div>
+             </div>
+             <div id="lenght16n" class="mx-auto d-flex my-auto flex-lg-column help-item">
+               <a href="#" id="boton" class="animal-icon jam-btn text-center">
+                 <span translate="no">16n</span>
+               </a>
+               <div class="m-auto text-center">
+               </div>
+             </div>
+             <div id="eraseAll" class="mx-auto d-flex my-auto flex-lg-column help-item">
+               <a href="#" id="boton" class="animal-icon jam-btn text-center">
+                 <span translate="no">Erase</span>
+               </a>
+               <div class="m-auto text-center">
+               </div>
+             </div>
+             <div id="eraseCh1" class="mx-auto d-flex my-auto flex-lg-column help-item">
+               <a href="#" id="boton" class="animal-icon jam-btn text-center">
+                 <span translate="no">erase Ch1</span>
+               </a>
+               <div class="m-auto text-center">
+               </div>
+             </div>
+             <div id="resetAll" class="mx-auto d-flex my-auto flex-lg-column help-item">
+               <a href="https://sesion-gui.onrender.com/" id="boton" class="animal-icon jam-btn text-center">
+                 <span translate="no">Restart</span>
+               </a>
+               <div class="m-auto text-center">
+               </div>
+             </div>
+             <div id="jam-sesion" class="mx-auto d-flex my-auto flex-lg-column help-item" data-toggle="popover"
+               title="JAM SESSION" data-placement="bottom" data-content="Invite more music explorers to your session">
+
+               <a href="#" id="boton" data-toggle="modal" data-target="#jamModal" role="button"
+                 class="animal-icon jam-btn text-center">
+                 <span translate="no">Jam</span>
+               </a>
+               <div class="m-auto text-center">
+               </div>
+             </div>
+             <div id="combo-botones" class="mx-0 mx-xl-auto d-flex flex-row flex-xl-column">
+               <div id="settings" class="animal-icon mb-2" data-toggle="tooltip" data-placement="top" title="Settings">
+                 <a href="#" id="boton" data-toggle="modal" data-target="#settingsModal" role="button">
+                   <img src="GUI/svg/botones/boton_ajustes_b.svg" class="btn-icon">
+                 </a>
+               </div>
+                 <a id="help-btn" class="mx-auto align-self-baseline help-icon text-center" role="button">
+                     <img src="GUI/svg/botones/boton_ayuda_b.svg" class="btn-icon">
+                 </a>
+             </div>
+           </div>
+
+           <!-- registro compartir end -->
+
+         </div>
+       </div>
+     </div>
+
+     <!-- main-down end -->
+
+     <!-- contact-bar -->
+
+     <div class="row">
+       <div class="col p-2 chocolate-animal text-white texto-chico">
+         <a href="https://mom-lab.studio/" target="_blank" translate="no" class="text-white">[MoM]</a> 2022 /
+         <a href="#" id="boton" data-toggle="modal" data-target="#creditsModal" role="button" class="text-white">Credits</a>
+         / hello@mom-lab.studio / UY [598]96453083
+       </div>
+     </div>
+
+     <!-- contact-bar end -->
+
+
+   </div>
+
+
+ <!-- FOOTER -->
+
+   <div id="footer" class="container-fluid py-5 bg-white">
+     <div class="row py-md-5">
+       <div class="col-12 col-lg-7 mx-auto my-0 px-5 pb-3">
+         <img src="GUI\img\VIT-VIN_logos.png" class="img-fluid">
+       </div>
+     </div>
+   </div>
+
+
+ <!-- footer end -->
 
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
