@@ -1707,7 +1707,7 @@
       });
 
        // CHAT related
-       
+
       socket.on('chat message', function (msg) {
 
         $('#messages').prepend('<li> ' + msg + ' </li>');
@@ -1779,6 +1779,38 @@
 
         }
       });
+
+
+      // CHANGE sound LENGHT
+      $("#lenght1n").click(function (e) {
+        e.stopPropagation();
+        for (i = 0; i < 8; i++) {
+          sonidos[i].fadeOut = "1n";
+        }
+        playSequencer();
+      });
+      $("#lenght4n").click(function (e) {
+        e.stopPropagation();
+        for (i = 0; i < 8; i++) {
+          sonidos[i].fadeOut = "4n";
+        }
+        playSequencer();
+      });
+      $("#lenght8n").click(function (e) {
+        e.stopPropagation();
+        for (i = 0; i < 8; i++) {
+          sonidos[i].fadeOut = "8n";
+        }
+        playSequencer();
+      });
+      $("#lenght16n").click(function (e) {
+        e.stopPropagation();
+        for (i = 0; i < 8; i++) {
+          sonidos[i].fadeOut = "16n";
+        }
+        playSequencer();
+      });
+
 
       $(".instrument-preview").click(function (e) {
         e.stopPropagation();
