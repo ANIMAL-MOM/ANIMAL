@@ -1780,34 +1780,7 @@
         }
       });
 
-
-      // CHANGE sound LENGHT
-
-      $("#lenght1n").click(function () {
-
-        for (i = 0; i < 8; i++) {
-          sonidos[i].fadeOut = "1n";
-        }
-      });
-      $("#lenght4n").click(function () {
-
-        for (i = 0; i < 8; i++) {
-          sonidos[i].fadeOut = "4n";
-        }
-      });
-      $("#lenght8n").click(function () {
-
-        for (i = 0; i < 8; i++) {
-          sonidos[i].fadeOut = "8n";
-        }
-      });
-      $("#lenght16n").click(function () {
-
-        for (i = 0; i < 8; i++) {
-          sonidos[i].fadeOut = "16n";
-        }
-      });
-
+      // AUDIT sounds (jam window)?
 
       $(".instrument-preview").click(function (e) {
         e.stopPropagation();
@@ -1821,6 +1794,22 @@
         function () { this.src = "GUI/img/audio_trans.png" }
 
       );
+
+
+            //copy link
+            $(".input-group-append").click(function () {
+              /* Get the text field */
+              var copyText = document.getElementById("linkText");
+
+              /* Select the text field */
+              copyText.select();
+              copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+
+              /* Copy the text inside the text field */
+              document.execCommand("copy");
+
+            });
+
       //END JAM SECTION
 
 
@@ -2017,28 +2006,34 @@
 
     });*/
 
-      //copy link
-      $(".input-group-append").click(function () {
-        /* Get the text field */
-        var copyText = document.getElementById("linkText");
-
-        /* Select the text field */
-        copyText.select();
-        copyText.setSelectionRange(0, 99999); /*For mobile devices*/
-
-        /* Copy the text inside the text field */
-        document.execCommand("copy");
-
-      });
 
 
-      sequencer.on('change', function (v) {
-        // //console.log(v);
-      });
+            // CHANGE sound LENGHT
 
-      sequencer.on('step', function (v) {
-        ////console.log(v);
-      });
+            $("#lenght1n").click(function () {
+
+              for (i = 0; i < 8; i++) {
+                sonidos[i].fadeOut = "1n";
+              }
+            });
+            $("#lenght4n").click(function () {
+
+              for (i = 0; i < 8; i++) {
+                sonidos[i].fadeOut = "4n";
+              }
+            });
+            $("#lenght8n").click(function () {
+
+              for (i = 0; i < 8; i++) {
+                sonidos[i].fadeOut = "8n";
+              }
+            });
+            $("#lenght16n").click(function () {
+
+              for (i = 0; i < 8; i++) {
+                sonidos[i].fadeOut = "16n";
+              }
+            });
 
       /////REC and SAVE MUSIC
       var isRecording;
