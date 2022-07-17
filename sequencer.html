@@ -1781,7 +1781,32 @@
       });
 
 
-      
+      // CHANGE sound LENGHT
+
+      $("#lenght1n").click(function () {
+
+        for (i = 0; i < 8; i++) {
+          sonidos[i].fadeOut = "1n";
+        }
+      });
+      $("#lenght4n").click(function () {
+
+        for (i = 0; i < 8; i++) {
+          sonidos[i].fadeOut = "4n";
+        }
+      });
+      $("#lenght8n").click(function () {
+
+        for (i = 0; i < 8; i++) {
+          sonidos[i].fadeOut = "8n";
+        }
+      });
+      $("#lenght16n").click(function () {
+
+        for (i = 0; i < 8; i++) {
+          sonidos[i].fadeOut = "16n";
+        }
+      });
 
 
       $(".instrument-preview").click(function (e) {
