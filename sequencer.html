@@ -2083,8 +2083,8 @@
       autoplay += 1;
       if (autoplay === 16 || autoplay === 48 ){
 
-        playSequencer();
-        playSequencer();
+        //playSequencer();
+        //playSequencer();
         console.log("AUTOSTART");
 
       } else if (autoplay === 80) {
@@ -2173,32 +2173,7 @@
 
     });
 
-      // CHANGE sound LENGHT
-
-      $("#lenght1n").click(function () {
-
-        for (i = 0; i < 8; i++) {
-          sonidos[i].fadeOut = "1n";
-        }
-      });
-      $("#lenght4n").click(function () {
-
-        for (i = 0; i < 8; i++) {
-          sonidos[i].fadeOut = "4n";
-        }
-      });
-      $("#lenght8n").click(function () {
-
-        for (i = 0; i < 8; i++) {
-          sonidos[i].fadeOut = "8n";
-        }
-      });
-      $("#lenght16n").click(function () {
-
-        for (i = 0; i < 8; i++) {
-          sonidos[i].fadeOut = "16n";
-        }
-      });
+      
 
       /////REC and SAVE MUSIC
       var isRecording;
