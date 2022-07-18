@@ -2152,7 +2152,7 @@
               }
 
           });
-          
+
       // CHANGE sound LENGHT
 
       $("#lenght1n").click(function () {
@@ -2232,6 +2232,8 @@
 
       });
       ///END REC AND SAVE MUSIC
+
+      // PLAY sequencer
       $("#Animal_logo").click(function () { //inicia el sequencer
         playSequencer();
       });
@@ -2283,6 +2285,35 @@
           $(this).toggleClass('mute-btn-activo');
       });
 
+
+      // SPACE BAR event = keyup or keydown
+
+      // prevenir scroll
+      window.addEventListener('keydown', function(e) {
+        if(e.keyCode == 32 && e.target == document.body) {
+          e.preventDefault();
+        }
+      });
+      // play stop
+      document.addEventListener('keydown', event => {
+        if (event.code === 'Space') {
+          playSequencer();
+        }
+      });
+
+      // ERASE ALL
+      $("#eraseAll").click(function () {
+        sequencer.matrix.populate.all( [0,0] );
+        playSequencer();
+        // console.log("erase all")
+      });
+      $("#eraseCh1").click(function () {
+        sequencer.matrix.populate.row( 0, [0,0] )
+        playSequencer();
+        // console.log("erase all")
+      });
+
+      // CHANGE PITCH
       function changePitch(myAnimal, value) {
         //console.log("entro a change pitch");
         //console.log(myAnimal);
@@ -2295,6 +2326,7 @@
         //sonidos.get(scaleNotes[8 - myAnimalNumber]).volume.value = value;
       }
 
+      // CHANGE VOLUME
       function changeVolume(myAnimal, value) {
         //console.log("entro a change volume");
         //console.log(myAnimal);
@@ -2488,6 +2520,9 @@
       });
 
     });
+
+    // BIG function end
+
   </script>
 
   <script>
