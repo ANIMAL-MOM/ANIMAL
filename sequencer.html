@@ -2082,10 +2082,11 @@
     sequencer.on('step', function (v) {
       autoplay += 1;
       if (autoplay === 16 || autoplay === 48 ){
-sequencer.stop();
+
 Tone.Transport.stop();
-sequencer.start();
+sequencer.stop();
 Tone.Transport.start();
+sequencer.start();
 
       } else if (autoplay === 80) {
         autoplay=0;
