@@ -2083,10 +2083,8 @@
       autoplay += 1;
       if (autoplay === 16 || autoplay === 48 ){
 
-Tone.Transport.stop();
-sequencer.stop();
-Tone.Transport.start();
-sequencer.start();
+        Tone.Transport.start();
+        console.log("AUTOSTART");
 
       } else if (autoplay === 80) {
         autoplay=0;
