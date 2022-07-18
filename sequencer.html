@@ -2081,13 +2081,13 @@
     let autoplay=0;
     sequencer.on('step', function (v) {
       autoplay += 1;
-      if (autoplay === 17){
+      if (autoplay === 16 || autoplay === 48 ){
         playSequencer();
         playSequencer();
-      } else if (autoplay === 480) {
+      } else if (autoplay === 80) {
         autoplay=0;
       }
-      console.log(autoplay);
+      console.log("Autoplay= " + autoplay);
     });
 
 
