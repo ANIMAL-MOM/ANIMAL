@@ -2083,6 +2083,7 @@
       autoplay += 1;
       if (autoplay === 16 || autoplay === 48 ){
         Tone.Transport.stop();
+        sequencer.next();
         Tone.Transport.start();
       } else if (autoplay === 80) {
         autoplay=0;
