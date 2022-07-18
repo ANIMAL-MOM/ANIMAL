@@ -2082,9 +2082,7 @@
     sequencer.on('step', function (v) {
       autoplay += 1;
       if (autoplay === 16 || autoplay === 48 ){
-        Tone.Transport.stop();
-        sequencer.next();
-        Tone.Transport.start();
+
       } else if (autoplay === 80) {
         autoplay=0;
       }
@@ -2253,8 +2251,18 @@
 
       // PLAY sequencer
 
-
       function playSequencer() {
+      if (Tone.Transport.state == "started") {
+        Tone.Transport.stop();
+        // sequencer.stop();
+      } else {
+        //   sequencer.start()
+        //  sequencer.interval.ms(166);
+        Tone.Transport.start();
+      }
+      };
+
+      function playSequencerOld() {
         // Tone.Transport.bpm.value = 90; //SACAR DE ACA
         if (loop === 0) {
           var matrix = sequencer.matrix.pattern;
