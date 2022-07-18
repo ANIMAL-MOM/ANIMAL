@@ -540,7 +540,7 @@
                </div>
              </div>
 
-             
+
             <!-- Sound lenght -->
 
              <div class="col-12 mt-3">Sound lenght</div>
@@ -601,7 +601,7 @@
            <b>UX:</b></br>
            <span translate="no">[MoM]</span>, Carolina Zunino</br>
            <b>UI:</b></br>
-           <span translate="no">[MoM]</span></br>
+           <span translate="no">Harto_estudio</span></br>
            <b>Sound design:</b></br>
            Andrés Perez</br>
            <hr>
@@ -2077,84 +2077,98 @@
       }
     });
 
-    // STEPINDICATOR
-          let stepInd=0;
-          sequencer.on('step', function (v) {
-            stepInd += 1;
-            if (stepInd === 1){
-              $('.stepIndicator').removeClass('stepIndicator-step');
-              $('#step1').addClass('stepIndicator-step');
-            } else if (stepInd === 2) {
-              $('.stepIndicator').removeClass('stepIndicator-step');
-              $('#step2').addClass('stepIndicator-step');
-            } else if (stepInd === 3) {
-              $('.stepIndicator').removeClass('stepIndicator-step');
-              $('#step3').addClass('stepIndicator-step');
-            } else if (stepInd === 4) {
-              $('.stepIndicator').removeClass('stepIndicator-step');
-              $('#step4').addClass('stepIndicator-step');
-            } else if (stepInd === 5) {
-              $('.stepIndicator').removeClass('stepIndicator-step');
-              $('#step5').addClass('stepIndicator-step');
-            } else if (stepInd === 6) {
-              $('.stepIndicator').removeClass('stepIndicator-step');
-              $('#step6').addClass('stepIndicator-step');
-            } else if (stepInd === 7) {
-              $('.stepIndicator').removeClass('stepIndicator-step');
-              $('#step7').addClass('stepIndicator-step');
-            } else if (stepInd === 8) {
-              $('.stepIndicator').removeClass('stepIndicator-step');
-              $('#step8').addClass('stepIndicator-step');
-            } else if (stepInd === 9) {
-              $('.stepIndicator').removeClass('stepIndicator-step');
-              $('#step9').addClass('stepIndicator-step');
-            } else if (stepInd === 10) {
-              $('.stepIndicator').removeClass('stepIndicator-step');
-              $('#step10').addClass('stepIndicator-step');
-            } else if (stepInd === 11) {
-              $('.stepIndicator').removeClass('stepIndicator-step');
-              $('#step11').addClass('stepIndicator-step');
-            } else if (stepInd === 12) {
-              $('.stepIndicator').removeClass('stepIndicator-step');
-              $('#step12').addClass('stepIndicator-step');
-            } else if (stepInd === 13) {
-              $('.stepIndicator').removeClass('stepIndicator-step');
-              $('#step13').addClass('stepIndicator-step');
-            } else if (stepInd === 14) {
-              $('.stepIndicator').removeClass('stepIndicator-step');
-              $('#step14').addClass('stepIndicator-step');
-            } else if (stepInd === 15) {
-              $('.stepIndicator').removeClass('stepIndicator-step');
-              $('#step15').addClass('stepIndicator-step');
-            } else {
-              $('.stepIndicator').removeClass('stepIndicator-step');
-              $('#step16').addClass('stepIndicator-step');
-              stepInd=0;
-            }
-          });
+    // AUTOPLAY
+    let autoplay=0;
+    sequencer.on('step', function (v) {
+      autoplay += 1;
+      if (autoplay === 17){
+        playSequencer();
+        playSequencer();
+      } else if (autoplay === 480) {
+        autoplay=0;
+      }
+      console.log(autoplay);
+    });
 
-          // METRONOMO
-          let metro=0;
-          sequencer.on('step', function (v) {
 
-              var count= document.getElementById("metronome");
-              count.innerHTML=++metro;
-              if (metro === 16){
-                metro=0;
-              } else if (metro === 13) {
-                $('#metronome').addClass('metronome-step');
-              } else if (metro === 9) {
-                $('#metronome').addClass('metronome-step');
-              } else if (metro === 5) {
-                $('#metronome').addClass('metronome-step');
-              } else if (metro === 1) {
-                $('#metronome').addClass('metronome-accent');
-              } else {
-                $('#metronome').removeClass('metronome-accent');
-                $('#metronome').removeClass('metronome-step');
-              }
+    // STEP INDICATOR
+    let stepInd=0;
+    sequencer.on('step', function (v) {
+      stepInd += 1;
+      if (stepInd === 1){
+        $('.stepIndicator').removeClass('stepIndicator-step');
+        $('#step1').addClass('stepIndicator-step');
+      } else if (stepInd === 2) {
+        $('.stepIndicator').removeClass('stepIndicator-step');
+        $('#step2').addClass('stepIndicator-step');
+      } else if (stepInd === 3) {
+        $('.stepIndicator').removeClass('stepIndicator-step');
+        $('#step3').addClass('stepIndicator-step');
+      } else if (stepInd === 4) {
+        $('.stepIndicator').removeClass('stepIndicator-step');
+        $('#step4').addClass('stepIndicator-step');
+      } else if (stepInd === 5) {
+        $('.stepIndicator').removeClass('stepIndicator-step');
+        $('#step5').addClass('stepIndicator-step');
+      } else if (stepInd === 6) {
+        $('.stepIndicator').removeClass('stepIndicator-step');
+        $('#step6').addClass('stepIndicator-step');
+      } else if (stepInd === 7) {
+        $('.stepIndicator').removeClass('stepIndicator-step');
+        $('#step7').addClass('stepIndicator-step');
+      } else if (stepInd === 8) {
+        $('.stepIndicator').removeClass('stepIndicator-step');
+        $('#step8').addClass('stepIndicator-step');
+      } else if (stepInd === 9) {
+        $('.stepIndicator').removeClass('stepIndicator-step');
+        $('#step9').addClass('stepIndicator-step');
+      } else if (stepInd === 10) {
+        $('.stepIndicator').removeClass('stepIndicator-step');
+        $('#step10').addClass('stepIndicator-step');
+      } else if (stepInd === 11) {
+        $('.stepIndicator').removeClass('stepIndicator-step');
+        $('#step11').addClass('stepIndicator-step');
+      } else if (stepInd === 12) {
+        $('.stepIndicator').removeClass('stepIndicator-step');
+        $('#step12').addClass('stepIndicator-step');
+      } else if (stepInd === 13) {
+        $('.stepIndicator').removeClass('stepIndicator-step');
+        $('#step13').addClass('stepIndicator-step');
+      } else if (stepInd === 14) {
+        $('.stepIndicator').removeClass('stepIndicator-step');
+        $('#step14').addClass('stepIndicator-step');
+      } else if (stepInd === 15) {
+        $('.stepIndicator').removeClass('stepIndicator-step');
+        $('#step15').addClass('stepIndicator-step');
+      } else {
+        $('.stepIndicator').removeClass('stepIndicator-step');
+        $('#step16').addClass('stepIndicator-step');
+        stepInd=0;
+      }
+    });
 
-          });
+    // METRONOMO
+    let metro=0;
+    sequencer.on('step', function (v) {
+
+        var count= document.getElementById("metronome");
+        count.innerHTML=++metro;
+        if (metro === 16){
+          metro=0;
+        } else if (metro === 13) {
+          $('#metronome').addClass('metronome-step');
+        } else if (metro === 9) {
+          $('#metronome').addClass('metronome-step');
+        } else if (metro === 5) {
+          $('#metronome').addClass('metronome-step');
+        } else if (metro === 1) {
+          $('#metronome').addClass('metronome-accent');
+        } else {
+          $('#metronome').removeClass('metronome-accent');
+          $('#metronome').removeClass('metronome-step');
+        }
+
+    });
 
       // CHANGE sound LENGHT
 
