@@ -2082,8 +2082,8 @@
     sequencer.on('step', function (v) {
       autoplay += 1;
       if (autoplay === 16 || autoplay === 48 ){
-        playSequencer();
-        playSequencer();
+        Tone.Transport.stop();
+        Tone.Transport.start();
       } else if (autoplay === 80) {
         autoplay=0;
       }
@@ -2251,9 +2251,7 @@
       ///END REC AND SAVE MUSIC
 
       // PLAY sequencer
-      $("#Animal_logo").click(function () { //inicia el sequencer
-        playSequencer();
-      });
+
 
       function playSequencer() {
         // Tone.Transport.bpm.value = 90; //SACAR DE ACA
