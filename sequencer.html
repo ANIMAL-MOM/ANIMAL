@@ -2083,7 +2083,9 @@
       autoplay += 1;
       if (autoplay === 16 || autoplay === 48 ){
 sequencer.stop();
+Tone.Transport.stop();
 sequencer.start();
+Tone.Transport.start();
 
       } else if (autoplay === 80) {
         autoplay=0;
@@ -2253,16 +2255,7 @@ sequencer.start();
 
       // PLAY sequencer
 
-      function playSequencerTemp() {
-      if (Tone.Transport.state == "started") {
-        Tone.Transport.stop();
-        // sequencer.stop();
-      } else {
-        //   sequencer.start()
-        //  sequencer.interval.ms(166);
-        Tone.Transport.start();
-      }
-      };
+
 
       function playSequencer() {
         // Tone.Transport.bpm.value = 90; //SACAR DE ACA
