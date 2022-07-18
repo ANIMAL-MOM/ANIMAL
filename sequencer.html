@@ -1316,13 +1316,13 @@
              <div id="metronome" class="metronome-normal text-center">
                --
              </div>
-             <!-- <div id="ToggleAll" class="mx-auto d-flex my-auto flex-lg-column help-item">
+             <div id="ToggleAll" class="mx-auto d-flex my-auto flex-lg-column help-item">
                <a href="#" id="boton" class="animal-icon jam-btn text-center">
                  <span translate="no">Toggle</span>
                </a>
                <div class="m-auto text-center">
                </div>
-             </div> -->
+             </div>
 
 
              <div id="eraseAll" class="mx-auto d-flex my-auto flex-lg-column help-item">
@@ -1332,13 +1332,13 @@
                <div class="m-auto text-center">
                </div>
              </div>
-             <div id="eraseCh1" class="mx-auto d-flex my-auto flex-lg-column help-item">
+             <!-- <div id="eraseCh1" class="mx-auto d-flex my-auto flex-lg-column help-item">
                <a href="#" id="boton" class="animal-icon jam-btn text-center">
                  <span translate="no">erase Ch1</span>
                </a>
                <div class="m-auto text-center">
                </div>
-             </div>
+             </div>-->
              <div id="resetAll" class="mx-auto d-flex my-auto flex-lg-column help-item">
                <a href="https://sesion-gui.onrender.com/" id="boton" class="animal-icon jam-btn text-center">
                  <span translate="no">Restart</span>
@@ -2083,7 +2083,8 @@
       autoplay += 1;
       if (autoplay === 16 || autoplay === 48 ){
 
-        Tone.Transport.start();
+        playSequencer();
+        playSequencer();
         console.log("AUTOSTART");
 
       } else if (autoplay === 80) {
@@ -2257,7 +2258,6 @@
 
 
       function playSequencer() {
-        // Tone.Transport.bpm.value = 90; //SACAR DE ACA
         if (loop === 0) {
           var matrix = sequencer.matrix.pattern;
           loop = new Tone.Sequence(function (time) {
@@ -2293,6 +2293,8 @@
           Tone.Transport.start();
         }
       };
+
+
 
       $("#mute-btn").click(function () {
           playSequencer();
