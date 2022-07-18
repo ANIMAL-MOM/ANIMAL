@@ -1796,19 +1796,20 @@
       );
 
 
-            //copy link
-            $(".input-group-append").click(function () {
-              /* Get the text field */
-              var copyText = document.getElementById("linkText");
+      //copy link
+      $(".input-group-append").click(function () {
+        /* Get the text field */
+        var copyText = document.getElementById("linkText");
 
-              /* Select the text field */
-              copyText.select();
-              copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+        /* Select the text field */
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); /*For mobile devices*/
 
-              /* Copy the text inside the text field */
-              document.execCommand("copy");
+        /* Copy the text inside the text field */
+        document.execCommand("copy");
 
-            });
+      });
+
 
       //END JAM SECTION
 
@@ -2006,34 +2007,61 @@
 
     });*/
 
+    // AUDIT  (channel icon)
+    $(".sound-preview").click(function () {
+    
+      var myId = this.id.split("icono-ch")[1];
+      sonidos[myId - 1].start();
+    });
+    // AUDIT (channel number) event keydown
+    document.addEventListener('keydown', event => {
+      // sin cuantizar
+      if (event.key === '1') {
+        sonidos[0].start();
+      } else if (event.key === '2') {
+        sonidos[1].start();
+      } else if (event.key === '3') {
+        sonidos[2].start();
+      } else if (event.key === '4') {
+        sonidos[3].start();
+      } else if (event.key === '5') {
+        sonidos[4].start();
+      } else if (event.key === '6') {
+        sonidos[5].start();
+      } else if (event.key === '7') {
+        sonidos[6].start();
+      } else if (event.key === '8') {
+        sonidos[7].start();
+      }
+    });
 
 
-            // CHANGE sound LENGHT
+      // CHANGE sound LENGHT
 
-            $("#lenght1n").click(function () {
+      $("#lenght1n").click(function () {
 
-              for (i = 0; i < 8; i++) {
-                sonidos[i].fadeOut = "1n";
-              }
-            });
-            $("#lenght4n").click(function () {
+        for (i = 0; i < 8; i++) {
+          sonidos[i].fadeOut = "1n";
+        }
+      });
+      $("#lenght4n").click(function () {
 
-              for (i = 0; i < 8; i++) {
-                sonidos[i].fadeOut = "4n";
-              }
-            });
-            $("#lenght8n").click(function () {
+        for (i = 0; i < 8; i++) {
+          sonidos[i].fadeOut = "4n";
+        }
+      });
+      $("#lenght8n").click(function () {
 
-              for (i = 0; i < 8; i++) {
-                sonidos[i].fadeOut = "8n";
-              }
-            });
-            $("#lenght16n").click(function () {
+        for (i = 0; i < 8; i++) {
+          sonidos[i].fadeOut = "8n";
+        }
+      });
+      $("#lenght16n").click(function () {
 
-              for (i = 0; i < 8; i++) {
-                sonidos[i].fadeOut = "16n";
-              }
-            });
+        for (i = 0; i < 8; i++) {
+          sonidos[i].fadeOut = "16n";
+        }
+      });
 
       /////REC and SAVE MUSIC
       var isRecording;
