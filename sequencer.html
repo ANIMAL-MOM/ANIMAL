@@ -2173,7 +2173,7 @@
 
     });
 
-      
+
 
       /////REC and SAVE MUSIC
       var isRecording;
@@ -2432,59 +2432,7 @@
       });
 
 
-      // REC LORO
-      var loroAudio;
-      var myUrl;
-      var myBlob;
-      //.rec-icon-s-activo
-
-
-      var loroRecorder = new WzRecorder({
-        onRecordingStop: function (blob) {
-          myBlob = blob;
-          myUrl = URL.createObjectURL(blob);
-          loroAudio = new Tone.Player({ "url": myUrl, "volume": -1 }).toMaster();
-        },
-        onRecording: function (milliseconds) {
-          document.getElementById('duration').innerText = milliseconds + 'ms';
-          if (milliseconds > 3000) {
-            loroRecorder.stop();
-          }
-        }
-      });
-      $("#loro-rec-preview").click(function () {
-        loroAudio.start();
-      });
-      $("#ok-rec-loro").click(function () {
-
-        sonidos[1] = loroAudio;
-        emitLoro();
-        $(".close").trigger('click');
-
-      });
-
-      // wire up the microphone button to toggle recording
-      document.getElementById('loro-rec-button').onmousedown = loroRecorder.toggleRecording;
-      document.getElementById('loro-rec-button').onmouseup = loroRecorder.stop;
-      $("#loro-rec").click(function () {
-        if (Tone.Transport.state == "started") {
-          $("#mute-btn").trigger("click");
-        }
-      });
-
-
-      socket.on('recLoro', function (elcasiblob) {
-        var blob = new Blob([elcasiblob]);
-        myUrl = URL.createObjectURL(blob);
-        loroAudio = new Tone.Player({ "url": myUrl, "volume": -1 }).toMaster();
-        sonidos[1] = loroAudio;
-      });
-
-      function emitLoro() {
-        socket.emit('recLoro', myBlob);
-      }
-
-      //END REC-LORO
+      
 
       //kits
 
