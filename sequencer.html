@@ -827,26 +827,7 @@
        <div id="izq" class="col-12 d-flex flex-column flex-lg-row">
          <div class="row pr-lg-1 d-flex h-100">
 
-           <!-- CHAT -->
 
-           <div id="chat-animal" class="col-5 col-lg-12 p-0 d-flex" style="display: none !important;">
-
-             <div id="chat-help" class="pt-4 pb-2 px-2 corners1 figura-1-animal help-item" data-toggle="popover"
-               title="CHAT" data-placement="bottom" data-content="Coordinate your actions with other music explorers">
-
-               <ul id="messages" class="d-flex h-75 flex-column-reverse m-0 p-0 texto-chico"></ul>
-
-               <form action="" class="pt-2 d-flex h-25">
-                 <input id="m" autocomplete="off" class="w-75 border-0 corners1" />
-                 <button class="ml-1 p-1 animal-icon-s"><img src="GUI/img/ok-btn.png" class="img-fluid"></button>
-               </form>
-
-
-             </div>
-
-           </div>
-
-           <!-- chat end -->
 
            <!-- TRANSPORT -->
 
@@ -910,7 +891,7 @@
                <div id="sel-inst"
                  class="m-0 p-0 pt-1 d-block d-lg-none d-flex align-items-end text-white overflow-hidden">
 
-                 
+
 
                </div>
              </span>
@@ -1525,29 +1506,7 @@
         $("#chat-animal").attr("style", "");
       });
 
-       // CHAT related
 
-      socket.on('chat message', function (msg) {
-
-        $('#messages').prepend('<li> ' + msg + ' </li>');
-      });
-
-
-      $('form').submit(function (e) {
-        e.preventDefault(); // prevents page reloading
-        var myAnimalsLetter = ["C", "L", "S", "P", "M", "G", "O", "B"];
-        var myLetters = "";
-        myChannel.forEach(function (channel) {
-          if (channel != "") {
-            myLetters = myLetters + '<span class="interloc-' + myAnimalsLetter[channel - 1] + '">' + myAnimalsLetter[channel - 1] + '</span>';
-          }
-        });
-        var emitMe = myLetters + "<p class='mt-1 mb-0 pb-2'>" + $('#m').val() + "</p>"
-        socket.emit('chat message', emitMe);
-        $('#messages').prepend('<li> ' + emitMe + ' </li>');
-        $('#m').val('');
-        return false;
-      });
 
 
       // JAM SECTION
@@ -1592,7 +1551,6 @@
           socket.emit('roomOpened', myChannel, myKitNum);
           console.log("emit open room kit" + myKitNum);
 
-          $("#chat-animal").attr("style", "display");
 
 
 
