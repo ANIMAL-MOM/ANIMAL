@@ -1112,7 +1112,7 @@
            <!-- CHANNEL CONTROL (#ch_control) -->
 
            <div id="ch_control" class="col-2 my-1 my-lg-0 p-4 corners-l fondo-1-animal">
-             <div class="row ">
+             <div class="row overflow-auto">
                <div class="stepper">&nbsp;</div>
 
                <!-- ÍCONOS y DIALES -->
@@ -1460,7 +1460,7 @@
       if ($(window).width() > 1200) {
         //console.log('creo seq Extra large devices (large desktops, 1200px and up)  @media (min-width: 1200px) { ... } GRILLA w:690 h:380 ');
         sequencer = new Nexus.Sequencer('#seq-animal', {
-          'size': [850, 505],
+          'size': [990, 505],
           'mode': 'toggle',
           'rows': 8,
           'columns': 16
@@ -1468,7 +1468,7 @@
       } else if (($(window).width() > 768)) {
         //console.log('creo seq Large devices (desktops, 768 y992px and up) @media (min-width: 992px y 768) { ... }  GRILLA w:580 h:380 ');
         sequencer = new Nexus.Sequencer('#seq-animal', {
-          'size': [690, 505],
+          'size': [720, 505],
           'mode': 'toggle',
           'rows': 8,
           'columns': 16
@@ -1477,7 +1477,7 @@
       } else if (($(window).width() > 576)) {
         //console.log('creo seq Small devices (landscape phones, 576px and up) @media (min-width: 576px) { ... } GRILLA w:430 h:380');
         sequencer = new Nexus.Sequencer('#seq-animal', {
-          'size': [480, 505],
+          'size': [430, 505],
           'mode': 'toggle',
           'rows': 8,
           'columns': 16
