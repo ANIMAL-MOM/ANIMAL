@@ -828,7 +828,7 @@
 
          <!-- TRANSPORT -->
 
-         <div class="row pr-lg-1 d-flex h-100">
+         <div class="w-50 h-100 corners1">
 
 
 
@@ -906,7 +906,7 @@
 
          <!-- METRONOME -->
 
-         <div id="metronome" class="metronome-normal w-25 h-100 corners1 text-center">
+         <div id="metronome" class="metronome-normal w-50 h-100 corners1">
            --
          </div>
        </div>
@@ -1912,7 +1912,8 @@
     sequencer.on('step', function (v) {
 
         var count= document.getElementById("metronome");
-        count.innerHTML=++metro;
+        //count.innerHTML=++metro;
+        metro +=1
         if (metro === 16){
           metro=0;
         } else if (metro === 13) {
