@@ -1069,10 +1069,6 @@ h3 {
 
   /* Metronome related styles */
     .metronome-normal {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      padding-top: 12px;
       background-color: var(--color-blanco-ui-animal);
     }
     .metronome-step {
