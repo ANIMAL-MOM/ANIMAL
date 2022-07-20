@@ -824,93 +824,56 @@
 
      <div id="Main-down" class="row mb-5">
 
-       <div id="izq" class="col-12 d-flex justify-content-between">
+       <div id="arriba" class="col-12 d-flex justify-content-between">
+         <div class="row">
 
-         <!-- TRANSPORT -->
+           <!-- TRANSPORT-->
+           <div id="controles" class="col-6 col-lg-3">
+              <div class="row">
+                <!-- BPM -->
+                <div id="bpm" class="col-6 corners1 fondo-1-animal">
+                  <div class="row d-flex h-100">
+                    <div id="decrement-bpm-btn" class="col-3 d-flex my-0 blanco-ui-animal animal-pointer">
+                      <strong class="m-auto text-center">-</strong>
+                    </div>
+                    <div id="increment-bpm-btn" class="col-3 d-flex my-0 blanco-ui-animal animal-pointer">
+                      <strong class="m-auto text-center">+</strong>
+                    </div>
+                    <div id="bpm-display" class="col-6 numero-animal d-flex my-0 blanco-ui-animal">
+                      <strong id="bpmNumber" class="m-auto text-center">90</strong>
+                      <span class="m-auto pl-1 texto-chico text-center">bpm</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- REC + MUTE -->
+                <div id="rec-mute" class="col-6">
+                  <div class="row h-100 my-0 pl-1 pl-lg-0 d-flex flex-column flex-lg-row ">
+                    <div id="rec-btn" class="col-lg-6 d-flex my-0 blanco-ui-animal animal-pointer">
+                      <span class="m-auto text-center" data-text="Stop" translate="no">Rec</span>
+                    </div>
+                    <div id="mute-btn" class="col-lg-6 d-flex my-0 mute-btn blanco-ui-animal animal-pointer"
+                      data-toggle="popover">
+                      <span class="m-auto text-center" data-text="Stop" translate="no">Play</span>
 
-         <div class="w-50 h-100 corners1">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-
-
-           <!-- TRANSPORT -->
-
-           <div id="controles" class="col-6 col-lg-12 p-0 pt-lg-1 d-flex flex-column flex-lg-row">
-             <div class="row m-0 p-2 d-flex custom-height corners1 fondo-1-animal">
-               <div class="col-8 col-lg-12">
-                 <div class="row h-100">
-                   <!-- BPM -->
-                   <div id="bpm" class="col-12">
-                     <div class="row d-flex h-100">
-                       <div id="decrement-bpm-btn" class="col-3 d-flex my-0 blanco-ui-animal animal-pointer">
-                         <strong class="m-auto text-center">-</strong>
-                       </div>
-                       <div id="increment-bpm-btn" class="col-3 d-flex my-0 blanco-ui-animal animal-pointer">
-                         <strong class="m-auto text-center">+</strong>
-                       </div>
-                       <div id="bpm-display" class="col-6 numero-animal d-flex my-0 blanco-ui-animal">
-                         <strong id="bpmNumber" class="m-auto text-center">90</strong>
-                         <span class="m-auto pl-1 texto-chico text-center">bpm</span>
-                       </div>
-                     </div>
-                   </div>
-                   <!-- SWING -->
-                   <div id="swing" class="col-12 d-none">
-                     <div class="row d-flex h-100">
-                       <div id="decrement-swing-btn" class="col-3 d-flex my-0 blanco-ui-animal animal-pointer">
-                         <strong class="m-auto text-center">-</strong>
-                       </div>
-                       <div id="increment-swing-btn" class="col-3 d-flex my-0 blanco-ui-animal animal-pointer">
-                         <strong class="m-auto text-center">+</strong>
-                       </div>
-                       <div id="swing-display" class="col-6 numero-animal d-flex my-0 blanco-ui-animal">
-                         <strong id="swingNumber" class="m-auto text-center">0</strong>
-                         <span class="m-auto pl-1 texto-chico text-center">swing</span>
-                       </div>
-                     </div>
-                   </div>
-                 </div>
-               </div>
-               <!-- REC + MUTE -->
-               <div id="rec-mute" class="col-4 col-lg-12 mt-lg-1 ">
-                 <div class="row h-100 my-0 pl-1 pl-lg-0 d-flex flex-column flex-lg-row ">
-                   <div id="rec-btn" class="col-lg-6 d-flex my-0 blanco-ui-animal animal-pointer">
-                     <span class="m-auto text-center" data-text="Stop" translate="no">Rec</span>
-                   </div>
-                   <div id="mute-btn" class="col-lg-6 d-flex my-0 mute-btn blanco-ui-animal animal-pointer"
-                     data-toggle="popover">
-                     <span class="m-auto text-center" data-text="Stop" translate="no">Play</span>
-
-                   </div>
-                 </div>
-               </div>
-             </div>
+            <!-- transport end -->
 
 
 
-             <!-- INSTRUMENTO SELECCIONADO (#sel-inst) -->
-             <span id="sel-inst-help" class="help-item" data-toggle="popover" title="INSTRUMENTS" data-placement="bottom"
-               data-content="Modify the sound and volume by turning the knobs">
+            <!-- METRONOME -->
 
-               <div id="sel-inst"
-                 class="m-0 p-0 pt-1 d-block d-lg-none d-flex align-items-end text-white overflow-hidden">
-
-
-
-               </div>
-             </span>
-           </div>
-
-           <!-- controles end -->
-
+            <div id="metronome" class="col-6 h-100 corners1"></div>
          </div>
 
-         <!-- METRONOME -->
 
-         <div id="metronome" class="metronome-normal w-50 h-100 corners1">
-           --
-         </div>
        </div>
-       <div id="der" class="col-12 ">
+
+       <div id="abajo" class="col-12">
 
          <div class="row">
 
