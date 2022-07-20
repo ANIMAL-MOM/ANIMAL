@@ -1641,6 +1641,7 @@
         myChannel.forEach(function (micha) {
           if (v.row == micha - 1) {
             socket.emit('toggleStep', v);
+            //console.log("emito change");
           }
         });
       });
@@ -1771,6 +1772,33 @@
         }
       });
 
+      /*
+      myAnimalNumber--;
+      if (!(sonidos.get(scaleNotes[(7 - myAnimalNumber)]).mute)) {
+         $(this).addClass("activado");
+        for (i = 0; i < 8; i++) {
+          sonidos.get(scaleNotes[i]).mute = true;
+          //console.log("es el animal numero"+ i)
+          //console.log(scaleNotes[i]);
+          //console.log("quedó muteado " +sonidos.get(scaleNotes[i]).mute);
+        }
+        sonidos.get(scaleNotes[(7 - myAnimalNumber)]).mute = false;
+        //console.log(scaleNotes[(7 - myAnimalNumber)]);
+
+      } else {
+        $(this).removeClass("activado");
+        for (i = 0; i < 8; i++) {
+          //console.log(scaleNotes[i]);
+          sonidos.get(scaleNotes[i]).mute = false;
+          //console.log("es el animal numero"+ i)
+          //console.log(scaleNotes[i]);
+          //console.log("quedó muteado " +sonidos.get(scaleNotes[i]).mute);
+        }
+
+    }
+
+
+    });*/
 
     // AUDIT  (channel icon)
     $(".sound-preview").click(function (e) {
@@ -1800,6 +1828,21 @@
       }
     });
 
+    // AUTOPLAY
+    let autoplay=0;
+    sequencer.on('step', function (v) {
+      autoplay += 1;
+      if (autoplay === 16 || autoplay === 48 ){
+
+        //playSequencer();
+        //playSequencer();
+        console.log("AUTOSTART");
+
+      } else if (autoplay === 80) {
+        autoplay=0;
+      }
+      console.log("Autoplay= " + autoplay);
+    });
 
 
     // STEP INDICATOR
@@ -1880,7 +1923,6 @@
         }
 
     });
-
 
 
 
