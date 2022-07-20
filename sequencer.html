@@ -901,6 +901,11 @@
 
          </div>
 
+         <!-- METRONOME -->
+         
+         <div id="metronome" class="metronome-normal text-center">
+           --
+         </div>
        </div>
        <div id="der" class="col-12 ">
 
@@ -1110,9 +1115,7 @@
 
 
            <div id="jam-ajustes" class="col-12 py-4 px-3 d-flex justify-content-between fondo-1-animal corners1">
-             <div id="metronome" class="metronome-normal text-center">
-               --
-             </div>
+             <!--
              <div id="ToggleAll" class="mx-auto d-flex my-auto flex-lg-column help-item">
                <a href="#" id="boton" class="animal-icon jam-btn text-center">
                  <span translate="no">Toggle</span>
@@ -1120,7 +1123,7 @@
                <div class="m-auto text-center">
                </div>
              </div>
-
+              -->
 
              <div id="eraseAll" class="mx-auto d-flex my-auto flex-lg-column help-item">
                <a href="#" id="boton" class="animal-icon jam-btn text-center">
@@ -1924,7 +1927,32 @@
 
     });
 
+    // CHANGE sound LENGHT
 
+          $("#lenght1n").click(function () {
+
+            for (i = 0; i < 8; i++) {
+              sonidos[i].fadeOut = "1n";
+            }
+          });
+          $("#lenght4n").click(function () {
+
+            for (i = 0; i < 8; i++) {
+              sonidos[i].fadeOut = "4n";
+            }
+          });
+          $("#lenght8n").click(function () {
+
+            for (i = 0; i < 8; i++) {
+              sonidos[i].fadeOut = "8n";
+            }
+          });
+          $("#lenght16n").click(function () {
+
+            for (i = 0; i < 8; i++) {
+              sonidos[i].fadeOut = "16n";
+            }
+          });
 
       /////REC and SAVE MUSIC
       var isRecording;
