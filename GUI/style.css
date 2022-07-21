@@ -928,12 +928,12 @@ h3 {
     #bajada {
       border-right: 1px solid white;
     }
-    #rec-btn {
+    /* #rec-btn {
       border-bottom: 1px solid var(--color-fondo-1-animal);
     }
     #mute-btn {
       border-top: 1px solid var(--color-fondo-1-animal);
-    }
+    }*/
   }
 
   /* Medium devices (tablets, 768px and up) */
@@ -974,7 +974,7 @@ h3 {
       height: 100%;
     }
 
-    #rec-btn {
+    /* #rec-btn {
       border-top-right-radius: 0;
       border-top-left-radius: 15px;
       border-bottom-left-radius: 15px;
@@ -992,7 +992,7 @@ h3 {
       border-bottom-left-radius: 0;
       border-left: 1px solid var(--color-fondo-1-animal);
       height: 100%;
-    }
+    }*/
 
     .instrumentos-help-item, .canal-help-item {
       display:block;
