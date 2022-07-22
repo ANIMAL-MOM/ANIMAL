@@ -905,6 +905,9 @@ h3 {
 }
 
 
+#stepIndicator {
+  width:290px;
+}
 
   /* --------------------------------------------- */
   /* Breakpoints */
@@ -953,6 +956,9 @@ h3 {
       border-left: 1px solid var(--color-fondo-1-animal);
       height: 100%;
     }
+    #stepIndicator {
+      width:520px;
+    }
   }
 
   /* Medium devices (tablets, 768px and up) */
@@ -965,6 +971,9 @@ h3 {
     }
     #bienvenida {
       border-right: 1px solid white;
+    }
+    #stepIndicator {
+      width:775px;
     }
   }
 
@@ -1020,6 +1029,7 @@ h3 {
       display:none;
     }
 
+
   }
 
   /* Extra large devices (large desktops, 1200px and up) */
@@ -1038,6 +1048,10 @@ h3 {
     }
     #chat-animal div {
         height: 254px;
+    }
+
+    #stepIndicator {
+      width:930px;
     }
   }
 
