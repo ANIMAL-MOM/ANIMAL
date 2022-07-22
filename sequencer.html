@@ -887,39 +887,47 @@
 
            <!-- REGISTRO COMPARTIR (#jam-ajustes) -->
 
-
            <div id="jam-ajustes" class="col-12 mt-1 py-4 px-3 d-flex justify-content-between fondo-1-animal corners1">
-             <!--
-             <div id="ToggleAll" class="mx-auto d-flex my-auto flex-lg-column help-item">
-               <a href="#" id="boton" class="animal-icon jam-btn text-center">
-                 <span translate="no">Toggle</span>
-               </a>
-               <div class="m-auto text-center">
-               </div>
-             </div>
-              -->
+             <div id="combo-botones" class="mr-auto d-flex flex-row">
 
-             <div id="eraseAll" class="mx-auto d-flex my-auto flex-lg-column help-item">
-               <a href="#" id="boton" class="animal-icon jam-btn text-center">
-                 <span translate="no">Erase</span>
-               </a>
-               <div class="m-auto text-center">
-               </div>
+               <!-- Toggle-->
+              <div id="ToggleAll" class="d-flex my-auto flex-lg-column help-item">
+                <a href="#" id="boton" class="animal-icon jam-btn text-center">
+                  <span translate="no">Toggle</span>
+                </a>
+                <div class="m-auto text-center">
+                </div>
+              </div>
+
+              <!--  Erase -->
+              <div id="eraseAll" class="mx-1 d-flex my-auto flex-lg-column help-item">
+                <a href="#" id="boton" class="animal-icon jam-btn text-center">
+                  <span translate="no">Erase</span>
+                </a>
+                <div class="m-auto text-center">
+                </div>
+              </div>
+              <!-- <div id="eraseCh1" class="mx-auto d-flex my-auto flex-lg-column help-item">
+                <a href="#" id="boton" class="animal-icon jam-btn text-center">
+                  <span translate="no">erase Ch1</span>
+                </a>
+                <div class="m-auto text-center">
+                </div>
+              </div>-->
+
+              <!-- Restart -->
+              <div id="resetAll" class="d-flex my-auto flex-lg-column help-item">
+                <a href="https://sesion-gui.onrender.com/" id="boton" class="animal-icon jam-btn text-center">
+                  <span translate="no">Restart</span>
+                </a>
+                <div class="m-auto text-center">
+                </div>
+              </div>
+
              </div>
-             <!-- <div id="eraseCh1" class="mx-auto d-flex my-auto flex-lg-column help-item">
-               <a href="#" id="boton" class="animal-icon jam-btn text-center">
-                 <span translate="no">erase Ch1</span>
-               </a>
-               <div class="m-auto text-center">
-               </div>
-             </div>-->
-             <div id="resetAll" class="mx-auto d-flex my-auto flex-lg-column help-item">
-               <a href="https://sesion-gui.onrender.com/" id="boton" class="animal-icon jam-btn text-center">
-                 <span translate="no">Restart</span>
-               </a>
-               <div class="m-auto text-center">
-               </div>
-             </div>
+
+
+
              <div id="jam-sesion" class="mx-auto d-flex my-auto flex-lg-column help-item" data-toggle="popover"
                title="JAM SESSION" data-placement="bottom" data-content="Invite more music explorers to your session">
 
@@ -930,8 +938,8 @@
                <div class="m-auto text-center">
                </div>
              </div>
-             <div id="combo-botones" class="mx-0 mx-xl-auto d-flex flex-row flex-xl-column">
-               <div id="settings" class="animal-icon mb-2" data-toggle="tooltip" data-placement="top" title="Settings">
+             <div id="combo-botones" class="ml-auto d-flex flex-row">
+               <div id="settings" class="animal-icon mb-2 mr-1" data-toggle="tooltip" data-placement="top" title="Settings">
                  <a href="#" id="boton" data-toggle="modal" data-target="#settingsModal" role="button">
                    <img src="GUI/svg/botones/boton_ajustes_b.svg" class="btn-icon">
                  </a>
