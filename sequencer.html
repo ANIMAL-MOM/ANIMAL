@@ -858,7 +858,7 @@
            <div id="secuenciador" class="col-10 mx-0 my-1 my-lg-0 p-0 pr-lg-1">
 
              <div class="pl-0 py-4 pr-4 corners-r overflow-auto fondo-1-animal">
-               <div id="stepIndicator" class="grid-size d-flex flex-row justify-content-around stepper" style="width: 300px;">
+               <div id="stepIndicator" class="grid-size d-flex flex-row justify-content-around stepper">
                  <span id="step1" class="stepIndicator"></span>
                  <span id="step2" class="stepIndicator"></span>
                  <span id="step3" class="stepIndicator"></span>
@@ -1047,6 +1047,8 @@
           'rows': 8,
           'columns': 16
         });
+        $("#stepIndicator").setAttribute("style","width:930px");
+
       } else if (($(window).width() > 768)) {
         //console.log('creo seq Large devices (desktops, 768 y992px and up) @media (min-width: 992px y 768) { ... }  GRILLA w:580 h:380 ');
         sequencer = new Nexus.Sequencer('#seq-animal', {
@@ -1055,6 +1057,7 @@
           'rows': 8,
           'columns': 16
         });
+        $("#stepIndicator").setAttribute("style","width:775px");
 
       } else if (($(window).width() > 576)) {
         //console.log('creo seq Small devices (landscape phones, 576px and up) @media (min-width: 576px) { ... } GRILLA w:430 h:380');
@@ -1064,6 +1067,7 @@
           'rows': 8,
           'columns': 16
         });
+        $("#stepIndicator").setAttribute("style","width:520px");
 
       } else {
         //console.log('creo seq S//smallest devices bootstrap default  GRILLA w:330 h:380');
@@ -1073,6 +1077,7 @@
           'rows': 8,
           'columns': 16
         });
+        $("#stepIndicator").setAttribute("style","width:285px");
       }
 
       sequencer.colorize("accent", "#FF7809");
