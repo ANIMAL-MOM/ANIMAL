@@ -1843,6 +1843,12 @@
           $(this).toggleClass('mute-btn-activo');
       });
 
+      // TOGGLE ALL
+      $("#toggleAll").click(function () {
+        sequencer.matrix.toggle.all();
+        playSequencer();
+        // console.log("toggle all")
+      });
 
       // SPACE BAR event = keyup or keydown
 
