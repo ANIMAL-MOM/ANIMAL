@@ -601,16 +601,16 @@ h3 {
     background-image: url("https://sesion-gui.onrender.com/GUI/svg/boton-toggle-over.svg");
   }
   .erase-btn{
-    background-image: url("https://sesion-gui.onrender.com/GUI/svg/erase-toggle.svg");
+    background-image: url("https://sesion-gui.onrender.com/GUI/svg/boton-erase.svg");
   }
   .erase-btn:hover{
-    background-image: url("https://sesion-gui.onrender.com/GUI/svg/erase-toggle-over.svg");
+    background-image: url("https://sesion-gui.onrender.com/GUI/svg/boton-erase-over.svg");
   }
   .reset-btn{
-    background-image: url("https://sesion-gui.onrender.com/GUI/svg/reset-toggle.svg");
+    background-image: url("https://sesion-gui.onrender.com/GUI/svg/boton-reset.svg");
   }
   .reset-btn:hover{
-    background-image: url("https://sesion-gui.onrender.com/GUI/svg/reset-toggle-over.svg");
+    background-image: url("https://sesion-gui.onrender.com/GUI/svg/boton-reset-over.svg");
   }
   .help-icon {
     width: 44px;
