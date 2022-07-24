@@ -599,7 +599,18 @@ h3 {
   }
   .toggle-btn:hover{
     background-image: url("https://sesion-gui.onrender.com/GUI/svg/boton-toggle-over.svg");
-
+  }
+  .erase-btn{
+    background-image: url("https://sesion-gui.onrender.com/GUI/svg/erase-toggle.svg");
+  }
+  .erase-btn:hover{
+    background-image: url("https://sesion-gui.onrender.com/GUI/svg/erase-toggle-over.svg");
+  }
+  .reset-btn{
+    background-image: url("https://sesion-gui.onrender.com/GUI/svg/reset-toggle.svg");
+  }
+  .reset-btn:hover{
+    background-image: url("https://sesion-gui.onrender.com/GUI/svg/reset-toggle-over.svg");
   }
   .help-icon {
     width: 44px;
