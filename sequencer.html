@@ -1836,7 +1836,7 @@
       // TOGGLE ALL
       $("#toggleAll").click(function () {
         sequencer.matrix.toggle.all();
-        playSequencer();
+        //playSequencer();
         // console.log("toggle all")
       });
 
@@ -1858,14 +1858,14 @@
       // ERASE ALL
       $("#eraseAll").click(function () {
         sequencer.matrix.populate.all( [0,0] );
-        playSequencer();
+        //playSequencer();
         // console.log("erase all")
       });
-      $("#eraseCh1").click(function () {
-        sequencer.matrix.populate.row( 0, [0,0] )
-        playSequencer();
+      //$("#eraseCh1").click(function () {
+        //sequencer.matrix.populate.row( 0, [0,0] )
+      //  playSequencer();
         // console.log("erase all")
-      });
+      //});
 
       // CHANGE PITCH
       function changePitch(myAnimal, value) {
