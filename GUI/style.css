@@ -466,12 +466,6 @@ h3 {
   .audiopre {
     cursor: pointer;
   }
-  .animal-btn{
-    width:44px;
-    height:44px;
-    border-radius:50px;
-    background-color: var(--color-figura-1-animal)
-  }
   #chat-animal{
     height:100%;
   }
@@ -494,7 +488,7 @@ h3 {
       color: var(--color-chocolate-animal);
       background-color: var(--color-blanco-ui-animal);
   }
-  .mute-btn-activo, .jam-btn-activo {
+  .jam-btn-activo {
     -webkit-animation:blinkingMuteJam 1.2s infinite;
     animation:blinkingMuteJam 1.2s infinite;
   }
@@ -511,7 +505,7 @@ h3 {
     border-bottom-right-radius: 15px;
     height:50%;
   }
-  .mute-btn:hover {
+  #mute-btn:hover, .animal-btn:hover {
     color: var(--color-blanco-ui-animal);
     background-color: var(--color-verde-ui-animal);
   }
@@ -592,12 +586,25 @@ h3 {
     background-color: var(--color-figura-1-animal);
 
   }
-  .animal-icon, .jam-btn {
+  .animal-icon, .jam-btn, .animal-btn {
     width: 44px;
     height: 44px;
     border-radius: 50%;
     background-color: var(--color-blanco-ui-animal);
-      border: none;
+    border: none;
+    cursor: pointer;
+  }
+  .toggle-btn{
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--color-blanco-ui-animal);
+    border: none;
+    cursor: pointer;
+    background-image: url("https://sesion-gui.onrender.com/GUI/img/boton-toggle.png");
+  }
+  .toggle-btn:hover{
+    background-image: url("https://sesion-gui.onrender.com/GUI/img/boton-toggle-over.png");
   }
   .help-icon {
     width: 44px;
