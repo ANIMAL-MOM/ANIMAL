@@ -481,6 +481,7 @@ h3 {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     height:50%;
+    border-bottom: 1px solid var(--color-fondo-1-animal);
   }
   .mute-btn {
       color: var(--color-chocolate-animal);
@@ -511,15 +512,20 @@ h3 {
     color: var(--color-blanco-ui-animal);
     background-color: var(--color-rojo-ui-animal);
   }
+  #bpm-display {
+  }
   #increment-swing-btn:hover, #increment-bpm-btn:hover, #decrement-swing-btn:hover, #decrement-bpm-btn:hover{
     background-color:var(--color-figura-1-animal)!important;
   }
   #decrement-bpm-btn {
     border-top-left-radius: 15px;
+    /*border-bottom: 1px solid var(--color-fondo-1-animal);*/
   }
   #increment-bpm-btn {
     border-top-right-radius: 15px;
+    /*border-bottom: 1px solid var(--color-fondo-1-animal);*/
   }
+
   #decrement-swing-btn {
     border-bottom-left-radius: 15px;
     border-top: 1px solid var(--color-fondo-1-animal);
@@ -857,7 +863,6 @@ h3 {
 
 
   #bpm-display{
-    /*border-bottom: 1px solid var(--color-fondo-1-animal);*/
   }
   #swing-display{
     /*border-bottom-right-radius: 15px;
@@ -939,30 +944,14 @@ h3 {
       border-right: 1px solid white;
     }
 
-    /* #rec-btn {
-      border-bottom: 1px solid var(--color-fondo-1-animal);
-    }
-    #mute-btn {
-      border-top: 1px solid var(--color-fondo-1-animal);
-    }*/
     #rec-btn {
       border-top-right-radius: 0;
       border-top-left-radius: 15px;
-      border-bottom-left-radius: 15px;
-      border-bottom: none;
-      border-right: 1px solid var(--color-fondo-1-animal);
-      height: 100%;
-    }
-    #mute-btn{
-      border-top: none;
-    }
-
-    #mute-btn {
       border-top-right-radius: 15px;
+    }
+    #mute-btn {
       border-bottom-right-radius: 15px;
-      border-bottom-left-radius: 0;
-      border-left: 1px solid var(--color-fondo-1-animal);
-      height: 100%;
+      border-bottom-left-radius: 15px;
     }
     #stepIndicator {
       width:520px;
@@ -986,10 +975,28 @@ h3 {
 
     #decrement-bpm-btn {
       border-bottom-left-radius: 15px;
+      border-bottom: 0;
     }
 
     #increment-bpm-btn {
       border-top-right-radius: 0;
+      border-bottom: 0;
+      border-right: 1px solid var(--color-fondo-1-animal);
+    }
+
+    #rec-btn {
+      border-top-right-radius: 0px;
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+      border-bottom: none;
+      height:100%;
+    }
+    #mute-btn {
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+      border-bottom-left-radius: 0px;
+      height:100%;
+      border-left: 1px solid var(--color-fondo-1-animal);
     }
   }
 
