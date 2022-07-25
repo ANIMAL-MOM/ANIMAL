@@ -287,8 +287,6 @@ h3 {
   }
 
   #bpm-display, #swing-display {
-    border-left:2px solid;
-    border-color: var(--color-fondo-1-animal);
   }
 
   #jam-sesion a{
@@ -522,7 +520,7 @@ h3 {
     border-bottom: 1px solid var(--color-fondo-1-animal);
   }
   #increment-bpm-btn {
-    border-bottom: 1px solid var(--color-fondo-1-animal);
+    /*border-bottom: 1px solid var(--color-fondo-1-animal);*/
   }
   #decrement-swing-btn {
     border-bottom-left-radius: 15px;
@@ -861,13 +859,11 @@ h3 {
 
 
   #bpm-display{
-    border-top-right-radius: 15px;
-      border-bottom-right-radius: 15px;
-    border-bottom: 1px solid var(--color-fondo-1-animal);
+    /*border-bottom: 1px solid var(--color-fondo-1-animal);*/
   }
   #swing-display{
-    border-bottom-right-radius: 15px;
-    border-top: 1px solid var(--color-fondo-1-animal);
+    /*border-bottom-right-radius: 15px;
+    border-top: 1px solid var(--color-fondo-1-animal);*/
   }
 
   .fondo-1 {

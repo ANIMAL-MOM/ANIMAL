@@ -642,20 +642,28 @@
 
            <!-- TRANSPORT-->
            <!-- BPM -->
-           <div id="bpm" class="col-3 h-100 corners1">
-             <div class="row d-flex h-100">
-               <div id="decrement-bpm-btn" class="col-3 d-flex my-0 blanco-ui-animal animal-pointer">
-                 <strong class="m-auto text-center">-</strong>
-               </div>
-               <div id="increment-bpm-btn" class="col-3 d-flex my-0 blanco-ui-animal animal-pointer">
-                 <strong class="m-auto text-center">+</strong>
-               </div>
-               <div id="bpm-display" class="col-6 numero-animal d-flex my-0 blanco-ui-animal">
-                 <strong id="bpmNumber" class="m-auto text-center">90</strong>
-                 <span class="m-auto pl-1 texto-chico text-center">bpm</span>
-               </div>
-             </div>
+
+
+           <div id="bpm" class="col-3 h-100 blanco-ui-animal corners1">
+            <div class="row h-100">
+              <div class="col-sm-12 col-md-6 d-flex">
+                <div id="decrement-bpm-btn" class="d-flex my-0 animal-pointer">
+                  <strong class="m-auto">-</strong>
+                </div>
+                <div id="increment-bpm-btn" class="d-flex my-0 animal-pointer">
+                  <strong class="m-auto">+</strong>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 d-flex" data-toggle="popover">
+                <div id="bpm-display" class="numero-animal d-flex my-0 ">
+                  <strong id="bpmNumber" class="m-auto text-center">90</strong>
+                  <span class="m-auto pl-1 texto-chico text-center">bpm</span>
+                </div>
+              </div>
+            </div>
            </div>
+
+
            <!-- REC + PLAY -->
           <div id="rec-mute" class="col-3 mx-1 h-100 corners1">
             <div class="row h-100">
