@@ -516,11 +516,9 @@ h3 {
   }
   #decrement-bpm-btn {
     border-top-left-radius: 15px;
-      border-bottom-left-radius: 15px;
-    border-bottom: 1px solid var(--color-fondo-1-animal);
   }
   #increment-bpm-btn {
-    /*border-bottom: 1px solid var(--color-fondo-1-animal);*/
+    border-top-right-radius: 15px;
   }
   #decrement-swing-btn {
     border-bottom-left-radius: 15px;
@@ -940,6 +938,7 @@ h3 {
     #bajada {
       border-right: 1px solid white;
     }
+
     /* #rec-btn {
       border-bottom: 1px solid var(--color-fondo-1-animal);
     }
@@ -983,6 +982,14 @@ h3 {
     }
     #stepIndicator {
       width:775px;
+    }
+
+    #decrement-bpm-btn {
+      border-bottom-left-radius: 15px;
+    }
+
+    #increment-bpm-btn {
+      border-top-right-radius: 0;
     }
   }
 
