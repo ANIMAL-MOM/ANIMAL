@@ -224,23 +224,23 @@
 
 
 
-dialch8.colorize("accent","#FF7809");
-dialch7.colorize("accent","#FF7809");
-dialch6.colorize("accent","#FF7809");
-dialch5.colorize("accent","#FF7809");
-dialch4.colorize("accent","#FF7809");
-dialch3.colorize("accent","#FF7809");
-dialch2.colorize("accent","#FF7809");
-dialch1.colorize("accent","#FF7809");
+dialch8.colorize("accent","#00B9E5");
+dialch7.colorize("accent","#00B9E5");
+dialch6.colorize("accent","#00B9E5");
+dialch5.colorize("accent","#00B9E5");
+dialch4.colorize("accent","#00B9E5");
+dialch3.colorize("accent","#00B9E5");
+dialch2.colorize("accent","#00B9E5");
+dialch1.colorize("accent","#00B9E5");
 
-dialins8.colorize("accent","#5EC20A");
-dialins7.colorize("accent","#5EC20A");
-dialins6.colorize("accent","#5EC20A");
-dialins5.colorize("accent","#5EC20A");
-dialins4.colorize("accent","#5EC20A");
-dialins3.colorize("accent","#5EC20A");
-dialins2.colorize("accent","#5EC20A");
-dialins1.colorize("accent","#5EC20A");
+dialins8.colorize("accent","#33C70F");
+dialins7.colorize("accent","#33C70F");
+dialins6.colorize("accent","#33C70F");
+dialins5.colorize("accent","#33C70F");
+dialins4.colorize("accent","#33C70F");
+dialins3.colorize("accent","#33C70F");
+dialins2.colorize("accent","#33C70F");
+dialins1.colorize("accent","#33C70F");
 
 var dialchs=[];
 dialchs.push(dialch8);

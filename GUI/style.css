@@ -3,7 +3,7 @@
 /* @import "animal.css"; */
 
 :root {
-  --color-verde-animal: rgba(59,140,39,1);
+  --color-verde-animal: rgba(51,199,15,1);
   --color-marron-animal: rgba(97,50,8,1);
   --color-chocolate-animal: rgba(55,41,41,1);
   --color-mostaza-animal: rgba(177,149,2,1);
@@ -14,13 +14,13 @@
   --color-figura-1-animal: rgba(184,197,208,1);
   --color-destaque-animal: rgba(109,119,126,1);
   --color-celeste-ui-animal: rgba(186,218,242,1);
-  --color-naranja-ui-animal: rgba(255,120,9,1);
-  --color-verde-ui-animal: rgba(94,194,10,1);
+  --color-azul-ui-animal: rgba(0,185,229,1);
+  --color-verde-ui-animal: rgba(51,199,15,1);
   --color-rojo-ui-animal: rgba(229,76,76,1);
   --color-fondo-mostaza-animal: rgba(199,179,79,1);
   --color-fondo-aqua-animal: rgba(183,226,208,1);
   --color-fondo-rosa-animal: rgba(255,221,207,1);
-  --color-fondo-verde-animal: rgba(188,246,93,1);
+  --color-fondo-verde-animal: rgba(189,245,92,1);
   --color-fondo-negro-animal: rgba(62,2,2,1);
   }
 
@@ -67,8 +67,8 @@
   .destaque-animal {
     background-color: var(--color-destaque-animal);
   }
-  .naranja-ui-animal {
-    background-color: var(--color-naranja-ui-animal);
+  .azul-ui-animal {
+    background-color: var(--color-azul-ui-animal);
   }
   .verde-ui-animal {
     background-color: var(--color-verde-ui-animal);
@@ -436,8 +436,8 @@ h3 {
   }
   .btn-primary:hover {
       color: var(--color-blanco-ui-animal);
-      background-color: var(--color-naranja-ui-animal);
-      border-color: var(--color-naranja-ui-animal);
+      background-color: var(--color-azul-ui-animal);
+      border-color: var(--color-azul-ui-animal);
   }
   .btn-secondary{
     background-color: var(--color-figura-1-animal);
@@ -451,14 +451,14 @@ h3 {
 
   .btn-secondary:focus {
       color: #fff;
-      background-color: var(--color-naranja-ui-animal);
-      border-color: var(--color-naranja-ui-animal);
+      background-color: var(--color-azul-ui-animal);
+      border-color: var(--color-azul-ui-animal);
       box-shadow: none;
   }
   .btn-secondary:not(:disabled):not(.disabled):active {
       color: #fff;
-      background-color: var(--color-naranja-ui-animal);
-      border-color: var(--color-naranja-ui-animal);
+      background-color: var(--color-azul-ui-animal);
+      border-color: var(--color-azul-ui-animal);
   }
 
   .audiopre {
@@ -580,7 +580,7 @@ h3 {
     line-height: 36px;
   }
   .cKit {
-    background-color: var(--color-naranja-ui-animal);
+    background-color: var(--color-azul-ui-animal);
   }
   .audio-preview, .loro-rec {
     width: 44px;
@@ -648,7 +648,7 @@ h3 {
     border-color: var(--color-blanco-ui-animal);
   }
   .icon-container-s:hover {
-    border-color: var(--color-naranja-ui-animal);
+    border-color: var(--color-azul-ui-animal);
   }
   #audio-preview:hover {
     filter:invert(0)!important;
@@ -738,7 +738,7 @@ h3 {
 
 
   .animal-icon path{
-    background-color: var(--color-naranja-ui-animal);
+    background-color: var(--color-azul-ui-animal);
   }
 
   .animal-border{
