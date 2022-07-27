@@ -129,7 +129,16 @@
 
 
   /* ---------------------------------------------- */
+  /* Backgrounds */
+
+  .back1 {
+    background-image: url("GUI/img/fondos/pato-loro1.jpg");
+    background-repeat: repeat;
+  }
+
+  /* ---------------------------------------------- */
   /* Type */
+
 
 
 body {
