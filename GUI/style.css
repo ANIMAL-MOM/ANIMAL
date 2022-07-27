@@ -597,22 +597,22 @@ h3 {
     cursor: pointer;
   }
   .toggle-btn{
-    background-image: url("https://sesion-gui.onrender.com/GUI/svg/boton-toggle.svg");
+    background-image: url("https://mom-lab.xyz/GUI/svg/boton-toggle.svg");
   }
   .toggle-btn:hover{
-    background-image: url("https://sesion-gui.onrender.com/GUI/svg/boton-toggle-over.svg");
+    background-image: url("https://mom-lab.xyz/GUI/svg/boton-toggle-over.svg");
   }
   .erase-btn{
-    background-image: url("https://sesion-gui.onrender.com/GUI/svg/boton-erase.svg");
+    background-image: url("https://mom-lab.xyz/GUI/svg/boton-erase.svg");
   }
   .erase-btn:hover{
-    background-image: url("https://sesion-gui.onrender.com/GUI/svg/boton-erase-over.svg");
+    background-image: url("https://mom-lab.xyz/GUI/svg/boton-erase-over.svg");
   }
   .reset-btn{
-    background-image: url("https://sesion-gui.onrender.com/GUI/svg/boton-reset.svg");
+    background-image: url("https://mom-lab.xyz/GUI/svg/boton-reset.svg");
   }
   .reset-btn:hover{
-    background-image: url("https://sesion-gui.onrender.com/GUI/svg/boton-reset-over.svg");
+    background-image: url("https://mom-lab.xyz/GUI/svg/boton-reset-over.svg");
   }
   .help-icon {
     width: 44px;
