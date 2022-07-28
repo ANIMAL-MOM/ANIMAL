@@ -450,12 +450,12 @@
              <div class="row m-0">
                <div id="sonidos-kit-11" class="col-6">
                  <div class="btn-group my-2" role="group" >
-                   <div class="audio-preview corners-l audio-pre-kit" id="audiopre-kit1">
+                   <div class="audio-preview corners-l audio-pre-kit" id="audiopre-kit11">
                      <h1 class="set-num">1</h1>
-                     <img id="kit-preview1" src="GUI/img/audio_trans.png"
+                     <img id="kit-preview11" src="GUI/img/audio_trans.png"
                      class="d-none audio-preview-s kit-preview ">
                    </div>
-                   <button type="button" id="kit1" class="pl-1 btn btn-secondary kits">Candombe</button>
+                   <button type="button" id="kit11" class="pl-1 btn btn-secondary kits">Candombe</button>
                  </div>
                </div>
                <div id="sonidos-kit-2" class="col-6">
@@ -470,12 +470,12 @@
                </div>
                <div id="sonidos-kit-9" class="col-6">
                  <div class="btn-group my-2" role="group" >
-                   <div class="audio-preview corners-l audio-pre-kit" id="audiopre-kit3">
+                   <div class="audio-preview corners-l audio-pre-kit" id="audiopre-kit9">
                      <h1 class="set-num">3</h1>
                      <img id="kit-preview9" src="GUI/img/audio_trans.png"
                      class="d-none audio-preview-s kit-preview ">
                    </div>
-                   <button type="button" id="kit3" class="pl-1 btn btn-secondary kits">Bata</button>
+                   <button type="button" id="kit9" class="pl-1 btn btn-secondary kits">Bata</button>
                  </div>
                </div>
                <div id="sonidos-kit-4" class="col-6">
@@ -510,12 +510,12 @@
                </div>
                <div id="sonidos-kit-12" class="col-6">
                  <div class="btn-group my-2" role="group">
-                   <div class="audio-preview corners-l audio-pre-kit" id="audiopre-kit6">
+                   <div class="audio-preview corners-l audio-pre-kit" id="audiopre-kit12">
                      <h1 class="set-num">7</h1>
                      <img id="kit-preview12" src="GUI/img/audio_trans.png"
                      class="d-none audio-preview-s kit-preview">
                    </div>
-                   <button type="button" id="kit7" class="pl-1 btn btn-secondary kits">Loro pelado</button>
+                   <button type="button" id="kit12" class="pl-1 btn btn-secondary kits">Loro pelado</button>
                  </div>
                </div>
              </div>
@@ -1227,6 +1227,18 @@
       kitCandombe.push(new Tone.Player({ "url": "/audios/kit11/candombe-7.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
       kitCandombe.push(new Tone.Player({ "url": "/audios/kit11/candombe-8.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
       misKits.push(kitCandombe);
+
+
+      var kitLoro = [];
+      kitLoro.push(new Tone.Player({ "url": "/audios/kit11/loro-1.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitLoro.push(new Tone.Player({ "url": "/audios/kit11/loro-2.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitLoro.push(new Tone.Player({ "url": "/audios/kit11/loro-3.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitLoro.push(new Tone.Player({ "url": "/audios/kit11/loro-4.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitLoro.push(new Tone.Player({ "url": "/audios/kit11/loro-5.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitLoro.push(new Tone.Player({ "url": "/audios/kit11/loro-6.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitLoro.push(new Tone.Player({ "url": "/audios/kit11/loro-7.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      kitLoro.push(new Tone.Player({ "url": "/audios/kit11/loro-8.wav", "volume": -1, "fadeOut": "16n" }).toMaster());
+      misKits.push(kitLoro);
 
       //var kit
       sonidos = kitAnimalia;
