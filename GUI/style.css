@@ -132,10 +132,25 @@
   /* Backgrounds */
 
   body {
-    background-image: url("https://mom-lab.xyz/GUI/img/fondos/gato-chancho2.jpg");
-    background-repeat: repeat;
+    animation: scroll 70s linear infinite;
+    background: url("https://mom-lab.xyz/GUI/img/fondos/gato-chancho2.jpg"), #111111;
+    color: #eee;
+    height: 100vh;
+    min-width: 360px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+
   }
 
+  @keyframes scroll {
+     100%{
+      background-position:0px -3000px;
+    }
+  }
   /* ---------------------------------------------- */
   /* Type */
 
