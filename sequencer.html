@@ -988,7 +988,7 @@
        <div class="col p-2 destaque-animal text-white texto-chico">
          <a href="https://mom-lab.studio/" target="_blank" translate="no" class="text-white">[MoM]</a> 2022 /
          <a href="#" id="boton" data-toggle="modal" data-target="#creditsModal" role="button" class="text-white">Credits</a>
-         / animal@mom-lab.studio / UY 
+         / animal@mom-lab.studio / UY
        </div>
      </div>
 
@@ -1064,7 +1064,7 @@
       var sequencer;
 
       if ($(window).width() > 1200) {
-        //console.log('creo seq Extra large devices (large desktops, 1200px and up)  @media (min-width: 1200px) { ... } GRILLA w:690 h:380 ');
+        //rosa
         sequencer = new Nexus.Sequencer('#seq-animal', {
           'size': [930, 505],
           'mode': 'toggle',
@@ -1072,8 +1072,8 @@
           'columns': 16
         });
 
-      } else if (($(window).width() > 768)) {
-        //console.log('creo seq Large devices (desktops, 768 y992px and up) @media (min-width: 992px y 768) { ... }  GRILLA w:580 h:380 ');
+      } else if (($(window).width() > 992)) {
+        //negro-animal(chocolate)
         sequencer = new Nexus.Sequencer('#seq-animal', {
           'size': [775, 505],
           'mode': 'toggle',
@@ -1081,8 +1081,17 @@
           'columns': 16
         });
 
+      } else if (($(window).width() > 768)) {
+        //aqua
+        sequencer = new Nexus.Sequencer('#seq-animal', {
+          'size': [520, 505],
+          'mode': 'toggle',
+          'rows': 8,
+          'columns': 16
+        });
+
       } else if (($(window).width() > 576)) {
-        //console.log('creo seq Small devices (landscape phones, 576px and up) @media (min-width: 576px) { ... } GRILLA w:430 h:380');
+        //mostaza
         sequencer = new Nexus.Sequencer('#seq-animal', {
           'size': [520, 505],
           'mode': 'toggle',
@@ -1091,7 +1100,7 @@
         });
 
       } else {
-        //console.log('creo seq S//smallest devices bootstrap default  GRILLA w:330 h:380');
+        //verde fluo
         sequencer = new Nexus.Sequencer('#seq-animal', {
           'size': [290, 505],
           'mode': 'toggle',
