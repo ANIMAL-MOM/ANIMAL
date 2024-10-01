@@ -924,13 +924,8 @@
              <!-- COMBO botones -->
              <div id="combo-botones" class="mr-auto d-flex flex-row">
 
-               <!-- Toggle all -->
-               <div id="toggleAll" class="toggle-btn animal-btn d-flex align-items-center justify-content-center" data-toggle="tooltip" data-placement="top" title="Toggle">
-               </div>
 
-              <!--  Erase all -->
-              <div id="eraseAll" class="mx-1 erase-btn animal-btn d-flex align-items-center justify-content-center" data-toggle="tooltip" data-placement="top" title="Erase">
-              </div>
+
 
               <!--  Erase channel -->
               <!-- <div id="eraseCh1" class="mx-auto d-flex my-auto flex-lg-column help-item">
@@ -941,31 +936,44 @@
                 </div>
               </div>-->
 
+              <!-- Settings -->
+              <div id="settings" class="animal-icon mb-2 mr-1" data-toggle="tooltip" data-placement="top" title="Settings">
+                <a href="#" id="boton" data-toggle="modal" data-target="#settingsModal" role="button">
+                  <img src="GUI/svg/botones/boton_ajustes_b.svg" class="btn-icon">
+                </a>
+              </div>
               <!-- Restart -->
               <a href="https://mom-lab.xyz/"><div id="resetAll" class="reset-btn animal-btn d-flex align-items-center justify-content-center" data-toggle="tooltip" data-placement="top" title="Restart">
               </div></a>
 
+
+
+             </div>
+
+<div id="combo-botones2" class="mx-auto d-flex flex-row">
+  <div id="jam-sesion" class="mx-auto d-flex my-auto help-item" data-toggle="popover"
+    title="JAM SESSION" data-placement="bottom" data-content="Invite more music explorers to your session">
+
+    <a href="#" id="boton" data-toggle="modal" data-target="#jamModal" role="button"
+      class="animal-icon jam-btn text-center">
+      <span translate="no">Jam</span>
+    </a>
+    <div class="m-auto text-center">
+    </div>
+  </div>
+  <!-- Toggle all -->
+  <div id="toggleAll" class="toggle-btn animal-btn d-flex align-items-center justify-content-center" data-toggle="tooltip" data-placement="top" title="Toggle">
+  </div>
+</div>
+
+
+
+             <div id="combo-botones3" class="ml-auto d-flex flex-row">
+               <!--  Erase all -->
+             <div id="eraseAll" class="mx-1 erase-btn animal-btn d-flex align-items-center justify-content-center" data-toggle="tooltip" data-placement="top" title="Erase">
              </div>
 
 
-
-             <div id="jam-sesion" class="mx-auto d-flex my-auto help-item" data-toggle="popover"
-               title="JAM SESSION" data-placement="bottom" data-content="Invite more music explorers to your session">
-
-               <a href="#" id="boton" data-toggle="modal" data-target="#jamModal" role="button"
-                 class="animal-icon jam-btn text-center">
-                 <span translate="no">Jam</span>
-               </a>
-               <div class="m-auto text-center">
-               </div>
-             </div>
-
-             <div id="combo-botones" class="ml-auto d-flex flex-row">
-               <div id="settings" class="animal-icon mb-2 mr-1" data-toggle="tooltip" data-placement="top" title="Settings">
-                 <a href="#" id="boton" data-toggle="modal" data-target="#settingsModal" role="button">
-                   <img src="GUI/svg/botones/boton_ajustes_b.svg" class="btn-icon">
-                 </a>
-               </div>
                <!--
                  <a id="help-btn" class="mx-auto align-self-baseline help-icon text-center" role="button">
                      <img src="GUI/svg/botones/boton_ayuda_b.svg" class="btn-icon">
@@ -986,9 +994,8 @@
 
      <div class="row my-5">
        <div class="col p-2 destaque-animal text-white texto-chico">
-         <a href="https://mom-lab.studio/" target="_blank" translate="no" class="text-white">[MoM]</a> 2022 /
+         <a href="https://mom-lab.studio/" target="_blank" translate="no" class="text-white">[MoM]</a> UY 2024 /
          <a href="#" id="boton" data-toggle="modal" data-target="#creditsModal" role="button" class="text-white">Credits</a>
-         / animal@mom-lab.studio / UY
        </div>
      </div>
 
